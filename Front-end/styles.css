@@ -1,112 +1,126 @@
 *{
     padding: 0%;
     margin: 0%;
-    list-style: none;
     box-sizing: border-box;
 }
-/* top bar */
-
 .topBar{
     display: flex;
     align-items: center;
-    padding-right: 10px;
-    padding-left: 10px;
-    background : white;
+    width: 100vw !important;
 }
 .topBar img{
+    height: 80px;
+    width: 110px;
     margin-right: auto;
-    margin-left: auto;
-    height: 100px;
-    width: 150px;
-    position: relative;
-    right: 70px;
 }
-.leftBar{
-    margin-left: 20px;
-    text-decoration: none;
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: #333;
-    transition: hover 2s ease-in-out;
+#menu{
+    margin-right: 10px;
 }
-.leftBar:visited{
-    color: #333;
+@media screen and (min-width:780px){
+    .topBar img{
+        height: 100px;
+        width: 150px;
+    }
+    #menu{
+        margin-right: 30px;
+    }
 }
-.leftBar:hover{
-    color: #1C6B20;
-}
-.topBar div, a{
+.topBar div{
+    font-size: 1rem;
+    margin-left: 3vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    font-weight: 700;
+    font-family: proxima-nova, "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+.topBar div:hover{
+    color: #3E8141;
+}
+.topBar div a{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
     align-items: center;
     text-decoration: none;
     color: #333;
+    font-size: 1rem;
 }
-.topBar div:hover,a:hover{
-    color: #1C6B20;
+.topBar div a:hover{
+    color: #3E8141;
 }
-.topBar div{
-    margin-right: 30px;
-}
-.topBar div i{
-    font-size: 25px;
-}
-.topBar div p{
-    font-size: 10px;
+main div{
     font-family: proxima-nova, "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-}
-.blog{
-    display: flex;
-    flex-direction: row;
-}
-.fa-blog{
-    margin-left: 5px;
-    font-size: 15px;
 }
 main{
     display: flex;
 }
 main img{
-    height: auto;
-    width: 600px;
-    margin-top: 8vh;
-    border-top-left-radius: 200px;
-    border-bottom-right-radius: 200px;
-    border-left: 5px solid #1C6B20;
-    border-right: 5px solid #1C6B20;
-    position: absolute;
-    right: 50px;
+    height: unset;
+    width: unset;
 }
-main div{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    margin-top: 8vh;
-    height: 400px;
-    position: absolute;
-    left : 50px;
+#info h1{
+    font-weight: 700;
+    font-size: 2.2rem;
 }
-#info{
-    display : flex;
-    flex-direction: column;
+@media screen and (max-width: 425px){
+    main img{
+        max-width: 90vw;
+        height: auto;
+        margin-top: 20px;
+        align-self: center;
+    }
+    #info{
+        width: 100vw;
+    }
+    main{
+        flex-direction: column-reverse;
+    }
+    
 }
-main div h1{
-    font-family:proxima-nova, "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-    font-size: 2rem;
-    font-weight: 900;
+@media screen and (max-width: 780px){
+    main img{
+        max-width: 90vw;
+        height: auto;
+        margin-top: 20px;
+        align-self: center;
+        border-left: 3px solid #1C6B20;
+        border-right: 3px solid #1C6B20;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    main{
+        flex-direction: column-reverse;
+        row-gap: 20px;
+    }
 }
-main div p{
-    font-family: proxima-nova, "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 500;
+@media screen and (min-width: 780px){
+    main img{
+        max-width: 600px;
+        height: auto;
+        margin-top: 20px;
+        align-self: center;
+        border-left: 5px solid #1C6B20;
+        border-right: 5px solid #1C6B20;
+        border-top-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+    }
+    main{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
-main div p{
-    margin-top: 5px;
-}
-main article{
-    display: flex;
-    column-gap: 20px;
+#info article{
     margin-top: 20px;
+    display: flex;
 }
+#info article button{
+    margin-right: 10px;
+}
+
+
 /* From cssbuttons.io by @westitan */
 button {
     position: relative;
@@ -186,8 +200,7 @@ button {
      transform: translate(-50%, -75%) rotate(360deg);
     }
    }
-
-   /* help button */
+ /* help button */
    /* From cssbuttons.io */
 .fancy {
     background-color: transparent;
@@ -213,7 +226,13 @@ button {
     bottom: 30px;
     right: 30px;
    }
-   
+@media screen and (max-width: 780px){
+    .fancy{
+        padding: .3em .7em;
+        position : relative;
+        top: 100px;
+    }
+}
    .fancy::before {
     content: " ";
     width: 1.5625rem;
@@ -294,3 +313,36 @@ button {
     right: 0;
     width: 0;
    }
+
+/* nav bar */
+#menu1{
+    height: 83vh;
+    width: 300px;
+    position: absolute;
+    top: 80px;
+    right : 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(8px) saturate(146%);
+    -webkit-backdrop-filter: blur(8px) saturate(146%);
+    background-color: rgba(36, 129, 68, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+#menu1 a{
+    height: 40px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: #333;
+    font-family: proxima-nova, "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+#menu1 a:hover{
+    background: #1C6B20;
+}
+@media screen and (max-width: 425px){
+    #menu1{
+        width: 100vw;
+    }
+}
