@@ -3,6 +3,9 @@
     margin: 0%;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
 .topBar{
     display: flex;
     align-items: center;
@@ -231,6 +234,7 @@ button {
         padding: .3em .7em;
         position : relative;
         top: 100px;
+        left: 20px;
     }
 }
    .fancy::before {
@@ -320,7 +324,7 @@ button {
     width: 300px;
     position: absolute;
     top: 80px;
-    right : 0%;
+    right : -100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -345,4 +349,21 @@ button {
     #menu1{
         width: 100vw;
     }
+}
+.moveRight{
+    right: 0% !important;
+    transition: all .5s ease-in-out;
+}
+.tags{
+    display: flex;
+    column-gap: 10px;
+    margin-left: 4.5vw;
+    font-family: proxima-nova, "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+.tags a{
+    text-decoration: none;
+    color: #333;
+}
+.tags a:visited{
+    color: #333;
 }
