@@ -10,4 +10,4 @@ login.addEventListener("click",()=>{
     window.open("login.html", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
 })
 
-//sign up on log in page 
+//sign up on log in
