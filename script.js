@@ -7,7 +7,14 @@ menuButton.addEventListener("click",()=>{
 //log in  
 const login = document.querySelector("#login");
 login.addEventListener("click",()=>{
-    window.open("login.html", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+    window.open("./Front-end/login.html", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
 })
 
-//sign up on log in
+
+//explore
+
+const explore = document.querySelector("#explore")
+
+explore.addEventListener("click",()=>{
+    window.location.href = "./Front-end/index.html";
+})
