@@ -339,13 +339,18 @@ button {
     background: #1C6B20;
     transition: all .5s ease-in-out;
 }
+#menu1 h2{
+    justify-self: center;
+    margin-top: 20px;
+    text-align: center;
+}
 #menu1 a{
     height: 40px;
     width: 100%;
     display: grid;
     place-items: center;
     text-decoration: none;
-    color: #333;
+    color: whitesmoke;
     font-family: proxima-nova, "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
 }
 #menu1 a:hover{
@@ -401,8 +406,14 @@ button {
 .blob1{
     fill: yellow;
 }
+.blob1 svg{
+    transform: rotate(30deg);
+}
 .blob2{
     fill: red;
+}
+.blob2 svg{
+    transform: rotate(60deg);
 }
 .blob svg,path{
     position: relative;

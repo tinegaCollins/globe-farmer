@@ -217,15 +217,96 @@ main{
 
 .buy{
     width: 70vw;
-    border: 2px solid black;
+    height: max-content;
     border-radius: 10px;
     display: none;
     justify-content: center;
     align-items: center;
     padding: 20px;
     flex-direction: column;
+    margin-top: 40px;
 }
-.buy img{
-    width: 30%;
+.buy .fa-xmark{
+    justify-self: flex-end;
+    align-self: flex-end;
+    font-size: 30px;
+}
+.buy .buyWrapper{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    flex-direction: column;
+}
+.buy .buyWrapper img{
+    width: 100%;
     height: auto;
+}
+/* button  */
+/* From cssbuttons.io by @alexmaracinaru */
+.cta {
+    border: none;
+    background: #3E8141;
+    height: 30px;
+    border-radius: 3px;
+   }
+   
+   .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 10px;
+    padding-right: 15px;
+    text-transform: uppercase;
+   }
+   
+   .cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+   }
+   
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+   
+   .cta:active svg {
+    transform: scale(0.9);
+   }
+   
+   .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+   }
+   
+   .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+   }
+   
+   .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+   }
+
+/* cartNumber */
+
+.cartNumber{
+    background: #3E8141;
+    position: relative;
+    height: 17px;
+    width: 17px;
+    right: 70px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    
 }
