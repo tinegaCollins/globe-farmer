@@ -17,7 +17,7 @@
         <img class="navImages" src="./images/cart-shopping-solid.svg">
         <img class="navImages" src="./images/circle-user-solid.svg" alt="">
     </nav>
-    <input type="text" placeholder="Search items/Farmer">
+    <input id="search" type="text" placeholder="Search items/Farmer">
     <h2 id="popular">Popular items</h1>
     <main>
         <section id="sideBar">
@@ -41,89 +41,97 @@
                 <p>Indegenous Vegetables</p>
             </div>
         </section>
-        <section id="items">
-            <div class="products">
-                <div class="productImg"></div>
-                <p class="produce">Product : Viazi</p>
-                <p>Price : 1000 per Gunia</p>
-                <p>Location : Kiambu</p>
-                <p>Farmer : Erick Wainaina</p>
-                <button> <span>Order Now</span>
-                </button>
+        <section id="main">
+            <div class="buy">
+                <img src="./images/viazi.jfif" alt="product image">
+                <p>Farmer : </p>
+                <input type="number" placeholder="quantity">
+                <p>Price : </p>
+                <p>pick up point:</p>
             </div>
-            <div class="products">
-                <div class="productImg" id="two"></div>
-                <p class="produce">Product : Tomatoes</p>
-                <p>Price : 500 per Crate</p>
-                <p>Location : Nairobi</p>
-                <p>Farmer : Ed Sheeran</p>
-                <button> <span>Order Now</span>
-                </button>
+            <div id="popularItems">
+                <div class="products">
+                    <div class="productImg"></div>
+                    <p class="produce">Product : Viazi</p>
+                    <p>Price : 1000 per Gunia</p>
+                    <p>Location : Kiambu</p>
+                    <p>Farmer : Erick Wainaina</p>
+                    <button class="button1"> <span>Order Now</span>
+                    </button>
+                </div>
+                <div class="products">
+                    <div class="productImg" id="two"></div>
+                    <p class="produce">Product : Tomatoes</p>
+                    <p>Price : 500 per Crate</p>
+                    <p>Location : Nairobi</p>
+                    <p>Farmer : Ed Sheeran</p>
+                    <button class="button1"> <span>Order Now</span>
+                    </button>
+                </div>
+                <div class="products">
+                    <div class="productImg" id="three"></div>
+                    <p class="produce">Product : Onions</p>
+                    <p>Price : 200 per kg</p>
+                    <p>Location : Mombasa </p>
+                    <p>Farmer : lil baby</p>
+                    <button class="button1"> <span>Order Now</span>
+                    </button>
+                </div>
+                <div class="products">
+                    <div class="productImg" id="four"></div>
+                    <p class="produce">Product : Carrots</p>
+                    <p>Price : 10000 per Gunia</p>
+                    <p>Location : Egerton</p>
+                    <p>Farmer : Lincoln Kiptoo</p>
+                    <button class="button1"> <span>Order Now</span>
+                    </button>
+                </div>
+                <div class="products">
+                    <div class="productImg"></div>
+                    <p class="produce">Product : Viazi</p>
+                    <p>Price : 1000 per Gunia</p>
+                    <p>Location : Kiambu</p>
+                    <p>Farmer : Erick Wainaina</p>
+                    <button class="button1"> <span>Order Now</span>
+                    </button>
+                </div>
+                <div class="products">
+                    <div class="productImg"></div>
+                    <p class="produce">Product : Viazi</p>
+                    <p>Price : 1000 per Gunia</p>
+                    <p>Location : Kiambu</p>
+                    <p>Farmer : Erick Wainaina</p>
+                    <button class="button1"> <span>Order Now</span>
+                    </button>
+                </div>
+                <div class="products">
+                    <div class="productImg"></div>
+                    <p class="produce">Product : Viazi</p>
+                    <p>Price : 1000 per Gunia</p>
+                    <p>Location : Kiambu</p>
+                    <p>Farmer : Erick Wainaina</p>
+                    <button class="button1"> <span>Order Now</span>
+                    </button>
+                </div>
+                <div class="products">
+                    <div class="productImg"></div>
+                    <p class="produce">Product : Viazi</p>
+                    <p>Price : 1000 per Gunia</p>
+                    <p>Location : Kiambu</p>
+                    <p>Farmer : Erick Wainaina</p>
+                    <button class="button1"> <span>Order Now</span>
+                    </button>
+                </div>
+                <div class="products">
+                    <div class="productImg"></div>
+                    <p class="produce">Product : Viazi</p>
+                    <p>Price : 1000 per Gunia</p>
+                    <p>Location : Kiambu</p>
+                    <p>Farmer : Erick Wainaina</p>
+                    <button class="button1"> <span>Order Now</span>
+                    </button>
+                </div>
             </div>
-            <div class="products">
-                <div class="productImg" id="three"></div>
-                <p class="produce">Product : Onions</p>
-                <p>Price : 200 per kg</p>
-                <p>Location : Mombasa </p>
-                <p>Farmer : lil baby</p>
-                <button> <span>Order Now</span>
-                </button>
-            </div>
-            <div class="products">
-                <div class="productImg" id="four"></div>
-                <p class="produce">Product : Carrots</p>
-                <p>Price : 10000 per Gunia</p>
-                <p>Location : Egerton</p>
-                <p>Farmer : Lincoln Kiptoo</p>
-                <button> <span>Order Now</span>
-                </button>
-            </div>
-            <div class="products">
-                <div class="productImg"></div>
-                <p class="produce">Product : Viazi</p>
-                <p>Price : 1000 per Gunia</p>
-                <p>Location : Kiambu</p>
-                <p>Farmer : Erick Wainaina</p>
-                <button> <span>Order Now</span>
-                </button>
-            </div>
-            <div class="products">
-                <div class="productImg"></div>
-                <p class="produce">Product : Viazi</p>
-                <p>Price : 1000 per Gunia</p>
-                <p>Location : Kiambu</p>
-                <p>Farmer : Erick Wainaina</p>
-                <button> <span>Order Now</span>
-                </button>
-            </div>
-            <div class="products">
-                <div class="productImg"></div>
-                <p class="produce">Product : Viazi</p>
-                <p>Price : 1000 per Gunia</p>
-                <p>Location : Kiambu</p>
-                <p>Farmer : Erick Wainaina</p>
-                <button> <span>Order Now</span>
-                </button>
-            </div>
-            <div class="products">
-                <div class="productImg"></div>
-                <p class="produce">Product : Viazi</p>
-                <p>Price : 1000 per Gunia</p>
-                <p>Location : Kiambu</p>
-                <p>Farmer : Erick Wainaina</p>
-                <button> <span>Order Now</span>
-                </button>
-            </div>
-            <div class="products">
-                <div class="productImg"></div>
-                <p class="produce">Product : Viazi</p>
-                <p>Price : 1000 per Gunia</p>
-                <p>Location : Kiambu</p>
-                <p>Farmer : Erick Wainaina</p>
-                <button> <span>Order Now</span>
-                </button>
-            </div>
-            
         </section>
     </main>
     <script src= "index.js"></script>
