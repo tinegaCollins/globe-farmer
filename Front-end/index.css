@@ -243,6 +243,10 @@ main{
     width: 100%;
     height: auto;
 }
+.buy .buyWrapper input{
+    width: 40px;
+    height: 20px;
+}
 /* button  */
 /* From cssbuttons.io by @alexmaracinaru */
 .cta {
@@ -300,13 +304,36 @@ main{
 /* cartNumber */
 
 .cartNumber{
-    background: #3E8141;
+    background: yellow;
     position: relative;
     height: 17px;
     width: 17px;
     right: 70px;
     border-radius: 50%;
+    /* padding: 2px; */
+    font-size: 13px;
+    padding-left: 4px;
+}
+  /* cart items*/
+
+  .cartItems{
+      position: absolute;
+      top: 65px;
+      right: 80px;
+      z-index: 2070;
+      background: #3E8141;
+      width: 300px;
+      height: max-content;
+      display: none;
+      place-items: center;
+}
+.cartItem{
+    border: 1px solid black;
+    height: 200px;
+    width: 100%;
     display: grid;
     place-items: center;
-    
+}
+.cartItemsOnclick{
+    display: grid;
 }

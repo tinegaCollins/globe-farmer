@@ -57,7 +57,21 @@ add.addEventListener("click",()=>{
 })
 
 //add to cart 
-const cart = document.querySelector(".cta")
-cart.addEventListener("click",()=>{
-    
+const cart = document.querySelector(".cartNumber")
+let imSoFuckingTired = cart.innerHTML
+let number = parseInt(imSoFuckingTired)
+console.log(number)
+if(number<=0){
+    cart.style.display = "none"
+    console.log(number)
+}
+const cta = document.querySelector(".cta")
+cta.addEventListener("click",()=>{
+    cart.innerHTML = number++
+})
+
+const cart909 = document.querySelector(".cart909")
+cart909.addEventListener("click",()=>{
+    let cartitems = document.querySelector(".cartItems")
+    cartitems.classList.toggle("cartItemsOnclick")
 })

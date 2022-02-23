@@ -11,12 +11,24 @@
 </head>
 <body>
     <img id="bars" src="./images/bars-solid.svg" alt="">
+    <div class="cartItems">
+        <div class="cartItem">
+            <div class="cartItemDetails">
+                <div class="checkOut">
+                    <h3>Cart Summary</h3>
+                    <p><p>item's total(1)</p><p>Ksh 4000</p></p>
+                    <p>delivery </p>
+                    <button>CHECKOUT</button>
+                </div>  
+            </div>
+        </div>
+    </div>
     <nav>
         <img id="image"src="./images/logo.png">
         <img class="navImages image1" src="./images/filter-solid.svg">
-        <img class="navImages" src="./images/cart-shopping-solid.svg">
+        <img class="navImages cart909" src="./images/cart-shopping-solid.svg">
         <img class="navImages" src="./images/circle-user-solid.svg" alt="">
-        <div class="cartNumber">3</div>
+        <div class="cartNumber">1</div>
     </nav>
     <input id="search" type="text" placeholder="Search items/Farmer">
     <h2 id="popular">Popular items</h1>
@@ -47,9 +59,9 @@
                 <i class="fa-solid fa-xmark"></i>
                 <div class="buyWrapper">
                     <img src="./images/viazi.jfif" alt="product image">
-                    <p>Farmer : Eric Wainaina</p>
+                    <p class="farmersName">Farmer : Eric Wainaina</p>
                     <p>Price : 1000 per Gunia</p>
-                    <div class="quanitity">
+                    <div class="quantity">
                         <i class="fa-solid fa-plus"></i>
                         <input type="number" id ="addQuantity" placeholder="quantity" value="1">
                         <i class="fa-solid fa-minus"></i>
@@ -149,5 +161,6 @@
         </section>
     </main>
     <script src= "index.js"></script>
+    <script src="test.js"></script>
 </body>
-</html>
+</h
