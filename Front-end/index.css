@@ -317,12 +317,13 @@ main{
   /* cart items*/
 
   .cartItems{
-      position: absolute;
+      position: fixed;
       top: 65px;
       right: 80px;
       z-index: 2070;
       background: #3E8141;
       width: 300px;
+      padding: 30px;
       height: max-content;
       display: none;
       place-items: center;
@@ -336,4 +337,7 @@ main{
 }
 .cartItemsOnclick{
     display: grid;
+}
+.checkOut > button{
+    padding: 10px;
 }

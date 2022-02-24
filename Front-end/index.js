@@ -63,7 +63,6 @@ let number = parseInt(imSoFuckingTired)
 console.log(number)
 if(number<=0){
     cart.style.display = "none"
-    console.log(number)
 }
 const cta = document.querySelector(".cta")
 cta.addEventListener("click",()=>{
@@ -74,4 +73,17 @@ const cart909 = document.querySelector(".cart909")
 cart909.addEventListener("click",()=>{
     let cartitems = document.querySelector(".cartItems")
     cartitems.classList.toggle("cartItemsOnclick")
+})
+
+
+//all veges
+const categories = document.querySelector(".categories")
+const groceries = [...categories.querySelectorAll(".categories p")]
+// console.log(groceries)
+
+groceries.forEach(()=>{
+    addEventListener("click",(e)=>{
+        let word = e.target.innerHTML
+        console.log(word)
+    })
 })

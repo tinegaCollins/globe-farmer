@@ -21,3 +21,7 @@ const explore = document.querySelector("#explore")
 explore.addEventListener("click",()=>{
     window.location.href = "./Front-end/index.html";
 })
+
+
+//grocery types 
+
