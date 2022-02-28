@@ -60,7 +60,6 @@ add.addEventListener("click",()=>{
 const cart = document.querySelector(".cartNumber")
 let imSoFuckingTired = cart.innerHTML
 let number = parseInt(imSoFuckingTired)
-console.log(number)
 if(number<=0){
     cart.style.display = "none"
 }
@@ -75,15 +74,55 @@ cart909.addEventListener("click",()=>{
     cartitems.classList.toggle("cartItemsOnclick")
 })
 
-
-//all veges
-const categories = document.querySelector(".categories")
-const groceries = [...categories.querySelectorAll(".categories p")]
-// console.log(groceries)
-
-groceries.forEach(()=>{
-    addEventListener("click",(e)=>{
-        let word = e.target.innerHTML
-        console.log(word)
+// vegetables categories
+const vegetableCategories = document.querySelector(".categories")
+let vegetables = [...vegetableCategories.querySelectorAll("p")]
+for (let i=0; i<vegetables.length; i++){
+    addEventListener("click", (event)=>{
+    let clickItem = event.target.innerHTML
+    if (clickItem =="Tomatoes"){
+        //code to pull only tomatoes fammers
+    }else if (clickItem =="Irish potatoes"){
+        //code to pull only irish potatoes fammers
+    }else if (clickItem =="Onions"){
+        //code to pull only onions fammers
+    }else if (clickItem =="Carrots"){
+        //code to pull only carrots fammers
+    }else if (clickItem =="Green Peppers"){
+        //code to pull only green peppers fammers
+    }else if (clickItem =="String Beans"){
+        //code to pull only String beans fammers
+    }else if (clickItem =="peas"){
+        //code to pull only peas fammers
+    }else if (clickItem =="Spring Onions"){
+        //code to pull only Spring Onions fammers
+    }else if (clickItem =="Brocolli"){
+        //code to pull only Brocolli fammers
+    }else if (clickItem =="Spinach"){
+        //code to pull only spinach fammers
+    }else if (clickItem =="Sukuma Wiki"){
+        //code to pull only Sukuma Wiki fammers
+    }else if (clickItem =="Indegenous Vegetables"){
+        //code to pull only Indegenous Vegetables fammers
+    }else{
+        return
+    }
     })
+}
+
+
+//removing cart items buttons
+
+let cartitems = document.querySelector(".cartItems")
+
+cartitems.addEventListener("click",(e)=>{
+    if (e.target.classList == "removeButton"){
+        console.log("im in")
+        let newlet = e.target.parentElement
+        cartitems.removeChild(newlet)
+    }
+    else{
+        return
+    }
 })
+
