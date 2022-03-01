@@ -404,3 +404,21 @@ main{
 #checkoutBtn:active {
  transform: translateY(-1px);
 }
+
+/* overlay */
+.overlay{
+    position: fixed;
+    left: -110%;
+    height: 500%;
+    width: 100vw;
+    background: rgba(91, 81, 81, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(91, 81, 81, 0.3);
+    z-index: 1090;
+}
+.newOverlay{
+    left: 0;
+}

@@ -73,12 +73,18 @@ nav.addEventListener("click",(e)=>{
     if(e.target.className == "navImages cart909" || e.target.className == "cartNumber"){
         let cartitems = document.querySelector(".cartItems")
         cartitems.classList.toggle("cartItemsOnclick")
+        let overlay = document.querySelector(".overlay")
+        overlay.classList.toggle("newOverlay")
         if(cartitems.classList == "cartItems cartItemsOnclick"){
             window.addEventListener("click",(e)=>{
-                if(e.target.className == "navImages cart909" || e.target.className == "cartNumber" || e.target.classList =="cartItems cartItemsOnclick" ){
-
+                if(e.target.className == "navImages cart909" || 
+                e.target.className == "cartNumber" || 
+                e.target.classList =="cartItems cartItemsOnclick" || 
+                e.target.classList =="cartItem" || 
+                e.target.classList =="removeButton"){
                 }else{
                     cartitems.classList.remove("cartItemsOnclick")
+                    overlay.classList.remove("newOverlay")
                 }
             })
         }
