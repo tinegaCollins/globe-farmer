@@ -57,22 +57,34 @@ add.addEventListener("click",()=>{
 })
 
 //add to cart 
-const cart = document.querySelector(".cartNumber")
-let imSoFuckingTired = cart.innerHTML
-let number = parseInt(imSoFuckingTired)
-if(number<=0){
-    cart.style.display = "none"
-}
-const cta = document.querySelector(".cta")
-cta.addEventListener("click",()=>{
-    cart.innerHTML = number++
+// const cart = document.querySelector(".cartNumber")
+// let imSoFuckingTired = cart.innerHTML
+// let number = parseInt(imSoFuckingTired)
+// if(number<=0){
+//     cart.style.display = "none"
+// }
+// const cta = document.querySelector(".cta")
+// cta.addEventListener("click",()=>{
+//     cart.innerHTML = number++
+// })
+
+const nav = document.querySelector("#ubuntuNav")
+nav.addEventListener("click",(e)=>{
+    if(e.target.className == "navImages cart909" || e.target.className == "cartNumber"){
+        let cartitems = document.querySelector(".cartItems")
+        cartitems.classList.toggle("cartItemsOnclick")
+        if(cartitems.classList == "cartItems cartItemsOnclick"){
+            window.addEventListener("click",(e)=>{
+                if(e.target.className == "navImages cart909" || e.target.className == "cartNumber" || e.target.classList =="cartItems cartItemsOnclick" ){
+
+                }else{
+                    cartitems.classList.remove("cartItemsOnclick")
+                }
+            })
+        }
+    }
 })
 
-const cart909 = document.querySelector(".cart909")
-cart909.addEventListener("click",()=>{
-    let cartitems = document.querySelector(".cartItems")
-    cartitems.classList.toggle("cartItemsOnclick")
-})
 
 // vegetables categories
 const vegetableCategories = document.querySelector(".categories")
@@ -110,19 +122,19 @@ for (let i=0; i<vegetables.length; i++){
     })
 }
 
+const allCart = document.querySelector(".cartItems")
+allCart.addEventListener("click",(e)=>{
+    if(e.target.className == "removeButton"){
+        let childElement = e.target.parentElement;
+        allCart.removeChild(childElement)
+        //checking if cart is empty
+        let itemInCart = [...document.querySelectorAll(".cartItem")]
+        if(itemInCart<=0){
+            document.querySelector(".emptyCart").style.display = "grid";
+            //cart items to back tf off
 
-//removing cart items buttons
-
-let cartitems = document.querySelector(".cartItems")
-
-cartitems.addEventListener("click",(e)=>{
-    if (e.target.classList == "removeButton"){
-        console.log("im in")
-        let newlet = e.target.parentElement
-        cartitems.removeChild(newlet)
-    }
-    else{
-        return
+        }
     }
 })
+
 

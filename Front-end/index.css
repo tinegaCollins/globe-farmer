@@ -130,7 +130,7 @@ main{
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-evenly;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 30px;
     row-gap: 50px;
@@ -306,18 +306,18 @@ main{
 .cartNumber{
     background: yellow;
     position: relative;
-    height: 17px;
-    width: 17px;
+    height: 13px;
+    width: 13px;
+    display: grid;
+    place-items: center;
     right: 70px;
     border-radius: 50%;
-    /* padding: 2px; */
-    font-size: 13px;
-    padding-left: 4px;
+    font-size: 10px;
 }
   /* cart items*/
 
   .cartItems{
-      position: fixed;
+      position: absolute;
       top: 65px;
       right: 80px;
       z-index: 2070;
@@ -336,6 +336,7 @@ main{
     padding-right: 10px;
     border-radius: 20px;
     padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 .cartItem > button{
     appearance: none;
@@ -344,9 +345,12 @@ main{
     border: none;
     border-radius: 5px;
 }
+.emptyCart{
+    display: none;
+}
 @media screen and (max-width: 780px) {
     .cartItems{
-        position: fixed;
+        position: absolute;
         top: 65px;
         right: 0px;
         width: max-content;
@@ -356,12 +360,14 @@ main{
 @media screen and (max-width: 420px){
     .cartItems{
         width: 100vw;
+        place-items: center;
     }
     .cartItem{
         width: 200px;
         padding-left: 10px;
         padding-right: 10px;
         border-radius: 20px;
+        margin-left: 30px;
     }
 }
 .cartItemsOnclick{
