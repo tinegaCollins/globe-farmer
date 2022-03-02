@@ -43,8 +43,10 @@ const add = document.querySelector(".fa-plus")
 minus.addEventListener("click",()=>{
     let q = document.querySelector("#addQuantity")
     let num = parseInt(q.value)
-    if (num>=0){
+    if (num=>0){
         num--
+    }else{
+        return
     }
     q.value = num
 })
@@ -82,6 +84,7 @@ nav.addEventListener("click",(e)=>{
                 e.target.classList =="cartItems cartItemsOnclick" || 
                 e.target.classList =="cartItem" || 
                 e.target.classList =="removeButton"){
+                    
                 }else{
                     cartitems.classList.remove("cartItemsOnclick")
                     overlay.classList.remove("newOverlay")
@@ -138,7 +141,7 @@ allCart.addEventListener("click",(e)=>{
         if(itemInCart<=0){
             document.querySelector(".emptyCart").style.display = "grid";
             //cart items to back tf off
-
+            
         }
     }
 })

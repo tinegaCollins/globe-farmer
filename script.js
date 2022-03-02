@@ -23,5 +23,10 @@ explore.addEventListener("click",()=>{
 })
 
 
-//grocery types 
+//buyshit
+
+const buyshit = document.querySelector("#buyshit")
+buyshit.addEventListener("click",()=>{
+    window.location.href = "./Front-end/index.html";
+})
 
