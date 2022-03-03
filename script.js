@@ -29,4 +29,8 @@ const buyshit = document.querySelector("#buyshit")
 buyshit.addEventListener("click",()=>{
     window.location.href = "./Front-end/index.html";
 })
+const sellShit = document.querySelector("#sellShit")
+sellShit.addEventListener("click",()=>{
+    window.location.href = "./Front-end/farmersChoice/index.html";
+})
 
