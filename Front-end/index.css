@@ -422,3 +422,33 @@ main{
 .newOverlay{
     left: 0;
 }
+
+.accountDetails{
+    position: absolute;
+    right: 10px;
+    top: 80px;
+    height: 100px;
+    width: 150px;
+    background: #3E8141;
+    z-index: 10990;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    display: none;
+    /* place-items: ; */
+}
+.accountDetailsOnClick{
+   display: block;
+}
+.accountDetails > img {
+    height: 35px;
+    width: 35px;
+}
+.accountDetails > button{
+    appearance: none;
+    outline: none;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+

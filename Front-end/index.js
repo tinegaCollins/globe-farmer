@@ -146,4 +146,17 @@ allCart.addEventListener("click",(e)=>{
     }
 })
 
+//account details button
+
+const account = document.querySelector(".accountPerson")
+account.addEventListener("click",()=>{
+    let accdet = document.querySelector(".accountDetails")
+    accdet.classList.toggle("accountDetailsOnClick")
+})
+
+const logOutBtn = document.querySelector("#logOutBtn")
+logOutBtn.addEventListener("click",()=>{
+    location.reload()
+    //
+})
 
