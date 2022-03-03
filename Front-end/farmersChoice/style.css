@@ -22,6 +22,9 @@ body{
 }
 .wrapper2 > div{
     text-align: center;
+    min-width: 200px;
+    display: grid;
+    place-items: center;
 }
 /* button  */
 button {
