@@ -32,5 +32,7 @@ buyshit.addEventListener("click",()=>{
 const sellShit = document.querySelector("#sellShit")
 sellShit.addEventListener("click",()=>{
     window.location.href = "./Front-end/farmersChoice/index.html";
+//this requires new mode to change it
+Window. Reload() 
 })
 
