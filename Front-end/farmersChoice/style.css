@@ -30,9 +30,8 @@ body{
 button {
     cursor: pointer;
     font-weight: 700;
-    font-family: Helvetica,"sans-serif";
     transition: all .2s;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: 100px;
     background: #3E8141;
     border: 1px solid transparent;
@@ -59,3 +58,66 @@ button {
    button:active {
     transform: scale(0.95);
    }
+
+/* form  */
+form{
+    display: none;
+    place-self: center;
+}
+.card{
+    background: white;
+    border: 1px solid #333333;
+    border-radius: .5rem;
+    padding: .5rem;
+    max-width: 300px;
+    margin: 0 auto;
+    display: none;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5rem;
+    gap: .25rem;
+}
+.form-group:last-child{
+    margin: 0;
+}
+.form-group > label{
+    font-weight: bold;
+    font-size: .8em;
+    color: #333;
+}
+.form-group > select{
+    height: 30px;
+    padding: 0 10px;
+    outline: none;
+    appearance: none;
+    border: none;
+    border-bottom: 1px solid green;
+}
+input{
+    height: 30px;
+    width: 250px;
+    margin-bottom: 20px;
+    outline: none;
+    appearance: none;
+    border: none;
+    border-bottom: 1px solid green;
+    transition: border-color .5s ease;
+    font-size: larger;
+}
+input:focus{
+    border-bottom: 1px solid #B7B108;
+}
+.step-title{
+    margin: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.card.active{
+    display: block;
+}
+.buttonWrapper{
+    display: flex;
+    gap: 20px;
+}

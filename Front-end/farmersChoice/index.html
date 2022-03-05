@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/basket-shopping-solid.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -26,7 +27,7 @@
             <div class="newCustomer">
                 <p>new seller?</p>
                 <h4>Sign up</h4>
-                <button>
+                <button id="signup">
                     <span>Sign up</span>
                     <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
@@ -35,6 +36,88 @@
                   </button>
             </div>
        </div>
+       <form data-multi-step>
+        <div class="card" data-step="1">
+            <h3 class="step-title">Step 1</h3>
+            <h5>We need basic information about you</h5>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Phone Number</label>
+                <input type="number" name="number" id="number" required>
+            </div>
+            <div class="form-group">
+                <label for="password">password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="form-group">
+                <label for="password">repeat password</label>
+                <input type="password" name="password" id="repeatpassword">
+            </div>
+            <button type="button" data-next="">Next</button>
+        </div>
+        
+        <div class="card" data-step>
+                <h3 class="step-title">step 2</h3>
+                <div class="form-group">
+                    <label for="firstName">First name</label>
+                    <input type="text" name="firstName" id="firstName">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last name</label>
+                    <input type="text" name="lastName" id="lastName">
+                </div>
+                <div class="buttonWrapper">
+                    <button type="button" data-previous="">Previous</button>
+                    <button type="button" data-next>Next</button>
+                </div>
+        </div>
+        <div class="card" data-step>
+            <h3 class="step-title">step 3</h3>
+            <div class="form-group">
+                <label for="line">Your product line</label>
+                <select name="line" id="line">
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="cereals">cereals</option>
+                    <option value="spices">spices</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="product">Your main product</label>
+                <input type="text" name="product" id="product">
+            </div>
+            <div class="buttonWrapper">
+                <button type="button" data-previous="">Previous</button>
+                <button type="button" data-next>Next</button>
+            </div>
+    </div>
+        <div class="card" data-step>
+            <h3 class="step-title">last Step</h3>
+            <div class="form-group">
+                <label for="county">County</label>
+                <input type="text" name="county" id="county">
+            </div>
+            <div class="form-group">
+                <label for="town">Nearest Town</label>
+                <input type="text" name="town" id="town">
+            </div>
+            <div class="form-group">
+                <label for="center">Nearest Center</label>
+                <input type="text" name="center" id="center">
+            </div>
+           <div class="buttonWrapper">
+            <button type="button" data-previous>Previous</button>
+            <button type="submit">submit</button>
+           </div>
+        </div>
+        
+    </form>
+    <div class="analysedData">
+        
+    </div>
     </div>
 </body>
 </html>
