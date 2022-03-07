@@ -152,7 +152,7 @@ main{
     margin-bottom: auto;
     border-radius: 5px;
 }
-/* From cssbuttons.io by @BHARGAVPATEL1244 */
+/* order now   */
 #popularItems .products button {
     outline: none;
     cursor: pointer;
@@ -204,15 +204,6 @@ main{
    #popularItems .products button:hover::before {
     transform: translate3d(100%, 0, 0);
    }
-#two{
-    background-image: url(./images/nyanya.jpg) !important;
-}  
-#three{
-    background-image: url(./images/onion.jfif) !important;
-}
-#four{
-    background-image: url(./images/carrots.jpg) !important;
-}
 
 /* order now button */
 

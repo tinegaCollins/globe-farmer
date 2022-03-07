@@ -6,24 +6,6 @@ navBar.addEventListener("click",()=>{
     side.classList.toggle("moveSidebar")
 })
 
-
-//buttons 
-
-const buttons = document.querySelectorAll(".button1");
-const buttonsArray = Array.from(buttons);
-for(let i=0; i < buttonsArray.length; i++){
-    let k = i + 1;
-    buttonsArray[i].addEventListener("click",()=>{
-        let popularItems = document.querySelector("#popularItems")
-        popularItems.style.display = "none"
-        let buy = document.querySelector(".buy")
-        buy.style.display = "flex"
-        let h2  = document.querySelector("#popular")
-        h2.innerHTML = ""
-        // console.log(`button no ${k}`)
-    });
-}
-
 //x button 
  const xbutton = document.querySelector(".fa-xmark")
 xbutton.addEventListener("click",()=>{
@@ -57,19 +39,6 @@ add.addEventListener("click",()=>{
         num++
     q.value = num
 })
-
-//add to cart 
-// const cart = document.querySelector(".cartNumber")
-// let imSoFuckingTired = cart.innerHTML
-// let number = parseInt(imSoFuckingTired)
-// if(number<=0){
-//     cart.style.display = "none"
-// }
-// const cta = document.querySelector(".cta")
-// cta.addEventListener("click",()=>{
-//     cart.innerHTML = number++
-// })
-
 const nav = document.querySelector("#ubuntuNav")
 nav.addEventListener("click",(e)=>{
     if(e.target.className == "navImages cart909" || e.target.className == "cartNumber"){
@@ -152,6 +121,9 @@ const account = document.querySelector(".accountPerson")
 account.addEventListener("click",()=>{
     let accdet = document.querySelector(".accountDetails")
     accdet.classList.toggle("accountDetailsOnClick")
+    window.addEventListener("click",()=>{
+        accdet.classList.toggle("accountDetailsOnClick")
+    })
 })
 
 const logOutBtn = document.querySelector("#logOutBtn")
@@ -159,4 +131,22 @@ logOutBtn.addEventListener("click",()=>{
     location.reload()
     //
 })
+
+
+//buy buttons
+const buttons = [...document.querySelectorAll(".button1")];
+for(let i=0; i < buttons.length; i++){
+    let k = i + 1;
+    buttons[i].addEventListener("click",(e)=>{
+        let target = e.target.parentElement.children;
+        console.log(target)
+        let popularItems = document.querySelector("#popularItems")
+        popularItems.style.display = "none"
+        let buy = document.querySelector(".buy")
+        buy.style.display = "flex"
+        let h2  = document.querySelector("#popular")
+        h2.innerHTML = ""
+        
+    });
+}
 
