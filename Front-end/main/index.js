@@ -150,3 +150,14 @@ for(let i=0; i < buttons.length; i++){
     });
 }
 
+
+const customers = [
+    {
+        name: 'farmer1',
+        item: 'viazi',
+        location: 'molo',
+        pickupPoint: 'nakuru',
+        price: 1000
+    }
+]
+console.log(customers[0].location)

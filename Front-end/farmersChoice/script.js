@@ -50,3 +50,10 @@ function showCurrentStep(){
         step.classList.toggle("active", index === currentStep)
     })
 }
+
+//submit button 
+const submit = document.querySelector("#submitData");
+login.addEventListener("click",()=>{
+    window.open("..\seller\index.html", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+})
+

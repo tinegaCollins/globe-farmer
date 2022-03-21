@@ -10,7 +10,7 @@ menuButton.addEventListener("click",()=>{
 //log in  
 const login = document.querySelector("#login");
 login.addEventListener("click",()=>{
-    window.open("./Front-end/login.html", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+    window.open("./Front-end/logins/login.html", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
 })
 
 
@@ -19,7 +19,7 @@ login.addEventListener("click",()=>{
 const explore = document.querySelector("#explore")
 
 explore.addEventListener("click",()=>{
-    window.location.href = "./Front-end/index.html";
+    window.location.href = "./Front-end/main/index.html";
 })
 
 
@@ -27,7 +27,7 @@ explore.addEventListener("click",()=>{
 
 const buyshit = document.querySelector("#buyshit")
 buyshit.addEventListener("click",()=>{
-    window.location.href = "./Front-end/index.html";
+    window.location.href = "./Front-end/main/index.html";
 })
 const sellShit = document.querySelector("#sellShit")
 sellShit.addEventListener("click",()=>{
