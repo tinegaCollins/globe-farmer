@@ -136,7 +136,6 @@ main{
     row-gap: 50px;
 }
 #popularItems .products{
-    height: max-content;
     width: 200px;
     font-weight: 500;
     border: 3px solid #3E8141;
@@ -144,13 +143,18 @@ main{
     padding: 15px;
 }
 #popularItems .products .productImg{
-    height: 150px;
     width: 98%;
-    background: url(./images/viazi.jfif) center;
-    background-repeat: no-repeat;
-    background-size: contain !important;
-    margin-bottom: auto;
+    margin: auto;
     border-radius: 5px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+#popularItems .products .productImg > img {
+    height: 150px;
+    width: auto;
+    margin: auto;
+    overflow: hidden;
 }
 /* order now   */
 #popularItems .products button {
