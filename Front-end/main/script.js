@@ -120,9 +120,13 @@ for (let i = 0; i < buttons.length; i++) {
         itemImage.setAttribute('src', `${image}`)
         let farmerName = parent.querySelector("#farmersName")
         // console.log(farmerName)
-        let id =parent.getAttribute("data-id");
+        let dataid = parent.getAttribute("data-id");
         for (let j = 0; j < sellers.length; j++) {
-            console.log(sellers[i])
+            if (sellers[j].id == dataid){
+               //aluta continua
+               console.log(sellers[j])
+            }
+
         }
     } )
 }
