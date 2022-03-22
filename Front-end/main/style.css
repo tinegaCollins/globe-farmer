@@ -142,19 +142,12 @@ main{
     border: 3px solid #3E8141;
     border-radius: 10px;
     padding: 15px;
-}
-#popularItems .products .productImg{
-    width: 98%;
-    margin: auto;
-    border-radius: 5px;
-    display: grid;
-    place-items: center;
     overflow: hidden;
 }
-#popularItems .products .productImg > img {
+#popularItems .products img {
+    width: 80%;
     height: 150px;
     width: auto;
-    margin: auto;
     overflow: hidden;
 }
 /* order now   */
@@ -432,3 +425,28 @@ main{
     border-radius: 5px;
 }
 
+/* item prompt  */
+
+.buyCustomerPrompt{
+    display: flex;
+    flex-direction: row;
+}
+#itemImg{ 
+   width: 400px;
+   height: auto;
+   margin-right: auto;
+   margin-left: 30px;
+   border-radius: 10px;
+}
+#farmersContent{
+    border-radius: 10px;
+    height: 400px;
+    width: 300px;
+    border: 2px solid black;
+    background: #3E8141;
+}
+#farmersContent > img{
+    height: 150px;
+    width: 150px;
+
+}

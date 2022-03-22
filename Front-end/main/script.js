@@ -103,27 +103,27 @@ logOutBtn.addEventListener("click",()=>{
 
 
 //order now
-function orderNowPromp(){
-    let popularItems = document.querySelector("#popularItems")
-    popularItems.style.display = "none"
-    let customerPrompt = document.querySelector(".buyCustomerPrompt")
-    customerPrompt.style.display = "block"
-}
+
 const buttons = [...document.querySelectorAll(".button1")]
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click",orderNowPromp )
 }
+function orderNowPromp(e){
+    let popularItems = document.querySelector("#popularItems")
+    popularItems.style.display = "none"
+    let customerPrompt = document.querySelector(".buyCustomerPrompt")
+    customerPrompt.style.display = "flex"
+    let parent= e.target.parentElement.parentElement
+    // console.log(parent)
+    let image = parent.querySelector("img").getAttribute("src")
+    console.log(image)
+    let itemImage = document.querySelector("#itemImg")
+    // console.log(itemImage)
+    itemImage.setAttribute('src', `${image}`)
+    let farmerName = parent.querySelector("#farmersName")
+    console.log(farmerName)
+}
 
-
-const customers = [
-    {
-        name: 'farmer1',
-        item: 'viazi',
-        location: 'molo',
-        pickupPoint: 'nakuru',
-        price: 1000
-    }
-]
 
 //x button 
 const xbutton = document.querySelector(".fa-xmark")
@@ -138,3 +138,104 @@ xbutton.addEventListener("click",()=>{
         let h2  = document.querySelector("#popular")
         h2.innerHTML = "Popular Items"
 })
+
+//jason data for sellers
+
+const sellers = [
+    {
+        id : 0001,
+        name : "lincoln kiptoo",
+        location: "Egerton",
+        products : [
+            {
+                item : "carrots",
+                price: " 10000 per gunia",
+            },
+            //places to add new items
+        ]
+    },
+    {
+        id : 0002,
+        name : "tuya mohan",
+        location: "kisii",
+        products : [
+            {
+                item : "green pepper",
+                price: " 1000 per gunia",
+            },
+            //places to add new items
+        ]
+    },
+    {
+        id : 0003,
+        name : "boogie hoodie",
+        location: "nyeri",
+        products : [
+            {
+                item : "string beans",
+                price: "500 per crate",
+            },
+            //places to add new items
+        ]
+    },
+    {
+        id : 0004,
+        name : "kygo",
+        location: "moyale",
+        products : [
+            {
+                item : "peas",
+                price: "200 per kg",
+            },
+            //places to add new items
+        ]
+    },
+    {
+        id : 0005,
+        name : "taylor swift",
+        location: "kiambu",
+        products : [
+            {
+                item : "spring onions",
+                price: " 1000 per gunia",
+            },
+            //places to add new items
+        ]
+    },    {
+        id : 0006,
+        name : "emeli sande",
+        location: "eldoret",
+        products : [
+            {
+                item : "brocolli",
+                price: "160 per kg",
+            },
+            //places to add new items
+        ]
+    },
+    {
+        id : 0007,
+        name : "ed sheeran",
+        location: "kisumu",
+        products : [
+            {
+                item : "spinach",
+                price: "500 per kg",
+            },
+            //places to add new items
+        ]
+    },
+    {
+        id : 0007,
+        name : "lincoln kiptoo",
+        location: "Egerton",
+        products : [
+            {
+                item : "carrots",
+                price: " 10000 per gunia",
+            },
+            //places to add new items
+        ]
+    }
+    
+]
