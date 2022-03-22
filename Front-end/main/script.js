@@ -106,25 +106,26 @@ logOutBtn.addEventListener("click",()=>{
 
 const buttons = [...document.querySelectorAll(".button1")]
 for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click",orderNowPromp )
+    buttons[i].addEventListener("click", (e)=>{
+        let popularItems = document.querySelector("#popularItems")
+        popularItems.style.display = "none"
+        let customerPrompt = document.querySelector(".buyCustomerPrompt")
+        customerPrompt.style.display = "flex"
+        let parent= e.target.parentElement.parentElement
+        // console.log(parent)
+        let image = parent.querySelector("img").getAttribute("src")
+        console.log(image)
+        let itemImage = document.querySelector("#itemImg")
+        // console.log(itemImage)
+        itemImage.setAttribute('src', `${image}`)
+        let farmerName = parent.querySelector("#farmersName")
+        // console.log(farmerName)
+        let id =parent.getAttribute("data-id");
+        for (let j = 0; j < sellers.length; j++) {
+            console.log(sellers[i])
+        }
+    } )
 }
-function orderNowPromp(e){
-    let popularItems = document.querySelector("#popularItems")
-    popularItems.style.display = "none"
-    let customerPrompt = document.querySelector(".buyCustomerPrompt")
-    customerPrompt.style.display = "flex"
-    let parent= e.target.parentElement.parentElement
-    // console.log(parent)
-    let image = parent.querySelector("img").getAttribute("src")
-    console.log(image)
-    let itemImage = document.querySelector("#itemImg")
-    // console.log(itemImage)
-    itemImage.setAttribute('src', `${image}`)
-    let farmerName = parent.querySelector("#farmersName")
-    console.log(farmerName)
-}
-
-
 //x button 
 const xbutton = document.querySelector(".fa-xmark")
 if (window.innerWidth < 480) {
@@ -143,7 +144,7 @@ xbutton.addEventListener("click",()=>{
 
 const sellers = [
     {
-        id : 0001,
+        id : 1,
         name : "lincoln kiptoo",
         location: "Egerton",
         products : [
@@ -155,7 +156,7 @@ const sellers = [
         ]
     },
     {
-        id : 0002,
+        id : 2,
         name : "tuya mohan",
         location: "kisii",
         products : [
@@ -167,7 +168,7 @@ const sellers = [
         ]
     },
     {
-        id : 0003,
+        id : 3,
         name : "boogie hoodie",
         location: "nyeri",
         products : [
@@ -179,7 +180,7 @@ const sellers = [
         ]
     },
     {
-        id : 0004,
+        id : 4,
         name : "kygo",
         location: "moyale",
         products : [
@@ -191,7 +192,7 @@ const sellers = [
         ]
     },
     {
-        id : 0005,
+        id : 5,
         name : "taylor swift",
         location: "kiambu",
         products : [
@@ -202,7 +203,7 @@ const sellers = [
             //places to add new items
         ]
     },    {
-        id : 0006,
+        id :6,
         name : "emeli sande",
         location: "eldoret",
         products : [
@@ -214,7 +215,7 @@ const sellers = [
         ]
     },
     {
-        id : 0007,
+        id : 7,
         name : "ed sheeran",
         location: "kisumu",
         products : [
@@ -226,16 +227,63 @@ const sellers = [
         ]
     },
     {
-        id : 0007,
-        name : "lincoln kiptoo",
-        location: "Egerton",
+        id :8,
+        name : "pink",
+        location: "nyamira",
         products : [
             {
-                item : "carrots",
-                price: " 10000 per gunia",
+                item : "sukuma wiki",
+                price: " 2000 per gunia",
             },
             //places to add new items
         ]
-    }
-    
+    },
+    {
+        id : 9,
+        name : "justin jeso",
+        location: "kisii",
+        products : [
+            {
+                item : "Indegenous vegetables",
+                price: " 1000 per gunia",
+            },
+            //places to add new items
+        ]
+    },
+    {
+        id : 10,
+        name : "Erick wainaina",
+        location: "kiambu",
+        products : [
+            {
+                item : "irish potatoes",
+                price: " 1000 per gunia",
+            },
+            //places to add new items
+        ]
+    },
+    {
+        id : 11,
+        name : "collins",
+        location: "nairobi",
+        products : [
+            {
+                item : "tomatoes",
+                price: "500 per crate",
+            },
+            //places to add new items
+        ]
+    },
+    {
+        id : 12,
+        name : "lil baby",
+        location: "mombasa",
+        products : [
+            {
+                item : "onions",
+                price: "200 per kg",
+            },
+            //places to add new items
+        ]
+    },
 ]

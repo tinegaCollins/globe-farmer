@@ -127,7 +127,7 @@ main{
 }
 /* fiixxxxxxxdxxxxxxx */
 #popularItems {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-evenly;
@@ -428,7 +428,7 @@ main{
 /* item prompt  */
 
 .buyCustomerPrompt{
-    display: flex;
+    display: none;
     flex-direction: row;
 }
 #itemImg{ 
