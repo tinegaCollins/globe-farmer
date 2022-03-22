@@ -125,8 +125,9 @@ main{
         z-index: 1070;
     }
 }
+/* fiixxxxxxxdxxxxxxx */
 #popularItems {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-evenly;
@@ -211,37 +212,21 @@ main{
 
 /* order now button */
 
-.buy{
+.buyCustomerPrompt{
     width: 70vw;
     height: max-content;
     border-radius: 10px;
-    display: none;
+    display: block;
     justify-content: center;
     align-items: center;
     padding: 20px;
     flex-direction: column;
     margin-top: 40px;
 }
-.buy .fa-xmark{
-    justify-self: flex-end;
-    align-self: flex-end;
-    font-size: 30px;
-}
-.buy .buyWrapper{
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    flex-direction: column;
-}
-.buy .buyWrapper img{
-    width: 100%;
-    height: auto;
-}
-.buy .buyWrapper input{
-    width: 40px;
-    height: 20px;
+.buyCustomerPrompt .fa-xmark{
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
 /* button  */
 .cta {

@@ -6,39 +6,8 @@ navBar.addEventListener("click",()=>{
     side.classList.toggle("moveSidebar")
 })
 
-//x button 
- const xbutton = document.querySelector(".fa-xmark")
-xbutton.addEventListener("click",()=>{
-    let popularItems = document.querySelector("#popularItems")
-        popularItems.style.display = "flex"
-        let buy = document.querySelector(".buy")
-        buy.style.display = "none"
-        let h2  = document.querySelector("#popular")
-        h2.innerHTML = "Popular Items"
-})
 
 
-//add and minus value on checklist
-
-const minus = document.querySelector(".fa-minus")
-const add = document.querySelector(".fa-plus")
-minus.addEventListener("click",()=>{
-    let q = document.querySelector("#addQuantity")
-    let num = parseInt(q.value)
-    if (num=>0){
-        num--
-    }else{
-        return
-    }
-    q.value = num
-})
-
-add.addEventListener("click",()=>{
-    let q = document.querySelector("#addQuantity")
-    let num = parseInt(q.value)
-        num++
-    q.value = num
-})
 const nav = document.querySelector("#ubuntuNav")
 nav.addEventListener("click",(e)=>{
     if(e.target.className == "navImages cart909" || e.target.className == "cartNumber"){
@@ -133,21 +102,16 @@ logOutBtn.addEventListener("click",()=>{
 })
 
 
-//buy buttons
-const buttons = [...document.querySelectorAll(".button1")];
-for(let i=0; i < buttons.length; i++){
-    let k = i + 1;
-    buttons[i].addEventListener("click",(e)=>{
-        let target = e.target.parentElement.children;
-        console.log(target)
-        let popularItems = document.querySelector("#popularItems")
-        popularItems.style.display = "none"
-        let buy = document.querySelector(".buy")
-        buy.style.display = "flex"
-        let h2  = document.querySelector("#popular")
-        h2.innerHTML = ""
-        
-    });
+//order now
+function orderNowPromp(){
+    let popularItems = document.querySelector("#popularItems")
+    popularItems.style.display = "none"
+    let customerPrompt = document.querySelector(".buyCustomerPrompt")
+    customerPrompt.style.display = "block"
+}
+const buttons = [...document.querySelectorAll(".button1")]
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click",orderNowPromp )
 }
 
 
@@ -160,4 +124,17 @@ const customers = [
         price: 1000
     }
 ]
-console.log(customers[0].location)
+
+//x button 
+const xbutton = document.querySelector(".fa-xmark")
+if (window.innerWidth < 480) {
+    xbutton.classList.remove("fa-2x")
+}
+xbutton.addEventListener("click",()=>{
+    let popularItems = document.querySelector("#popularItems")
+        popularItems.style.display = "flex"
+        let buy = document.querySelector(".buyCustomerPrompt")
+        buy.style.display = "none"
+        let h2  = document.querySelector("#popular")
+        h2.innerHTML = "Popular Items"
+})

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,25 +75,13 @@
             </div>
         </section>
         <section id="main">
-            <div class="buy">
-                <i class="fa-solid fa-xmark"></i>
-                <div class="buyWrapper">
-                    <img src="" alt="product image">
-                    <p class="farmersName">Farmer : Eric Wainaina</p>
-                    <p>Price : 1000 per Gunia</p>
-                     <div class="quantity">
-                        <i class="fa-solid fa-plus"></i>
-                        <input type="number" id ="addQuantity" placeholder="quantity" value="1">
-                        <i class="fa-solid fa-minus"></i>
-                    </div>
-                    <p>pick up point: nakuru Town</p>
-                    <button class="cta">
-                        <span class="hover-underline-animation"> Add to cart </span>
-                        <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
-                          <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
-                        </svg>
-                      </button>
-                </div>
+            <div class="buyCustomerPrompt">
+                <!-- buyCustomerPromt -->
+                <i class="fa-solid fa-xmark fa-2x"></i>
+                <section id="itemImg"></section>
+                <section id="farmersContent"></section>
+                <section id="textBox"></section>
+                <p>some shit is supposed to be dispalyed</p>
             </div>
             <div id="popularItems">
                 <div class="products">
@@ -207,6 +195,6 @@
             </div>
         </section>
     </main>
-    <script src= "index.js"></script>
+    <script src= "script.js"></script>
 </body>
 </h
