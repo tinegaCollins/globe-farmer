@@ -114,7 +114,7 @@ for (let i = 0; i < buttons.length; i++) {
         let parent= e.target.parentElement.parentElement
         // console.log(parent)
         let image = parent.querySelector("img").getAttribute("src")
-        console.log(image)
+        // console.log(image)
         let itemImage = document.querySelector("#itemImg")
         // console.log(itemImage)
         itemImage.setAttribute('src', `${image}`)
@@ -124,7 +124,17 @@ for (let i = 0; i < buttons.length; i++) {
         for (let j = 0; j < sellers.length; j++) {
             if (sellers[j].id == dataid){
                //aluta continua
-               console.log(sellers[j])
+               let name = sellers[j].name
+               let location = sellers[j].location
+               let product = sellers[j].products[0].item
+               let price = sellers[j].products[0].price
+               let phone = sellers[j].phone
+               console.log(name,location,product,price,phone)
+               document.querySelector("#name").textContent = name
+               document.querySelector("#location").textContent = location
+               document.querySelector("#product").textContent = product
+               document.querySelector("#price").textContent = price
+               document.querySelector("#phone").textContent = phone
             }
 
         }
@@ -151,6 +161,7 @@ const sellers = [
         id : 1,
         name : "lincoln kiptoo",
         location: "Egerton",
+        phone : +254791729544,
         products : [
             {
                 item : "carrots",
@@ -163,6 +174,7 @@ const sellers = [
         id : 2,
         name : "tuya mohan",
         location: "kisii",
+        phone : +254791729544,
         products : [
             {
                 item : "green pepper",
@@ -175,6 +187,7 @@ const sellers = [
         id : 3,
         name : "boogie hoodie",
         location: "nyeri",
+        phone : +254791729544,
         products : [
             {
                 item : "string beans",
@@ -187,6 +200,7 @@ const sellers = [
         id : 4,
         name : "kygo",
         location: "moyale",
+        phone : +254791729544,
         products : [
             {
                 item : "peas",
@@ -199,6 +213,7 @@ const sellers = [
         id : 5,
         name : "taylor swift",
         location: "kiambu",
+        phone : +254791729544,
         products : [
             {
                 item : "spring onions",
@@ -210,6 +225,7 @@ const sellers = [
         id :6,
         name : "emeli sande",
         location: "eldoret",
+        phone : +254791729544,
         products : [
             {
                 item : "brocolli",
@@ -222,6 +238,7 @@ const sellers = [
         id : 7,
         name : "ed sheeran",
         location: "kisumu",
+        phone : +254791729544,
         products : [
             {
                 item : "spinach",
@@ -234,6 +251,7 @@ const sellers = [
         id :8,
         name : "pink",
         location: "nyamira",
+        phone : +254791729544,
         products : [
             {
                 item : "sukuma wiki",
@@ -246,6 +264,7 @@ const sellers = [
         id : 9,
         name : "justin jeso",
         location: "kisii",
+        phone : +254791729544,
         products : [
             {
                 item : "Indegenous vegetables",
@@ -258,6 +277,7 @@ const sellers = [
         id : 10,
         name : "Erick wainaina",
         location: "kiambu",
+        phone : +254791729544,
         products : [
             {
                 item : "irish potatoes",
@@ -270,6 +290,7 @@ const sellers = [
         id : 11,
         name : "collins",
         location: "nairobi",
+        phone : +254791729544,
         products : [
             {
                 item : "tomatoes",
@@ -282,6 +303,7 @@ const sellers = [
         id : 12,
         name : "lil baby",
         location: "mombasa",
+        phone : +254791729544,
         products : [
             {
                 item : "onions",

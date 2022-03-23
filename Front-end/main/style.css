@@ -87,6 +87,10 @@ main{
 #sideBar .location,.categories{
     margin-left: 20px;
 }
+.categories{
+    overflow-y: scroll;
+    height: 100vh;
+}
 #sideBar .categories p, #sideBar .location p{
     padding: 10px;
 }
@@ -430,23 +434,53 @@ main{
 .buyCustomerPrompt{
     display: none;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 #itemImg{ 
-   width: 400px;
+   width: 500px;
    height: auto;
    margin-right: auto;
    margin-left: 30px;
-   border-radius: 10px;
+   justify-self: flex-start;
+   align-self: flex-start;
 }
 #farmersContent{
-    border-radius: 10px;
-    height: 400px;
+    height: 100vh;
     width: 300px;
     border: 2px solid black;
     background: #3E8141;
+    justify-self: flex-end;
+    align-self: flex-end;
+    border-radius: 5px;
 }
 #farmersContent > img{
     height: 150px;
     width: 150px;
-
+    margin-left: 30px;
+    margin-top: 20px;
 }
+#sellerInfo{
+    margin-left: 30px;
+}
+#negotiate{
+    height: 40px;
+    width: 90%;
+    background: cyan;
+    text-align: center;
+    font-weight: 500;
+    font-size: large;
+    padding-top: 10px;
+    margin-top: 40px;
+}
+#textBox{
+    width: 600px;
+    position: relative;
+    bottom: 100px;
+    right: 170px;
+    text-align: center;
+}
+#textBox > input{
+    height: 40px;
+    width: 400px;
+}
+
