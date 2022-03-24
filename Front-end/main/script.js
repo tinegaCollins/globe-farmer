@@ -135,6 +135,7 @@ for (let i = 0; i < buttons.length; i++) {
                document.querySelector("#product").textContent = product
                document.querySelector("#price").textContent = price
                document.querySelector("#phone").textContent = phone
+               document.querySelector("#textBox h2 span").textContent = name
             }
 
         }

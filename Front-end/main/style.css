@@ -483,4 +483,11 @@ main{
     height: 20px;
     width: 400px;
 }
+#startchart{
+    width: 60%;
+    height: 50vh;
+    border: 1px solid black;
+    margin: 30px auto 30px auto;
+}
+
 
