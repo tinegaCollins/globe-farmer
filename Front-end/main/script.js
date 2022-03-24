@@ -230,7 +230,7 @@ const sellers = [
             {
                 item : "brocolli",
                 price: "160 per kg",
-            },
+            }
             //places to add new items
         ]
     },
