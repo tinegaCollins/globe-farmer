@@ -51,9 +51,16 @@ function showCurrentStep(){
     })
 }
 
-//submit button 
-const submit = document.querySelector("#submitData");
-login.addEventListener("click",()=>{
-    window.open("..\seller\index.html", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
-})
+const submitButton = document.querySelector("#submitData")
+submitButton.addEventListener("click", getAllData)
+function getAllData(e){
+    e.preventDefault();
+    let phone = document.querySelector("#number").value
+    let firstName = document.querySelector("#firstName").value
+    let lastName = document.querySelector("#lastName").value
+    let name = firstName + " " + lastName
+    let town = document.querySelector("#town").value
+    window.location.href = "../post-stuff/index.html";
+}
+
 
