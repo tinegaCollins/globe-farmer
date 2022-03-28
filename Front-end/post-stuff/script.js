@@ -12,4 +12,6 @@ var newCustomer ={
     ]
 }
 
-module.exports = newCustomer
+document.querySelector("#post").addEventListener("click",()=>{
+    window.location.href = "../main/index.html";
+})
