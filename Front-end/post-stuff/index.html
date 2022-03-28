@@ -2,10 +2,24 @@
 <html lang="en">
 <head>
     <style>
+        body{
+            text-align: center;
+        }
         img{
             height: 120px !important;
             width: 150px;
             margin-bottom: 20px;
+        }
+        input{
+            height: 30px;
+            width: 250px;
+            margin-bottom: 20px;
+            outline: none;
+            appearance: none;
+            border: none;
+            border-bottom: 1px solid green;
+            transition: border-color .5s ease;
+            font-size: larger;
         }
     </style>
     <meta charset="UTF-8">
@@ -16,6 +30,7 @@
 </head>
 <body>
     <h1>post you product on fresh pickens</h1>
+    <input type="text">
     <img src="../images/logo.png">
     <input type="file" name="myImage" accept="image/x-png,image/gif,image/jpeg" />
 </body>
