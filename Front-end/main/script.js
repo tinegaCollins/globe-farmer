@@ -314,3 +314,18 @@ const sellers = [
         ]
     },
 ]
+//send buton
+let sendButton = document.querySelector(".chat-window button")
+sendButton.addEventListener("click",(e)=>{
+    e.preventDefault()
+    let textValue = document.querySelector(".chat-window input").value
+    console.log(textValue)
+    let li = document.createElement("li")
+    li.classList.add("to")
+    li.textContent = textValue
+    document.querySelector(".chat-thread").appendChild(li)
+})
+
+function sendTextMessage(){
+    
+}

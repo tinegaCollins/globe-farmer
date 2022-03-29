@@ -473,21 +473,62 @@ main{
     margin-top: 40px;
 }
 #textBox{
-    width: 600px;
+    width: 650px;
     position: relative;
     bottom: 100px;
     right: 170px;
     text-align: center;
-}
-#textBox > input{
-    height: 20px;
-    width: 400px;
+
 }
 #startchart{
-    width: 60%;
-    height: 50vh;
+    width: 65%;
+    min-height: 50vh;
     border: 1px solid black;
     margin: 30px auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
 }
 
+/* chartbox */
+.chat-window{
+    margin-top: auto;
+}
+.chat-window input{
+    height: 30px;
+    width: 250px;
+    margin-bottom: 20px;
+    outline: none;
+    appearance: none;
+    border: none;
+    border-bottom: 1px solid green;
+    transition: border-color .5s ease;
+    font-size: larger;
+}
+.chat-window button{
+    padding: 10px;
+    background: #3E8141;
+    outline: none;
+}
+
+.chat-thread{
+    list-style: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    row-gap: 10px;
+}
+.from{
+    margin-right: auto;
+    background: cyan;
+    padding: 5px;
+    border-radius: 5px;
+}
+.to{
+    margin-left: auto;
+    background: green;
+    padding: 5px;
+    border-radius: 5px;
+}
 
