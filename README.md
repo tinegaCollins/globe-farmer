@@ -1,6 +1,24 @@
-###Team project for my Under graduate degree
-##team members [john](https://github.com/John2836)
-#hosted on
-[fresh pickens](https://fresh-pickens.netlify.app/)
+# fresh
 
-the project is about a grocery store that helps to eradicate the countless middlemen in the groceries/perishable goods industry.
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
