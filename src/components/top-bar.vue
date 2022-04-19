@@ -1,18 +1,21 @@
 <template>
    <div class="content">
-      <img src="../assets/logo.png" alt="company logo">
+      <img src="../assets/svglogos/logo.png" alt="company logo">
       <div class="details">
          <div class="user" @click="showUser">
-            <img src="../assets/user-solid.svg" alt="user">
+            <img src="../assets//svglogos/user-solid.svg" alt="user">
             <span v-if="showUserData">{{user}}</span>
          </div> 
          <div class="cart" @click="showCart">
-            <img src="../assets/cart.svg" alt="cart">
+            <img src="../assets//svglogos/cart.svg" alt="cart">
             <span v-if="showCartData">{{cart}}</span>
          </div>
       </div>
    </div>
-   <input type="text" placeholder="search for items/farmer">
+   <div class="after">
+         <img src="../assets//svglogos/bars-solid.svg" alt="" srcset="" @click="sideBarMove">
+         <input type="text" placeholder="search for items/farmer">
+   </div>
 </template>
 
 <script>
@@ -31,6 +34,10 @@ export default {
       },
       showCart() {
          this.showCartData = !this.showCartData
+      },
+      sideBarMove() {
+         //function to emit a event to parent component
+         this.$emit('sideBarMove', this.classmove)
       }
    }
 
@@ -42,6 +49,7 @@ export default {
        height: 30%;
        display: flex;
        margin-top: 20px;
+       align-items: center;
     }
     img{
        height: 25px;
@@ -60,11 +68,33 @@ export default {
        justify-content: space-around;
     }
     input{
-       width: 300px;
+       width: 60%;
        height: 30px;
-       border-radius: 5px;
-       border: 1px solid #ccc;
+       border: none;
+       outline: none;
+       border-bottom: 1px solid green;
        padding: 0 10px;
-       margin: 0 auto 0 auto;
+       margin-left: 20%;
+       color: green;
+    }
+    /* edit this when adding cart and user login information */
+    .cart, .user{
+       display: flex;
+       flex-direction: column;
+    }
+    @media screen and (max-width: 480px){
+       img{
+          height: 20px;
+       }
+       .content > img {
+          height: 50px;
+          margin-left: 0px;
+       }
+    }
+    .after{
+       margin-top: 10px;
+    }
+    .after > img{
+        margin-left: 10px;
     }
 </style>
