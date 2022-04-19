@@ -1,26 +1,31 @@
 <template>
-   <h1>newwwwwww</h1>
+    <topBar/>
+    <div class="maincontent">
+        <navBar/>
+        <router-view/>
+    </div>
 </template>
 
+<script>
+
+import topBar from './components/top-bar.vue'
+import navBar from './components/sideBar.vue'
+
+//import css for this  for assets folder
+import './assets/styles.css' 
+
+
+export default {
+  components :{
+    topBar,
+    navBar
+  }
+
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+    .maincontent{
+      margin-top: 50px;
+    }
 </style>
