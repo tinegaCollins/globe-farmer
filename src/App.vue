@@ -1,31 +1,21 @@
 <template>
-    <topBar/>
-    <div class="maincontent">
-        <navBar/>
-        <router-view/>
-    </div>
+  <appTopBar/>
 </template>
 
 <script>
 
-import topBar from './components/top-bar.vue'
-import navBar from './components/sideBar.vue'
 
-//import css for this  for assets folder
-import './assets/styles.css' 
-
+import appTopBar from './components/appTopBar.vue'
+import './assets/styles/global.css'
 
 export default {
-  components :{
-    topBar,
-    navBar
-  }
+  components: {
+    appTopBar
+  },
 
 }
 </script>
 
 <style>
-    .maincontent{
-      margin-top: 50px;
-    }
+
 </style>
