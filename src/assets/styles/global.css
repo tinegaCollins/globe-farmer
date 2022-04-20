@@ -1,6 +1,13 @@
 :root{
    /* variable to set main font */
-    --main-font: 'Nova Mono', monospace;
+    /* --main-font: 'Nova Mono', monospace; */
+    --main-font: monospace;
     --main-color: #13A76B;
     --btn-color: #FFE401;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+    box-sizing: border-box;
 }
