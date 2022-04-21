@@ -31,19 +31,19 @@ export default {
 #sideBar{
     width: 300px;
     background-color: var(--main-color);
-    margin-top: 30px;
+    margin: 30px 0 0 15px;
+    overflow-x: hidden;
 }
 #sideBar .location,.categories{
     margin-left: 20px;
 }
-.categories{
-    height: 100vh;
-}
 #sideBar .categories p, #sideBar .location p{
+    transition: all .2s ease-in-out;
     padding: 10px;
 }
 #sideBar .categories p:hover,#sideBar .location p:hover{
-    background-color: hsl(123,60%, 37%);
+    background-color: #086641;
+    color: white;
 }
 #sideBar h2 img{
     height: 20px;

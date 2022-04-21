@@ -24,6 +24,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  main{
+    overflow-y: hidden !important;
+    width: 97vw;
+  }
 </style>

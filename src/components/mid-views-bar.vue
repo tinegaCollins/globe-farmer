@@ -21,12 +21,13 @@ export default {
 <style scoped>
 .bar{
     height: 35px;
-    min-width: 100vw;
-    margin-top: 3px;
+    min-width: 98vw;
+    margin-top: 10px;
     background-color:#e2cfcf;
     display: flex;
     column-gap: 10px;
     align-items: center;
+    overflow-x: hidden;
 }
 .bar::after{
     content: "";
@@ -47,5 +48,12 @@ export default {
     min-width: max-content;
     font-family: var(--second-font);
     font-size: .8rem;
+    transition: all .2s ease-in-out;
+    margin-left: 3px;
+}
+.barItem:hover{
+    cursor: pointer;
+    background-color: #086641;
+    color: white;
 }
 </style>

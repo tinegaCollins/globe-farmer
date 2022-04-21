@@ -58,7 +58,7 @@ export default {
         font-weight: 600;
         background-color: var(--main-color);
         display: flex;
-        width: 100vw;
+        width: calc(98vw + 9px);
         overflow-x: hidden;
         margin-top: 0px;
         /* box-shadow: 20px 10px 17px 10px #12121242; */
@@ -108,7 +108,7 @@ export default {
         padding: 4px 10px 0px 10px;
         border-radius: 5px;
     }
-    .sell:hover{
+    .sell:hover,h4:hover{
         cursor: pointer;
     }
     .dropdown{
@@ -116,7 +116,7 @@ export default {
         width: 20px;
         background: white;
         align-self: center;
-        margin-right: 10px;
+        margin-right: 20px;
         border-radius: 50%;
     }
     @media screen and (max-width: 1200px){
