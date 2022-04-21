@@ -56,17 +56,17 @@ export default {
     .wrapper{
         font-family: var(--main-font);
         font-weight: 600;
-        background: #13A76B;
+        background-color: var(--main-color);
         display: flex;
         width: 100vw;
         overflow-x: hidden;
         margin-top: 0px;
-        box-shadow: 20px 10px 17px 10px #12121242;
+        /* box-shadow: 20px 10px 17px 10px #12121242; */
     }
     .wrapper h3{
         align-self: center;
         margin-right: auto;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: var(--title-font);
         font-weight: 300;
     }
     .wrapper > img{
@@ -138,17 +138,17 @@ export default {
             position: fixed;
             top: 74px;
             right: -20px;
-            height: 50%;
-            background: #FF652F;
+            height: 30%;
+            background: var(--main-color);
             justify-items: center;
             align-items: flex-end;
-            /* padding: 5px 10px 10px 0; */
-            width: 80vw;
+            width: 50vw;
+            border-radius: 5px;
         }
         .dataicons > div{
             border-bottom: 1px solid black;
-            border-right: 1px solid black;
-            border-left: 1px solid black;
+            /* border-right: 1px solid black; */
+            /* border-left: 1px solid black; */
             width: 100%;
             height: 100%;
             display: flex;
@@ -159,9 +159,13 @@ export default {
             height: 20px;
         }
         .notificationNumber{
-            top: 20px;
+            top: 10px;
             font-size: 1em;
             padding: 0 4px 0 4px;
+            right: 5px;
+        }
+        .sell{
+            border-bottom: none !important;
         }
     }
 </style>
