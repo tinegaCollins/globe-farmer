@@ -1,6 +1,18 @@
 :root{
    /* variable to set main font */
-    --main-font: 'Nova Mono', monospace;
+    /* --main-font: 'Nova Mono', monospace; */
+    --main-font: monospace;
+    --title-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --second-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --main-color: #13A76B;
     --btn-color: #FFE401;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background: #fff;
 }
