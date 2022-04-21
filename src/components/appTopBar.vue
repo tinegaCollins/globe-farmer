@@ -5,12 +5,18 @@
        <div class="dataicons" v-if="showIcons">
             <div class="notification">
                 <img class= "icons" src="../assets/icons/bell-solid.svg" alt="" srcset="">
+                <div class="notificationNumber">
+                    <span> {{ notifications }}</span>
+                </div>
             </div>
             <div class="bookmark">
                 <img class= "icons" src="../assets/icons/bookmark-solid.svg" alt="bookmark" srcset="">
             </div>
             <div class="messages">
                 <img class= "icons" src="../assets/icons/message-solid.svg" alt="messages" srcset="">
+                 <div class="notificationNumber">
+                    <span>{{ messages }}</span>
+                </div>
             </div>
             <div class="acc">
            <!-- bind to account image -->
@@ -30,7 +36,9 @@ export default {
         return {
             account: 'Account',
             Image: '../assets/icons/circle-user-solid.svg',
-            showIcons: false
+            showIcons: true,
+            notifications: 4,
+            messages: 1
         }
     },
     methods: {
@@ -53,10 +61,13 @@ export default {
         width: 100vw;
         overflow-x: hidden;
         margin-top: 0px;
+        box-shadow: 20px 10px 17px 10px #12121242;
     }
     .wrapper h3{
         align-self: center;
         margin-right: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 300;
     }
     .wrapper > img{
         padding: 5px;
@@ -75,12 +86,30 @@ export default {
         height: 25px;
         width: auto;
     }
+    .icons:hover{
+        cursor: pointer;
+    }
+    .notification, .messages{
+        position: relative;
+    }
+    .notificationNumber{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: var(--btn-color);
+        padding: 0 3px 0 3px;
+        font-size: .7rem;
+        border-radius: 50%;
+    }
     .sell > h4{
         background: var(--btn-color);
         height: 25px;
-        width: min-content !important;
+        width: min-content;
         padding: 4px 10px 0px 10px;
         border-radius: 5px;
+    }
+    .sell:hover{
+        cursor: pointer;
     }
     .dropdown{
         height: 20px;
@@ -98,7 +127,7 @@ export default {
     @media screen and (max-width: 768px) {
         .wrapper{
             height: 70px;
-            margin-top: 5px;
+            margin-top: 1px;
         }
         .wrapper > img {
             height: 70px;
@@ -107,14 +136,14 @@ export default {
         .dataicons{
             flex-direction: column;
             position: fixed;
-            top: 75px;
+            top: 74px;
             right: -20px;
             height: 50%;
             background: #FF652F;
             justify-items: center;
             align-items: flex-end;
             /* padding: 5px 10px 10px 0; */
-            width: 50%
+            width: 80vw;
         }
         .dataicons > div{
             border-bottom: 1px solid black;
@@ -128,6 +157,11 @@ export default {
         }
         .icons{
             height: 20px;
+        }
+        .notificationNumber{
+            top: 20px;
+            font-size: 1em;
+            padding: 0 4px 0 4px;
         }
     }
 </style>
