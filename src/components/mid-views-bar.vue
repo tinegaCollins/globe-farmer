@@ -1,7 +1,10 @@
 <template>
+<div class="bars">
+   <img src='../assets/icons/bars-solid.svg' @click="sidebar">
+</div>
     <div class="bar">
-        <div class="barItem"><p>popular items</p></div>
-        <div class="barItem"><p>new items</p></div>
+        <div class="barItem"><router-link to="/new-items">neww items </router-link></div>
+        <div class="barItem"><router-link to="/popular-items">popular items</router-link></div>
         <div class="barItem"><p>other shit</p></div>
         <div class="barItem"><p>your choice</p></div>
         <div class="barItem"><p>Freshhhhh</p></div>
@@ -19,40 +22,59 @@
 
 <script>
 export default {
-
+    methods: {
+        sidebar(){
+            this.$emit('sidebar')
+        }
+    },
+    data(){
+        return{
+            //bind to  the image to be an x when the sidebar is open
+            imgSrc: '../assets/icons/bars-solid.svg'
+        }
+    }
 }
 </script>
 
 <style scoped>
 .bar{
-    height: 35px;
+    height: 50px;
     max-width: calc(100vw- 100%);
     margin-top: 15px;
     background-color:#e2cfcf;
     display: flex;
     column-gap: 10px;
     align-items: center;
-    overflow-x: auto ;
+    overflow-x: scroll;
     padding: 0 5px 0 10px;
     border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    /* border-bottom-left-radius: 25px; */
 }
 ::-webkit-scrollbar{
-    height: 4px;
-    width: 4px;
-    background: gray;
+    height: 8px;
+    width: 8px;
 }
 ::-webkit-scrollbar-track{
-    border-radius: 20px;
+    background: var(--main-color);
 }
-::-webkit-scrollbar-thumb:horizontal{
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    height: 10px;
     background: red;
-    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: blue;
+}
+@supports (scrollbar-color: red blue){
+    *{
+        scrollbar-color: black #086641;
+        scrollbar-width: thin;
+    }
 }
 .bar::after{
     content: "";
-    height: 35px;
-    width:35px;
+    height: 44px;
+    width:44px;
     background: linear-gradient(90deg,rgba(174, 197, 197, 0),rgb(174, 197, 197)) ;
     position: absolute;
     right: 0;
@@ -76,10 +98,14 @@ export default {
     background-color: #086641;
     color: white;
 }
+img{
+    height: 20px;
+    width: 20px;
+    display: none;
+}
 @media screen and (max-width: 768px){
-    .bar{
-        position: absolute;
-        left: 0;
+    img{
+        display: inline;
     }
 }
 </style>

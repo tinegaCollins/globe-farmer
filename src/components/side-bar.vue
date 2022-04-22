@@ -1,8 +1,8 @@
 <template>
-   <section id="sideBar">
+   <section id="sideBar" :class="{ moveSidebar : moveSidebar }">
             <div class="location">
                 <h2>Location<img src= "../assets/icons/arrow-right-solid.svg"></h2>
-                <p>All Kenya</p>
+                <p>all Kenya</p>
             </div>
             <div class="categories">
                 <h2>Categories<img src= "../assets/icons/arrow-right-solid.svg"></h2>
@@ -24,6 +24,7 @@
 
 <script>
 export default {
+    props: ['moveSidebar'],
 
 }
 </script>
@@ -32,6 +33,9 @@ export default {
     width: 300px;
     background-color: var(--main-color);
     overflow-x: hidden;
+    font-family: var(--main-font);
+    font-size: 1.1rem;
+    z-index: 1;
 }
 #sideBar .location,.categories{
     margin-left: 20px;
@@ -43,6 +47,7 @@ export default {
 #sideBar .categories p:hover,#sideBar .location p:hover{
     background-color: #086641;
     color: white;
+    cursor: pointer;
 }
 #sideBar h2 img{
     height: 20px;
@@ -64,6 +69,7 @@ export default {
         width: 100%;
         left: -100%;
         transition: all .3s cubic-bezier(0.2, 0.055, 0.675, 0.59) ;
+        margin-top: 40px;
     }
     .moveSidebar{
         left: 0% !important;
