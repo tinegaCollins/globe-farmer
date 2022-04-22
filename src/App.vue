@@ -2,9 +2,10 @@
   <appTopBar/>
   
   <main>
-    <sideBar/>
+    <sideBar :moveSidebar= "moveSidebar"/>
     <div class="mainContent">
-      <midViewsBar/>
+      <midViewsBar @sidebar="sidebarMove"/>
+      <router-view/>
     </div>
   </main>
 </template>
@@ -22,6 +23,16 @@ export default {
     appTopBar,
     midViewsBar,
     sideBar
+  },
+  data(){
+    return{
+      moveSidebar: false
+    }
+  },
+  methods: {
+    sidebarMove(){
+      this.moveSidebar = !this.moveSidebar
+    }
   }
 
 }

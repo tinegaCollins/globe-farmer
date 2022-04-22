@@ -26,7 +26,9 @@
                 <h4>Sell</h4>
             </div>
        </div>
-       <div class="dropdown" @click="show"></div>
+       <div class="dropdown" @click="show">
+           <img src="../assets/icons/caret-down-solid.svg" alt="" srcset="">
+       </div>
    </div>
 </template>
 
@@ -36,7 +38,7 @@ export default {
         return {
             account: 'Account',
             Image: '../assets/icons/circle-user-solid.svg',
-            showIcons: true,
+            showIcons: false,
             notifications: 4,
             messages: 1
         }
@@ -112,10 +114,9 @@ export default {
         cursor: pointer;
     }
     .dropdown{
+        align-self: center;
         height: 20px;
         width: 20px;
-        background: white;
-        align-self: center;
         margin-right: 20px;
         border-radius: 50%;
     }
