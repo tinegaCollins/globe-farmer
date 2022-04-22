@@ -31,7 +31,6 @@ export default {
 #sideBar{
     width: 300px;
     background-color: var(--main-color);
-    margin: 30px 0 0 15px;
     overflow-x: hidden;
 }
 #sideBar .location,.categories{

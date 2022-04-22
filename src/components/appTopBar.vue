@@ -144,6 +144,7 @@ export default {
             align-items: flex-end;
             width: 50vw;
             border-radius: 5px;
+            z-index: 1;
         }
         .dataicons > div{
             border-bottom: 1px solid black;
