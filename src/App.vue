@@ -1,8 +1,11 @@
 <template>
   <appTopBar/>
-  <midViewsBar/>
+  
   <main>
     <sideBar/>
+    <div class="mainContent">
+      <midViewsBar/>
+    </div>
   </main>
 </template>
 
@@ -26,7 +29,15 @@ export default {
 
 <style scoped>
   main{
-    overflow-y: hidden !important;
-    width: 97vw;
+    overflow-x: hidden !important;
+    width: calc(99vw - 4px);
+    /* display: flex; */
+    padding: 20px 0 20px 20px;
+    column-gap: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .mainContent{
+    max-width: 100%;
   }
 </style>
