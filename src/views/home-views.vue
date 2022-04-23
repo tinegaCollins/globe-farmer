@@ -7,6 +7,7 @@
             <p>We got you !</p>
          </div>
       </div>
+      <h3>Trending ads</h3>
       <div class="trending">
              <div class="products">
                     <img src="" alt="" srcset="">
@@ -35,6 +36,7 @@ export default {
             {
                 item : "carrots",
                 price: " 10000 per gunia",
+                image: '../assets/products/carrots.jpg'
             },
             //places to add new items
         ]
@@ -48,6 +50,7 @@ export default {
             {
                 item : "green pepper",
                 price: " 1000 per gunia",
+                image: '../assets/products/green.jfif'
             },
             //places to add new items
         ]
@@ -193,6 +196,10 @@ export default {
       /* width: 100%; */
       height: max-content;
       padding: 20px 10px 0 0px;
+      font-family: var(--main-font);
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
    }
    .advertBar{
       display: flex;
@@ -208,5 +215,71 @@ export default {
    }
    .text p{
       margin-top: 5px;
+   }
+.products{
+    width: 200px;
+    font-weight: 500;
+    border: 3px solid #3E8141;
+    border-radius: 10px;
+    padding: 15px;
+    overflow: hidden;
+}
+.products img {
+    width: 80%;
+    height: 150px;
+    width: auto;
+    overflow: hidden;
+}
+/* order now   */
+.products button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.4rem 1rem;
+    margin-left: 35px;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    overflow: hidden;
+    background: black;
+    color: black;
+   }
+   
+    .products  button span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+   }
+   
+   .products  button:hover span {
+    color: whitesmoke;
+   }
+   
+   .products  button::before,
+   .products button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+   }
+   
+   .products button::before {
+    content: "";
+    background: #3E8141;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+   }
+   
+   .products button:hover::before {
+    transform: translate3d(100%, 0, 0);
    }
 </style>
