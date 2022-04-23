@@ -32,10 +32,17 @@ export default {
 #sideBar{
     width: 300px;
     background-color: var(--main-color);
-    overflow-x: hidden;
     font-family: var(--main-font);
-    font-size: 1.1rem;
+    font-size: 1rem;
     z-index: 1;
+    height: max-content;
+    /* this needs to be sticky */
+}
+.location{
+    margin-top: 30px;
+}
+p{
+    margin-right: 30px;
 }
 #sideBar .location,.categories{
     margin-left: 20px;
@@ -69,7 +76,7 @@ export default {
         width: 100%;
         left: -100%;
         transition: all .3s cubic-bezier(0.2, 0.055, 0.675, 0.59) ;
-        margin-top: 40px;
+        margin-top: 100px;
     }
     .moveSidebar{
         left: 0% !important;
