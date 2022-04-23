@@ -60,11 +60,11 @@ export default {
 ::-webkit-scrollbar-thumb{
     width: 10px;
     height: 10px;
-    background: red;
+    background: black;
 }
-::-webkit-scrollbar-thumb:hover{
+/* ::-webkit-scrollbar-thumb:hover{
     background: blue;
-}
+} */
 @supports (scrollbar-color: red blue){
     *{
         scrollbar-color: black #086641;
