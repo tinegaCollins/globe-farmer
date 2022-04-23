@@ -1,10 +1,11 @@
 <template>
-<div class="bars">
-   <img src='../assets/icons/bars-solid.svg' @click="sidebar">
-</div>
+   <div class="bars">
+        <img src='../assets/icons/bars-solid.svg' @click="sidebar">
+    </div>
     <div class="bar">
-        <div class="barItem"><router-link to="/new-items">neww items </router-link></div>
-        <div class="barItem"><router-link to="/popular-items">popular items</router-link></div>
+        <router-link to="/" class="barItem">home</router-link>
+        <router-link to="/new-items" class="barItem">neww items </router-link>
+        <router-link to="/popular-items" class="barItem">popular items</router-link>
         <div class="barItem"><p>other shit</p></div>
         <div class="barItem"><p>your choice</p></div>
         <div class="barItem"><p>Freshhhhh</p></div>
@@ -39,7 +40,7 @@ export default {
 <style scoped>
 .bar{
     height: 50px;
-    max-width: calc(100vw- 100%);
+    width: 100%;
     margin-top: 15px;
     background-color:#e2cfcf;
     display: flex;
@@ -48,7 +49,6 @@ export default {
     overflow-x: scroll;
     padding: 0 5px 0 10px;
     border-top-left-radius: 25px;
-    /* border-bottom-left-radius: 25px; */
 }
 ::-webkit-scrollbar{
     height: 8px;
@@ -73,8 +73,8 @@ export default {
 }
 .bar::after{
     content: "";
-    height: 44px;
-    width:44px;
+    height: 43px;
+    width:43px;
     background: linear-gradient(90deg,rgba(174, 197, 197, 0),rgb(174, 197, 197)) ;
     position: absolute;
     right: 0;
@@ -84,7 +84,7 @@ export default {
 /* edit the scroll bar  */
 .barItem{
     background: var(--main-color);
-    padding: 2px 7px 0px 7px;
+    padding: 3px 7px 0px 7px;
     height: 25px;
     border-radius: 15px ;
     min-width: max-content;
@@ -92,6 +92,7 @@ export default {
     font-size: .8rem;
     transition: all .2s ease-in-out;
     margin-left: 3px;
+    font-weight: bold;
 }
 .barItem:hover{
     cursor: pointer;
@@ -107,5 +108,16 @@ img{
     img{
         display: inline;
     }
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+a:visited{
+    color: black;
+}
+a.router-link-exact-active{
+    background-color: var(--btn-color);
 }
 </style>

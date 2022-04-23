@@ -38,7 +38,7 @@ export default {
         return {
             account: 'Account',
             Image: '../assets/icons/circle-user-solid.svg',
-            showIcons: false,
+            showIcons: true,
             notifications: 4,
             messages: 1
         }

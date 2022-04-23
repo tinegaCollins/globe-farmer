@@ -2,7 +2,7 @@
   <appTopBar/>
   
   <main>
-    <sideBar :moveSidebar= "moveSidebar"/>
+    <sideBar :moveSidebar= "moveSidebar" class="sidebar"/>
     <div class="mainContent">
       <midViewsBar @sidebar="sidebarMove"/>
       <router-view/>
@@ -40,15 +40,17 @@ export default {
 
 <style scoped>
   main{
-    overflow-x: hidden !important;
-    width: calc(99vw - 4px);
-    /* display: flex; */
+    overflow-x: hidden;
+    width: calc(99vw - 4px) !important;
     padding: 20px 0 20px 20px;
     column-gap: 30px;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
   }
   .mainContent{
-    max-width: 100%;
+    max-width: calc(100% - 327px);
+  }
+  .sidebar{
+    position: sticky;
+    top: 20px;
   }
 </style>
