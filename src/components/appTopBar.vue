@@ -143,7 +143,7 @@ export default {
             background: var(--main-color);
             justify-items: center;
             align-items: flex-end;
-            width: 50vw;
+            width: 70vw;
             border-radius: 5px;
             z-index: 1;
         }

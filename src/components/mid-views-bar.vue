@@ -4,7 +4,7 @@
     </div>
     <div class="bar">
         <router-link to="/" class="barItem">home</router-link>
-        <router-link to="/new-items" class="barItem">neww items </router-link>
+        <router-link to="/new-items" class="barItem">new items </router-link>
         <router-link to="/popular-items" class="barItem">popular items</router-link>
         <div class="barItem"><p>other shit</p></div>
         <div class="barItem"><p>your choice</p></div>
@@ -73,8 +73,8 @@ export default {
 }
 .bar::after{
     content: "";
-    height: 43px;
-    width:43px;
+    height: 45px;
+    width:45px;
     background: linear-gradient(90deg,rgba(174, 197, 197, 0),rgb(174, 197, 197)) ;
     position: absolute;
     right: 0;

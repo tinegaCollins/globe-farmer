@@ -4,12 +4,12 @@
          <div class="text">
             <h2>looking to <strong>Buy</strong> or <strong>Sell</strong></h2>
             <h3>We got you !</h3>
-            <h3>Your one stop groceries shoping site</h3>
+            <h3>Your one stop shoping site for farm produces</h3>
             <p>Save on average of KSH140 off RRP</p>
          </div>
          <img src="../assets/ad.png" alt="ad pic" srcset="">
       </div>
-      <h3>Trending ads</h3>
+      <h3 id="trendingAds">Trending ads</h3>
       <div class="trending">
              <div class="products" v-for="product in sellers" :key="product.id">
                 <img :src="product.products.image" alt="" srcset="">
@@ -182,7 +182,6 @@ export default {
 
 <style scoped>
    .wrapper{
-      /* width: 100%; */
       height: max-content;
       padding: 20px 10px 0 0px;
       font-family: var(--main-font);
@@ -204,13 +203,16 @@ export default {
       width: auto;
       height: 300px;
    }
-   .text p{
+   .text > *{
       margin-top: 5px;
+   }
+   .text > p{
+       font-size: .8rem;
    }
     .wrapper > h3{
        position: relative;
     }
-    h3::after{
+    #trendingAds::after{
        content: "";
        width: 100px;
        height: 2px;
@@ -227,7 +229,7 @@ export default {
         justify-content: flex-start;
     }
     .products{
-    width: 200px;
+    width: 20 0px;
     font-weight: 500;
     border: 2px solid #3E8141;
     border-radius: 5px;
