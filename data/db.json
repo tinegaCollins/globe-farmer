@@ -1,7 +1,161 @@
 {
-    "produces": [
-        { "name": "carroti", "id": 40, "details": "carroti farm"},
-        { "name": "avocadoes", "id": 41, "details": "avogadro farm"},
-        { "name": "maembee", "id": 42, "details": "maembe farm"}
+    "sellers":[
+        {
+            "id" : 1,
+            "name" : "lincoln kiptoo",
+            "location": "Egerton",
+            "phone" : "+254791729544",
+            "popular": true,
+            "products" :
+                {
+                    "item" : "carrots",
+                    "price": " 10000 per gunia",
+                    "image": "./products/carrots.jpg"
+                }
+        },
+        {
+            "id" : 2,
+            "name" : "tuya mohan",
+            "location": "kisii",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "green pepper",
+                    "price": " 1000 per gunia",
+                    "image": "./products/green.jfif"
+                }
+        },
+        {
+            "id" : 3,
+            "name" : "boogie hoodie",
+            "location": "nyeri",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "string beans",
+                    "price": "500 per crate",
+                    "image": "./products/string.jfif"
+                }
+        },
+        {
+            "id" : 4,
+            "name" : "kygo",
+            "location": "moyale",
+            "popular": true,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "peas",
+                    "price": "200 per kg",
+                    "image": "./products/peas.jfif"
+                }
+        },
+        {
+            "id" : 5,
+            "name" : "taylor swift",
+            "location": "kiambu",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "spring onions",
+                    "price": " 1000 per gunia",
+                    "image": "./products/spring.jfif"
+                }
+        },    {
+            "id" :6,
+            "name" : "emeli sande",
+            "location": "eldoret",
+            "popular": true,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "brocolli",
+                    "price": "160 per kg",
+                    "image": "./products/brocolli.jfif"
+                }
+        },
+        {
+            "id" : 7,
+            "name" : "ed sheeran",
+            "location": "kisumu",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "spinach",
+                    "price": "500 per kg",
+                    "image": "./products/spinach.jfif"
+                }
+        },
+        {
+            "id" :8,
+            "name" : "pink",
+            "location": "nyamira",
+            "popular": true,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "sukuma wiki",
+                    "price": " 2000 per gunia",
+                    "image": "./products/sukuma.jfif"
+                }
+        },
+        {
+            "id" : 9,
+            "name" : "justin jeso",
+            "location": "kisii",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "Indegenous vegetables",
+                    "price": " 1000 per gunia",
+                    "image": "./products/veg.jfif"
+                }
+        },
+        {
+            "id" : 10,
+            "name" : "Erick wainaina",
+            "location": "kiambu",
+            "popular": true,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "irish potatoes",
+                    "price": " 1000 per gunia",
+                    "image": "./products/viazi.jfif"
+                }
+        },
+        {
+            "id" : 11,
+            "name" : "collins",
+            "location": "nairobi",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "tomatoes",
+                    "price": "500 per crate",
+    
+                    "image": "./products/nyanya.jpg"
+                }
+        },
+        {
+            "id" : 12,
+            "name" : "lil baby",
+            "location": "mombasa",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" : 
+                {
+                    "item" : "onions",
+                    "price": "200 per kg",
+                    "image": "./products/onion.jfif"
+                }
+
+        }
     ]
 }

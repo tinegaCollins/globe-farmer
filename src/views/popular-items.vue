@@ -1,13 +1,59 @@
 <template>
-  <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, accusamus?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et provident dicta animi error repellat doloribus quo? Magnam vel veniam optio. Labore quae repellat alias culpa blanditiis quisquam aliquam pariatur nostrum nesciunt iste officiis magnam perspiciatis illum, aliquid a repellendus, deleniti eius dignissimos sequi excepturi voluptates! Voluptates iusto labore soluta molestias incidunt velit amet debitis nihil doloribus excepturi itaque eius, nulla sequi commodi ullam cupiditate minus libero quae blanditiis? Fuga excepturi illo, atque sequi debitis omnis quae quis enim neque dicta consequatur reiciendis error deserunt similique exercitationem aliquid ipsam minima iste. Laborum nihil earum nostrum porro qui odio sint officiis aspernatur magnam soluta molestias facilis velit id unde fuga provident, illo ipsam vitae neque? Aspernatur modi at numquam iste. Eligendi unde quibusdam natus mollitia illo veritatis error quidem nihil officia. Numquam optio quos perspiciatis, in nesciunt quam esse magni natus magnam sit fuga ut ad id recusandae, fugiat dicta, maiores quia minima omnis porro. Culpa vero veritatis quaerat repudiandae labore dolorum quos hic nam. Amet exercitationem, repellendus recusandae dolore ipsum quae incidunt? Ex atque praesentium qui ipsum harum repudiandae, libero laborum quam officia dolorem dolor illo eveniet. Iste ut et libero incidunt id labore earum laboriosam ipsam quis esse unde nobis assumenda sequi quae veniam magni, aut quod maxime. Eveniet, eaque necessitatibus enim harum, a natus maiores culpa dolore asperiores reiciendis impedit ab omnis earum ullam eligendi. Beatae debitis, dolorem pariatur sint eius magnam harum ipsam eveniet iste voluptatibus ipsum laborum animi sunt cum iure inventore suscipit repellendus possimus amet tenetur quia nihil, minima praesentium. Ea dignissimos nobis nisi rem eius porro ex ipsum omnis veritatis, voluptatum, consequuntur, delectus veniam. Aliquid quam facere rem dolorem voluptate error odit vitae? Et ab expedita quis incidunt voluptate nisi fuga perspiciatis quia. Neque repudiandae fuga nihil voluptates, esse nobis provident accusamus voluptas. Consequatur, dolores non perferendis dolor voluptates debitis accusantium ipsum, nemo commodi ipsa quidem. Nam ducimus blanditiis dolore praesentium explicabo velit, laborum modi vitae incidunt cupiditate nobis officia natus ullam ratione officiis vel dolorem ipsam expedita nesciunt quo quam nihil ad est eos. Corporis quisquam, in, odio odit facere, blanditiis sit dicta enim vero dolorem velit! Aperiam atque, eveniet nam quibusdam, placeat esse quis eaque voluptates voluptatum dolorum at beatae tempore deserunt, omnis dolorem exercitationem! Reprehenderit perspiciatis error rerum unde. Error voluptatum ipsam doloribus voluptatibus vero cum tenetur quibusdam, facilis corrupti repudiandae vel doloremque debitis, consequatur numquam! Veritatis pariatur, voluptas quam ipsam labore earum eos alias quaerat at voluptatem reiciendis deleniti totam nostrum. Ab praesentium, minus consequuntur aliquid commodi repellendus cum amet nihil placeat consequatur totam nam eum assumenda quo magni expedita ut fuga in sint dolorum! Corrupti, illo qui soluta quam placeat laboriosam sequi veniam distinctio quod voluptates tempore deleniti vero reiciendis! Iste aut neque recusandae optio adipisci quo quia perferendis porro inventore nemo architecto eum, maxime illum voluptate quis fugiat? Officia nesciunt esse facilis molestias earum accusamus non consequuntur necessitatibus soluta nulla eaque dolorum natus fuga a repellat labore corporis, tempore aliquam explicabo eum omnis numquam? Aut fugiat dolores corrupti reprehenderit totam impedit. Tenetur accusamus sunt optio, veritatis in commodi, corporis dicta, laborum atque iusto saepe! Libero repellendus ipsam ipsum mollitia ratione dignissimos aperiam minima reprehenderit velit cupiditate ut, laborum dolor repellat saepe optio error magni tempore non, eaque ducimus quasi id molestiae. Hic, quod? Nihil eligendi dolorem, perspiciatis hic accusamus eveniet doloremque excepturi, fugit itaque alias error atque totam ipsa quidem quisquam quod harum ea accusantium. Quas quasi quibusdam asperiores nulla inventore distinctio veritatis ullam voluptas eaque quae blanditiis, fuga saepe modi vero impedit sapiente omnis molestias eum rerum tempore optio excepturi aspernatur. Cupiditate necessitatibus ex sequi doloribus, quis vitae nulla nemo et nostrum perferendis debitis ullam. Tempora recusandae quia adipisci quibusdam accusantium blanditiis inventore consectetur, culpa ab, dolores vero voluptatem nesciunt dolorum corporis. Odio aliquid earum harum delectus similique, sint, corporis officia, a odit libero error quos ipsam. Aliquid porro doloremque nisi qui. Quibusdam voluptatibus ipsum fugit deleniti rem nesciunt natus voluptas, ex blanditiis corrupti dolores tenetur. Quaerat harum doloremque reiciendis accusamus sequi iure, est id rerum, laboriosam tenetur molestias omnis repellendus. Consequuntur ex eum veritatis iste aliquid cupiditate eligendi ipsum expedita incidunt accusamus nulla reprehenderit neque qui corporis molestiae repellendus earum, fuga blanditiis assumenda laborum nam quas numquam sint temporibus. Libero exercitationem consequatur veritatis molestiae, cumque, porro fugiat itaque inventore deserunt maxime quis eveniet! Eveniet, ipsum! Saepe hic, aut quia, porro debitis laudantium id, ut tempora ea earum nihil! Odit tempora sequi eligendi facere aspernatur impedit beatae voluptatem enim ipsa. Culpa at eum, adipisci id vero facere laborum labore in. Officiis enim autem ipsum ex fuga repudiandae ipsam neque corporis tenetur quos amet id, qui ipsa sed magnam eos cumque quas. Sint eos illum, vel cum sequi aliquam et quam ducimus at, provident nobis, blanditiis incidunt in aspernatur est? Nihil laudantium debitis consequatur rem omnis illo vitae tempore maxime quam? Numquam voluptatem architecto labore eveniet officia quia distinctio ullam hic ex accusamus deserunt excepturi, repellendus id aut cum rerum alias, rem exercitationem voluptates, sed veniam harum? Corporis beatae eos quibusdam saepe hic, inventore voluptatum blanditiis enim rerum dolor. Corrupti sit necessitatibus velit ut rerum quam a possimus animi ad mollitia laboriosam quidem, natus excepturi eos amet ipsum sapiente voluptate neque delectus voluptatem reprehenderit autem dignissimos, voluptates perferendis? Ipsa at error magnam illum nesciunt, sapiente cum molestiae praesentium minus ex, rem dignissimos eveniet? Esse quam beatae exercitationem delectus tempore quae voluptate porro, laborum non, veritatis nam voluptates voluptatibus molestias similique voluptatum cum autem consequuntur officia minima. Ipsam, molestiae maxime omnis voluptate consequatur aut perferendis quae in voluptates porro iusto pariatur sequi velit? Quos tempore, eaque illum earum voluptates nesciunt tenetur officiis iure porro numquam quae quidem, vero autem quo ratione. Laboriosam, illum. Ut quam quidem at, consectetur sit placeat? Illo dolor impedit a, ab facere saepe cumque eius repellat eos distinctio odio. Quaerat perspiciatis iste explicabo eligendi dignissimos rem inventore praesentium asperiores ab illo, officiis ipsa voluptas ea deserunt. Facere, mollitia facilis. Vitae iste, nesciunt ipsam unde, exercitationem praesentium suscipit rem commodi, expedita ullam quos eveniet sint enim magni?</h1>
+  <div class="wrapper">
+    <h1 @click="hhh">popular items</h1>
+    <div class="popular">
+             <div class="products" v-for="product in sellers" :key="product.id">
+                <img v-bind:src="product.products.image" alt="product image">
+                <p>Product :{{ product.products.item }} </p>
+                <p>Price :{{ product.products.price}} </p>
+                <p>Location : {{ product.location }}</p>
+                <p>Farmer : {{ product.name }} </p>
+                <router-link :to="{ name: 'productDetails', params: { det: product.id }}"><button><span>Order Now</span></button></router-link>
+            </div>
+      </div>
+  </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      popularSellers: [],
+      sellers: []
+    }
+  },
+  beforeMount() {
+    fetch('http://localhost:3000/sellers')
+      .then(res => res.json())
+      .then(data => {
+        this.sellers = data
+      })
+      // .then(
+      //   console.log(this.sellers),
+      //   this.popularSellers = this.sellers.filter(
+      //     (x) => x.popular === true
+      //   )
+      // )
+      .catch(err => console.log(err))
+  },
+  mounted() {
+    console.log(this.sellers)
+    this.popularSellers = this.sellers.filter(
+      (x) => x.popular === true
+    )
+  },
+  methods: {
+    hhh() {
+      console.log(this.sellers)
+      console.log(this.popularSellers)
+    }
+  }
 
 }
 </script>
 
-<style>
-
+<style scoped>
+  .wrapper{
+    font-family: var(--main-font);
+  }
 </style>

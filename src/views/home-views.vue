@@ -27,167 +27,17 @@
 export default {
    data(){
       return{
-      sellers:[
-    {
-        id : 1,
-        name : "lincoln kiptoo",
-        location: "Egerton",
-        phone : +254791729544,
-        products :
-            {
-                item : "carrots",
-                price: " 10000 per gunia",
-                image: './products/carrots.jpg'
-            },
-            //places to add new items
-    },
-    {
-        id : 2,
-        name : "tuya mohan",
-        location: "kisii",
-        phone : +254791729544,
-        products :
-            {
-                item : "green pepper",
-                price: " 1000 per gunia",
-                image: './products/green.jfif'
-            },
-            //places to add new items
-    },
-    {
-        id : 3,
-        name : "boogie hoodie",
-        location: "nyeri",
-        phone : +254791729544,
-        products :
-            {
-                item : "string beans",
-                price: "500 per crate",
-                image: './products/string.jfif'
-            },
-            //places to add new items
-    },
-    {
-        id : 4,
-        name : "kygo",
-        location: "moyale",
-        phone : +254791729544,
-        products :
-            {
-                item : "peas",
-                price: "200 per kg",
-                image: './products/peas.jfif'
-            },
-            //places to add new items
-    },
-    {
-        id : 5,
-        name : "taylor swift",
-        location: "kiambu",
-        phone : +254791729544,
-        products :
-            {
-                item : "spring onions",
-                price: " 1000 per gunia",
-                image: './products/spring.jfif'
-            },
-            //places to add new items
-    },    {
-        id :6,
-        name : "emeli sande",
-        location: "eldoret",
-        phone : +254791729544,
-        products :
-            {
-                item : "brocolli",
-                price: "160 per kg",
-                image: './products/brocolli.jfif'
-            }
-            //places to add new items
-    },
-    {
-        id : 7,
-        name : "ed sheeran",
-        location: "kisumu",
-        phone : +254791729544,
-        products :
-            {
-                item : "spinach",
-                price: "500 per kg",
-                image: './products/spinach.jfif'
-            },
-            //places to add new items
-    },
-    {
-        id :8,
-        name : "pink",
-        location: "nyamira",
-        phone : +254791729544,
-        products :
-            {
-                item : "sukuma wiki",
-                price: " 2000 per gunia",
-                image: './products/sukuma.jfif'
-            },
-            //places to add new items
-    },
-    {
-        id : 9,
-        name : "justin jeso",
-        location: "kisii",
-        phone : +254791729544,
-        products :
-            {
-                item : "Indegenous vegetables",
-                price: " 1000 per gunia",
-                image: './products/veg.jfif'
-            },
-            //places to add new items
-    },
-    {
-        id : 10,
-        name : "Erick wainaina",
-        location: "kiambu",
-        phone : +254791729544,
-        products :
-            {
-                item : "irish potatoes",
-                price: " 1000 per gunia",
-                image: './products/viazi.jfif'
-            },
-            //places to add new items
-    },
-    {
-        id : 11,
-        name : "collins",
-        location: "nairobi",
-        phone : +254791729544,
-        products :
-            {
-                item : "tomatoes",
-                price: "500 per crate",
-
-                image: './products/nyanya.jpg'
-            },
-            //places to add new items
-    },
-    {
-        id : 12,
-        name : "lil baby",
-        location: "mombasa",
-        phone : +254791729544,
-        products : 
-            {
-                item : "onions",
-                price: "200 per kg",
-                image: './products/onion.jfif'
-            },
-            //places to add new items
-    },
-]
+          sellers: []
       }
+   },
+   mounted(){
+       fetch(' http://localhost:3000/sellers')
+       .then(res => res.json())
+       .then(data => {
+           this.sellers = data
+       })
+       .catch(err => console.log(err))
    }
-
 }
 </script>
 

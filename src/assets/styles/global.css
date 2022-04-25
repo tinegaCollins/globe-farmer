@@ -17,7 +17,7 @@ body{
     background: #f8f8ff;
 }
 /* products style */
-.trending, .new{
+.trending, .new, .popular{
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
