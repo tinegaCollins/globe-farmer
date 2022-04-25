@@ -20,13 +20,13 @@
             </div>
             <div class="acc">
            <!-- bind to account image -->
-                <img class= "icons" src="../assets/icons/circle-user-solid.svg" :alt="account">
+                <img class= "icons" :src="Image" :alt="account">
             </div>
             <div class="sell">
                 <h4>Sell</h4>
             </div>
        </div>
-       <div class="dropdown" @click="show">
+       <div class="dropdown" @click="show" v-if="showDropDown">
            <img src="../assets/icons/caret-down-solid.svg" alt="" srcset="">
        </div>
    </div>
@@ -37,10 +37,11 @@ export default {
     data() {
         return {
             account: 'Account',
-            Image: '../assets/icons/circle-user-solid.svg',
+            Image: 'circle-user-solid.svg',
             showIcons: true,
-            notifications: 4,
-            messages: 1
+            notifications: 40,
+            messages: 10,
+            showDropDown: false,
         }
     },
     methods: {
@@ -49,6 +50,14 @@ export default {
         },
         show(){
             this.showIcons = !this.showIcons
+        }
+    },
+    beforeMount() {
+        
+        this.Image = './icons/face-shot.png'
+        if(window.innerWidth < 768){
+            this.showIcons = false
+            this.showDropDown = true
         }
     }
 }
@@ -99,16 +108,18 @@ export default {
         top: 0;
         right: 0;
         background: var(--btn-color);
-        padding: 0 3px 0 3px;
         font-size: .7rem;
         border-radius: 50%;
+        width: 15px;
+        display: grid;
+        place-items: center;
     }
     .sell > h4{
         background: var(--btn-color);
         height: 25px;
         width: min-content;
-        padding: 4px 10px 0px 10px;
         border-radius: 5px;
+        padding: 2px 7px 0 7px;
     }
     .sell:hover,h4:hover{
         cursor: pointer;
@@ -118,6 +129,9 @@ export default {
         height: 20px;
         width: 20px;
         margin-right: 20px;
+        border-radius: 50%;
+    }
+    .acc > img{
         border-radius: 50%;
     }
     @media screen and (max-width: 1200px){

@@ -2,8 +2,8 @@
    <div class="wrapper">
       <div class="advertBar">
          <div class="text">
-            <h2>looking to <strong>Buy</strong> or <strong>Sell</strong></h2>
-            <h3>We got you !</h3>
+            <h2>looking to <strong>Buy 🤷‍♀️</strong> or <strong>Sell 🤑</strong></h2>
+            <h3>We got you! 🤝</h3>
             <h3>Your one stop shoping site for farm produces</h3>
             <p>Save on average of KSH140 off RRP</p>
          </div>
@@ -12,7 +12,7 @@
       <h3 id="trendingAds">Trending ads</h3>
       <div class="trending">
              <div class="products" v-for="product in sellers" :key="product.id">
-                <img :src="product.products.image" alt="" srcset="">
+                <img v-bind:src="product.products.image" alt="product image">
                 <p>Product :{{ product.products.item }} </p>
                 <p>Price :{{ product.products.price}} </p>
                 <p>Location : {{ product.location }}</p>
@@ -37,7 +37,7 @@ export default {
             {
                 item : "carrots",
                 price: " 10000 per gunia",
-                image: '../assets/products/carrots.jpg'
+                image: './products/carrots.jpg'
             },
             //places to add new items
     },
@@ -50,7 +50,7 @@ export default {
             {
                 item : "green pepper",
                 price: " 1000 per gunia",
-                image: '../assets/products/green.jfif'
+                image: './products/green.jfif'
             },
             //places to add new items
     },
@@ -63,6 +63,7 @@ export default {
             {
                 item : "string beans",
                 price: "500 per crate",
+                image: './products/string.jfif'
             },
             //places to add new items
     },
@@ -75,6 +76,7 @@ export default {
             {
                 item : "peas",
                 price: "200 per kg",
+                image: './products/peas.jfif'
             },
             //places to add new items
     },
@@ -87,6 +89,7 @@ export default {
             {
                 item : "spring onions",
                 price: " 1000 per gunia",
+                image: './products/spring.jfif'
             },
             //places to add new items
     },    {
@@ -98,6 +101,7 @@ export default {
             {
                 item : "brocolli",
                 price: "160 per kg",
+                image: './products/brocolli.jfif'
             }
             //places to add new items
     },
@@ -110,6 +114,7 @@ export default {
             {
                 item : "spinach",
                 price: "500 per kg",
+                image: './products/spinach.jfif'
             },
             //places to add new items
     },
@@ -122,6 +127,7 @@ export default {
             {
                 item : "sukuma wiki",
                 price: " 2000 per gunia",
+                image: './products/sukuma.jfif'
             },
             //places to add new items
     },
@@ -134,6 +140,7 @@ export default {
             {
                 item : "Indegenous vegetables",
                 price: " 1000 per gunia",
+                image: './products/veg.jfif'
             },
             //places to add new items
     },
@@ -146,6 +153,7 @@ export default {
             {
                 item : "irish potatoes",
                 price: " 1000 per gunia",
+                image: './products/viazi.jfif'
             },
             //places to add new items
     },
@@ -158,6 +166,8 @@ export default {
             {
                 item : "tomatoes",
                 price: "500 per crate",
+
+                image: './products/nyanya.jpg'
             },
             //places to add new items
     },
@@ -170,6 +180,7 @@ export default {
             {
                 item : "onions",
                 price: "200 per kg",
+                image: './products/onion.jfif'
             },
             //places to add new items
     },
@@ -204,7 +215,7 @@ export default {
       height: 300px;
    }
    .text > *{
-      margin-top: 5px;
+      margin-top: 3px;
    }
    .text > p{
        font-size: .8rem;
@@ -231,6 +242,7 @@ export default {
     .products{
     width: 200px;
     font-weight: 500;
+    font-size: .9rem;
     border: 2px solid #3E8141;
     border-radius: 5px;
     padding: 15px;

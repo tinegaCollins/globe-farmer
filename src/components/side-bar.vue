@@ -6,18 +6,18 @@
             </div>
             <div class="categories">
                 <h2>Categories<img src= "../assets/icons/arrow-right-solid.svg"></h2>
-                <p>Tomatoes</p>
-                <p>Irish Potatoes</p>
-                <p>Onions</p>
-                <p>Carrots</p>
-                <p>Green peppers</p>
-                <p>String Beans</p>
-                <p>Peas</p>
-                <p>Spring Onions</p>
-                <p>Brocolli</p>
-                <p>Spinach</p>
-                <p>Sukuma Wiki</p>
-                <p>Indegenous Vegetables</p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
             </div>
    </section>
 </template>

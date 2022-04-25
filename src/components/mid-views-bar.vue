@@ -1,23 +1,24 @@
 <template>
    <div class="bars">
-        <img src='../assets/icons/bars-solid.svg' @click="sidebar">
+        <img :src='imgSrc' @click="sidebar">
     </div>
     <div class="bar">
         <router-link to="/" class="barItem">home</router-link>
         <router-link to="/new-items" class="barItem">new items </router-link>
         <router-link to="/popular-items" class="barItem">popular items</router-link>
-        <div class="barItem"><p>other shit</p></div>
-        <div class="barItem"><p>your choice</p></div>
-        <div class="barItem"><p>Freshhhhh</p></div>
+        <div class="barItem"><p>Tomatoes</p></div>
+        <div class="barItem"><p>Irish Potatoes</p></div>
         <div class="barItem"><p>around you</p></div>
-        <div class="barItem"><p>filter items</p></div>
-        <div class="barItem"><p>popular items</p></div>
-        <div class="barItem"><p>popular items</p></div>
-        <div class="barItem"><p>popular items</p></div>
-        <div class="barItem"><p>popular items</p></div>
-        <div class="barItem"><p>popular items</p></div>
-        <div class="barItem"><p>popular items</p></div>
-        <div class="barItem"><p>popular items</p></div>
+        <div class="barItem"><p>Onions</p></div>
+        <div class="barItem"><p>Carrots</p></div>
+        <div class="barItem"><p>Green peppers</p></div>
+        <div class="barItem"><p>String Beans</p></div>
+        <div class="barItem"><p>Peas</p></div>
+        <div class="barItem"><p>Spring Onions</p></div>
+        <div class="barItem"><p>Brocolli</p></div>
+        <div class="barItem"><p>Spinach</p></div>
+        <div class="barItem"><p>Sukuma Wiki</p></div>
+        <div class="barItem"><p>Indegenous Vegetables</p></div>
     </div>
 </template>
 
@@ -26,12 +27,13 @@ export default {
     methods: {
         sidebar(){
             this.$emit('sidebar')
+            this.imgSrc = this.imgSrc === './icons/bars-solid.svg' ? './icons/xmark-solid.svg' : './icons/bars-solid.svg'
         }
     },
     data(){
         return{
             //bind to  the image to be an x when the sidebar is open
-            imgSrc: '../assets/icons/bars-solid.svg'
+            imgSrc: './icons/bars-solid.svg'
         }
     }
 }
