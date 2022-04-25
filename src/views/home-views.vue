@@ -2,7 +2,7 @@
    <div class="wrapper">
       <div class="advertBar">
          <div class="text">
-            <h2>looking to <strong>Buy 🤷‍♀️</strong> or <strong>Sell 🤑</strong></h2>
+            <h2>looking to <strong id="text1">Buy 🤷‍♀️</strong> or <strong id="text2">Sell 🤑</strong></h2>
             <h3>We got you! 🤝</h3>
             <h3>Your one stop shoping site for farm produces</h3>
             <p>Save on average of KSH140 off RRP</p>
@@ -221,6 +221,12 @@ export default {
    .text > p{
        font-size: .8rem;
    }
+   #text1{
+       color: rgb(0, 140, 255);
+   }
+   #text2{
+       color: green;
+   }
     .wrapper > h3{
        position: relative;
     }
@@ -299,7 +305,7 @@ export default {
     }
     .products button::before{
         content: "";
-        background: #3E8141;
+        background: var(--main-color);
         width: 120%;
         left: -10%;
         transform: skew(30deg);

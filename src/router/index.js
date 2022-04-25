@@ -3,6 +3,8 @@ import Home from '../views/home-views.vue'
 import popularItems from '../views/popular-items.vue'
 import newItems from '../views/new-items.vue'
 import productDetails from '../views/buying/product-details.vue'
+import notFound from '../views/404-error.vue'
+
 
 
 const routes = [
@@ -26,6 +28,11 @@ const routes = [
     name : 'productDetails',
     component: productDetails,
     props: true
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'notFound',
+    component: notFound
   }
 ]
 
