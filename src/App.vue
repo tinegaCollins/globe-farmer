@@ -40,7 +40,6 @@ export default {
 
 <style scoped>
   main{
-    overflow-x: hidden;
     width: calc(99vw - 4px) !important;
     padding: 20px 0 20px 20px;
     column-gap: 30px;

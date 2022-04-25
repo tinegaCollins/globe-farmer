@@ -51,10 +51,13 @@ export default {
     overflow-x: scroll;
     padding: 0 5px 0 10px;
     border-top-left-radius: 25px;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
 }
 ::-webkit-scrollbar{
     height: 8px;
-    width: 8px;
+    width: 0px;
 }
 ::-webkit-scrollbar-track{
     background: var(--main-color);
@@ -64,9 +67,6 @@ export default {
     height: 10px;
     background: black;
 }
-/* ::-webkit-scrollbar-thumb:hover{
-    background: blue;
-} */
 @supports (scrollbar-color: red blue){
     *{
         scrollbar-color: black #086641;
@@ -83,7 +83,6 @@ export default {
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
 }
-/* edit the scroll bar  */
 .barItem{
     background: var(--main-color);
     padding: 3px 7px 0px 7px;

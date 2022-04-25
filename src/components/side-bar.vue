@@ -5,19 +5,20 @@
                 <p>all Kenya</p>
             </div>
             <div class="categories">
-                <h2>Categories<img src= "../assets/icons/arrow-right-solid.svg"></h2>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
+                <h2>Towns<img src= "../assets/icons/arrow-right-solid.svg"></h2>
+                <p>Nakuru</p>
+                <p>Eldoret</p>
+                <p>Kisii</p>
+                <p>Machakos</p>
+                <p>kitale</p>
+                <p>Eldoret</p>
+                <p>Meru</p>
+                <p>thika</p>
+                <p>busia</p>
+                <p>Nyahururu</p>
+                <p>Nanyuki</p>
+                <p>Molo</p>
+                <p>Nyahururu</p>
             </div>
    </section>
 </template>
@@ -37,6 +38,8 @@ export default {
     z-index: 1;
     height: max-content;
     /* this needs to be sticky */
+    position: sticky;
+    top: 20px;
 }
 .location{
     margin-top: 30px;

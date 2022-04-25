@@ -27,7 +27,7 @@
             </div>
        </div>
        <div class="dropdown" @click="show" v-if="showDropDown">
-           <img src="../assets/icons/caret-down-solid.svg" alt="" srcset="">
+           <img :src="dropDownImg" alt="" srcset="" ref="rotate">
        </div>
    </div>
 </template>
@@ -39,9 +39,10 @@ export default {
             account: 'Account',
             Image: 'circle-user-solid.svg',
             showIcons: true,
-            notifications: 40,
-            messages: 10,
+            notifications: 4,
+            messages: 3,
             showDropDown: false,
+            dropDownImg: './icons/caret-down-solid.svg'
         }
     },
     methods: {
@@ -50,10 +51,11 @@ export default {
         },
         show(){
             this.showIcons = !this.showIcons
+            this.$refs.rotate.classList.toggle('rotate')
+            // this.dropDownImg = this.dropDownImg === './icons/caret-down-solid.svg' ? './icons/caret-up-solid.svg' : './icons/caret-down-solid.svg'
         }
     },
     beforeMount() {
-        
         this.Image = './icons/face-shot.png'
         if(window.innerWidth < 768){
             this.showIcons = false
@@ -78,7 +80,7 @@ export default {
         align-self: center;
         margin-right: auto;
         font-family: var(--title-font);
-        font-weight: 300;
+        font-weight: 700;
     }
     .wrapper > img{
         padding: 5px;
@@ -163,8 +165,6 @@ export default {
         }
         .dataicons > div{
             border-bottom: 1px solid black;
-            /* border-right: 1px solid black; */
-            /* border-left: 1px solid black; */
             width: 100%;
             height: 100%;
             display: flex;
@@ -176,12 +176,19 @@ export default {
         }
         .notificationNumber{
             top: 10px;
-            font-size: 1em;
-            padding: 0 4px 0 4px;
             right: 5px;
+            width: 15px;
+        display: grid;
+        place-items: center;
         }
         .sell{
             border-bottom: none !important;
-        }
+            }
+    }
+    .dropdown > img{
+        transition: transform .3s ease-in-out;
+    }
+    .rotate{
+        transform: rotate(180deg);
     }
 </style>

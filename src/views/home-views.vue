@@ -17,7 +17,7 @@
                 <p>Price :{{ product.products.price}} </p>
                 <p>Location : {{ product.location }}</p>
                 <p>Farmer : {{ product.name }} </p>
-                <router-link :to="{ name: 'productDetails', params: { det: product.id }}"><button class="button1"> <span>Order Now</span></button></router-link>
+                <router-link :to="{ name: 'productDetails', params: { det: product.id }}"><button><span>Order Now</span></button></router-link>
             </div>
       </div>
    </div>
@@ -198,7 +198,8 @@ export default {
       font-family: var(--main-font);
       display: flex;
       flex-direction: column;
-      row-gap: 20px;
+      gap: 20px;
+      overflow-x: hidden;
    }
    .advertBar{
       display: flex;
@@ -224,14 +225,14 @@ export default {
        position: relative;
     }
     #trendingAds::after{
-       content: "";
-       width: 100px;
-       height: 2px;
-       background-color: black;
-       position: absolute;
-       left: 0;
-       bottom: -5px;
-    }
+    content: "";
+    width: 115px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+ }
     .trending{
         display: flex;
         flex-wrap: wrap;
