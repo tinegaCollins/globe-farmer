@@ -17,7 +17,7 @@
                 <p>Price :{{ product.products.price}} </p>
                 <p>Location : {{ product.location }}</p>
                 <p>Farmer : {{ product.name }} </p>
-                <button class="button1"> <span>Order Now</span></button>
+                <router-link :to="{ name: 'productDetails', params: { det: product.id }}"><button class="button1"> <span>Order Now</span></button></router-link>
             </div>
       </div>
    </div>
@@ -225,11 +225,11 @@ export default {
         display: flex;
         flex-wrap: wrap;
         padding: 20px;
-        gap: 10px;
-        justify-content: flex-start;
+        gap: 5px;
+        justify-content: center;
     }
     .products{
-    width: 20 0px;
+    width: 200px;
     font-weight: 500;
     border: 2px solid #3E8141;
     border-radius: 5px;
@@ -248,7 +248,7 @@ export default {
     width: auto;
     overflow: hidden;
     }
-    .products > button{
+    .products button{
     outline: none;
     cursor: pointer;
     border: none;
@@ -265,17 +265,18 @@ export default {
     overflow: hidden;
     background: black;
     color: black;
+    border: none;
     }
-    .products > button span{
+    .products button span{
         position: relative;
         z-index: 10;
         transition: color 0.4s;
     }
-    .products > button:hover span{
+    .products button:hover span{
         color:whitesmoke;
     }
-    .products > button::before,
-    .products > button::after{
+    .products button::before,
+    .products button::after{
         position: absolute;
         top: 0;
         left: 0;
@@ -283,7 +284,7 @@ export default {
         height: 100%;
         z-index: 0;
     }
-    .products > button::before{
+    .products button::before{
         content: "";
         background: #3E8141;
         width: 120%;
@@ -291,7 +292,7 @@ export default {
         transform: skew(30deg);
         transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
     }
-    .products > button:hover::before{
+    .products button:hover::before{
         transform: translate3d(100%, 0, 0);
     }
 </style>
