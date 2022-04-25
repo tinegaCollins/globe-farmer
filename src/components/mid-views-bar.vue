@@ -53,6 +53,7 @@ export default {
     border-top-left-radius: 25px;
     position: sticky;
     top: 0px;
+    z-index: 1;
 }
 ::-webkit-scrollbar{
     height: 8px;

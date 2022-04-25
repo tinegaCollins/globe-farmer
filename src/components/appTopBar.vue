@@ -74,7 +74,6 @@ export default {
         width: calc(98vw + 9px);
         overflow-x: hidden;
         margin-top: 0px;
-        /* box-shadow: 20px 10px 17px 10px #12121242; */
     }
     .wrapper h3{
         align-self: center;
@@ -94,6 +93,7 @@ export default {
         align-items: center;
         margin-right: 50px;
         width: 20%;
+        z-index: 2;
     }
     .icons{
         height: 25px;
