@@ -49,8 +49,9 @@ export default {
   .mainContent{
     max-width: calc(100% - 327px);
   }
-  .sidebar{
-    position: sticky;
-    top: 20px;
+  @media screen and (max-width: 768px){
+    .mainContent{
+      max-width: 100%;
+    }
   }
 </style>
