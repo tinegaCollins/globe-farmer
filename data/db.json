@@ -157,5 +157,191 @@
                 }
 
         }
+    ],
+    "popularItems":[
+        {
+            "id" : 13,
+            "name" : "vincent kiiti",
+            "location": "machakos",
+            "phone" : "+254791729544",
+            "popular": true,
+            "products" :
+                {
+                    "item" : "mangoes",
+                    "price": " 1000 per gunia",
+                    "image": "https://netstorage-tuko.akamaized.net/images/0fgjhsu4mbikdiuks.jpg"
+                }
+        },
+        {
+            "id" : 14,
+            "name" : "ondicho makena",
+            "location": "kisii",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "avocado",
+                    "price": " 800 per gunia",
+                    "image": "https://farmbizafrica.com/images/Hassavocado.jpg"
+                }
+        },
+        {
+            "id" : 15,
+            "name" : "kipchirchir kigen",
+            "location": "thika",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "pineapples",
+                    "price": "5000 per crate",
+                    "image": "https://www.monitor.co.ug/resource/image/1553788/portrait_ratio1x1/1600/1600/29d2c42856bf6af0ce1985620004d020/ZO/farm01pix.jpg"
+                }
+        },
+        {
+            "id" : 16,
+            "name" : "baby billy freeman",
+            "location": "nyahururu",
+            "popular": true,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "water melon",
+                    "price": "1000 per unit",
+                    "image": "https://cdn.standardmedia.co.ke/images/friday/how_to_make_cash_fro60e87cdd5d517.jpg"
+                }
+        },
+        {
+            "id" : 17,
+            "name" : "ray charles",
+            "location": "kiambu",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "chicken eggs",
+                    "price": "300 per crate",
+                    "image": "https://zootecnicainternational.com/wp-content/uploads/2018/12/Poultry-Production-congo-africa-696x464.jpg"
+                }
+        },
+        {
+            "id" : 6,
+            "name" : "emeli sande",
+            "location": "eldoret",
+            "popular": true,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "brocolli",
+                    "price": "160 per kg",
+                    "image": "./products/brocolli.jfif"
+                }
+        },
+        {
+            "id" : 7,
+            "name" : "ed sheeran",
+            "location": "kisumu",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "spinach",
+                    "price": "500 per kg",
+                    "image": "./products/spinach.jfif"
+                }
+        },
+        {
+            "id" : 8,
+            "name" : "pink",
+            "location": "nyamira",
+            "popular": true,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "sukuma wiki",
+                    "price": " 2000 per gunia",
+                    "image": "./products/sukuma.jfif"
+                }
+        },
+        {
+            "id" : 9,
+            "name" : "justin jeso",
+            "location": "kisii",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "Indegenous vegetables",
+                    "price": " 1000 per gunia",
+                    "image": "./products/veg.jfif"
+                }
+        },
+        {
+            "id" : 10,
+            "name" : "Erick wainaina",
+            "location": "kiambu",
+            "popular": true,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "irish potatoes",
+                    "price": " 1000 per gunia",
+                    "image": "./products/viazi.jfif"
+                }
+        }
+    ],
+    "newItems": [
+        {
+            "id" : 13,
+            "name" : "vincent kiiti",
+            "location": "machakos",
+            "phone" : "+254791729544",
+            "popular": true,
+            "products" :
+                {
+                    "item" : "mangoes",
+                    "price": " 1000 per gunia",
+                    "image": "https://netstorage-tuko.akamaized.net/images/0fgjhsu4mbikdiuks.jpg"
+                }
+        },
+        {
+            "id" : 14,
+            "name" : "ondicho makena",
+            "location": "kisii",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "avocado",
+                    "price": " 800 per gunia",
+                    "image": "https://farmbizafrica.com/images/Hassavocado.jpg"
+                }
+        },
+        {
+            "id" : 15,
+            "name" : "kipchirchir kigen",
+            "location": "thika",
+            "popular": false,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "pineapples",
+                    "price": "5000 per crate",
+                    "image": "https://farmbizafrica.com/images/152888775_10224941308868247_3160029068076064717_o.jpg"
+                }
+        },
+        {
+            "id" : 16,
+            "name" : "baby billy freeman",
+            "location": "nyahururu",
+            "popular": true,
+            "phone" : "+254791729544",
+            "products" :
+                {
+                    "item" : "water melon",
+                    "price": "1000 per unit",
+                    "image": "https://cdn.standardmedia.co.ke/images/friday/how_to_make_cash_fro60e87cdd5d517.jpg"
+                }
+        }
     ]
 }

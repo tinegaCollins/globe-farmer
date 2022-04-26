@@ -18,47 +18,16 @@
 export default {
   data(){
     return{
-      sellers: [
-        {
-        id : 4,
-        name : "kygo",
-        location: "moyale",
-        phone : +254791729544,
-        products :
-            {
-                item : "peas",
-                price: "200 per kg",
-                image: './products/peas.jfif'
-            },
-            //places to add new items
-    },
-    {
-        id : 5,
-        name : "taylor swift",
-        location: "kiambu",
-        phone : +254791729544,
-        products :
-            {
-                item : "spring onions",
-                price: " 1000 per gunia",
-                image: './products/spring.jfif'
-            },
-            //places to add new items
-    },    {
-        id :6,
-        name : "emeli sande",
-        location: "eldoret",
-        phone : +254791729544,
-        products :
-            {
-                item : "brocolli",
-                price: "160 per kg",
-                image: './products/brocolli.jfif'
-            }
-            //places to add new items
-    },
-      ]
+      sellers: []
     }
+  },
+  mounted(){
+    fetch('http://localhost:3000/newItems')
+      .then(res => res.json())
+      .then(data => {
+        this.sellers = data
+      })
+      .catch(err => console.log(err))
   }
 
 }

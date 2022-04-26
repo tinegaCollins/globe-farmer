@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h1 @click="hhh">popular items</h1>
+    <h1>popular items</h1>
     <div class="popular">
              <div class="products" v-for="product in sellers" :key="product.id">
                 <img v-bind:src="product.products.image" alt="product image">
@@ -18,37 +18,18 @@
 export default {
   data() {
     return {
-      popularSellers: [],
+      // popularSellers: [],
       sellers: []
     }
   },
-  beforeMount() {
-    fetch('http://localhost:3000/sellers')
+  mounted() {
+    fetch('  http://localhost:3000/popularItems')
       .then(res => res.json())
       .then(data => {
         this.sellers = data
       })
-      // .then(
-      //   console.log(this.sellers),
-      //   this.popularSellers = this.sellers.filter(
-      //     (x) => x.popular === true
-      //   )
-      // )
       .catch(err => console.log(err))
-  },
-  mounted() {
-    console.log(this.sellers)
-    this.popularSellers = this.sellers.filter(
-      (x) => x.popular === true
-    )
-  },
-  methods: {
-    hhh() {
-      console.log(this.sellers)
-      console.log(this.popularSellers)
-    }
   }
-
 }
 </script>
 

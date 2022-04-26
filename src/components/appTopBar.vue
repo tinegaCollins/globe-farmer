@@ -2,6 +2,10 @@
    <div class="wrapper">
        <img src="../assets/logos/2.png" alt="logo" class="logo">
        <h3>Globe Farmer</h3>
+       <div class="searchBar">
+            <input type="text" name="text">
+            <button><span>Search</span></button>
+       </div>
        <div class="dataicons" v-if="showIcons">
             <div class="notification">
                 <img class= "icons" src="../assets/icons/bell-solid.svg" alt="" srcset="">
@@ -28,6 +32,9 @@
        </div>
        <div class="dropdown" @click="show" v-if="showDropDown">
            <img :src="dropDownImg" alt="" srcset="" ref="rotate">
+       </div>
+       <div class="helpBar">
+           
        </div>
    </div>
 </template>
