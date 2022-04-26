@@ -123,6 +123,13 @@ export default {
         display: grid;
         place-items: center;
     }
+    .bookmark > img{
+        height: 20px;
+    }
+    .sell{
+        position: relative;
+        bottom: 3px;
+    }
     .sell > h4{
         background: var(--btn-color);
         height: 25px;
