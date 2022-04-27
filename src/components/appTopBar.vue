@@ -3,7 +3,8 @@
        <img src="../assets/logos/2.png" alt="logo" class="logo">
        <h3>Globe Farmer</h3>
        <div class="searchBar">
-            <input type="text" name="text">
+            <label for="text"><img src="../assets/icons/filter-solid.svg"></label>
+            <input type="text" name="text" id="text">
             <button><span>Search</span></button>
        </div>
        <div class="dataicons" v-if="showIcons">
@@ -29,13 +30,14 @@
             <div class="sell">
                 <h4>Sell</h4>
             </div>
+            <div class="helpBar">
+                <h4>help</h4>
+            </div>
        </div>
        <div class="dropdown" @click="show" v-if="showDropDown">
            <img :src="dropDownImg" alt="" srcset="" ref="rotate">
        </div>
-       <div class="helpBar">
-           
-       </div>
+      
    </div>
 </template>
 
@@ -86,7 +88,8 @@ export default {
         align-self: center;
         margin-right: auto;
         font-family: var(--title-font);
-        font-weight: 700;
+        font-size: 1.3rem;
+        font-weight: 500;
     }
     .wrapper > img{
         padding: 5px;
@@ -150,6 +153,42 @@ export default {
     .acc > img{
         border-radius: 50%;
     }
+    .dropdown > img{
+        transition: transform .3s ease-in-out;
+    }
+    .rotate{
+        transform: rotate(180deg);
+    }
+    .searchBar{
+        margin-right: 100px;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        border: 1px solid #333;
+        height: 30px;
+        align-items: center;
+    }
+    .searchBar input,img,button{
+        height: 30px;
+    }
+    .searchBar input{
+        width: 300px;
+        appearance: none;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        border-right: 1px solid #333;
+        outline: none;
+        padding-left: 5px;
+    }
+    .searchBar label{
+        background: #fff;
+    }
+    .searchBar button{
+        width: 80px;
+        border: 0;
+        appearance: none;
+        outline: none;
+    }
     @media screen and (max-width: 1200px){
          .dataicons{
             width: 40%;
@@ -199,10 +238,5 @@ export default {
             border-bottom: none !important;
             }
     }
-    .dropdown > img{
-        transition: transform .3s ease-in-out;
-    }
-    .rotate{
-        transform: rotate(180deg);
-    }
+
 </style>

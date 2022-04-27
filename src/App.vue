@@ -1,6 +1,5 @@
 <template>
   <appTopBar/>
-  
   <main>
     <sideBar :moveSidebar= "moveSidebar" class="sidebar"/>
     <div class="mainContent">
