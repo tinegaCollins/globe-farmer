@@ -53,7 +53,7 @@ export default {
     border-top-left-radius: 25px;
     position: sticky;
     top: 0px;
-    z-index: 1;
+    /* z-index: 1; */
 }
 ::-webkit-scrollbar{
     height: 8px;
@@ -108,6 +108,9 @@ img{
 @media screen and (max-width: 768px){
     img{
         display: inline;
+    }
+    .bar{
+        position: relative;
     }
 }
 a{

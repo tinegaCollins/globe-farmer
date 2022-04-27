@@ -77,7 +77,8 @@ p{
         width: 100%;
         left: -100%;
         transition: all .3s cubic-bezier(0.2, 0.055, 0.675, 0.59) ;
-        margin-top: 30px;
+        margin-top: 100px;
+        z-index: 1070;
     }
     .moveSidebar{
         left: 0% !important;

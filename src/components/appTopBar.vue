@@ -2,10 +2,9 @@
    <div class="wrapper">
        <img src="../assets/logos/2.png" alt="logo" class="logo">
        <h3>Globe Farmer</h3>
-       <div class="searchBar">
-            <label for="text"><img src="../assets/icons/filter-solid.svg"></label>
+       <div class="searchBar" v-if="showSearchBar">
             <input type="text" name="text" id="text">
-            <button><span>Search</span></button>
+            <button><img src="../assets/icons/magnifying-glass-solid.svg"></button>
        </div>
        <div class="dataicons" v-if="showIcons">
             <div class="notification">
@@ -34,6 +33,9 @@
                 <h4>help</h4>
             </div>
        </div>
+       <div class="searchIcon">
+           <img src="../assets/icons/magnifying-glass-solid.svg">
+       </div>
        <div class="dropdown" @click="show" v-if="showDropDown">
            <img :src="dropDownImg" alt="" srcset="" ref="rotate">
        </div>
@@ -48,9 +50,10 @@ export default {
             account: 'Account',
             Image: 'circle-user-solid.svg',
             showIcons: true,
-            notifications: 4,
+            notifications: 7,
             messages: 3,
             showDropDown: false,
+            showSearchBar: true,
             dropDownImg: './icons/caret-down-solid.svg'
         }
     },
@@ -69,6 +72,7 @@ export default {
         if(window.innerWidth < 768){
             this.showIcons = false
             this.showDropDown = true
+            this.showSearchBar = false
         }
     }
 }
@@ -104,6 +108,7 @@ export default {
         margin-right: 50px;
         width: 20%;
         z-index: 2;
+        column-gap: 30px;
     }
     .icons{
         height: 25px;
@@ -143,6 +148,9 @@ export default {
     .sell:hover,h4:hover{
         cursor: pointer;
     }
+    .messages img{
+        height: 23px;
+    }
     .dropdown{
         align-self: center;
         height: 20px;
@@ -165,29 +173,34 @@ export default {
         display: flex;
         align-items: center;
         border: 1px solid #333;
-        height: 30px;
+        height: 40px;
         align-items: center;
     }
-    .searchBar input,img,button{
-        height: 30px;
+    .searchBar input,button{
+        height: 100%;
+    }
+    .searchBar img{
+        height: 70%;
     }
     .searchBar input{
-        width: 300px;
+        width: 400px;
         appearance: none;
-        border-top: 1px solid #333;
-        border-bottom: 1px solid #333;
-        border-right: 1px solid #333;
         outline: none;
         padding-left: 5px;
-    }
-    .searchBar label{
-        background: #fff;
+        background-color: #333;
+        color: #fff;
     }
     .searchBar button{
-        width: 80px;
+        width: 60px;
         border: 0;
         appearance: none;
         outline: none;
+    }
+    .searchBar button:hover{
+        cursor: pointer;
+    }
+    .searchIcon{
+        display: none;
     }
     @media screen and (max-width: 1200px){
          .dataicons{
@@ -236,7 +249,18 @@ export default {
         }
         .sell{
             border-bottom: none !important;
-            }
+        }
+        .searchIcon{
+           display: block;
+           align-self: center;
+           align-self: center;
+            height: 20px;
+            width: 20px;
+            margin: 15px 15px 0 0; 
+        }
+        .searchIcon img{
+            height: 20px;
+        }
     }
 
 </style>
