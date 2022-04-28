@@ -16,12 +16,14 @@
             <div class="bookmark">
                 <img class= "icons" src="../assets/icons/bookmark-solid.svg" alt="bookmark" srcset="">
             </div>
-            <div class="messages">
+            <router-link to='/messages'>
+                 <div class="messages"  @click="remove">
                 <img class= "icons" src="../assets/icons/message-solid.svg" alt="messages" srcset="">
                  <div class="notificationNumber">
                     <span>{{ messages }}</span>
                 </div>
             </div>
+            </router-link>
             <div class="acc">
            <!-- bind to account image -->
                 <img class= "icons" :src="Image" :alt="account">
@@ -65,6 +67,9 @@ export default {
             this.showIcons = !this.showIcons
             this.$refs.rotate.classList.toggle('rotate')
             // this.dropDownImg = this.dropDownImg === './icons/caret-down-solid.svg' ? './icons/caret-up-solid.svg' : './icons/caret-down-solid.svg'
+        },
+        remove(){
+            this.$emit('remove')
         }
     },
     beforeMount() {

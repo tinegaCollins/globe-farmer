@@ -343,5 +343,11 @@
                     "image": "https://cdn.standardmedia.co.ke/images/friday/how_to_make_cash_fro60e87cdd5d517.jpg"
                 }
         }
+    ],
+    "incoming": [
+        {
+           "10.05": "hello how are you doing",
+           "10.06": "you inquired about an item"
+        }
     ]
 }

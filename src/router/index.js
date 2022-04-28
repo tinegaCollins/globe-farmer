@@ -4,6 +4,7 @@ import popularItems from '../views/popular-items.vue'
 import newItems from '../views/new-items.vue'
 import productDetails from '../views/buying/product-details.vue'
 import notFound from '../views/404-error.vue'
+import messages from '../views/messagesView.vue'
 
 
 
@@ -24,7 +25,7 @@ const routes = [
     component : Home
   },
   {
-    path : '/product/:det',
+    path : '/product-details/:det',
     name : 'productDetails',
     component: productDetails,
     props: true
@@ -33,6 +34,11 @@ const routes = [
     path: '/:catchAll(.*)',
     name: 'notFound',
     component: notFound
+  },
+  {
+    path: '/messages',
+    name: messages,
+    component: messages
   }
 ]
 
