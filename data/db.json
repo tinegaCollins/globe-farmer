@@ -10,7 +10,8 @@
                 {
                     "item" : "carrots",
                     "price": " 10000 per gunia",
-                    "image": "./products/carrots.jpg"
+                    "image": "./products/carrots.jpg",
+                    "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
                 }
         },
         {
@@ -23,7 +24,8 @@
                 {
                     "item" : "green pepper",
                     "price": " 1000 per gunia",
-                    "image": "./products/green.jfif"
+                    "image": "./products/green.jfif",
+                    "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
                 }
         },
         {
@@ -36,7 +38,8 @@
                 {
                     "item" : "string beans",
                     "price": "500 per crate",
-                    "image": "./products/string.jfif"
+                    "image": "./products/string.jfif",
+                    "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
                 }
         },
         {
@@ -49,7 +52,8 @@
                 {
                     "item" : "peas",
                     "price": "200 per kg",
-                    "image": "./products/peas.jfif"
+                    "image": "./products/peas.jfif",
+                    "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
                 }
         },
         {
@@ -62,7 +66,8 @@
                 {
                     "item" : "spring onions",
                     "price": " 1000 per gunia",
-                    "image": "./products/spring.jfif"
+                    "image": "./products/spring.jfif",
+                    "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
                 }
         },    {
             "id" :6,
@@ -74,7 +79,8 @@
                 {
                     "item" : "brocolli",
                     "price": "160 per kg",
-                    "image": "./products/brocolli.jfif"
+                    "image": "./products/brocolli.jfif",
+                    "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
                 }
         },
         {
@@ -87,7 +93,8 @@
                 {
                     "item" : "spinach",
                     "price": "500 per kg",
-                    "image": "./products/spinach.jfif"
+                    "image": "./products/spinach.jfif",
+                    "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
                 }
         },
         {
@@ -100,7 +107,8 @@
                 {
                     "item" : "sukuma wiki",
                     "price": " 2000 per gunia",
-                    "image": "./products/sukuma.jfif"
+                    "image": "./products/sukuma.jfif",
+                    "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
                 }
         },
         {
@@ -113,7 +121,8 @@
                 {
                     "item" : "Indegenous vegetables",
                     "price": " 1000 per gunia",
-                    "image": "./products/veg.jfif"
+                    "image": "./products/veg.jfif",
+                    "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
                 }
         },
         {
@@ -124,9 +133,11 @@
             "phone" : "+254791729544",
             "products" :
                 {
+                    "pruductId": 1004,
                     "item" : "irish potatoes",
                     "price": " 1000 per gunia",
-                    "image": "./products/viazi.jfif"
+                    "image": "./products/viazi.jfif",
+                    "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
                 }
         },
         {

@@ -12,7 +12,7 @@
       <h3 id="trendingAds">Trending ads</h3>
       <div class="trending">
              <div class="products" v-for="product in sellers" :key="product.id">
-                <img v-bind:src="product.products.image" alt="product image">
+                <img :src="product.products.image" alt="product image">
                 <p>Product :{{ product.products.item }} </p>
                 <p>Price :{{ product.products.price}} </p>
                 <p>Location : {{ product.location }}</p>

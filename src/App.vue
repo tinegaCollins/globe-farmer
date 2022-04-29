@@ -1,10 +1,10 @@
 <template>
-  <appTopBar @remove="remove"/>
+  <appTopBar/>
   <main>
     <sideBar :moveSidebar= "moveSidebar" class="sidebar"/>
     <div class="mainContent">
       <router-view name="notifications"/>
-      <midViewsBar @sidebar="sidebarMove" v-if="showMidViewsBar"/>
+      <midViewsBar @sidebar="sidebarMove"/>
       <router-view/>
     </div>
   </main>
@@ -28,16 +28,11 @@ export default {
   data(){
     return{
       moveSidebar: false,
-      showMidViewsBar: true
     }
   },
   methods: {
     sidebarMove(){
       this.moveSidebar = !this.moveSidebar
-    },
-    remove(){
-      console.log("removed")
-      this.showMidViewsBar = !this.showMidViewsBar
     }
   }
 

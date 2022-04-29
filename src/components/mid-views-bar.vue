@@ -51,9 +51,6 @@ export default {
     overflow-x: scroll;
     padding: 0 5px 0 10px;
     border-top-left-radius: 25px;
-    position: sticky;
-    top: 0px;
-    /* z-index: 1; */
 }
 ::-webkit-scrollbar{
     height: 8px;

@@ -68,12 +68,10 @@ export default {
             this.$refs.rotate.classList.toggle('rotate')
             // this.dropDownImg = this.dropDownImg === './icons/caret-down-solid.svg' ? './icons/caret-up-solid.svg' : './icons/caret-down-solid.svg'
         },
-        remove(){
-            this.$emit('remove')
-        }
     },
     beforeMount() {
         this.Image = './icons/face-shot.png'
+        //make a default image
         if(window.innerWidth < 768){
             this.showIcons = false
             this.showDropDown = true
