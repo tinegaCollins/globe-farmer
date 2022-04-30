@@ -38,15 +38,9 @@ export default {
       this.moveSidebar = !this.moveSidebar
     },
     showSearchBar2(){
-      console.log('show search')
       this.showSearchBar = !this.showSearchBar
     }
-  },
-  // mounted(){
-  //   if(window.innerWidth < 768){
-  //     this.showSearcBar = false
-  //   }
-  // }
+  }
 
 }
 </script>

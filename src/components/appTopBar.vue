@@ -12,18 +12,16 @@
                     <span> {{ notifications }}</span>
                 </div>
             </div>
-            <div class="bookmark">
+            <a href="/bookmarks"><div class="bookmark">
                 <img class= "icons" src="../assets/icons/bookmark-solid.svg" alt="bookmark" srcset="">
-            </div>
-            <router-link to='/messages'>
+            </div> </a>
                  <div class="messages"  @click="remove">
-                <img class= "icons" src="../assets/icons/message-solid.svg" alt="messages" srcset="">
+                 <img class= "icons" src="../assets/icons/message-solid.svg" alt="messages" srcset="">
                  <div class="notificationNumber">
                     <span>{{ messages }}</span>
                 </div>
             </div>
-            </router-link>
-            <a href="http://localhost:8080/logins"><div class="acc">
+            <a href="/logins"><div class="acc">
            <!-- bind to account image -->
                 <img class= "icons" :src="Image" :alt="account">
             </div> </a>
@@ -80,7 +78,7 @@ export default {
     },
     beforeMount() {
         this.Image = './icons/face-shot.png'
-        //make a default image
+       // make a default image
         if(window.innerWidth < 768){
             this.showIcons = false
             this.showDropDown = true
@@ -96,7 +94,6 @@ export default {
         font-weight: 600;
         background-color: var(--main-color);
         display: flex;
-        width: calc(98vw + 9px);
         overflow-x: hidden;
         margin-top: 0px;
     }
@@ -121,6 +118,9 @@ export default {
         width: 20%;
         z-index: 2;
         column-gap: 30px;
+    }
+    .dataicons > div > *:hover{
+        cursor: pointer;
     }
     .icons{
         height: 25px;
@@ -206,33 +206,35 @@ export default {
             position: fixed;
             top: 74px;
             right: -20px;
-            height: 30%;
+            height: 40%;
             background: var(--main-color);
             justify-items: center;
             align-items: flex-end;
-            width: 70vw;
+            width: 50vw;
             border-radius: 5px;
             z-index: 1;
         }
-        .dataicons > div{
+        .dataicons > *{
             border-bottom: 1px solid black;
             width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
             padding-left: 10px;
+            position: relative;
         }
         .icons{
             height: 20px;
         }
         .notificationNumber{
+            position: absolute;
             top: 10px;
             right: 5px;
             width: 15px;
-         display: grid;
-        place-items: center;
+            display: grid;
+            place-items: center;
         }
-        .sell{
+        .helpBar{
             border-bottom: none !important;
         }
         .searchIcon{

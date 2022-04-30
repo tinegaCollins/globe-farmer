@@ -7,7 +7,7 @@
 <style scoped>
 
 .container-3 {
-	 max-width: 300px;
+	 max-width: 400px;
 	 overflow: hidden;
 	 white-space: nowrap;
 }
@@ -16,7 +16,7 @@
     height: 20px;
 }
  .container-3 input#search {
-	 max-width: 300px;
+	 max-width: 400px;
 	 height: 2rem;
 	 background: #333;
 	 color: #eceff1;
@@ -26,6 +26,7 @@
 	 line-height: 1.5em;
 	 padding: 0 0 0 5px;
 	 border-radius: 5px;
+	 transition: all .4s ease-in-out;
 }
 .container-3 input::placeholder{
     color: #eceff1;
