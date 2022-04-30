@@ -1,5 +1,6 @@
 <template>
-  <appTopBar/>
+  <appTopBar @showSearch="showSearchBar2"/>
+  <searchBar class="searchbar" v-if="showSearchBar"/>
   <main>
     <sideBar :moveSidebar= "moveSidebar" class="sidebar"/>
     <div class="mainContent">
@@ -17,24 +18,35 @@ import appTopBar from './components/appTopBar.vue'
 import './assets/styles/global.css'
 import midViewsBar from './components/mid-views-bar.vue'
 import sideBar from './components/side-bar.vue'
-
+import searchBar from './components/searchBar.vue'
 
 export default {
   components: {
     appTopBar,
     midViewsBar,
-    sideBar
+    sideBar,
+    searchBar
   },
   data(){
     return{
       moveSidebar: false,
+      showSearchBar: false,
     }
   },
   methods: {
     sidebarMove(){
       this.moveSidebar = !this.moveSidebar
+    },
+    showSearchBar2(){
+      console.log('show search')
+      this.showSearchBar = !this.showSearchBar
     }
-  }
+  },
+  // mounted(){
+  //   if(window.innerWidth < 768){
+  //     this.showSearcBar = false
+  //   }
+  // }
 
 }
 </script>
@@ -53,5 +65,8 @@ export default {
     .mainContent{
       max-width: 100%;
     }
+  }
+  .searchbar{
+    margin: 10px 0 0 20px;
   }
 </style>

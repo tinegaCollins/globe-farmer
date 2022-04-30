@@ -2,7 +2,7 @@
 <div class="wrapper">
     <h3>product details</h3>
     <p>the product details  {{ product.name }}  </p>
-    <img src="product.products.image" alt="product image">
+    <img :src="product.products.image" alt="product image">
     <h1 @click="goBack">X</h1>
 </div>
   </template>
@@ -13,7 +13,6 @@ export default {
   data(){
     return{
       product: [],
-      image: null
     }
   },
   methods: {

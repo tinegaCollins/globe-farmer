@@ -3,8 +3,7 @@
        <img src="../assets/logos/2.png" alt="logo" class="logo">
        <h3>Globe Farmer</h3>
        <div class="searchBar" v-if="showSearchBar">
-            <input type="text" name="text" id="text">
-            <button><img src="../assets/icons/magnifying-glass-solid.svg"></button>
+            <search-bar/>
        </div>
        <div class="dataicons" v-if="showIcons">
             <div class="notification">
@@ -24,10 +23,10 @@
                 </div>
             </div>
             </router-link>
-            <div class="acc">
+            <a href="http://localhost:8080/logins"><div class="acc">
            <!-- bind to account image -->
                 <img class= "icons" :src="Image" :alt="account">
-            </div>
+            </div> </a>
             <div class="sell">
                 <h4>Sell</h4>
             </div>
@@ -35,7 +34,7 @@
                 <h4>help</h4>
             </div>
        </div>
-       <div class="searchIcon">
+       <div class="searchIcon" @click="showSearch">
            <img src="../assets/icons/magnifying-glass-solid.svg">
        </div>
        <div class="dropdown" @click="show" v-if="showDropDown">
@@ -46,7 +45,14 @@
 </template>
 
 <script>
+
+import searchBar from './searchBar.vue'
+
+
 export default {
+    components: {
+        searchBar
+    },
     data() {
         return {
             account: 'Account',
@@ -67,6 +73,9 @@ export default {
             this.showIcons = !this.showIcons
             this.$refs.rotate.classList.toggle('rotate')
             // this.dropDownImg = this.dropDownImg === './icons/caret-down-solid.svg' ? './icons/caret-up-solid.svg' : './icons/caret-down-solid.svg'
+        },
+        showSearch(){
+            this.$emit('showSearch')
         },
     },
     beforeMount() {
@@ -173,35 +182,8 @@ export default {
     .searchBar{
         margin-right: 100px;
         align-self: center;
-        display: flex;
-        align-items: center;
-        border: 1px solid #333;
-        height: 40px;
-        align-items: center;
     }
-    .searchBar input,button{
-        height: 100%;
-    }
-    .searchBar img{
-        height: 70%;
-    }
-    .searchBar input{
-        width: 400px;
-        appearance: none;
-        outline: none;
-        padding-left: 5px;
-        background-color: #333;
-        color: #fff;
-    }
-    .searchBar button{
-        width: 60px;
-        border: 0;
-        appearance: none;
-        outline: none;
-    }
-    .searchBar button:hover{
-        cursor: pointer;
-    }
+    
     .searchIcon{
         display: none;
     }
@@ -247,7 +229,7 @@ export default {
             top: 10px;
             right: 5px;
             width: 15px;
-        display: grid;
+         display: grid;
         place-items: center;
         }
         .sell{
