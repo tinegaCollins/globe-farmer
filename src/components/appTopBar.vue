@@ -6,12 +6,14 @@
             <search-bar/>
        </div>
        <div class="dataicons" v-if="showIcons">
+           <a href="/notifications">
             <div class="notification">
                 <img class= "icons" src="../assets/icons/bell-solid.svg" alt="" srcset="">
                 <div class="notificationNumber">
                     <span> {{ notifications }}</span>
                 </div>
             </div>
+            </a>
             <a href="/bookmarks"><div class="bookmark">
                 <img class= "icons" src="../assets/icons/bookmark-solid.svg" alt="bookmark" srcset="">
             </div> </a>

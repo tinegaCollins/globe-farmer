@@ -8,7 +8,7 @@
                 <p>{{ product.products.item }} </p>
                 <!-- <p>Price :{{ product.products.price}} </p> -->
                 <p>From : {{ product.name }} </p>
-                <router-link :to="{ name: 'productDetails', params: { det: product.id }}"><button><span>go</span></button></router-link>
+                <button><span>go</span></button>
             </div>
         </div>
         <router-view/>
