@@ -360,5 +360,12 @@
            "10.05": "hello how are you doing",
            "10.06": "you inquired about an item"
         }
-    ]
+    ],
+    "notes": [
+        {"noteid": 1, "date": "29/02/2022", "note": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, officia." },
+        {"noteid": 1, "date": "29/02/2022", "note": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, officia." },
+        {"noteid": 1, "date": "29/02/2022", "note": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, officia." },
+        {"noteid": 1, "date": "29/02/2022", "note": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, officia." },
+        {"noteid": 1, "date": "29/02/2022", "note": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, officia." }
+     ]
 }

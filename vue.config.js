@@ -10,11 +10,6 @@ module.exports = {
       template: './public/index.html',
       title: 'home'
     },
-    notifications: {
-      entry: './src/pages/notifications/notifications.js',
-      template: './public/notifications.html',
-      title: notifications
-    },
   // Then configure each sub page ： After logging in, the course schedule query page 
     bookmarks: {
       entry: './src/pages/bookmarks/book-marks.js',
@@ -25,6 +20,16 @@ module.exports = {
       entry: './src/pages/logins/logins.js',
       template: './public/logins.html',
       title: 'logins'
+    },
+    messages: {
+      entry: './src/pages/messages/messages.js',
+      template: './public/messages.html',
+      title: 'messages'
+    },
+    notes: {
+      entry: './src/pages/notes/notes.js',
+      template: './public/notes.html',
+      title: 'notes'
     }
   }
 }

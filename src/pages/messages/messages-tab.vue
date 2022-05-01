@@ -1,5 +1,5 @@
 <template>
-  <h1>notifications tab</h1>
+  <h1> this is the message tab </h1>
 </template>
 
 <script>

@@ -6,23 +6,25 @@
             <search-bar/>
        </div>
        <div class="dataicons" v-if="showIcons">
-           <a href="/notifications">
+           <a href="/notes">
             <div class="notification">
                 <img class= "icons" src="../assets/icons/bell-solid.svg" alt="" srcset="">
                 <div class="notificationNumber">
-                    <span> {{ notifications }}</span>
+                    <span> {{this.notes.length }}</span>
                 </div>
             </div>
             </a>
             <a href="/bookmarks"><div class="bookmark">
                 <img class= "icons" src="../assets/icons/bookmark-solid.svg" alt="bookmark" srcset="">
             </div> </a>
-                 <div class="messages"  @click="remove">
+            <a href="/messages">
+            <div class="messages"  @click="remove">
                  <img class= "icons" src="../assets/icons/message-solid.svg" alt="messages" srcset="">
                  <div class="notificationNumber">
                     <span>{{ messages }}</span>
                 </div>
             </div>
+            </a>
             <a href="/logins"><div class="acc">
            <!-- bind to account image -->
                 <img class= "icons" :src="Image" :alt="account">
@@ -62,7 +64,8 @@ export default {
             messages: 3,
             showDropDown: false,
             showSearchBar: true,
-            dropDownImg: './icons/caret-down-solid.svg'
+            dropDownImg: './icons/caret-down-solid.svg',
+            notes: []
         }
     },
     methods: {
@@ -75,6 +78,7 @@ export default {
             // this.dropDownImg = this.dropDownImg === './icons/caret-down-solid.svg' ? './icons/caret-up-solid.svg' : './icons/caret-down-solid.svg'
         },
         showSearch(){
+            console.log(this.notes.length)
             this.$emit('showSearch')
         },
     },
@@ -86,6 +90,13 @@ export default {
             this.showDropDown = true
             this.showSearchBar = false
         }
+        fetch(' http://localhost:3000/notes')
+        .then(res => res.json())
+        .then(data => {
+            this.notes = data
+        })
+        .catch(err => console.log(err))
+       
     }
 }
 </script>
