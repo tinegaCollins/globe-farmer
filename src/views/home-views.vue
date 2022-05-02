@@ -31,7 +31,7 @@ export default {
       }
    },
    mounted(){
-       fetch(' http://localhost:3000/sellers')
+       fetch('http://localhost:3000/produces')
        .then(res => res.json())
        .then(data => {
            this.sellers = data

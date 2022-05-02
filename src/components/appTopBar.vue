@@ -90,7 +90,7 @@ export default {
             this.showDropDown = true
             this.showSearchBar = false
         }
-        fetch(' http://localhost:3000/notes')
+        fetch('http://localhost:3000/notifications')
         .then(res => res.json())
         .then(data => {
             this.notes = data
