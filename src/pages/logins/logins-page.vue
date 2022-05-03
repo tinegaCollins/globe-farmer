@@ -1,10 +1,22 @@
 <template>
-  <h1> logins</h1>
+  <div class="wrapper">
+    <appTopBar/>
+    <div class="mainContent">
+      <!-- <router-view/> -->
+      <p>eegjkfl;fgh</p>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
 
+import appTopBar from '../../components/appTopBar.vue'
+import '../../assets/styles/global.css'
+
+export default {
+  components: {
+    appTopBar
+  },
 }
 </script>
 
