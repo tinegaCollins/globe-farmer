@@ -25,7 +25,7 @@
                 </div>
             </div>
             </a>
-            <a href="/logins"><div class="acc">
+            <a href="#"><div class="acc" @click="acountData">
            <!-- bind to account image -->
                 <img class= "icons" :src="Image" :alt="account">
             </div> </a>
@@ -42,8 +42,22 @@
        <div class="dropdown" @click="show" v-if="showDropDown">
            <img :src="dropDownImg" alt="" srcset="" ref="rotate">
        </div>
-      
    </div>
+   <dialog class="modal" ref="modal">
+       <img src="../assets/icons/xmark-solid.svg" @click="closeModal">
+       <div class="mainContent">
+           <div class="login">
+               <img src="../assets/icons/undraw_access_account_re_8spm.svg" alt="">
+               <p>have an account?</p>
+               <a href="/logins"><button>login</button></a>
+           </div>
+           <div class="signup">
+               <img src="../assets/icons/undraw_my_app_re_gxtj.svg" alt="">
+                <p>create your account in just a few steps</p>
+                <a href="/logins/signup"><button>signup</button></a>
+           </div>
+       </div>
+   </dialog>
 </template>
 
 <script>
@@ -65,7 +79,8 @@ export default {
             showDropDown: false,
             showSearchBar: true,
             dropDownImg: './icons/caret-down-solid.svg',
-            notes: []
+            notes: [],
+            accountDetails: null
         }
     },
     methods: {
@@ -80,6 +95,16 @@ export default {
         showSearch(){
             console.log(this.notes.length)
             this.$emit('showSearch')
+        },
+        acountData(){
+            if (this.accountDetails === null) { 
+                this.$refs.modal.showModal()
+            } else {
+                //where account details are shown
+            }
+        },
+        closeModal(){
+            this.$refs.modal.close()
         },
     },
     beforeMount() {
@@ -97,6 +122,14 @@ export default {
         })
         .catch(err => console.log(err))
        
+    },
+    mounted(){
+        if (this.accountDetails === null) {
+                  this.accountDetails = null
+                this.Image = './icons/circle-user-solid.svg'
+            } else {
+                this.Image = './icons/face-shot.png'
+            }
     }
 }
 </script>
@@ -262,5 +295,63 @@ export default {
             height: 20px;
         }
     }
-
+    .modal{
+        padding: 1.3em;
+        max-width:70ch;
+        z-index: 100;
+        position: fixed;
+        top: 25%;
+        left: 35%;
+        border: 1px solid black;
+    }   
+    .modal::backdrop{
+        backdrop-filter: blur(2px) saturate(100%);
+        -webkit-backdrop-filter: blur(2px) saturate(100%);
+        background-color: rgba(17, 25, 40, 0.39);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+    }   
+    .modal > img{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+    .modal div > img{
+        height: 150px;
+        width: auto;
+    }
+    .mainContent{
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        text-align: center;
+        margin-top: 20px;
+        font-family: var(--main-font);
+    }
+    .mainContent p{
+        margin-top: 10px;
+    }
+    .signup{
+        margin: 10px 10px 0 0;
+        border-left: 1px solid black;
+    }
+    .mainContent button{
+        background-color: var(--btn-color);
+        padding:7px 15px;
+        border: 1px solid #333;
+        border-radius:105px;
+        transition: background-color 0.3s ease-in-out;
+        transition: bottom 0.5s ease-in-out;
+        position: relative;
+        margin-top: 10px;
+    }   
+    .mainContent button:hover{
+        background-color: var(--sub-color);
+        bottom: 5px;
+        cursor: pointer;
+    }    
 </style>

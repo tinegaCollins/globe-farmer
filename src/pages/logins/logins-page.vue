@@ -1,5 +1,5 @@
 <template>
-  <h1> home deejhb kd</h1>
+  <h1> logins</h1>
 </template>
 
 <script>
