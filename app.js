@@ -9,6 +9,7 @@ const corsOptions ={
     optionSuccessStatus:200
 }
 app.use(cors(corsOptions));
+app.use(express.json())
 
 
 // db connection
@@ -39,6 +40,30 @@ app.get('/produces',(req, res)=>{
         res.status(500).json({error: 'could not fetch the documents'})
     })
 })
+app.get('/new',(req, res)=>{
+    let newProduces = []
+    db.collection('new items')
+    .find()
+    .forEach(produce => newProduces.push(produce))
+    .then(()=>{
+        res.status(200).json(newProduces)
+    })
+    .catch(()=>{
+        res.status(500).json({error: 'could not fetch the documents'})
+    })
+})
+app.get('/popular',(req, res)=>{
+    let popularProduces = []
+    db.collection('popular items')
+    .find()
+    .forEach(produce => popularProduces.push(produce))
+    .then(()=>{
+        res.status(200).json(popularProduces)
+    })
+    .catch(()=>{
+        res.status(500).json({error: 'could not fetch the documents'})
+    })
+})
 app.get('/notifications',(req, res)=>{
 
     let notifications = []
@@ -63,6 +88,17 @@ app.get('/produces/:produce', (req,res)=>{
     })
     .catch(err => {
         res.status(500).json({error: 'could not fetch the document'})
+    })
+})
+
+app.post('/produces', (req,res) =>{
+    db.collection('produces')
+    .insertOne(req.body)
+    .then(()=>{
+        res.status(200).json({message: 'produce added'})
+    })
+    .catch(err => {
+        res.status(500).json({error: 'could not add the produce'})
     })
 })
 

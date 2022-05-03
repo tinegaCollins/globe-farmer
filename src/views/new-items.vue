@@ -2,13 +2,13 @@
   <div class="wrapper">
     <h3 id="trendingAds">This Week</h3>
     <div class="trending new">
-             <div class="products" v-for="product in sellers" :key="product.id">
+             <div class="products" v-for="product in newProduces" :key="product.id">
                 <img v-bind:src="product.products.image" alt="product image">
                 <p>Product :{{ product.products.item }} </p>
                 <p>Price :{{ product.products.price}} </p>
                 <p>Location : {{ product.location }}</p>
                 <p>Farmer : {{ product.name }} </p>
-                <button><span>Order Now</span></button>
+                <router-link :to = "{ name: 'produce',params: {id :product._id} }"><button><span>Order Now</span></button></router-link>
             </div>
       </div>
   </div>
@@ -18,14 +18,14 @@
 export default {
   data(){
     return{
-      sellers: []
+      newProduces: []
     }
   },
   mounted(){
-    fetch('http://localhost:3000/newItems')
+    fetch('http://localhost:3000/new')
       .then(res => res.json())
       .then(data => {
-        this.sellers = data
+        this.newProduces = data
       })
       .catch(err => console.log(err))
   }
