@@ -1,9 +1,11 @@
 <template>
   <appTopBar/>
-  <main v-for="note in notes" :key="note.noteid">
+  <div class="wrapper">
+    <main v-for="note in notes" :key="note.noteid">
     <p>{{ note.note}}</p>
     <h4> {{ note.date}} </h4>
   </main>
+  </div>
 </template>
 
 <script>
@@ -20,7 +22,7 @@ export default {
     }
   },
   mounted(){
-    fetch(' http://localhost:3000/notes')
+    fetch(' http://localhost:3000/notifications')
     .then(res => res.json())
     .then(data => {
       this.notes = data
@@ -31,6 +33,9 @@ export default {
 </script>
 
 <style scoped>
+.wrapper{
+  padding: 30px;
+}
 main{
   font-family: var(--main-font);
   padding: 20px;

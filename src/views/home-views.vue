@@ -17,7 +17,7 @@
                 <p>Price :{{ product.products.price}} </p>
                 <p>Location : {{ product.location }}</p>
                 <p>Farmer : {{ product.name }} </p>
-                <button><span>Order Now</span></button>
+                <router-link :to = "{ name: 'produce',params: {id :product._id} }"><button><span>Order Now</span></button></router-link>
             </div>
       </div>
    </div>
