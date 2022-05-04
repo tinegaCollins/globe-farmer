@@ -42,8 +42,8 @@ app.get('/produces',(req, res)=>{
 })
 app.get('/new',(req, res)=>{
     let newProduces = []
-    db.collection('new items')
-    .find()
+    db.collection('produces')
+    .find({new: true})
     .forEach(produce => newProduces.push(produce))
     .then(()=>{
         res.status(200).json(newProduces)
@@ -54,8 +54,9 @@ app.get('/new',(req, res)=>{
 })
 app.get('/popular',(req, res)=>{
     let popularProduces = []
-    db.collection('popular items')
-    .find()
+    db.collection('produces')
+    .find({popular: true})
+    .sort({name : 1})
     .forEach(produce => popularProduces.push(produce))
     .then(()=>{
         res.status(200).json(popularProduces)

@@ -2,8 +2,7 @@
   <div class="wrapper">
     <appTopBar/>
     <div class="mainContent">
-      <!-- <router-view/> -->
-      <p>eegjkfl;fgh</p>
+      <router-view/>
     </div>
   </div>
 </template>

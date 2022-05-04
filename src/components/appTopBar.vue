@@ -25,7 +25,7 @@
                 </div>
             </div>
             </a>
-            <a href="#"><div class="acc" @click="acountData">
+            <a href="#"  @click="acountData"><div class="acc" @click="acountData">
            <!-- bind to account image -->
                 <img class= "icons" :src="Image" :alt="account">
             </div> </a>
@@ -93,7 +93,6 @@ export default {
             // this.dropDownImg = this.dropDownImg === './icons/caret-down-solid.svg' ? './icons/caret-up-solid.svg' : './icons/caret-down-solid.svg'
         },
         showSearch(){
-            console.log(this.notes.length)
             this.$emit('showSearch')
         },
         acountData(){
@@ -251,12 +250,12 @@ export default {
             flex-direction: column;
             position: fixed;
             top: 74px;
-            right: -20px;
+            /* right: -20px; */
             height: 40%;
             background: var(--main-color);
             justify-items: center;
             align-items: flex-end;
-            width: 50vw;
+            width: 100vw;
             border-radius: 5px;
             z-index: 1;
         }
@@ -269,16 +268,23 @@ export default {
             padding-left: 10px;
             position: relative;
         }
+        .notification, .messages{
+            position: relative;
+        }
         .icons{
             height: 20px;
         }
         .notificationNumber{
             position: absolute;
-            top: 10px;
-            right: 5px;
+            top: 5px;
+            right: -80vw;
             width: 15px;
             display: grid;
             place-items: center;
+        }
+        .notification, .bookmark, .acc{
+            position: relative;
+            left: 3px;
         }
         .helpBar{
             border-bottom: none !important;
@@ -307,6 +313,7 @@ export default {
     .modal::backdrop{
         backdrop-filter: blur(2px) saturate(100%);
         -webkit-backdrop-filter: blur(2px) saturate(100%);
+        -moz-backdrop-filter:blur(2px) saturate(100%);
         background-color: rgba(17, 25, 40, 0.39);
         border-radius: 12px;
         border: 1px solid rgba(255, 255, 255, 0.125);
