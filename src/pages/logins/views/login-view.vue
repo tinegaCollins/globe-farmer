@@ -8,20 +8,21 @@
         <label for="text">
           login with phone number:
         </label>
-        <input type="text" placeholder="phone number" id="text">
+        <input v-model="phone" type="text" placeholder="phone number" id="text">
         <label for="password">
           Password:
         </label>
-        <input type="password" placeholder="password" id="password">
+        <input v-model="password" type="password" placeholder="password" id="password">
         <button>Log In</button>
+        <input type="checkbox" name="save" id="save">
         <label for="save">
           stay logged in
         </label>
-        <input type="checkbox" name="save" id="save">
         <button id="forgot">Forgot password?</button>
       </div>
       <div class="randomlorem">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, sapiente. Corporis maiores dolore officiis asperiores maxime consequuntur nesciunt, eaque fuga tenetur voluptates omnis corrupti necessitatibus nihil ullam saepe eveniet laudantium quibusdam qui velit facilis quod explicabo eum enim? Commodi quos reiciendis, libero adipisci quas iste facere reprehenderit voluptatibus distinctio quo!</p>
+        <img src="../assets/undraw_access_account_re_8spm.svg">
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, sapiente. Corporis maiores dolore officiis asperiores maxime consequuntur nesciunt, eaque fuga tenetur voluptates omnis corrupti necessitatibus nihil ullam saepe eveniet laudantium quibusdam qui velit facilis quod explicabo eum enim? Commodi quos reiciendis, libero adipisci quas iste facere reprehenderit voluptatibus distinctio quo!</p> -->
       </div>
       </div>
   </div>
@@ -29,6 +30,12 @@
 
 <script>
 export default {
+  data(){
+    return{
+      phone: '',
+      password: ''
+    }
+  }
 
 }
 </script>
@@ -83,24 +90,29 @@ export default {
   margin-top: 10px;
   border: 1px solid black;
   border-radius: 20px;
-  background: var(--btn-color);
+  background: #6C63FF;
   transition: background .3s ease-in-out;
 }
 .logins button:hover{
   cursor: pointer;
-  background: var(--main-color);
+  background: var(--btn-color);
 }
 .logins button ~ label{
   margin-top: 20px;
 }
-.logins #save{
+#save{
+  margin-top: 25px;
+}
+#save ~ label{
   position: relative;
-  bottom: 14px;
+  bottom: 46px;
+  left: 30px;
 }
 #forgot{
   align-self: flex-end;
 }
-.randomlorem{
-  max-width: 50ch;
+.randomlorem > img{
+  width: 280px;
+  height: auto;
 }
 </style>

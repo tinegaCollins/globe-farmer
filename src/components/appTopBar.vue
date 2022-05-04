@@ -1,6 +1,6 @@
 <template>
    <div class="wrapper">
-       <img src="../assets/logos/2.png" alt="logo" class="logo">
+       <a href="/"><img src="../assets/logos/2.png" alt="logo" class="logo"></a>
        <h3>Globe Farmer</h3>
        <div class="searchBar" v-if="showSearchBar">
             <search-bar/>
@@ -149,7 +149,7 @@ export default {
         font-size: 1.3rem;
         font-weight: 500;
     }
-    .wrapper > img{
+    .wrapper a > img{
         padding: 5px;
         height: 100px;
         width: auto;

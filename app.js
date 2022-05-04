@@ -31,7 +31,7 @@ app.get('/produces',(req, res)=>{
 
     db.collection('produces')
     .find() //returns a cursor
-    // .sort({ popular: true })
+    .sort({ name: 1 })
     .forEach(produce => produces.push(produce))
     .then(()=>{
         res.status(200).json(produces)
