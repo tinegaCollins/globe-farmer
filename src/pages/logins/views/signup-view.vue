@@ -1,30 +1,122 @@
 <template>
-  <div class="wrapper">
-    <div class="ad">
-      <h6>ad goes here</h6>
+  <div class="wrapper" >
+    <div class="query" v-if="query">
+      <div class="buyer">
+        <img src="../../../assets/landing1.jpg" alt="image" srcset="">
+        <button @click="showContents">sign up as a buyer</button>
+      </div>
+      <div class="seller" @click="farmer">
+         <img src="../../../assets/ad.png" alt="image" srcset="">
+        <button @click="showContents" >sign up as farmer</button>
+      </div>
     </div>
-    <div class="mainContent">
+    <div class="mainContent" v-if="showSignup">
       <div class="logins">
         <label for="text">
-          login with phone number:
+          enter your phone number:
         </label>
         <input v-model="phone" type="text" placeholder="phone number" id="text">
         <label for="password">
           Password:
         </label>
         <input v-model="password" type="password" placeholder="password" id="password">
-        <button>Log In</button>
+        <label for="password2">
+          repeat Password:
+        </label>
+        <input v-model="rpassword" type="password" placeholder="password" id="password2">
+        <button @click="showMoreDetails">Sign up</button>
         <input type="checkbox" name="save" id="save">
         <label for="save">
-          stay logged in
+          <a href="#">accept terms and conditions</a>
         </label>
-        <button id="forgot">Forgot password?</button>
       </div>
       <div class="randomlorem">
         <img src="../assets/undraw_my_app_re_gxtj.svg">
         <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, sapiente. Corporis maiores dolore officiis asperiores maxime consequuntur nesciunt, eaque fuga tenetur voluptates omnis corrupti necessitatibus nihil ullam saepe eveniet laudantium quibusdam qui velit facilis quod explicabo eum enim? Commodi quos reiciendis, libero adipisci quas iste facere reprehenderit voluptatibus distinctio quo!</p> -->
       </div>
       </div>
+  </div>
+  <div class="farmerdetails" v-if="details">
+    <h3> we need more details to let you post an ad </h3>
+    <form method="post" data-multi-step>
+        <!-- <div class="card" data-step="1">
+            <h3 class="step-title">Step 1</h3>
+            <h5>We need basic information about you</h5>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Phone Number</label>
+                <input type="number" name="number" id="number" required>
+            </div>
+            <div class="form-group">
+                <label for="password">password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="form-group">
+                <label for="password">repeat password</label>
+                <input type="password" name="password" id="repeatpassword">
+            </div>
+            <button type="button" data-next="">Next</button>
+        </div> -->
+        
+        <div class="card" data-step>
+                <h3 class="step-title">step 2</h3>
+                <div class="form-group">
+                    <label for="firstName">First name</label>
+                    <input type="text" name="firstName" id="firstName">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last name</label>
+                    <input type="text" name="lastName" id="lastName">
+                </div>
+                <div class="buttonWrapper">
+                    <button type="button" data-previous="">Previous</button>
+                    <button type="button" data-next>Next</button>
+                </div>
+        </div>
+        <div class="card" data-step>
+            <h3 class="step-title">step 3</h3>
+            <div class="form-group">
+                <label for="line">Your product line</label>
+                <select name="line" id="line">
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="cereals">cereals</option>
+                    <option value="spices">spices</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="product">Your main product</label>
+                <input type="text" name="product" id="product">
+            </div>
+            <div class="buttonWrapper">
+                <button type="button" data-previous="">Previous</button>
+                <button type="button" data-next>Next</button>
+            </div>
+    </div>
+        <div class="card" data-step>
+            <h3 class="step-title">last Step</h3>
+            <div class="form-group">
+                <label for="county">County</label>
+                <input type="text" name="county" id="county">
+            </div>
+            <div class="form-group">
+                <label for="town">Nearest Town</label>
+                <input type="text" name="town" id="town">
+            </div>
+            <div class="form-group">
+                <label for="center">Nearest Center</label>
+                <input type="text" name="center" id="center">
+            </div>
+           <div class="buttonWrapper">
+            <button type="button" data-previous>Previous</button>
+            <button type="submit" id="submitData">submit</button>
+           </div>
+        </div>
+        
+    </form>
   </div>
 </template>
 
@@ -33,7 +125,28 @@ export default {
   data(){
     return{
       phone: '',
-      password: ''
+      password: '',
+      rpassword: '',
+      showSignup: false,
+      query: true,
+      farmerInfo: {},
+      details: false
+    }
+  },
+  methods:{
+    showContents(){
+      this.query = !this.query
+      this.showSignup = !this.showSignup
+    },
+    farmer(){
+      this.farmerInfo = {"phone" : this.phone}
+    },
+    showMoreDetails(){
+      console.log(this.phone)
+      console.log(this.farmerInfo)
+      if(this.farmerInfo == !{}){
+        this.details = true
+      }
     }
   }
 
@@ -46,15 +159,39 @@ export default {
   display: grid;
   place-items: center;
 }
-.ad{
-  height: 100px;
-  width: 70vw;
-  background: grey;
-  color: #fff;
-  display: grid;
-  place-items: center;
-  margin-top: 10px;
-  box-shadow: 5px 5px 5px 5px rgba(51, 51, 51, 0.411);
+.query{
+  display: flex;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.query > *{
+  display:flex;
+  flex-direction: column;
+  row-gap:20px;
+}
+.query button{
+  padding: 7px 15px;
+  border-radius: 20px;
+  width: 240px;
+  align-self: center;
+  background: var(--main-color);
+  font-weight: 500;
+}
+.query button:hover{
+  background: var(--btn-color);
+  cursor: pointer;
+}
+.buyer button{
+  background: var(--btn-color);
+}
+.buyer button:hover{
+  background: var(--main-color);
+}
+
+.query img{
+  height: 300px;
+  width: auto;
+  border-radius: 30px;
 }
 .mainContent{
   display: flex;
@@ -75,7 +212,7 @@ export default {
 .logins input{
   margin-bottom: 10px;
 }
-.logins #text, #password{
+.logins #text, #password, #password2{
   width: 300px;
   height: 30px;
   appearance: none;
@@ -108,13 +245,16 @@ export default {
   bottom: 46px;
   left: 30px;
 }
-#forgot{
-  align-self: flex-end;
-}
 .randomlorem > img{
   width: 280px;
   height: auto;
   position: relative;
   top: 30px;
+}
+a:visited{
+  color: black;
+}
+.farmerdetails{
+  font-family: var(--main-font);
 }
 </style>
