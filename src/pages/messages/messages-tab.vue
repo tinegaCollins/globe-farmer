@@ -8,7 +8,7 @@
           <h3>chats</h3>
             <div class="chats">
               <ul v-for="message in messages" :key="message.id">
-                <li>{{ message.to }}</li>
+                <router-link :to = "{ name : 'tab', params : {id: message._id} }"><li>{{ message.to }}</li></router-link>
               </ul>
             </div>
         </div>
@@ -30,13 +30,16 @@ export default {
   },
   data(){
     return{
-      messages: [
-        {from: "rrrrrrrrr",to: "tony",body: "the qirj dbfxjzhj"},
-        {from: "rrrrrrrrr",to: "teddy", body: "rfuyebsiojveivn"},
-        {from: "rrrrrrrrr",to: "taby",body: "the quick brown fox"},
-        {from: "rrrrrrrrr",to: "tommy",body: "no onerur"},
-      ]
+      messages: []
     }
+  },
+  mounted(){
+    fetch('http://localhost:3000/messages')
+       .then(res => res.json())
+       .then(data => {
+            this.messages = data
+        })
+        .catch(err => console.log(err))
   }
 }
 </script>
@@ -68,9 +71,9 @@ main > h3::after{
 .notifications-tab, .chat-box{
   height: calc(100vh - 180px);
   width: 100%;
-  background-color: red;
+  background-color: #fff;
 }
 .chat-box{
-  background-color: yellow;
+  background-color: chocolate;
 }
 </style>

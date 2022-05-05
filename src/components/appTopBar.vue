@@ -21,7 +21,7 @@
             <div class="messages"  @click="remove">
                  <img class= "icons" src="../assets/icons/message-solid.svg" alt="messages" srcset="">
                  <div class="notificationNumber">
-                    <span>{{ messages }}</span>
+                    <span>{{ this.messages.length }}</span>
                 </div>
             </div>
             </a>
@@ -74,12 +74,11 @@ export default {
             account: 'Account',
             Image: 'circle-user-solid.svg',
             showIcons: true,
-            notifications: 7,
-            messages: 3,
             showDropDown: false,
             showSearchBar: true,
             dropDownImg: './icons/caret-down-solid.svg',
             notes: [],
+            messages: [],
             accountDetails: null
         }
     },
@@ -120,15 +119,21 @@ export default {
             this.notes = data
         })
         .catch(err => console.log(err))
-       
+
+       fetch('http://localhost:3000/messages')
+       .then(res => res.json())
+       .then(data => {
+            this.messages = data
+        })
+        .catch(err => console.log(err))
     },
     mounted(){
         if (this.accountDetails === null) {
-                  this.accountDetails = null
-                this.Image = './icons/circle-user-solid.svg'
-            } else {
+            this.accountDetails = null
+            this.Image = './icons/circle-user-solid.svg'
+        } else {
                 this.Image = './icons/face-shot.png'
-            }
+        }
     }
 }
 </script>

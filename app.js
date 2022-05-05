@@ -40,6 +40,18 @@ app.get('/produces',(req, res)=>{
         res.status(500).json({error: 'could not fetch the documents'})
     })
 })
+app.get('/messages', (req, res)=>{
+    let messages = []
+    db.collection('messages')
+    .find()
+    .forEach(message => messages.push(message))
+    .then(()=>{
+        res.status(200).json(messages)
+    })
+    .catch(()=>{
+        res.status(500).json({error: 'could not fetch the documents'})
+    })
+})
 app.get('/new',(req, res)=>{
     let newProduces = []
     db.collection('produces')
@@ -91,7 +103,16 @@ app.get('/produces/:produce', (req,res)=>{
         res.status(500).json({error: 'could not fetch the document'})
     })
 })
-
+app.get('/messages/:id', (req,res)=>{
+    db.collection('messages')
+    .findOne({_id: ObjectId(req.params.id)})
+    .then(doc =>{
+        res.status(200).json(doc)
+    })
+    .catch(err => {
+        res.status(500).json({error: 'could not fetch the document'})
+    })
+})
 app.post('/produces', (req,res) =>{
     db.collection('produces')
     .insertOne(req.body)

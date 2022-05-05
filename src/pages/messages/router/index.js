@@ -5,12 +5,12 @@ import chattab from '../views/chats-tab.vue'
 
 const routes = [
     {
-        path: 'messages/',
+        path: '/messages/',
         name: 'chat',
         component: chat
     },
     {
-        path: 'messages/chat-id',
+        path: '/messages/:id',
         name: 'tab',
         component: chattab
     }
