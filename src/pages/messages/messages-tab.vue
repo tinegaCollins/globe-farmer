@@ -5,9 +5,16 @@
       <h3>messages</h3>
       <div class="maincontent">
         <div class="notifications-tab">
-
+          <h3>chats</h3>
+            <div class="chats">
+              <ul v-for="message in messages" :key="message.id">
+                <li>{{ message.to }}</li>
+              </ul>
+            </div>
         </div>
-        <div class="chat-box"></div>
+        <div class="chat-box">
+          <router-view/>
+        </div>
       </div>
     </main>
   </div>
@@ -24,10 +31,10 @@ export default {
   data(){
     return{
       messages: [
-        {type: "clement kipkirui", body: "Lorem ipsum dolor sit amet consectetur."},
-        {type: "me", body: "Lorem, ipsum dolor."},
-        {type: "other", body: "Lorem, ipsum dolor. to us"},
-        {type: "me", body: "okay"},
+        {from: "rrrrrrrrr",to: "tony",body: "the qirj dbfxjzhj"},
+        {from: "rrrrrrrrr",to: "teddy", body: "rfuyebsiojveivn"},
+        {from: "rrrrrrrrr",to: "taby",body: "the quick brown fox"},
+        {from: "rrrrrrrrr",to: "tommy",body: "no onerur"},
       ]
     }
   }

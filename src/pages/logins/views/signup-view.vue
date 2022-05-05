@@ -130,7 +130,7 @@ export default {
       showSignup: false,
       query: true,
       farmerInfo: {},
-      details: false
+      details: true
     }
   },
   methods:{
