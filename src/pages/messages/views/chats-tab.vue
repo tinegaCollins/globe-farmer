@@ -1,8 +1,9 @@
 <template>
-  <h3>this is the chats tab</h3>
+  <h3 @click="show"> inbox </h3>
   <ul>
     <li>{{ message.to }}</li>
     <li> {{message.from }}</li>
+    <li> {{message.messages}}</li>
   </ul>
 </template>
 
@@ -11,7 +12,8 @@ export default {
   data(){
     return{
       id: this.$route.params.id,
-      message: {}
+      message: {},
+      // messages: this.message.messages,
     }
   },
   mounted(){
@@ -23,7 +25,9 @@ export default {
     .catch(err => console.log(err))
   },
   methods: {
-
+    show(){
+      console.log(this.messages)
+    }
   }
 }
 </script>

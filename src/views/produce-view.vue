@@ -21,15 +21,11 @@
 
 <script>
 export default {
-
     data(){
       return{
           produce: null,
           id: this.$route.params.id
       }
-   },
-   methods:{
-    
    },
    mounted(){
        fetch('http://localhost:3000/produces/'+ this.id)
