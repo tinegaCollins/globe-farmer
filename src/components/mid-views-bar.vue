@@ -9,7 +9,8 @@
         <router-link to = "/tomatoes" class="barItem">Tomatoes</router-link>
         <router-link to = "/irish potatoes" class="barItem">Irish Potatoes</router-link>
         <router-link to = "/onions" class="barItem">Onions</router-link>
-        <router-link to = "/]carrots" class="barItem">Carrots</router-link>
+        <router-link to = "/carrots" class="barItem">Carrots</router-link>
+        <!-- refresh the filters -->
         <router-link to = "/green pepper" class="barItem">Green pepper</router-link>
         <router-link to = "/string beans" class="barItem">String Beans</router-link>
         <router-link to = "/peas" class="barItem">Peas</router-link>

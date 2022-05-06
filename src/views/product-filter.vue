@@ -20,9 +20,6 @@ export default {
         }
     },
     methods: {
-        show(){
-            console.log(this.produce,this.type)
-        }
     },
     mounted(){
         fetch('http://localhost:3000/produces/filter/'+ this.type)
