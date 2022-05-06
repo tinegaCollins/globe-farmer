@@ -247,7 +247,7 @@ export default {
             height: 70px;
             margin-top: 1px;
         }
-        .wrapper > img {
+        .wrapper a > img {
             height: 70px;
             margin-left: 0%;
         }

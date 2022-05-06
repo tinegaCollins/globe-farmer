@@ -3,18 +3,18 @@
       <h3>Produce Details</h3>
       <div class="maincontent" > 
           <div class="imagearea">
-              <img :src="  '/' + produce.products.image" alt="product image">
+              <img :src="  '/' + produce.image" alt="product image">
           </div>
           <div class="sideContent">
-            <h3>{{ produce.products.item }}</h3>
-            <h4>price: {{ produce.products.price }}</h4>
+            <h3>{{ produce.item }}</h3>
+            <h4>price: {{ produce.price }}</h4>
             <p>location: {{ produce.location }}</p>
             <p><span> FarmerName: </span> {{ produce.name }} </p>
             <p class="phone">{{ produce.phone }} </p>
           </div>
       </div>
       <div class="moreDetails">
-          <p> {{ produce.products.moredetails }}</p>
+          <p> {{ produce.moredetails }}</p>
       </div>
   </div>
 </template>

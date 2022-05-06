@@ -77,6 +77,30 @@ app.get('/popular',(req, res)=>{
         res.status(500).json({error: 'could not fetch the documents'})
     })
 })
+app.get('/produces/:produce', (req,res)=>{
+    db.collection('produces')
+    .findOne({_id: ObjectId(req.params.produce)})
+    .then((doc) =>{
+        res.status(200).json(doc)
+    })
+    .catch(err => {
+        res.status(500).json({error: 'could not fetch the document'})
+    })
+})
+//hererererer
+app.get('/produces/filter/:typep', (req,res)=>{
+    let typeProduct = []
+    db.collection('produces')
+    .find({item: (req.params.typep)})
+    .sort({ _id : 1})
+    .forEach(produce => typeProduct.push(produce))
+    .then(() =>{
+        res.status(200).json(typeProduct)
+    })
+    .catch(err => {
+        res.status(500).json({error: 'could not fetch the document'})
+    })
+})
 app.get('/notifications',(req, res)=>{
 
     let notifications = []
@@ -92,17 +116,8 @@ app.get('/notifications',(req, res)=>{
         res.status(500).json({error: 'could not fetch the documents'})
     })
 })
-app.get('/produces/:produce', (req,res)=>{
-    
-    db.collection('produces')
-    .findOne({_id: ObjectId(req.params.produce)})
-    .then(doc =>{
-        res.status(200).json(doc)
-    })
-    .catch(err => {
-        res.status(500).json({error: 'could not fetch the document'})
-    })
-})
+
+
 app.get('/messages/:id', (req,res)=>{
     db.collection('messages')
     .findOne({_id: ObjectId(req.params.id)})

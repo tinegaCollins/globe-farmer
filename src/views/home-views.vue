@@ -12,9 +12,9 @@
       <h3 id="trendingAds">Trending ads</h3>
       <div class="trending">
              <div class="products" v-for="product in sellers" :key="product.id">
-                <img :src="product.products.image" alt="product image">
-                <p>Product :{{ product.products.item }} </p>
-                <p>Price :{{ product.products.price}} </p>
+                <img :src="product.image" alt="product image">
+                <p>Product :{{ product.item }} </p>
+                <p>Price :{{ product.price}} </p>
                 <p>Location : {{ product.location }}</p>
                 <p>Farmer : {{ product.name }} </p>
                 <router-link :to = "{ name: 'produce',params: {id :product._id} }"><button><span>Order Now</span></button></router-link>

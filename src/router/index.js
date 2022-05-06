@@ -4,6 +4,7 @@ import popularItems from '../views/popular-items.vue'
 import newItems from '../views/new-items.vue'
 import notFound from '../views/404-error.vue'
 import produce from '../views/produce-view.vue'
+import produceFilter from '../views/product-filter.vue'
 
 
 
@@ -32,6 +33,11 @@ const routes = [
     path: '/produces/:id',
     name: 'produce',
     component: produce
+  },
+  {
+    path: '/:type',
+    name: 'filter',
+    component: produceFilter
   }
 ]
 

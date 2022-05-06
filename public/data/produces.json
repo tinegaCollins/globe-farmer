@@ -1,0 +1,243 @@
+[{
+  "_id": {
+    "$oid": "626f8a9821f5e45680dfa3ed"
+  },
+  "name": "lincoln kiptoo",
+  "location": "Egerton",
+  "phone": "0729980890",
+  "popular": true,
+  "item": "carrots",
+  "price": " 10000 per gunia",
+  "image": "./products/carrots.jpg",
+  "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
+
+},
+{
+  "_id": {
+    "$oid": "626f8a9821f5e45680dfa3ee"
+  },
+  "name": "tuya mohan",
+  "location": "kisii",
+  "popular": false,
+  "phone": "+254791729544",
+  "item": "green pepper",
+  "price": " 1000 per gunia",
+  "image": "./products/green.jfif",
+  "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?",
+  "new": true
+},
+{
+  "_id": {
+    "$oid": "626f8a9821f5e45680dfa3ef"
+  },
+  "id": 3,
+  "name": "boogie hoodie",
+  "location": "nyeri",
+  "popular": false,
+  "phone": "+254791729544",
+  "item": "string beans",
+  "price": "500 per crate",
+  "image": "./products/string.jfif",
+  "new": true
+},
+{
+  "_id": {
+    "$oid": "626f8b4b21f5e45680dfa3f1"
+  },
+  "id": 4,
+  "name": "kygo",
+  "location": "moyale",
+  "popular": true,
+  "phone": "0729980890",
+    "item": "peas",
+    "price": "200 per kg",
+    "image": "./products/peas.jfif",
+    "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
+},
+{
+  "_id": {
+    "$oid": "626f8b4b21f5e45680dfa3f2"
+  },
+  "id": 5,
+  "name": "taylor swift",
+  "location": "kiambu",
+  "popular": false,
+  "phone": "+254791729544",
+  "item": "spring onions",
+  "price": " 1000 per gunia",
+  "image": "./products/spring.jfif",
+  "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?",
+  "new": true
+},
+{
+  "_id": {
+    "$oid": "626f8b4b21f5e45680dfa3f3"
+  },
+  "id": 6,
+  "name": "emeli sande",
+  "location": "eldoret",
+  "popular": true,
+  "phone": "0729980890",
+  "item": "brocolli",
+  "price": "160 per kg",
+  "image": "./products/brocolli.jfif",
+  "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
+},
+{
+  "_id": {
+    "$oid": "626f8b4b21f5e45680dfa3f4"
+  },
+  "id": 7,
+  "name": "ed sheeran",
+  "location": "kisumu",
+  "popular": false,
+  "phone": "+254791729544",
+  "item": "spinach",
+  "price": "500 per kg",
+  "image": "./products/spinach.jfif",
+  "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?",
+  "new": true
+},
+{
+  "_id": {
+    "$oid": "626f8b7421f5e45680dfa3f6"
+  },
+  "id": 8,
+  "name": "pink",
+  "location": "nyamira",
+  "popular": true,
+  "phone": "0729980890",
+  "item": "sukuma wiki",
+  "price": " 2000 per gunia",
+  "image": "./products/sukuma.jfif",
+  "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
+},
+{
+  "_id": {
+    "$oid": "626f8b7421f5e45680dfa3f7"
+  },
+  "id": 9,
+  "name": "justin jeso",
+  "location": "kisii",
+  "popular": false,
+  "phone": "+254791729544",
+  "item": "Indegenous vegetables",
+  "price": " 1000 per gunia",
+  "image": "./products/veg.jfif",
+  "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?",
+  "new": true
+},{
+  "_id": {
+    "$oid": "626f8b7421f5e45680dfa3f8"
+  },
+  "name": "Erick wainaina",
+  "location": "kiambu",
+  "popular": true,
+  "phone": "0729980890",
+    "item": "irish potatoes",
+    "price": " 1000 per gunia",
+    "image": "./products/viazi.jfif",
+    "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
+
+},{
+  "_id": {
+    "$oid": "626f8b7421f5e45680dfa3f9"
+  },
+  "name": "ouuuu",
+  "location": "nairobi",
+  "popular": false,
+  "phone": "+254791729544",
+      "item": "tomatoes",
+    "price": "500 per crate",
+    "image": "./products/nyanya.jpg",
+  "new": true
+},{
+  "_id": {
+    "$oid": "626f8b7421f5e45680dfa3fa"
+  },
+  "name": "lil baby",
+  "location": "mombasa",
+  "popular": false,
+  "phone": "+254791729544",
+  "item": "onions",
+  "price": "200 per kg",
+  "image": "./products/onion.jfif",
+  "new": true
+},{
+  "_id": {
+    "$oid": "626fc36399967e10fa6c5d3b"
+  },
+  "name": "tinega collins",
+  "location": "kisii",
+  "phone": "+254729980890",
+  "popular": false,
+  "item": "ovacados",
+  "price": "700 per gunia",
+  "new": true
+},{
+  "_id": {
+    "$oid": "62713521b6869114f0e6c9ee"
+  },
+  "name": "monyenche sharon",
+  "location": "kiambu",
+  "popular": true,
+  "phone": "0729980890",
+      "item": "irish potatoes",
+    "price": " 1000 per gunia",
+    "image": "./products/viazi.jfif",
+    "moredetails": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, sint. Quidem ratione corporis consequuntur delectus porro iure, placeat laudantium asperiores dignissimos minus facere? Alias nesciunt necessitatibus ad voluptate delectus, incidunt consectetur perspiciatis fuga qui vero facere maxime animi sint officia ducimus quis iusto itaque sit aperiam quo. Qui velit eum dolorem natus temporibus deserunt odio magni inventore omnis, quaerat doloremque laudantium officiis, beatae sed placeat aspernatur nulla consectetur! Aperiam, nemo rem illum voluptatem, beatae maxime saepe consequatur officiis aliquid, illo fugiat tempore doloribus. Minus nobis aperiam enim laborum aliquam soluta dolorem deleniti, nesciunt ab sunt molestias omnis, amet optio officiis?"
+},{
+  "_id": {
+    "$oid": "62713884eec9d5cc1037b0c1"
+  },
+  "id": 16,
+  "name": "baby billy freeman",
+  "location": "nyahururu",
+  "popular": true,
+  "phone": "+254791729544",
+  "item": "water melon",
+  "price": "1000 per unit",
+  "image": "https://cdn.standardmedia.co.ke/images/friday/how_to_make_cash_fro60e87cdd5d517.jpg",
+   "new": true
+
+
+},{
+  "_id": {
+    "$oid": "62713884eec9d5cc1037b0be"
+  },
+  "id": 13,
+  "name": "vincent kiiti",
+  "location": "machakos",
+  "phone": "+254791729544",
+  "popular": true,
+  "item": "mangoes",
+  "price": " 1000 per gunia",
+  "image": "https://netstorage-tuko.akamaized.net/images/0fgjhsu4mbikdiuks.jpg"
+},{
+  "_id": {
+    "$oid": "62713884eec9d5cc1037b0bf"
+  },
+  "id": 14,
+  "name": "ondicho makena",
+  "location": "kisii",
+  "popular": false,
+  "phone": "+254791729544",
+      "item": "avocado",
+    "price": " 800 per gunia",
+    "image": "https://farmbizafrica.com/images/Hassavocado.jpg"
+,
+  "new": true
+},{
+  "_id": {
+    "$oid": "62713884eec9d5cc1037b0c0"
+  },
+  "id": 15,
+  "name": "kipchirchir kigen",
+  "location": "thika",
+  "popular": false,
+  "phone": "+254791729544",
+    "item": "pineapples",
+    "price": "5000 per crate",
+    "image": "https://farmbizafrica.com/images/152888775_10224941308868247_3160029068076064717_o.jpg"
+
+}]

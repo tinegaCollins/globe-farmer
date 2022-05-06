@@ -3,22 +3,21 @@
         <img :src='imgSrc' @click="sidebar">
     </div>
     <div class="bar">
-        <router-link to="/" class="barItem">home</router-link>
-        <router-link to="/new-items" class="barItem">new items </router-link>
-        <router-link to="/popular-items" class="barItem">popular items</router-link>
-        <div class="barItem"><p>Tomatoes</p></div>
-        <div class="barItem"><p>Irish Potatoes</p></div>
-        <div class="barItem"><p>around you</p></div>
-        <div class="barItem"><p>Onions</p></div>
-        <div class="barItem"><p>Carrots</p></div>
-        <div class="barItem"><p>Green peppers</p></div>
-        <div class="barItem"><p>String Beans</p></div>
-        <div class="barItem"><p>Peas</p></div>
-        <div class="barItem"><p>Spring Onions</p></div>
-        <div class="barItem"><p>Brocolli</p></div>
-        <div class="barItem"><p>Spinach</p></div>
-        <div class="barItem"><p>Sukuma Wiki</p></div>
-        <div class="barItem"><p>Indegenous Vegetables</p></div>
+        <router-link to = "/" class="barItem">home</router-link>
+        <router-link to = "/new-items" class="barItem">new items </router-link>
+        <router-link to = "/popular-items" class="barItem">popular items</router-link>
+        <router-link to = "/tomatoes" class="barItem">Tomatoes</router-link>
+        <router-link to = "/irish potatoes" class="barItem">Irish Potatoes</router-link>
+        <router-link to = "/onions" class="barItem">Onions</router-link>
+        <router-link to = "/]carrots" class="barItem">Carrots</router-link>
+        <router-link to = "/green pepper" class="barItem">Green pepper</router-link>
+        <router-link to = "/string beans" class="barItem">String Beans</router-link>
+        <router-link to = "/peas" class="barItem">Peas</router-link>
+        <router-link to = "/spring onions" class="barItem">Spring Onions</router-link>
+        <router-link to = "/brocolli" class="barItem">Brocolli</router-link>
+        <router-link to = "/spinach" class="barItem">Spinach</router-link>
+        <router-link to = "/sukuma wiki" class="barItem">Sukuma Wiki</router-link>
+        <router-link to = "/indegenous vegetables" class="barItem">Indegenous Vegetables</router-link>
     </div>
 </template>
 
@@ -72,11 +71,12 @@ export default {
 }
 .bar::after{
     content: "";
-    height: 45px;
+    height: 49px;
     width:45px;
     background: linear-gradient(90deg,rgba(174, 197, 197, 0),rgb(174, 197, 197)) ;
     position: absolute;
     right: 0;
+    /* top: 131px; */
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
 }

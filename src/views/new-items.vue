@@ -3,9 +3,9 @@
     <h3 id="trendingAds">This Week</h3>
     <div class="trending new">
              <div class="products" v-for="product in newProduces" :key="product.id">
-                <img v-bind:src="product.products.image" alt="product image">
-                <p>Product :{{ product.products.item }} </p>
-                <p>Price :{{ product.products.price}} </p>
+                <img v-bind:src="product.image" alt="product image">
+                <p>Product :{{ product.item }} </p>
+                <p>Price :{{ product.price}} </p>
                 <p>Location : {{ product.location }}</p>
                 <p>Farmer : {{ product.name }} </p>
                 <router-link :to = "{ name: 'produce',params: {id :product._id} }"><button><span>Order Now</span></button></router-link>
