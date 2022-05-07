@@ -4,7 +4,7 @@
       <h6>ad goes here</h6>
     </div>
     <div class="mainContent">
-      <div class="logins">
+      <form action="" method="post" class="logins">
         <label for="text">
           login with phone number:
         </label>
@@ -19,10 +19,9 @@
           stay logged in
         </label>
         <button id="forgot">Forgot password?</button>
-      </div>
+      </form>
       <div class="randomlorem">
         <img src="../assets/undraw_access_account_re_8spm.svg">
-        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, sapiente. Corporis maiores dolore officiis asperiores maxime consequuntur nesciunt, eaque fuga tenetur voluptates omnis corrupti necessitatibus nihil ullam saepe eveniet laudantium quibusdam qui velit facilis quod explicabo eum enim? Commodi quos reiciendis, libero adipisci quas iste facere reprehenderit voluptatibus distinctio quo!</p> -->
       </div>
       </div>
   </div>

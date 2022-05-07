@@ -52,6 +52,7 @@ export default {
   width: 100%;
 }
 .notifications-tab ul{
+  font-weight: 600;
   width: 100%;
 }
 .notifications-tab .chats li{
