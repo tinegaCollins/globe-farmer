@@ -11,7 +11,6 @@
                 <p>Kisii</p>
                 <p>Machakos</p>
                 <p>kitale</p>
-                <p>Eldoret</p>
                 <p>Meru</p>
                 <p>thika</p>
                 <p>busia</p>
