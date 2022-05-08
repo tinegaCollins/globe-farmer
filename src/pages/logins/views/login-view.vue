@@ -4,7 +4,7 @@
       <h6>ad goes here</h6>
     </div>
     <div class="mainContent">
-      <form action="" method="post" class="logins">
+      <form action="/users" method="post" class="logins">
         <label for="text">
           login with phone number:
         </label>

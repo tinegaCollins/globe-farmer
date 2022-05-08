@@ -127,14 +127,13 @@ export default {
         })
         .catch(err => console.log(err))
     },
-    mounted(){
-        if (this.accountDetails === null) {
-            this.accountDetails = null
-            this.Image = './icons/circle-user-solid.svg'
-        } else {
-                this.Image = './icons/face-shot.png'
-        }
-    }
+    // mounted(){
+    //     if (this.accountDetails === null) {
+    //         this.Image = './icons/circle-user-solid.svg'
+    //     } else {
+    //             this.Image = './icons/face-shot.png'
+    //     }
+    // }
 }
 </script>
 

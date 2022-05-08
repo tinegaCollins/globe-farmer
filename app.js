@@ -128,7 +128,7 @@ app.get('/messages/:id', (req,res)=>{
         res.status(500).json({error: 'could not fetch the document'})
     })
 })
-app.post('/produces', (req,res) =>{
+app.post('/users', (req,res) =>{
     db.collection('produces')
     .insertOne(req.body)
     .then(()=>{

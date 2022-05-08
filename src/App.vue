@@ -9,6 +9,7 @@
       <router-view/>
     </div>
   </main>
+  <Footer/>
 </template>
 
 <script>
@@ -19,13 +20,15 @@ import './assets/styles/global.css'
 import midViewsBar from './components/mid-views-bar.vue'
 import sideBar from './components/side-bar.vue'
 import searchBar from './components/searchBar.vue'
+import Footer from './components/footer-bar.vue'
 
 export default {
   components: {
     appTopBar,
     midViewsBar,
     sideBar,
-    searchBar
+    searchBar,
+    Footer
   },
   data(){
     return{

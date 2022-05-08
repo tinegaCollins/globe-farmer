@@ -11,7 +11,18 @@
       </div>
       <h3 id="trendingAds">Trending ads</h3>
       <div class="trending">
-             <div class="products" v-for="product in sellers" :key="product.id">
+             <div class="products" v-for="product in products" :key="product.id">
+                <img :src="product.image" alt="product image">
+                <p>Product :{{ product.item }} </p>
+                <p>Price :{{ product.price}} </p>
+                <p>Location : {{ product.location }}</p>
+                <p>Farmer : {{ product.name }} </p>
+                <router-link :to = "{ name: 'produce',params: {id :product._id} }"><button><span>Order Now</span></button></router-link>
+            </div>
+      </div>
+      <h3 id="around">Around you</h3>
+      <div class="around">
+         <div class="products" v-for="product in products" :key="product.id">
                 <img :src="product.image" alt="product image">
                 <p>Product :{{ product.item }} </p>
                 <p>Price :{{ product.price}} </p>
@@ -27,14 +38,14 @@
 export default {
    data(){
       return{
-          sellers: []
+          products: []
       }
    },
    mounted(){
        fetch('http://localhost:3000/produces')
        .then(res => res.json())
        .then(data => {
-           this.sellers = data
+           this.products = data
        })
        .catch(err => console.log(err))
    }
@@ -88,6 +99,14 @@ export default {
     position: absolute;
     left: 0;
     bottom: -5px;
- }
-   
+   }
+   #around::after{
+      content: "";
+      width: 115px;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+   }
 </style>

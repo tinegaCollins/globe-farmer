@@ -3,7 +3,7 @@
     <div class="query" v-if="query">
       <div class="buyer">
         <img src="../../../assets/landing1.jpg" alt="image" srcset="">
-        <button @click="showContents">sign up as a buyer</button>
+        <button @click="showSignUpForm">sign up as a buyer</button>
       </div>
       <div class="seller" @click="farmer">
          <img src="../../../assets/ad.png" alt="image" srcset="">
@@ -32,14 +32,15 @@
       </div>
       <div class="randomlorem">
         <img src="../assets/undraw_my_app_re_gxtj.svg">
-        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, sapiente. Corporis maiores dolore officiis asperiores maxime consequuntur nesciunt, eaque fuga tenetur voluptates omnis corrupti necessitatibus nihil ullam saepe eveniet laudantium quibusdam qui velit facilis quod explicabo eum enim? Commodi quos reiciendis, libero adipisci quas iste facere reprehenderit voluptatibus distinctio quo!</p> -->
       </div>
       </div>
   </div>
   <div class="farmerdetails" v-if="details">
     <h3> we need more details to let you post an ad </h3>
-    <form method="post" data-multi-step>
-        <!-- <div class="card" data-step="1">
+
+
+     <form action="app.js" method="post" data-multi-step @click="next"> 
+        <div class="card" data-step="1">
             <h3 class="step-title">Step 1</h3>
             <h5>We need basic information about you</h5>
             <div class="form-group">
@@ -59,7 +60,7 @@
                 <input type="password" name="password" id="repeatpassword">
             </div>
             <button type="button" data-next="">Next</button>
-        </div> -->
+        </div>
         
         <div class="card" data-step>
                 <h3 class="step-title">step 2</h3>
@@ -106,10 +107,6 @@
                 <label for="town">Nearest Town</label>
                 <input type="text" name="town" id="town">
             </div>
-            <div class="form-group">
-                <label for="center">Nearest Center</label>
-                <input type="text" name="center" id="center">
-            </div>
            <div class="buttonWrapper">
             <button type="button" data-previous>Previous</button>
             <button type="submit" id="submitData">submit</button>
@@ -130,11 +127,11 @@ export default {
       showSignup: false,
       query: true,
       farmerInfo: {},
-      details: true
+      details: false
     }
   },
   methods:{
-    showContents(){
+    showSignUpForm(){
       this.query = !this.query
       this.showSignup = !this.showSignup
     },
@@ -147,9 +144,12 @@ export default {
       if(this.farmerInfo == !{}){
         this.details = true
       }
+    },
+    showContents(){
+      this.query = !this.query
+      this.details = !this.details
     }
   }
-
 }
 </script>
 
@@ -239,11 +239,12 @@ export default {
 }
 #save{
   margin-top: 25px;
+  position: relative;
+  left: 35px;
 }
 #save ~ label{
   position: relative;
   bottom: 46px;
-  left: 30px;
 }
 .randomlorem > img{
   width: 280px;
