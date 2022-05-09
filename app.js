@@ -129,13 +129,24 @@ app.get('/messages/:id', (req,res)=>{
     })
 })
 app.post('/users', (req,res) =>{
-    db.collection('produces')
+    db.collection('users')
     .insertOne(req.body)
     .then(()=>{
-        res.status(200).json({message: 'produce added'})
+        res.status(200).json({message: 'user added 🤪, log in to continue'})
     })
     .catch(err => {
-        res.status(500).json({error: 'could not add the produce'})
+        res.status(500).json({error: 'could not add the user'})
+    })
+})
+
+app.post('/farmers', (req,res) =>{
+    db.collection('farmers')
+    .insertOne(req.body)
+    .then(()=>{
+        res.status(200).json({message: 'farmer added 🤪, log in to continue'})
+    })
+    .catch(err => {
+        res.status(500).json({error: 'could not add the farmer'})
     })
 })
 

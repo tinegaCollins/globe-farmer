@@ -106,7 +106,7 @@ export default {
         },
     },
     beforeMount() {
-        this.Image = './icons/face-shot.png'
+        this.Image = '/icons/face-shot.png'
        // make a default image
         if(window.innerWidth < 768){
             this.showIcons = false

@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
-    <appTopBar/>
+    <!-- <appTopBar/> -->
+    <a href="/"><img src="./2.png"></a>
     <div class="mainContent">
       <router-view/>
     </div>
@@ -19,6 +20,15 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.wrapper{
+  font-family: var(--main-font);
+  display: grid;
+  place-items: center;
+}
+.wrapper > a > img{
+  height: 100px;
+  width: auto;
+  margin-top: 20px;
+}
 </style>

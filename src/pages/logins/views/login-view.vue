@@ -4,15 +4,15 @@
       <h6>ad goes here</h6>
     </div>
     <div class="mainContent">
-      <form action="/users" method="post" class="logins">
+      <form class="logins" @submit.prevent = "submitUser">
         <label for="text">
           login with phone number:
         </label>
-        <input v-model="phone" type="text" placeholder="phone number" id="text">
+        <input v-model="formdata.phone" type="text" placeholder="phone number" id="text">
         <label for="password">
           Password:
         </label>
-        <input v-model="password" type="password" placeholder="password" id="password">
+        <input v-model="formdata.password" type="password" placeholder="password" id="password">
         <button>Log In</button>
         <input type="checkbox" name="save" id="save">
         <label for="save">
@@ -28,14 +28,27 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   data(){
     return{
-      phone: '',
-      password: ''
+      formdata:{
+        phone:'',
+        password:''
+    }
+   }
+  },
+  methods:{
+    submitUser(){
+      axios.post('http://localhost:3000/users',this.formdata)
+      .then(response=>{
+        console.log(response);
+      })
+      .catch(error=>{
+        console.log(error);
+      })
     }
   }
-
 }
 </script>
 
