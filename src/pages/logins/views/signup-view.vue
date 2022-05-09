@@ -42,7 +42,8 @@
   </div>
   <div class="farmerdetails" v-if="details">
     <h3> we need more details to let you post an ad </h3>
-     <form @submit.prevent="submitFarmerDetails"> 
+     <form @submit.prevent="submitFarmerDetails"  action="/upload" method="POST"
+            enctype="multipart/form-data"> 
         <div class="card" v-if="step101">
             <h3 class="step-title">Step 1</h3>
             <h5>We need basic information about you</h5>
@@ -86,6 +87,8 @@
     </div>
         <div class="card" v-else-if="step104">
             <h3 class="step-title">last Step</h3>
+                <label for="image">Upload your avatar</label>
+                <input type="file" name="file" id="image">
                 <label for="county">County</label>
                 <input type="text" id="county" v-model="newFarmerData.county">
                 <label for="town">Nearest Town</label>
