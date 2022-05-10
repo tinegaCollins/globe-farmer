@@ -19,7 +19,7 @@ module.exports = {
     logins: {
       entry: './src/pages/logins/logins.js',
       template: './public/logins.html',
-      title: 'logins'
+      title: 'user details'
     },
     messages: {
       entry: './src/pages/messages/messages.js',
