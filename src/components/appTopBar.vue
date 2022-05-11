@@ -79,9 +79,7 @@ export default {
             dropDownImg: '/icons/caret-down-solid.svg',
             notes: [],
             messages: [],
-            accountDetails: {
-
-            }
+            accountDetails: null
         }
     },
     methods: {
@@ -156,11 +154,6 @@ export default {
         font-size: 1.3rem;
         font-weight: 500;
     }
-    @media screen and (max-width: 320px) {
-        .wrapper h3{
-            font-size: 1rem;
-        }
-    }
     .wrapper a > img{
         padding: 5px;
         height: 100px;
@@ -199,6 +192,15 @@ export default {
         width: 15px;
         display: grid;
         place-items: center;
+    }
+        @media screen and (max-width: 320px) {
+        .wrapper h3{
+            font-size: 1rem;
+        }
+        .notificationNumber{
+            font-size: 1.1rem;
+            
+        }
     }
     .bookmark > img{
         height: 20px;
@@ -368,6 +370,8 @@ export default {
     @media screen and (max-width: 555px){
          .modal{
             top: 10vh; 
+            width: 100vw;
+
          }
          .mainContent{
              display: flex;

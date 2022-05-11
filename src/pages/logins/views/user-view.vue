@@ -126,7 +126,7 @@ a:visited{
   justify-content: space-between;
   gap: 50px;
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 400px){
   .logins #text, #password, #password2, #username{
     width: 90vw;
   }

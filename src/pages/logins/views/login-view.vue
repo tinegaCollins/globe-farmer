@@ -123,4 +123,9 @@ export default{
     display: none;
   }
 }
+@media screen and (max-width: 420px){
+  .logins #text, #password{
+    width: 87vw;
+  }
+}
 </style>

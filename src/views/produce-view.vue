@@ -100,6 +100,8 @@ export default {
 }
 .chat-box .send button{
     padding: 0 10px;
+    border-radius: 0%;
+    border: none;
 }
 .chat-box .send input{
     width: 100%;

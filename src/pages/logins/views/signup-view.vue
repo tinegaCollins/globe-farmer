@@ -67,7 +67,7 @@ export default {
   width: auto;
   border-radius: 30px;
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 400px){
   .query{
     width: 100vw;
   }

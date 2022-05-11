@@ -192,7 +192,7 @@ input{
   flex-direction: column;
   row-gap: 10px;
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 400px){
   input,#password{
     width: 90vw;
   }
