@@ -16,6 +16,13 @@
       <div class="moreDetails">
           <p> {{ produce.moredetails }}</p>
       </div>
+      <div class="chat-box">
+          <div class="messages"></div>
+          <div class="send">
+              <input type="text" placeholder="write you massage here">
+              <button>send</button>
+          </div>
+      </div>
   </div>
 </template>
 
@@ -41,15 +48,19 @@ export default {
 <style scoped>
 .wrapper{
     font-family: var(--main-font);
+    display: grid;
+    place-items: center;
 }
 .wrapper > h3{
     margin-top: 5px;
     text-decoration: underline;
 }
 .maincontent{
+    width: 100%;
     display: flex;
-    padding: 20px 10px 30px 10px;;
+    padding: 20px 10px 30px 10px;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .maincontent img{
     width: auto;
@@ -69,5 +80,43 @@ export default {
 .sideContent p > span {
     font-size: 1.3rem;
     font-weight: 600;
+}
+.moreDetails{
+    padding: 50px;
+}
+.chat-box{
+    height: 100px;
+    background: #74e7b9;
+    width: 400px;
+    height: 300px;
+    position: relative;
+}
+.chat-box .send{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    height: 35px;
+}
+.chat-box .send button{
+    padding: 0 10px;
+}
+.chat-box .send input{
+    width: 100%;
+}
+@media screen and (max-width: 768px){
+    .wrapper{
+        display: block;
+    }
+    .maincontent img{
+    width: 80vw;
+    height: auto;
+    }
+    .moreDetails{
+        padding: 10px;
+    }
+    .chat-box{
+        width: 90vw;
+    }
 }
 </style>

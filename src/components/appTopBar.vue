@@ -76,7 +76,7 @@ export default {
             showIcons: true,
             showDropDown: false,
             showSearchBar: true,
-            dropDownImg: './icons/caret-down-solid.svg',
+            dropDownImg: '/icons/caret-down-solid.svg',
             notes: [],
             messages: [],
             accountDetails: null

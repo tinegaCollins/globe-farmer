@@ -1,10 +1,7 @@
 <template>
   <div class="wrapper">
-    <div class="ad">
-      <h6>ad goes here</h6>
-    </div>
     <div class="mainContent">
-      <form class="logins" @submit.prevent = "submitUser">
+      <form class="logins" @submit.prevent = "getUser">
         <label for="text">
           login with phone number:
         </label>
@@ -41,14 +38,8 @@ export default{
    }
   },
   methods:{
-    submitUser(){
-      axios.post('http://localhost:3000/users',this.formdata)
-      .then(response=>{
-        console.log(response);
-      })
-      .catch(error=>{
-        console.log(error);
-      })
+    getUser(){
+      fetch()
     }
   }
 }
@@ -60,20 +51,10 @@ export default{
   display: grid;
   place-items: center;
 }
-.ad{
-  height: 100px;
-  width: 70vw;
-  background: grey;
-  color: #fff;
-  display: grid;
-  place-items: center;
-  margin-top: 10px;
-  box-shadow: 5px 5px 5px 5px rgba(51, 51, 51, 0.411);
-}
 .mainContent{
   display: flex;
   flex-wrap: wrap;
-  margin-top:20px;
+  margin-top:70px;
   justify-content: space-between;
   gap: 50px;
 }

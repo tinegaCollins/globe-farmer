@@ -9,7 +9,7 @@
       <router-view/>
     </div>
   </main>
-  <Footer/>
+  <!-- <Footer/> -->
 </template>
 
 <script>
@@ -20,7 +20,7 @@ import './assets/styles/global.css'
 import midViewsBar from './components/mid-views-bar.vue'
 import sideBar from './components/side-bar.vue'
 import searchBar from './components/searchBar.vue'
-import Footer from './components/footer-bar.vue'
+// import Footer from './components/footer-bar.vue'
 
 export default {
   components: {
@@ -28,7 +28,7 @@ export default {
     midViewsBar,
     sideBar,
     searchBar,
-    Footer
+    // Footer
   },
   data(){
     return{

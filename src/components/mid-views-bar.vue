@@ -27,13 +27,13 @@ export default {
     methods: {
         sidebar(){
             this.$emit('sidebar')
-            this.imgSrc = this.imgSrc === './icons/bars-solid.svg' ? './icons/xmark-solid.svg' : './icons/bars-solid.svg'
+            this.imgSrc = this.imgSrc === '/icons/bars-solid.svg' ? '/icons/xmark-solid.svg' : '/icons/bars-solid.svg'
         }
     },
     data(){
         return{
             //bind to  the image to be an x when the sidebar is open
-            imgSrc: './icons/bars-solid.svg'
+            imgSrc: '/icons/bars-solid.svg'
         }
     }
 }
