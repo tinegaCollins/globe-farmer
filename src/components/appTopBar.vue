@@ -309,11 +309,11 @@ export default {
         padding: 1.3em;
         max-width:70ch;
         z-index: 100;
-        position: fixed;
+        /* position: fixed; */
         top: 25%;
-        left: 35%;
+        left: 30%;
         border: 1px solid black;
-    }   
+    }
     .modal::backdrop{
         backdrop-filter: blur(2px) saturate(100%);
         -webkit-backdrop-filter: blur(2px) saturate(100%);
@@ -343,12 +343,31 @@ export default {
         margin-top: 20px;
         font-family: var(--main-font);
     }
+
     .mainContent p{
         margin-top: 10px;
     }
     .signup{
         margin: 10px 10px 0 0;
         border-left: 1px solid black;
+    }
+    @media screen and (max-width: 768px){
+        .modal{
+            top: 20vw;
+            left: 0;
+        }
+    }
+    @media screen and (max-width: 555px){
+         .modal{
+            top: 15vh; 
+         }
+         .mainContent{
+             display: flex;
+             flex-direction: column;
+         }
+         .signup{
+             border: none;
+         }
     }
     .mainContent button{
         background-color: var(--btn-color);
