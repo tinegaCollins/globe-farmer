@@ -79,7 +79,9 @@ export default {
             dropDownImg: '/icons/caret-down-solid.svg',
             notes: [],
             messages: [],
-            accountDetails: null
+            accountDetails: {
+
+            }
         }
     },
     methods: {
@@ -99,6 +101,7 @@ export default {
                 this.$refs.modal.showModal()
             } else {
                 //where account details are shown
+                this.$router.push('/account')
             }
         },
         closeModal(){
@@ -152,6 +155,11 @@ export default {
         font-family: var(--title-font);
         font-size: 1.3rem;
         font-weight: 500;
+    }
+    @media screen and (max-width: 320px) {
+        .wrapper h3{
+            font-size: 1rem;
+        }
     }
     .wrapper a > img{
         padding: 5px;
