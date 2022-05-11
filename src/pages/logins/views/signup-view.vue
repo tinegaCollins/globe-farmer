@@ -67,4 +67,17 @@ export default {
   width: auto;
   border-radius: 30px;
 }
+@media screen and (max-width: 320px){
+  .query{
+    width: 100vw;
+  }
+  .query img{
+    height: auto;
+    width: 250px;
+  }
+  .query{
+    align-items: center;
+    justify-content: center;
+  }
+}
 </style>

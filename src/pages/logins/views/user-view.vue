@@ -101,8 +101,8 @@ export default{
 #save{
   margin-top: 25px;
   position: relative;
-  left: 170px;
-}
+  left: 60px;
+  }
 #save ~ label{
   position: relative;
   bottom: 45px;
@@ -126,5 +126,12 @@ a:visited{
   justify-content: space-between;
   gap: 50px;
 }
-
+@media screen and (max-width: 320px){
+  .logins #text, #password, #password2, #username{
+    width: 90vw;
+  }
+  .randomlorem{
+    display: none;
+  }
+}
 </style>

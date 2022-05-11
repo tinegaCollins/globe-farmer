@@ -1,15 +1,14 @@
 <template>
 <div class="farmerdetails">
-    <h3> we need more details to let you post an ad </h3>
+    <h3> we need more details about you to let you post an ad </h3>
      <form @submit.prevent="submitFarmerDetails"  action="/upload" method="POST"
             enctype="multipart/form-data"> 
         <div class="card" v-if="step101">
             <h3 class="step-title">Step 1</h3>
-            <h5>We need basic information about you</h5>
                 <label for="email">Email:</label>
                 <input type="email" id="email" required v-model="newFarmerData.farmerEmail">
                 <label for="number">Phone Number:</label>
-                <input type="number" id="number" required v-model="newFarmerData.farmerphone">
+                <input type="text" id="number" required v-model="newFarmerData.farmerphone">
                 <label for="password">password:</label>
                 <input type="password"  id="password" v-model="newFarmerData.farmerPassword">
                 <label for="password">repeat password:</label>
@@ -192,6 +191,17 @@ input{
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+}
+@media screen and (max-width: 320px){
+  input,#password{
+    width: 90vw;
+  }
+  .card{
+    margin-left: 20px;
+  }
+  label{
+    font-size: .8rem;
+  }
 }
 .card button{
   padding: 5px;

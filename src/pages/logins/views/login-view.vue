@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="mainContent">
+      <h3>log in to continue</h3>
       <form class="logins" @submit.prevent = "getUser">
         <label for="text">
           login with phone number:
@@ -51,10 +52,13 @@ export default{
   display: grid;
   place-items: center;
 }
+.wrapper h3{
+  margin-left: 20px;
+}
 .mainContent{
   display: flex;
   flex-wrap: wrap;
-  margin-top:70px;
+  margin-top:30px;
   justify-content: space-between;
   gap: 50px;
 }
@@ -78,6 +82,7 @@ export default{
   border: none;
   border-bottom: 1px solid black;
 }
+
 .logins button{
   width: max-content;
   align-self: center;
@@ -109,5 +114,13 @@ export default{
 .randomlorem > img{
   width: 280px;
   height: auto;
+}
+@media screen and (max-width: 768px){
+  .logins #text, #password{
+    width: 250px;
+  }
+  .randomlorem > img{
+    display: none;
+  }
 }
 </style>

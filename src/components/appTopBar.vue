@@ -359,7 +359,7 @@ export default {
     }
     @media screen and (max-width: 555px){
          .modal{
-            top: 15vh; 
+            top: 10vh; 
          }
          .mainContent{
              display: flex;
