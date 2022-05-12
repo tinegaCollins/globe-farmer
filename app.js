@@ -130,7 +130,7 @@ app.get('/messages/:id', (req,res)=>{
 })
 app.get('/users', (req,res)=>{
     db.collection('users')
-    .findOne({normalUserPhone: req.body})
+    .find()
     .then(doc =>{
         res.status(200).json(doc)
     })

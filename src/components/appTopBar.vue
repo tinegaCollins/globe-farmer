@@ -79,7 +79,7 @@ export default {
             dropDownImg: '/icons/caret-down-solid.svg',
             notes: [],
             messages: [],
-            accountDetails: null
+            accountDetails: {}
         }
     },
     methods: {

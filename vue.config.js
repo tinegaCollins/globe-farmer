@@ -30,6 +30,11 @@ module.exports = {
       entry: './src/pages/notes/notes.js',
       template: './public/notes.html',
       title: 'notes'
+    },
+    account : {
+      entry : './src/pages/account/main.js',
+      template: './public/account.html',
+      title: 'account'
     }
   }
 }
