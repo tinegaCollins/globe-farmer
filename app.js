@@ -128,9 +128,9 @@ app.get('/messages/:id', (req,res)=>{
         res.status(500).json({error: 'could not fetch the document'})
     })
 })
-app.get('/users', (req,res)=>{
+app.get('/users/:id', (req,res)=>{
     db.collection('users')
-    .find()
+    .findOne({_id: ObjectId(req.params.id)})
     .then(doc =>{
         res.status(200).json(doc)
     })
@@ -147,6 +147,7 @@ app.post('/users', (req,res) =>{
     .catch(err => {
         res.status(500).json({error: 'could not add the user'})
     })
+    d
 })
 
 app.post('/farmers', (req,res) =>{

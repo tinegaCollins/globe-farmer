@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import account from '/account-home.vue'
+import account from './account-home.vue'
 import router from './router'
 
 

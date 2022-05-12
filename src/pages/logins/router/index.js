@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import login from '../views/login-view.vue'
 import signup from '../views/signup-view.vue'
+import post from '../views/post-ad.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
         component : () => import('../views/farmer-view.vue')
       }
     ]
+  },
+  {
+    path : '/logins/post',
+    name: 'post',
+    component: post
   }
 ]
 

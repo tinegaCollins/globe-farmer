@@ -108,6 +108,9 @@ export default{
             .then(()=>{
                 this.details = !this.details
             })
+            .then(()=>{
+              window.location.href = "/account/post"
+            })
             .catch(error=>{
                 console.log(error);
             })
