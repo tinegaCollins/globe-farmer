@@ -1,27 +1,27 @@
 <template>
 <div class="farmerdetails">
     <h3> we need more details about you to let you post an ad </h3>
-     <form @submit.prevent="submitFarmerDetails"  action="/upload" method="POST"
+     <form @submit.prevent="createUser"  action="/upload" method="POST"
             enctype="multipart/form-data"> 
         <div class="card" v-if="step101">
             <h3 class="step-title">Step 1</h3>
                 <label for="email">Email:</label>
-                <input type="email" id="email" required v-model="newFarmerData.farmerEmail">
+                <input type="email" id="email" required v-model="UserData.email">
                 <label for="number">Phone Number:</label>
-                <input type="text" id="number" required v-model="newFarmerData.farmerphone">
+                <input type="text" id="number" required v-model="UserData.phone">
                 <label for="password">password:</label>
-                <input type="password"  id="password" v-model="newFarmerData.farmerPassword">
+                <input type="password"  id="password" v-model="UserData.password">
                 <label for="password">repeat password:</label>
-                <input type="password" name="password" id="repeatpassword" v-model="newFarmerData.farmerRpassword">
+                <input type="password" name="password" id="repeatpassword" v-model="rpassword">
             <button type="button" @click="step1">Next</button>
         </div>
         
         <div class="card" v-else-if="step102">
                 <h3 class="step-title">step 2</h3>
                     <label for="firstName">First name</label>
-                    <input type="text" name="firstName" id="firstName" v-model="newFarmerData.firstName">
+                    <input type="text" name="firstName" id="firstName" v-model="UserData.firstName">
                     <label for="lastName">Last name</label>
-                    <input type="text" name="lastName" id="lastName" v-model="newFarmerData.lastName">
+                    <input type="text" name="lastName" id="lastName" v-model="UserData.lastName">
                 <div class="buttonWrapper">
                     <button type="button" @click="step1">Previous</button>
                     <button type="button" @click="step2">Next</button>
@@ -30,14 +30,14 @@
         <div class="card" v-else-if="step103">
             <h3 class="step-title">step 3</h3>
                 <label for="line">Your product line</label>
-                <select name="line" id="line" v-model="newFarmerData.line">
+                <select name="line" id="line" v-model="UserData.line">
                     <option value="Vegetables">Vegetables</option>
                     <option value="Fruits">Fruits</option>
                     <option value="cereals">cereals</option>
                     <option value="spices">spices</option>
                 </select>
                 <label for="product">Your main product</label>
-                <input type="text" id="product" v-model="newFarmerData.product">
+                <input type="text" id="product" v-model="UserData.product">
             <div class="buttonWrapper">
                 <button type="button" @click="step2">Previous</button>
                 <button type="button" @click="step3">Next</button>
@@ -48,9 +48,9 @@
                 <label for="image">Upload your avatar</label>
                 <input type="file" name="file" id="image">
                 <label for="county">County</label>
-                <input type="text" id="county" v-model="newFarmerData.county">
+                <input type="text" id="county" v-model="UserData.county">
                 <label for="town">Nearest Town</label>
-                <input type="text" id="town" v-model="newFarmerData.town">
+                <input type="text" id="town" v-model="UserData.town">
            <div class="buttonWrapper">
             <button type="button" @click="step3">Previous</button>
             <button type="submit" id="submitData">submit</button>
@@ -73,18 +73,20 @@ export default{
             step102: false,
             step103: false,
             step104: false,
-            newFarmerData: {
+            UserData: {
                 firstName: '',
                 lastName: '',
                 line: '',
                 product: '',
                 county: '',
                 town: '',
-                farmerEmail: '',
-                farmerphone: '',
-                farmerPassword: '',
-                farmerRpassword: ''
-            }
+                email: '',
+                phone: '',
+                password: '',
+                farmer: true
+            },
+            rpassword: '',
+            response2: null
         }
     },
     methods: {
@@ -100,13 +102,10 @@ export default{
             this.step103 = !this.step103
             this.step104 = !this.step104
         },
-        submitFarmerDetails(){
-            axios.post('http://localhost:3000/farmers', this.newFarmerData)
+          createUser(){
+            axios.post('http://localhost:3000/users', this.UserData)
             .then(response=>{
                 this.response2 = response.data.message
-            })
-            .then(()=>{
-                this.details = !this.details
             })
             .then(()=>{
               window.location.href = "/account/post"

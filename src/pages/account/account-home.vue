@@ -1,6 +1,7 @@
 <template>
 <nav> <a href="/"><img src="./assets/2.png"></a></nav>
 <div class="mainContent">
+    <h3>profile</h3>
     <div class="details" v-if="userDetails">
         <img src="./assets/face-shot.png">
         <p>{{ userDetails.normalUsername }}</p> 
@@ -10,6 +11,8 @@
 </template>
 
 <script >
+
+import '../../assets/styles/global.css'
 export default{
     data(){
         return{
@@ -27,11 +30,15 @@ export default{
     }
 }
 </script>
-<style scoped>
+<style scoped>  
 nav img{
     height: 90px;
     width: auto;
     margin:10px 0 0 50px;
+}
+.mainContent{
+    font-family: var(--main-font);
+    padding: 30px;
 }
 .details img{
     height: 160px;

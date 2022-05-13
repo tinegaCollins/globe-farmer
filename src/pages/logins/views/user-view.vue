@@ -1,29 +1,34 @@
 <template>
     <p>{{ response1 }}</p>
     <div class="mainContent">
-      <form class="logins" @submit.prevent="createNormalUser">
+      <form class="logins" @submit.prevent="createUser">
         <label for="username">
           username: 
         </label>
-        <input type="text" id="username" v-model="normalUserData.normalUsername" required>
+        <input type="text" id="username" v-model="UserData.name" required>
+        <label for="email">
+          enter your email:
+        </label>
+        <input type="email" name="" id="email" v-model="UserData.email">
         <label for="text">
           enter your phone number:
         </label>
-        <input v-model="normalUserData.normalUserPhone" type="text" placeholder="phone number" id="text" required>
+        <input v-model="UserData.phone" type="text" placeholder="phone number" id="text" required>
         <label for="password">
           Password:
         </label>
-        <input v-model="normalUserData.normalPassword" type="password" placeholder="password" id="password" required>
+        <input v-model="UserData.password" type="password" placeholder="password" id="password" required>
         <label for="password2">
           repeat Password:
         </label>
-        <input v-model="normalUserData.normalRpassword" type="password" placeholder="password" id="password2" required>
+        <input v-model="rpassword" type="password" placeholder="password" id="password2" required>
         <button>Sign up</button>
         <input type="checkbox" name="save" id="save">
         <label for="save">
           <a href="#">accept terms and conditions</a>
         </label>
       </form>
+      <p>{{ response1 }}</p>
       <div class="randomlorem">
         <img src="../assets/undraw_my_app_re_gxtj.svg">
       </div>
@@ -36,22 +41,23 @@ export default{
     data(){
         return{
             response1: null,
-            normalUserData: {
-                normalUsername: '',
-                normalUserPhone: '',
-                normalPassword: '',
-                normalRpassword: ''
+            UserData: {
+                name: '',
+                phone: '',
+                password: '',
+                email: ''
             },
+            rpassword: ''
         }
     },
     methods: {
-        createNormalUser(){
-        axios.post('http://localhost:3000/users', this.normalUserData)
+        createUser(){
+        axios.post('http://localhost:3000/users', this.UserData)
         .then(response=>{
             this.response1 = response.data.message
         })
         .then(()=>{
-            this.showSignup = !this.showSignup
+            window.location.href = "/account"
         })
         .catch(error=>{
             console.log(error);
@@ -73,7 +79,7 @@ export default{
 .logins input{
   margin-bottom: 10px;
 }
-.logins #text, #password, #password2, #username{
+.logins #text, #password, #password2, #username, #email{
   width: 300px;
   height: 30px;
   appearance: none;
