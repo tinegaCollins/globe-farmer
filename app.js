@@ -140,6 +140,16 @@ app.get('/users/:id', (req,res)=>{
         res.status(500).json({error: 'could not fetch the document'})
     })
 })
+app.get('/users/:phone&:password', (req,res)=>{
+    db.collection('users')
+    .findOne({phone: req.params.phone, password: req.params.password})
+    .then(doc =>{
+        res.status(200).json(doc)
+    })
+    .catch(err => {
+        res.status(500).json({error: 'could not fetch the document'})
+    })
+})
 app.post('/users', (req,res) =>{
     db.collection('users')
     .insertOne(req.body)

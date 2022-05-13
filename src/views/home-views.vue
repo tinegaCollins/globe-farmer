@@ -5,7 +5,6 @@
             <h2>looking to <strong id="text1">Buy 🤷‍♀️</strong> or <strong id="text2">Sell 🤑</strong></h2>
             <h3>We got you! 🤝</h3>
             <h3>Your one stop shoping site for farm produces</h3>
-            <p>Save on average of KSH140 off RRP</p>
          </div>
          <img src="../assets/ad.png" alt="ad pic" srcset="">
       </div>

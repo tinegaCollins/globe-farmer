@@ -93,3 +93,32 @@ border: none;
 .products button:hover::before{
     transform: translate3d(100%, 0, 0);
 }
+@media screen and (max-width: 400px){
+    .wrapper{
+        padding: 0px;
+    }
+    .trending, .new, .popular, .around{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 3px;
+    }
+    .products{
+        width: 130px;
+        height: 220px;
+        font-size: .7rem;
+        border: 1px solid #3E8141;
+        padding: 3px;
+    }
+    .products > * {
+        margin: 2px;
+    }
+    .products img {
+        height: 90px;
+        width: auto;
+    }
+    .products button{
+        padding: 5px 10px;
+        font-size: .7rem;
+        margin: 3px 0px 0px 10px;
+    }
+}

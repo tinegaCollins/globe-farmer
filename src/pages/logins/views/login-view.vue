@@ -32,12 +32,21 @@ export default{
       formdata: {
         phone:'',
         password:''
-    }
+      },
+      globalUserDetails: null
    }
   },
   methods:{
     getUser(){
-      fetch()
+      fetch('http://localhost:3000/user/' + this.formdata.phone + '&' + this.formdata.password)
+      .then(res => res.json())
+      .then(data => {
+        this.globalUserDetails = data
+      })
+      .then(()=>{
+        console.log(this.globalUserDetails)
+      })
+      .catch(err => console.log(err))
     }
   }
 }
