@@ -1,6 +1,6 @@
 <template>
     <p>{{ response1 }}</p>
-    <div class="mainContent">
+    <div class="mainContent" v-if="user">
       <form class="logins" @submit.prevent="createUser">
         <label for="username">
           username: 
@@ -28,7 +28,6 @@
           <a href="#">accept terms and conditions</a>
         </label>
       </form>
-      <p>{{ response1 }}</p>
       <div class="randomlorem">
         <img src="../assets/undraw_my_app_re_gxtj.svg">
       </div>
@@ -47,7 +46,8 @@ export default{
                 password: '',
                 email: ''
             },
-            rpassword: ''
+            rpassword: '',
+            user: true
         }
     },
     methods: {
@@ -57,7 +57,12 @@ export default{
             this.response1 = response.data.message
         })
         .then(()=>{
-            window.location.href = "/account"
+          this.user = !this.user
+        })
+        .then(()=>{
+            setTimeout(() => {
+              window.location.href = "/account"
+            }, 3000);
         })
         .catch(error=>{
             console.log(error);

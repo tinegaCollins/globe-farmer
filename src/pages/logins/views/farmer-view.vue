@@ -108,7 +108,9 @@ export default{
                 this.response2 = response.data.message
             })
             .then(()=>{
-              window.location.href = "/account/post"
+              setTimeout(() => {
+                window.location.href = "/account/post"
+              }, 5000);
             })
             .catch(error=>{
                 console.log(error);
