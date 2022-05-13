@@ -79,7 +79,7 @@ export default {
             dropDownImg: '/icons/caret-down-solid.svg',
             notes: [],
             messages: [],
-            accountDetails: {}
+            accountDetails: null
         }
     },
     methods: {
@@ -185,8 +185,8 @@ export default {
     }
     .notificationNumber{
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -5px;
+        right: -5px;
         background: var(--btn-color);
         font-size: .7rem;
         border-radius: 50%;
@@ -199,7 +199,7 @@ export default {
             font-size: 1rem;
         }
         .notificationNumber{
-            font-size: 1.1rem;
+            font-size: .7rem;
             
         }
     }
@@ -294,6 +294,7 @@ export default {
             top: 5px;
             right: -80vw;
             width: 15px;
+            height: 15px;
             display: grid;
             place-items: center;
         }
