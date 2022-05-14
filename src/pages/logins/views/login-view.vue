@@ -6,11 +6,11 @@
         <label for="text">
           login with phone number:
         </label>
-        <input v-model="formdata.phone" type="text" placeholder="phone number" id="text">
+        <input v-model="phone" type="text" placeholder="phone number" id="text">
         <label for="password">
           Password:
         </label>
-        <input v-model="formdata.password" type="password" placeholder="password" id="password">
+        <input v-model="password" type="password" placeholder="password" id="password">
         <button>Log In</button>
         <input type="checkbox" name="save" id="save">
         <label for="save">
@@ -29,16 +29,14 @@
 export default{
   data(){
     return{
-      formdata: {
         phone:'',
-        password:''
-      },
-      globalUserDetails: null
+        password:'',
+        globalUserDetails: null
    }
   },
   methods:{
     getUser(){
-      fetch('http://localhost:3000/user/' + this.formdata.phone + '&' + this.formdata.password)
+      fetch('http://localhost:3000/user/' + this.phone + '/' + this.password)
       .then(res => res.json())
       .then(data => {
         this.globalUserDetails = data
