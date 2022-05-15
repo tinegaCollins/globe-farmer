@@ -22,7 +22,8 @@
     "multer-gridfs-storage": "^5.0.2",
     "nodemon": "^2.0.16",
     "vue": "^3.2.13",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

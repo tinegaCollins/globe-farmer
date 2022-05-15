@@ -43,7 +43,8 @@ export default {
     showSearchBar2(){
       this.showSearchBar = !this.showSearchBar
     }
-  }
+  },
+
 
 }
 </script>
