@@ -1,4 +1,4 @@
-<template>
+<template> 
 <nav> <a href="/"><img src="./assets/2.png"></a></nav>
 <div class="mainContent">
     <div class="details" v-if="userDetails">
@@ -13,17 +13,18 @@
         <div class="card1">
             <img src="./assets/face-shot.png">
             <h3>My account</h3>
-            <p>Names: {{ userDetails.firstName + " " + userDetails.lastName }}</p>
+            <p>Name: {{ userDetails.firstName + " " + userDetails.lastName }}</p>
             <p>Email: {{userDetails.email}}</p> 
             <p>Phone: {{userDetails.phone }}</p>
             <p class="pass"><img src="./assets/setting-svgrepo-com.svg"><span>change password</span></p>
             <button>Edit</button>
         </div>
         <div class="card2">
-            <div class="purchases">
-                <h3>My ads <img src="./assets/present-svgrepo-com.svg"></h3>
+            <div class="ads">
+                <h4><img src="./assets/present-svgrepo-com.svg">My ads </h4>
+                <button>view all</button>
             </div>
-            <div class="ads"></div>
+            <div class="otherInfo"></div>
         </div>
     </div>
 </div>
@@ -46,6 +47,8 @@ export default{
             this.userDetails = data
         })
         .catch(err => console.log(err))
+
+        fetch('')
     }
 }
 </script>
@@ -71,9 +74,13 @@ nav img {
     padding: 20px;
     box-shadow: 3px 3px 6px 5px #ccc;
     border-radius: 15px;
-}
-.card1{
     width: 280px;
+}
+
+.details .card1 > img{
+    height: 230px;
+    width: auto;
+    border-radius: 10%;
 }
 .card1 p{
     font-size: .9rem;
@@ -119,18 +126,34 @@ nav img {
     flex-direction: column;
     justify-content: space-between;
 }
-.ads, .purchases{
+.ads, .otherInfo{
      box-shadow: 3px 3px 6px 5px #ccc;
      border-radius: 15px;
      height: 46%;
+     padding: 10px;
 }
-.purchases img{
+.ads img{
     height: 20px;
     width: auto;
 }
-.details img{
-    height: 230px;
-    width: auto;
-    border-radius: 10%;
+.ads{
+    display: flex;
+    flex-direction: column;
+}
+.ads h4, .ads button{
+    align-self: flex-end;
+    text-align: justify;
+}
+.ads h4 img{
+    margin-right: 10px;
+}
+.ads button{
+    margin-top: auto;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+button:hover{
+    cursor: pointer;
 }
 </style>
