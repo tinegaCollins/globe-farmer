@@ -51,12 +51,12 @@
                 <input type="text" id="county" v-model="UserData.county">
                 <label for="town">Nearest Town</label>
                 <input type="text" id="town" v-model="UserData.town">
+                
            <div class="buttonWrapper">
             <button type="button" @click="step3">Previous</button>
             <button type="submit" id="submitData">submit</button>
            </div>
         </div>
-        
     </form>
   </div>
 </template>
@@ -216,4 +216,16 @@ input{
   justify-content: flex-start;
   column-gap: 10px;
 } 
+#save{
+  margin-top: 25px;
+  position: relative;
+  left: 60px;
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+  }
+#save ~ label{
+  position: relative;
+  bottom: 45px;
+}
 </style>

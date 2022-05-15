@@ -1,8 +1,9 @@
 <template>
   <div class="wrapper">
     <div class="mainContent">
-      <h3>log in to continue</h3>
       <form class="logins" @submit.prevent = "getUser">
+      <h3>log in to continue</h3>
+      <h4>{{response2}}</h4>
         <label for="text">
           login with phone number:
         </label>
@@ -11,12 +12,12 @@
           Password:
         </label>
         <input v-model="password" type="password" placeholder="password" id="password">
-        <button>Log In</button>
+        <button :disabled="button">Log In</button>
         <input type="checkbox" name="save" id="save">
         <label for="save">
           stay logged in
         </label>
-        <button id="forgot">Forgot password?</button>
+        <div id="forgot">Forgot password?</div>
       </form>
       <div class="randomlorem">
         <img src="../assets/undraw_access_account_re_8spm.svg">
@@ -31,7 +32,9 @@ export default{
     return{
         phone:'',
         password:'',
-        globalUserDetails: null
+        globalUserDetails: null,
+        response2: '',
+        button: false
    }
   },
   methods:{
@@ -42,7 +45,16 @@ export default{
         this.globalUserDetails = data
       })
       .then(()=>{
-        console.log(this.globalUserDetails)
+        if(this.globalUserDetails === null){
+          this.response2 = 'enter a valid phonenumber and password 🤦‍♂️'
+        }
+        else{
+          this.button = !this.button
+          this.response2 = 'log in successful 👍'
+          setTimeout(() => {
+            window.location.href = "/"
+          }, 2000);
+        }
       })
       .catch(err => console.log(err))
     }
@@ -55,9 +67,6 @@ export default{
   font-family: var(--main-font);
   display: grid;
   place-items: center;
-}
-.wrapper h3{
-  margin-left: 20px;
 }
 .mainContent{
   display: flex;
@@ -87,7 +96,7 @@ export default{
   border-bottom: 1px solid black;
 }
 
-.logins button{
+.logins button, #forgot{
   width: max-content;
   align-self: center;
   padding: 7px 15px;
@@ -118,6 +127,13 @@ export default{
 .randomlorem > img{
   width: 280px;
   height: auto;
+}
+.logins h4, .logins h3{
+  margin-bottom: 5px;
+  max-width: 100%;
+  }
+.logins h4{
+  color: rgba(255, 0, 0, 0.548);
 }
 @media screen and (max-width: 768px){
   .logins #text, #password{

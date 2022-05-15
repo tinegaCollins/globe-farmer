@@ -4,7 +4,13 @@
     <h3>profile</h3>
     <div class="details" v-if="userDetails">
         <img src="./assets/face-shot.png">
-        <p>{{ userDetails.normalUsername }}</p> 
+        <p>names: {{ userDetails.firstName + " " + userDetails.lastName }}</p>
+        <p>line of business: {{ userDetails.line }}</p> 
+        <p>main product: {{ userDetails.product}}</p>
+        <p>county: {{userDetails.county }}</p>
+        <p>town: {{userDetails.town}}</p>
+        <p>phone: {{userDetails.phone }}</p>
+        <p>email:{{userDetails.email}}</p>
     </div>
     <div class="ads"></div>
 </div>
@@ -16,7 +22,7 @@ import '../../assets/styles/global.css'
 export default{
     data(){
         return{
-            userId: '627d6b3cd9f11d3234e7de4d',
+            userId: '627e0e1ead1acf5e1d1144ac',
             userDetails: null
         }
     },
