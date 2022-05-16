@@ -11,7 +11,7 @@
                 <button><span>go</span></button>
             </div>
         </div>
-        <router-view/>
+        
     </div>
 </template>
 

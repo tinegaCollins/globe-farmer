@@ -154,7 +154,7 @@ app.post('/users', (req,res) =>{
     db.collection('users')
     .insertOne(req.body)
     .then(()=>{
-        res.status(200).json({message: 'user added 🤪, log in to continue'})
+        res.status(200).json({message: 'user added 🤪'})
     })
     .catch(err => {
         res.status(500).json({error: 'could not add the user'})

@@ -23,7 +23,10 @@ module.exports = defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         account: resolve(__dirname, '/account/account.html'),
-        bookmarks: resolve(__dirname,'/public/bookmarks.html')
+        bookmarks: resolve(__dirname,'/bookmarks/bookmarks.html'),
+        logins: resolve(__dirname,'/logins/logins.html'),
+        messages: resolve(__dirname, '/messages/messages.html'),
+        notifications: resolve(__dirname, '/notifications/notifications.html')
       }
     }
   },

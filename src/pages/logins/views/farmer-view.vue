@@ -1,6 +1,7 @@
 <template>
 <div class="farmerdetails">
     <h3> we need more details about you to let you post an ad </h3>
+    <h3>{{ response2 }}</h3>
      <form @submit.prevent="createUser"  action="/upload" method="POST"
             enctype="multipart/form-data"> 
         <div class="card" v-if="step101">
@@ -106,10 +107,11 @@ export default{
             axios.post('http://localhost:3000/users', this.UserData)
             .then(response=>{
                 this.response2 = response.data.message
+                
             })
             .then(()=>{
               setTimeout(() => {
-                window.location.href = "/account/post"
+                window.location.href = "/account/account.html"
               }, 5000);
             })
             .catch(error=>{

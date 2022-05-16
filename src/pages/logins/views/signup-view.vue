@@ -2,11 +2,11 @@
     <div class="query" v-if="query">
       <div class="buyer">
         <img src="../istockphoto-1199186094-612x612.png" alt="image" srcset="">
-        <router-link to ="/logins/signup/user"><button @click="togglequery">sign up as a buyer</button></router-link>
+        <router-link to ="/signup/user"><button @click="togglequery">sign up as a buyer</button></router-link>
       </div>
       <div class="seller" @click="farmer">
          <img src="../../../assets/ad.png" alt="image" srcset="">
-        <router-link to ="/logins/signup/farmer"><button @click="togglequery" >sign up as farmer</button></router-link>
+        <router-link to ="/signup/farmer"><button @click="togglequery" >sign up as farmer</button></router-link>
       </div>
     </div>
     <router-view></router-view>

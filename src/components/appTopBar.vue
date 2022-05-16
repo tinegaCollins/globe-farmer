@@ -6,7 +6,7 @@
             <search-bar/>
        </div>
        <div class="dataicons" v-if="showIcons">
-           <a href="/notes">
+           <a href="/notifications/notifications.html">
             <div class="notification">
                 <img class= "icons" src="../assets/icons/bell-solid.svg" alt="" srcset="">
                 <div class="notificationNumber">
@@ -14,10 +14,10 @@
                 </div>
             </div>
             </a>
-            <a href="/bookmarks"><div class="bookmark">
+            <a href="/bookmarks/bookmarks.html"><div class="bookmark">
                 <img class= "icons" src="../assets/icons/bookmark-solid.svg" alt="bookmark" srcset="">
             </div> </a>
-            <a href="/messages">
+            <a href="/messages/messages.html#/">
             <div class="messages"  @click="remove">
                  <img class= "icons" src="../assets/icons/message-solid.svg" alt="messages" srcset="">
                  <div class="notificationNumber">
@@ -49,12 +49,12 @@
            <div class="login">
                <img src="../assets/icons/undraw_access_account_re_8spm.svg" alt="">
                <p>have an account?</p>
-               <a href="/logins"><button>login</button></a>
+               <a href="/logins/logins.html#/"><button>login</button></a>
            </div>
            <div class="signup">
                <img src="../assets/icons/undraw_my_app_re_gxtj.svg" alt="">
                 <p>create your account in just a few steps</p>
-                <a href="/logins/signup"><button>signup</button></a>
+                <a href="/logins/logins.html#/signup/"><button>signup</button></a>
            </div>
        </div>
    </dialog>
@@ -79,7 +79,7 @@ export default {
             dropDownImg: '/icons/caret-down-solid.svg',
             notes: [],
             messages: [],
-            userId: 'rtyuioiuyui'
+            userId: null
         }
     },
     methods: {

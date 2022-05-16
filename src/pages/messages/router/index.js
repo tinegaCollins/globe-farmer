@@ -1,16 +1,16 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import chat from '../views/chat-home.vue'
 import chattab from '../views/chats-tab.vue'
 
 
 const routes = [
     {
-        path: '/messages/',
+        path: '/',
         name: 'chat',
         component: chat
     },
     {
-        path: '/messages/:id',
+        path: '/:id',
         name: 'tab',
         component: chattab
     }
@@ -18,7 +18,7 @@ const routes = [
 
 
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
+    history: createWebHashHistory('/messages/messages.html'),
     routes
   })
   
