@@ -2,14 +2,6 @@
 <nav> <a href="/"><img src="./assets/2.png"></a></nav>
 <div class="mainContent">
     <div class="details" v-if="userDetails">
-        <!-- 
-        
-        <p>line of business: {{ userDetails.line }}</p> 
-        <p>main product: {{ userDetails.product}}</p>
-        <p>county: {{userDetails.county }}</p>
-        <p>town: {{userDetails.town}}</p>
-        
-        <p>email:{{userDetails.email}}</p> -->
         <div class="card1">
             <img src="./assets/face-shot.png">
             <h3>My account</h3>
@@ -22,9 +14,19 @@
         <div class="card2">
             <div class="ads">
                 <h4><img src="./assets/present-svgrepo-com.svg">My ads </h4>
+                <p><span>potatoes</span><span>10/05/2022</span></p>
+                <p><span>tomatoes</span><span>13/05/2022</span></p>
+                <p><span>carrots</span><span>17/05/2022</span></p>
+                <p><span>cabbages</span><span>20/05/2022</span></p>
                 <button>view all</button>
             </div>
-            <div class="otherInfo"></div>
+            <div class="otherInfo">
+                <h3>other info</h3>
+                <p>line of business: {{ userDetails.line }}</p> 
+                <p>main product: {{ userDetails.product}}</p>
+                <p>county: {{userDetails.county }}</p>
+                <p>town: {{userDetails.town}}</p>
+            </div>
         </div>
     </div>
 </div>
@@ -136,11 +138,11 @@ nav img {
     height: 20px;
     width: auto;
 }
-.ads{
+.ads, .otherInfo{
     display: flex;
     flex-direction: column;
 }
-.ads h4, .ads button{
+.ads h4, .ads button, .otherInfo h3{
     align-self: flex-end;
     text-align: justify;
 }
@@ -154,6 +156,17 @@ nav img {
     border: 1px solid black;
 }
 button:hover{
+    cursor: pointer;
+}
+.ads p, .otherInfo p{
+    margin: 2px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    transition: background 200ms ease;
+}
+.ads p:hover{
+    background: #ccc;
     cursor: pointer;
 }
 </style>
