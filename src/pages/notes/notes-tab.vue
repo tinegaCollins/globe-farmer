@@ -12,7 +12,8 @@
 
 import appTopBar from '../../components/appTopBar.vue'
 import '../../assets/styles/global.css'
-export default {
+
+export default{
   components:{
     appTopBar
   },

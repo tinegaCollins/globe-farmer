@@ -9,7 +9,6 @@
       <router-view/>
     </div>
   </main>
-  <!-- <Footer/> -->
 </template>
 
 <script>

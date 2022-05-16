@@ -79,7 +79,7 @@ export default {
             dropDownImg: '/icons/caret-down-solid.svg',
             notes: [],
             messages: [],
-            accountDetails: null
+            userId: 'rtyuioiuyui'
         }
     },
     methods: {
@@ -95,12 +95,12 @@ export default {
             this.$emit('showSearch')
         },
         acountData(){
-            if (this.accountDetails === null) { 
+            if (this.userId === null) { 
                 this.$refs.modal.showModal()
             } else {
                 //where account details are shown
                 // this.$router.push('/account')
-                window.location.href = '/account'
+                window.location.href = '/account/account.html'
             }
         },
         closeModal(){
