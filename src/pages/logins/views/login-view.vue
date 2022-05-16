@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="wrapper">
     <div class="mainContent">
       <form class="logins" @submit.prevent = "getUser">

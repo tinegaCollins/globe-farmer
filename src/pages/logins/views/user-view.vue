@@ -47,11 +47,14 @@ export default{
                 email: ''
             },
             rpassword: '',
-            user: true
+            user: true,
+            userId: null
         }
     },
     methods: {
-        createUser(){
+        
+      createUser(){
+        let userDetails;
         axios.post('http://localhost:3000/users', this.UserData)
         .then(response=>{
             this.response1 = response.data.message
@@ -61,12 +64,19 @@ export default{
         })
         .then(()=>{
             setTimeout(() => {
-              window.location.href = "/account"
+              window.location.href = "/account/account.html/"
             }, 3000);
         })
         .catch(error=>{
             console.log(error);
         })
+        fetch('http://localhost:3000/user/' + this.UserData.phone + '/' + this.UserData.password)
+        .then(data => {
+          userDetails = data
+        })
+        .then(
+          console.log(userDetails)
+        )
         }
     }
 }
