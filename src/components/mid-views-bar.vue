@@ -72,7 +72,7 @@ export default {
 }
 .bar::after{
     content: "";
-    height: 49px;
+    height: 43px;
     width:45px;
     background: linear-gradient(90deg,rgba(174, 197, 197, 0),rgb(174, 197, 197)) ;
     position: absolute;

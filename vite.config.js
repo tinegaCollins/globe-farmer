@@ -26,7 +26,8 @@ module.exports = defineConfig({
         bookmarks: resolve(__dirname,'/bookmarks/bookmarks.html'),
         logins: resolve(__dirname,'/logins/logins.html'),
         messages: resolve(__dirname, '/messages/messages.html'),
-        notifications: resolve(__dirname, '/notifications/notifications.html')
+        notifications: resolve(__dirname, '/notifications/notifications.html'),
+        post: resolve(__dirname, 'post/post.html')
       }
     }
   },

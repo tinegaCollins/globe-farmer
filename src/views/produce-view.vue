@@ -5,23 +5,25 @@
           <div class="imagearea">
               <img :src="  '/' + produce.image" alt="product image">
           </div>
-          <div class="sideContent">
-            <h3>{{ produce.item }}</h3>
-            <h4>price: {{ produce.price }}</h4>
-            <p>location: {{ produce.location }}</p>
-            <p><span> FarmerName: </span> {{ produce.name }} </p>
-            <p class="phone">{{ produce.phone }} </p>
-          </div>
+          <div class="details">
+            <div class="sideContent">
+                <h3>{{ produce.item }}</h3>
+                <h4>price: {{ produce.price }}</h4>
+                <p>location: {{ produce.location }}</p>
+                <p><span> FarmerName: </span> {{ produce.name }} </p>
+                <p class="phone">{{ produce.phone }} </p>
+            </div>
+            <div class="chat-box">
+                <div class="messages"></div>
+                <div class="send">
+                <input type="text" placeholder="write you massage here">
+                <button>send</button>
+                </div>
+            </div>
+          </div> 
       </div>
       <div class="moreDetails">
           <p> {{ produce.moredetails }}</p>
-      </div>
-      <div class="chat-box">
-          <div class="messages"></div>
-          <div class="send">
-              <input type="text" placeholder="write you massage here">
-              <button>send</button>
-          </div>
       </div>
   </div>
 </template>
@@ -58,13 +60,16 @@ export default {
 .maincontent{
     width: 100%;
     display: flex;
-    padding: 20px 10px 30px 10px;
+    padding: 20px;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 .maincontent img{
-    width: auto;
-    height: 400px;
+    width: 500px;
+    height: auto;
+}
+.imagearea{
+    padding-top: 40px;
 }
 .sideContent > *{
     margin-top: 6px;
@@ -78,7 +83,7 @@ export default {
     cursor: pointer;
 }
 .sideContent p > span {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 .moreDetails{
@@ -90,6 +95,7 @@ export default {
     width: 400px;
     height: 300px;
     position: relative;
+    margin-top: 10px;
 }
 .chat-box .send{
     position: absolute;
