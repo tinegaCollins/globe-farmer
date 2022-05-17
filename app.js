@@ -1,8 +1,12 @@
 const express = require('express')
-const {connectToDb, getDb} = require('./db')
+const {connectToDb, getDb, connection} = require('./db')
 const { ObjectId } = require('mongodb')
 const app = express()
 const cors = require('cors');
+const upload = require("./routes/upload");
+
+
+app.use("/file", upload);
 const corsOptions ={
     origin: 'http://localhost:8080',
     credentials: true,            //access-control-allow-credentials:true
@@ -13,6 +17,7 @@ const corsOptions ={
 app.use(cors(corsOptions));
 app.use(express.json())
 
+// connection()
 
 // db connection
 let db
@@ -26,7 +31,25 @@ connectToDb((err)=>{
     }
 })
 
-
+app.get("/file/:filename", async (req, res) => {
+    try {
+        const file = await gfs.images.findOne({ filename: req.params.filename });
+        const readStream = gfs.createReadStream(file.filename);
+        readStream.pipe(res);
+    } catch (error) {
+        res.send("not found");
+    }
+});
+app.post('/file/:filename', async(req, res) =>{
+    db.collection('images')
+    try {
+        const file = await gfs.images.insertOne({ filename: req.params.filename });
+        const readStream = gfs.createReadStream(file.filename);
+        readStream.pipe(res);
+    } catch (error) {
+        res.send("not found");
+    }
+})
 app.get('/produces',(req, res)=>{
 
     let produces = []

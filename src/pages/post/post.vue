@@ -1,31 +1,59 @@
 <template>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 mt-3">
-          <h4>Node.js upload images - bezkoder.com</h4>
-          <form class="mt-4"
+   <a href="/"><img src="../../../2.png"></a>
+   <h3>Post an ad</h3>
+          <!-- <form class="mt-4"
             action="/upload"
             method="POST"
             enctype="multipart/form-data"
+            @submit="send"
           >
             <div class="form-group">
               <input
                 type="file"
                 name="file"
-                id="input-files"
-                class="form-control-file border"
+                id="image"
               />
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-      </div>
-      <hr />
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="preview-images"></div>
-        </div>
-      </div>
-    </div>
+          </form> -->
    
 </template>
+
+<script>
+import  '../../assets/styles/global.css';
+import axios from 'axios';
+
+
+export default{
+  data(){
+    return{
+    }
+  }, 
+  methods: {
+    send(){
+      const formData = new FormData()
+      let image = document.getElementById('image').files[0];
+      formData.append('image', image)
+      axios.post('http://localhost:3000/images', formData)
+      .then(response=>{
+            console.log(response.data)
+        })
+      .catch(error=>{
+            console.log(error);
+        })
+    }
+  }
+}
+</script>
+<style scoped>
+a{
+  margin-top: 20px;
+}
+a > img{
+  height: 80px;
+  width: auto;
+}
+h3{
+  font-family: var(--main-font)
+}
+</style>

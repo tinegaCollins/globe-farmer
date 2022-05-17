@@ -1,4 +1,5 @@
 const { MongoClient} = require('mongodb')
+// const mongoose = require('mongoose')
 
 let dbConnection;
 
@@ -15,5 +16,18 @@ module.exports = {
         })
     },
     getDb: ()=> dbConnection,
-    
+    // async connection() {
+    //     try {
+    //         const connectionParams = {
+    //             useNewUrlParser: true,
+    //             useCreateIndex: true,
+    //             useUnifiedTopology: true,
+    //         };
+    //         await mongoose.connect('mongodb://localhost:27017/globe-farmer', connectionParams);
+    //         console.log("connected to database");
+    //     } catch (error) {
+    //         console.log(error);
+    //         console.log("could not connect to database");
+    //     }
+    // }
 }
