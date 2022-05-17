@@ -16,7 +16,7 @@
             <div class="chat-box">
                 <div class="messages"></div>
                 <div class="send">
-                <input type="text" placeholder="write you massage here">
+                <input type="text" placeholder="write you message here">
                 <button>send</button>
                 </div>
             </div>
@@ -90,7 +90,7 @@ export default {
     padding: 50px;
 }
 .chat-box{
-    height: 100px;
+    height: 100%;
     background: #74e7b9;
     width: 400px;
     height: 300px;
@@ -106,11 +106,15 @@ export default {
 }
 .chat-box .send button{
     padding: 0 10px;
-    border-radius: 0%;
+    border-radius: 4%;
     border: none;
 }
 .chat-box .send input{
     width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    appearance: none;
 }
 @media screen and (max-width: 768px){
     .wrapper{
