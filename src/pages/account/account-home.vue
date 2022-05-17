@@ -38,19 +38,18 @@ import '../../assets/styles/global.css'
 export default{
     data(){
         return{
-            userId: '627e0e1ead1acf5e1d1144ac',
+            userId: '',
             userDetails: null
         }
     },
     mounted(){
-        fetch('http://localhost:3000/users/' + this.userId)
+        fetch('http://localhost:3000/users/' + this.$store.getters.getUserID)
         .then(res => res.json())
         .then(data => {
             this.userDetails = data
         })
         .catch(err => console.log(err))
 
-        fetch('')
     }
 }
 </script>

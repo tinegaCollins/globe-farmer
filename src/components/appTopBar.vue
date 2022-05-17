@@ -66,9 +66,7 @@ import searchBar from './searchBar.vue'
 
 
 export default {
-    components: {
-        searchBar
-    },
+    emits: ['showSearch'],
     data() {
         return {
             account: 'Account',
