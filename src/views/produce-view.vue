@@ -33,10 +33,16 @@ export default {
     data(){
       return{
           produce: null,
-          id: this.$route.params.id
+          id: this.$route.params.id,
+          userId: '',
+          chat: {
+              sender1: '',
+              sender2: ''
+          }
       }
    },
    mounted(){
+      this.userID = this.$store.getters.getUserID
        fetch('http://localhost:3000/produces/'+ this.id)
        .then(res => res.json())
        .then(data => {
