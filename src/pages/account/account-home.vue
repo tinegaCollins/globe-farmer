@@ -1,5 +1,6 @@
 <template> 
 <nav> <a href="/"><img src="./assets/2.png"></a></nav>
+<h2>my account</h2>
 <div class="mainContent">
     <div class="details" v-if="userDetails">
         <div class="card1">
@@ -62,15 +63,26 @@ nav img {
     height: 70px;
     width: auto; 
 }
-.mainContent{
+h2{
+    position: relative;
+    left: 60px;
+}
+.mainContent, h2{
     font-family: var(--main-font);
 }  
 .details{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 350px 0 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 0;
     max-height: 100vh;
+    gap: 30px;
+}
+@media screen and (max-width: 768px){
+    .details{
+        padding: 30px;
+        width: 100vw;
+    }
 }
 .card1{
     padding: 20px;
@@ -121,12 +133,12 @@ nav img {
     background-color: var(--main-color-dark);
 }
 .card2{
-    width: calc(100% + 100px);
-    grid-column-start: 2;
+    width: 300px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    row-gap: 30px;
 }
 .ads, .otherInfo{
      box-shadow: 3px 3px 6px 5px #ccc;

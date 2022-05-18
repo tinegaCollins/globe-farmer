@@ -61,7 +61,6 @@ export default {
    },
    methods: {
        sendChat(){
-           console.log('clicked')
            axios.post('http://localhost:3000/chats', this.chat)
            .then(response=>{
                 this.response = response.data.message
