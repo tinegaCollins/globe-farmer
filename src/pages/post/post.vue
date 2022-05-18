@@ -27,7 +27,7 @@
       <button @click="postProduct">post</button>
      </main>
    <article>
-     <h4>add an image</h4>
+     <h4>add images</h4>
       <form class="mt-4"
             action="/upload"
             method="POST"
@@ -39,7 +39,6 @@
                 name="file"
                 id="image"
               />
-            <button type="submit">Submit</button>
           </form>
    </article>
    </div>
@@ -66,26 +65,14 @@ export default{
         phone: '',
         location: ''
       },
-      response101: null
+      response1: null
     }
   }, 
   methods: {
-    send(){
-      const formData = new FormData()
-      let image = document.getElementById('image').files[0];
-      formData.append('image', image)
-      axios.post('http://localhost:3000/images', formData)
-      .then(response=>{
-            console.log(response.data)
-        })
-      .catch(error=>{
-            console.log(error);
-        })
-    },
     postProduct(){
-      axios.post('http://localhost:3000/produces/', + this.product)
+      axios.post('http://localhost:3000/produces', this.product)
       .then(response=>{
-        this.response101 = response.data.message
+        this.response1 = response.data.message
       })
       .catch(error=>{
         console.log(error);
@@ -148,6 +135,12 @@ h3{
   appearance: none;
   outline: none;
   border-bottom: 1px solid #333;
+}
+main button{
+  width: min-content;
+  padding: 7px 14px;
+  border-radius: 10px;
+  border: 1px solid black; 
 }
 article h4{
   margin: 10px 0;

@@ -37,10 +37,12 @@
 export default {
    data(){
       return{
-          products: []
+          products: [],
+          userID: ''
       }
    },
    mounted(){
+      this.userID = this.$store.getters.getUserID
        fetch('http://localhost:3000/produces')
        .then(res => res.json())
        .then(data => {

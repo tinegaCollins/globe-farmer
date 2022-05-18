@@ -74,9 +74,6 @@ export default{
         .then(data => {
           userDetails = data
         })
-        .then(
-          console.log(userDetails)
-        )
         }
     }
 }

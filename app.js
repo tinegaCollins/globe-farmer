@@ -1,12 +1,12 @@
 const express = require('express')
-const {connectToDb, getDb, connection} = require('./db')
+const {connectToDb, getDb } = require('./db')
 const { ObjectId } = require('mongodb')
 const app = express()
 const cors = require('cors');
-const upload = require("./routes/upload");
+// const upload = require("./routes/upload");
 
 
-app.use("/file", upload);
+// app.use("/file", upload);
 const corsOptions ={
     origin: 'http://localhost:8080',
     credentials: true,            //access-control-allow-credentials:true
@@ -31,25 +31,25 @@ connectToDb((err)=>{
     }
 })
 
-app.get("/file/:filename", async (req, res) => {
-    try {
-        const file = await gfs.images.findOne({ filename: req.params.filename });
-        const readStream = gfs.createReadStream(file.filename);
-        readStream.pipe(res);
-    } catch (error) {
-        res.send("not found");
-    }
-});
-app.post('/file/:filename', async(req, res) =>{
-    db.collection('images')
-    try {
-        const file = await gfs.images.insertOne({ filename: req.params.filename });
-        const readStream = gfs.createReadStream(file.filename);
-        readStream.pipe(res);
-    } catch (error) {
-        res.send("not found");
-    }
-})
+// app.get("/file/:filename", async (req, res) => {
+//     try {
+//         const file = await gfs.images.findOne({ filename: req.params.filename });
+//         const readStream = gfs.createReadStream(file.filename);
+//         readStream.pipe(res);
+//     } catch (error) {
+//         res.send("not found");
+//     }
+// });
+// app.post('/file/:filename', async(req, res) =>{
+//     db.collection('images')
+//     try {
+//         const file = await gfs.images.insertOne({ filename: req.params.filename });
+//         const readStream = gfs.createReadStream(file.filename);
+//         readStream.pipe(res);
+//     } catch (error) {
+//         res.send("not found");
+//     }
+// })
 app.get('/produces',(req, res)=>{
 
     let produces = []
@@ -183,13 +183,23 @@ app.post('/users', (req,res) =>{
         res.status(500).json({error: 'could not add the user'})
     })
 })
-app.post('/produces', (res,req)=>{
+// app.post('/produces', (res,req)=>{
+//     db.collection('produces')
+//     .insertOne(req.body)
+//     .then(()=>{
+//         res.status(200).json({message: 'posted'})
+//     })
+//     .catch(err=>{
+//         res.status(500).json({error: 'couldnt post the product' })
+//     })
+// })
+app.post('/produces', (req,res) =>{
     db.collection('produces')
     .insertOne(req.body)
     .then(()=>{
-        res.status(201).json({message: 'posted'})
+        res.status(200).json({message: 'user added 🤪'})
     })
-    .catch(err=>{
-        res.status(500).json({error: 'couldnt post the product' })
+    .catch(err => {
+        res.status(500).json({error: 'could not add the user'})
     })
 })
