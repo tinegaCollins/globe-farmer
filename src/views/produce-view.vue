@@ -16,8 +16,8 @@
             <div class="chat-box">
                 <div class="messages"></div>
                 <div class="send">
-                <input type="text" placeholder="write you message here">
-                <button>send</button>
+                <input type="text" v-model="chat.message" placeholder="write you message here">
+                <button @click="sendChat">send</button>
                 </div>
             </div>
           </div> 
@@ -29,16 +29,20 @@
 </template>
 
 <script>
+
+import axios from 'axios'
 export default {
     data(){
       return{
           produce: null,
           id: this.$route.params.id,
-          userId: '',
+          userID: '',
           chat: {
               sender1: '',
-              sender2: ''
-          }
+              sender2: '',
+              message: ''
+          },
+          response: ''
       }
    },
    mounted(){
@@ -48,7 +52,24 @@ export default {
        .then(data => {
            this.produce = data
        })
-       .catch(err => console.log(err))
+       .then(()=>{
+           this.chat.sender1 = this.userID
+            this.chat.sender2 = this.produce.senderId
+           console.log(this.chat.sender1, this.chat.sender2)
+       })
+       .catch(err => console.log(err)) 
+   },
+   methods: {
+       sendChat(){
+           console.log('clicked')
+           axios.post('http://localhost:3000/chats', this.chat)
+           .then(response=>{
+                this.response = response.data.message
+           })
+           .catch(err=>{
+               console.log(err)
+           })
+       }
    }
 }
 </script>

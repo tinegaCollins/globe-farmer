@@ -29,9 +29,11 @@
            <!-- bind to account image -->
                 <img class= "icons" :src="Image" :alt="account">
             </div> </a>
+            <a href="/post/post.html" id="sell">
             <div class="sell">
                 <h4>Sell</h4>
             </div>
+            </a>
             <div class="helpBar">
                 <h4>help</h4>
             </div>
@@ -80,7 +82,7 @@ export default {
             dropDownImg: '/icons/caret-down-solid.svg',
             notes: [],
             messages: [],
-            userId: null
+            userId: ''
         }
     },
     methods: {
@@ -96,7 +98,7 @@ export default {
             this.$emit('showSearch')
         },
         acountData(){
-            if (this.userId === null) { 
+            if (this.userId === '') { 
                 this.$refs.modal.showModal()
             } else {
                 //where account details are shown
@@ -107,6 +109,9 @@ export default {
         closeModal(){
             this.$refs.modal.close()
         },
+    },
+    mounted(){
+        this.userId = this.$store.getters.getUserID
     },
     beforeMount() {
         this.Image = '/icons/face-shot.png'
@@ -230,6 +235,12 @@ export default {
         width: 20px;
         margin-right: 20px;
         border-radius: 50%;
+    }
+    #sell{
+        text-decoration: none;
+    }
+    #sell:visited{
+        color: black;
     }
     .acc > img{
         border-radius: 50%;

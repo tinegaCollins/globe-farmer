@@ -30,26 +30,6 @@ connectToDb((err)=>{
         db = getDb()
     }
 })
-
-// app.get("/file/:filename", async (req, res) => {
-//     try {
-//         const file = await gfs.images.findOne({ filename: req.params.filename });
-//         const readStream = gfs.createReadStream(file.filename);
-//         readStream.pipe(res);
-//     } catch (error) {
-//         res.send("not found");
-//     }
-// });
-// app.post('/file/:filename', async(req, res) =>{
-//     db.collection('images')
-//     try {
-//         const file = await gfs.images.insertOne({ filename: req.params.filename });
-//         const readStream = gfs.createReadStream(file.filename);
-//         readStream.pipe(res);
-//     } catch (error) {
-//         res.send("not found");
-//     }
-// })
 app.get('/produces',(req, res)=>{
 
     let produces = []
@@ -183,16 +163,6 @@ app.post('/users', (req,res) =>{
         res.status(500).json({error: 'could not add the user'})
     })
 })
-// app.post('/produces', (res,req)=>{
-//     db.collection('produces')
-//     .insertOne(req.body)
-//     .then(()=>{
-//         res.status(200).json({message: 'posted'})
-//     })
-//     .catch(err=>{
-//         res.status(500).json({error: 'couldnt post the product' })
-//     })
-// })
 app.post('/produces', (req,res) =>{
     db.collection('produces')
     .insertOne(req.body)
@@ -201,5 +171,15 @@ app.post('/produces', (req,res) =>{
     })
     .catch(err => {
         res.status(500).json({error: 'could not add the user'})
+    })
+})
+app.post('/chats', (req,res)=>{
+    db.collection('chats')
+    .insertOne(req.body)
+    .then(()=>{
+        res.status(200).json({message: 'sent'})
+    })
+    .catch(err => {
+        res.status(500).json({error: 'could send message'})
     })
 })
