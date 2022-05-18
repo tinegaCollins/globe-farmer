@@ -32,7 +32,6 @@ export default{
     return{
         phone:'',
         password:'',
-        globalUserDetails: null,
         response2: '',
         button: false
    }
@@ -42,7 +41,6 @@ export default{
       fetch('http://localhost:3000/user/' + this.phone + '/' + this.password)
       .then(res => res.json())
       .then(data => {
-        this.globalUserDetails = data._id
         this.$store.commit('updateUserID', data._id);
         console.log(this.$store.getters.getUserID);
       })

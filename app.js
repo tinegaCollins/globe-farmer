@@ -183,15 +183,13 @@ app.post('/users', (req,res) =>{
         res.status(500).json({error: 'could not add the user'})
     })
 })
-
-app.post('/farmers', (req,res) =>{
-    db.collection('farmers')
+app.post('/produces', (res,req)=>{
+    db.collection('produces')
     .insertOne(req.body)
     .then(()=>{
-        res.status(200).json({message: 'farmer added 🤪, log in to continue'})
+        res.status(201).json({message: 'posted'})
     })
-    .catch(err => {
-        res.status(500).json({error: 'could not add the farmer'})
+    .catch(err=>{
+        res.status(500).json({error: 'couldnt post the product' })
     })
 })
-
