@@ -12,7 +12,7 @@
       </form>
   </div>
   <div class="image">
-    <img src="../../../assets/icons/undraw_access_account_re_8spm.svg">
+    <img src="../../../assets/icons/undraw_messages_re_qy9x.svg">
   </div>
   </div>
 </template>

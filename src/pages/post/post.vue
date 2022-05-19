@@ -2,6 +2,7 @@
    <a href="/"><img src="../../../2.png"></a>
    <h3>Post an ad</h3>
    <h3 v-if="ifLogin">login to continue</h3>
+   <h3> {{ response1 }}</h3>
    <div class="mainContent">
      <main>
       <label for="name"> 

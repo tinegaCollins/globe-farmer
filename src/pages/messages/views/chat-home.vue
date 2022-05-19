@@ -7,7 +7,7 @@
               </ul>
             </div>
             <div class="image">
-              <img src="../../../assets/icons/undraw_my_app_re_gxtj.svg">
+              <img src="../../../assets/icons/undraw_messages_re_qy9x.svg">
             </div>
         </div>
 </template>
@@ -36,7 +36,7 @@ export default {
 .notifications-tab{
   display: flex;
   flex-direction: row-reverse;
-  padding: 30px;
+  padding: 0 200px;
 }
 .notifications-tab .chats{
   margin-right: auto;
@@ -53,7 +53,7 @@ export default {
 }
 .notifications-tab ul{
   font-weight: 600;
-  width: 100%;
+  width: 250px;
 }
 .notifications-tab .chats li{
   padding: 10px;

@@ -167,10 +167,10 @@ app.post('/produces', (req,res) =>{
     db.collection('produces')
     .insertOne(req.body)
     .then(()=>{
-        res.status(200).json({message: 'user added 🤪'})
+        res.status(200).json({message: 'add posted'})
     })
     .catch(err => {
-        res.status(500).json({error: 'could not add the user'})
+        res.status(500).json({error: 'could not post the add'})
     })
 })
 app.post('/chats', (req,res)=>{

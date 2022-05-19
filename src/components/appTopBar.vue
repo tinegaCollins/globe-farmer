@@ -114,8 +114,6 @@ export default {
         this.userId = this.$store.getters.getUserID
     },
     beforeMount() {
-        // this.Image = '/icons/face-shot.png'
-       // make a default image
         if(window.innerWidth < 768){
             this.showIcons = false
             this.showDropDown = true
