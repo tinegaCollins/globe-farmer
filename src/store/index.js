@@ -1,8 +1,10 @@
 import { createStore } from 'vuex';
+import createPersistedState from "vuex-persistedstate";
 
 export default createStore({
+    plugins: [createPersistedState()],
     state: {
-        userID: '6282924fd819753e4234f047',
+        userID: '',
     },
     mutations: {
         updateUserID(state, payload) {

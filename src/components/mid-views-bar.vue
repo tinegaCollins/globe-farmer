@@ -24,6 +24,7 @@
 
 <script>
 export default {
+    emits: ['sidebar'],
     methods: {
         sidebar(){
             this.$emit('sidebar')
@@ -76,8 +77,7 @@ export default {
     width:45px;
     background: linear-gradient(90deg,rgba(174, 197, 197, 0),rgb(174, 197, 197)) ;
     position: absolute;
-    right: 0;
-    /* top: 131px; */
+    right: 5px;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
 }
@@ -106,9 +106,6 @@ img{
 @media screen and (max-width: 768px){
     img{
         display: inline;
-    }
-    .bar{
-        position: relative;
     }
 }
 a{

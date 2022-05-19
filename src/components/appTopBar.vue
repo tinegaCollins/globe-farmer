@@ -27,7 +27,7 @@
             </a>
             <a href="#"  @click="acountData"><div class="acc" @click="acountData">
            <!-- bind to account image -->
-                <img class= "icons" :src="Image" :alt="account">
+                <img class= "icons" src="../assets/icons//circle-user-solid.svg" :alt="account">
             </div> </a>
             <a href="/post/post.html" id="sell">
             <div class="sell">
@@ -68,14 +68,14 @@ import searchBar from './searchBar.vue'
 
 
 export default {
-    // emits: ['showSearch'],
+    emits: ['showSearch'],
     components: {
         searchBar
     },
     data() {
         return {
             account: 'Account',
-            Image: 'circle-user-solid.svg',
+            // Image: '/circle-user-solid.svg',
             showIcons: true,
             showDropDown: false,
             showSearchBar: true,
@@ -114,7 +114,7 @@ export default {
         this.userId = this.$store.getters.getUserID
     },
     beforeMount() {
-        this.Image = '/icons/face-shot.png'
+        // this.Image = '/icons/face-shot.png'
        // make a default image
         if(window.innerWidth < 768){
             this.showIcons = false
@@ -134,14 +134,7 @@ export default {
             this.messages = data
         })
         .catch(err => console.log(err))
-    },
-    // mounted(){
-    //     if (this.accountDetails === null) {
-    //         this.Image = './icons/circle-user-solid.svg'
-    //     } else {
-    //             this.Image = './icons/face-shot.png'
-    //     }
-    // }
+    }
 }
 </script>
 

@@ -33,19 +33,25 @@ export default{
         phone:'',
         password:'',
         response2: '',
-        button: false
+        button: false,
+        userID: null
    }
   },
   methods:{
     getUser(){
       fetch('http://localhost:3000/user/' + this.phone + '/' + this.password)
       .then(res => res.json())
-      .then(data => {
-        this.$store.commit('updateUserID', data._id);
-        console.log(this.$store.getters.getUserID);
+      .then(data =>{
+        if(data._id === null){
+          this.response2 = 'enter a valid phonenumber and password 🤦‍♂️'
+        }
+        else{
+          this.$store.commit('updateUserID', data._id);
+          this.userID = this.$store.getters.getUserID
+        }    
       })
       .then(()=>{
-        if(this.globalUserDetails === null){
+        if(this.userID === null || this.userID === ''){
           this.response2 = 'enter a valid phonenumber and password 🤦‍♂️'
         }
         else{

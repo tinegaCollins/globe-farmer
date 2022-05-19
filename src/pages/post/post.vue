@@ -122,6 +122,11 @@ h3{
   row-gap: 20px;
   padding:0 200px;
 }
+@media screen and (max-width: 400px) {
+  .mainContent{
+    padding: 20px;
+  }
+}
 .mainContent main {
   display: flex;
   flex-direction: column;

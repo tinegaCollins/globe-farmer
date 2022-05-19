@@ -51,7 +51,6 @@ export default{
             this.userDetails = data
         })
         .catch(err => console.log(err))
-
     }
 }
 </script>

@@ -3,7 +3,7 @@
       <h3>Produce Details</h3>
       <div class="maincontent" > 
           <div class="imagearea">
-              <img :src="  '/' + produce.image" alt="product image">
+              <img :src="produce.image" alt="product image">
           </div>
           <div class="details">
             <div class="sideContent">

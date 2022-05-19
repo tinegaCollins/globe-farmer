@@ -64,7 +64,7 @@ export default{
         })
         .then(()=>{
             setTimeout(() => {
-              window.location.href = "/account/account.html/"
+              window.location.href = "/account/account.html"
             }, 3000);
         })
         .catch(error=>{
