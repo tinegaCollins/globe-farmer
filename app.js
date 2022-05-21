@@ -3,13 +3,10 @@ const {connectToDb, getDb } = require('./db')
 const { ObjectId } = require('mongodb')
 const app = express()
 const cors = require('cors');
-// const upload = require("./routes/upload");
 
-
-// app.use("/file", upload);
 const corsOptions ={
     origin: 'http://localhost:8080',
-    credentials: true,            //access-control-allow-credentials:true
+    credentials: true,
     optionSuccessStatus: 200
 }
 
@@ -17,9 +14,7 @@ const corsOptions ={
 app.use(cors(corsOptions));
 app.use(express.json())
 
-// connection()
 
-// db connection
 let db
 
 connectToDb((err)=>{
@@ -35,7 +30,7 @@ app.get('/produces',(req, res)=>{
     let produces = []
 
     db.collection('produces')
-    .find() //returns a cursor
+    .find()
     .sort({ name: 1 })
     .forEach(produce => produces.push(produce))
     .then(()=>{
@@ -92,7 +87,6 @@ app.get('/produces/:produce', (req,res)=>{
         res.status(500).json({error: 'could not fetch the document'})
     })
 })
-//hererererer
 app.get('/produces/filter/:typep', (req,res)=>{
     let typeProduct = []
     db.collection('produces')
@@ -111,8 +105,7 @@ app.get('/notifications',(req, res)=>{
     let notifications = []
 
     db.collection('notifications')
-    .find() //returns a cursor
-    // .sort({ popular: true })
+    .find()
     .forEach(note => notifications.push(note))
     .then(()=>{
         res.status(200).json(notifications)
@@ -121,8 +114,6 @@ app.get('/notifications',(req, res)=>{
         res.status(500).json({error: 'could not fetch the documents'})
     })
 })
-
-
 app.get('/messages/:id', (req,res)=>{
     db.collection('messages')
     .findOne({_id: ObjectId(req.params.id)})
