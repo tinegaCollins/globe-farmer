@@ -134,6 +134,16 @@ app.get('/users/:id', (req,res)=>{
         res.status(500).json({error: 'could not fetch the document'})
     })
 })
+app.get('/chats/:userID', (req,res)=>{
+    db.collection('chats')
+    .find({$or: [{sender1: req.params.userID},{sender2: req.params.userID}]})
+    .then(doc =>{
+        res.status(200).json(doc)
+    })
+    .catch(err => {
+        res.status(500).json({error: 'could not get user '})
+    })
+})
 app.get('/user/:phone/:password', (req,res)=>{
     db.collection('users')
     .findOne({phone: req.params.phone}, { password: req.params.password})
@@ -174,3 +184,4 @@ app.post('/chats', (req,res)=>{
         res.status(500).json({error: 'could send message'})
     })
 })
+
