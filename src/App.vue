@@ -5,8 +5,8 @@
   <a href="login.html">login</a>
   <a href="signup.html">sign up</a>
   <a href="#">sell</a>
-  <i class="fa-solid fa-magnifying-glass fa-2x"></i>
-  <a href="login.html"><i class="fa-solid fa-circle-user fa-2x"></i></a>
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <a href="login.html"><i class="fa-solid fa-circle-user"></i></a>
 </nav>
 <main>
   <img src="./assets/images/ad2.png" alt="ad picture">
@@ -21,9 +21,47 @@
       <h3>Your one stop shoping site for farm produces</h3>
     </div>
   </div>
-  <img src="./assets/images/ad1.png" alt="ad picture">
+  <img src="./assets/images/ad1.png" alt="ad picture" id="ad2">
 </main>
-
+<section>
+  <aside>
+    <h4>location</h4>
+    <div class="location">
+        <p>Nakuru</p>
+        <p>Eldoret</p>
+        <p>Kisii</p>
+        <p>Machakos</p>
+        <p>kitale</p>
+        <p>Meru</p>
+        <p>thika</p>
+        <p>busia</p>
+        <p>Nyahururu</p>
+        <p>Nanyuki</p>
+        <p>Molo</p>
+        <p>Nyahururu</p>
+    </div>
+  </aside>
+  <article>
+    <div class="bar">
+        <router-link to = "/" class="barItem">home</router-link>
+        <router-link to = "/new-items" class="barItem">new items </router-link>
+        <router-link to = "/popular-items" class="barItem">popular items</router-link>
+        <router-link to = "/tomatoes" class="barItem">Tomatoes</router-link>
+        <router-link to = "/irish potatoes" class="barItem">Irish Potatoes</router-link>
+        <router-link to = "/onions" class="barItem">Onions</router-link>
+        <router-link to = "/carrots" class="barItem">Carrots</router-link>
+        <!-- refresh the filters -->
+        <router-link to = "/green pepper" class="barItem">Green pepper</router-link>
+        <router-link to = "/string beans" class="barItem">String Beans</router-link>
+        <router-link to = "/peas" class="barItem">Peas</router-link>
+        <router-link to = "/spring onions" class="barItem">Spring Onions</router-link>
+        <router-link to = "/brocolli" class="barItem">Brocolli</router-link>
+        <router-link to = "/spinach" class="barItem">Spinach</router-link>
+        <router-link to = "/sukuma wiki" class="barItem">Sukuma Wiki</router-link>
+        <router-link to = "/indegenous vegetables" class="barItem">Indegenous Vegetables</router-link>
+    </div>
+  </article>
+  </section>
 </template>
 
 
@@ -84,10 +122,12 @@ nav a:visited{
   nav .fa-magnifying-glass{
     display: block;
     margin-left: auto;
+    font-size: 20px;
   }
   nav a:nth-child(7){
     display: block;
     margin: 0 20px;
+    font-size: 20px;
   }
 }
 /* nav bar ends here */
@@ -95,6 +135,7 @@ main{
   display: flex;
   justify-content: space-between;
   padding: 30px;
+  position: relative;
 }
 main img{
   height: 320px;
@@ -138,6 +179,106 @@ main .mid .search button:hover{
 .text h2{
   margin-top: 40px;
 }
-
-
+@media screen and (max-width: 768px){
+  #ad2{
+    display: none;
+  }
+}
+@media screen and (max-width: 525px){
+  main .mid{
+    position: absolute;
+    background: transparent;
+  }
+}
+/* end of main */
+section{
+  font-family: var(--text-font);
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+section aside{
+  border: 1px solid var(--main-green);
+  width: 200px;
+  padding: 5px;
+  border-radius: 5px;
+}
+section aside .location > *{
+  margin: 5px;
+  padding: 5px;
+  transition: background-color 150ms ease-in-out;
+}
+section aside .location > *:hover{
+  background-color: var(--main-green);
+  cursor: pointer;
+}
+/* end of aside bar */
+article .bar{
+    height: 40px;
+    max-width: 70vw;
+    margin-top: 15px;
+    background-color:#e2cfcf;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    overflow-x: scroll;
+    padding: 0 5px 0 10px;
+    border-top-left-radius: 25px;
+}
+::-webkit-scrollbar{
+    height: 8px;
+    width: 0px;
+}
+::-webkit-scrollbar-track{
+    background: var(--main-color);
+}
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    height: 10px;
+    background: black;
+}
+@supports (scrollbar-color: red blue){
+    *{
+        scrollbar-color: black #086641;
+        scrollbar-width: thin;
+    }
+}
+.bar::after{
+    content: "";
+    height: 43px;
+    width:45px;
+    background: linear-gradient(90deg,rgba(174, 197, 197, 0),rgb(174, 197, 197)) ;
+    position: absolute;
+    right: 5px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.barItem{
+    background: var(--main-color);
+    padding: 3px 7px 0px 7px;
+    height: 25px;
+    border-radius: 15px ;
+    min-width: max-content;
+    font-family: var(--second-font);
+    font-size: .8rem;
+    transition: all .2s ease-in-out;
+    margin-left: 3px;
+    font-weight: bold;
+}
+.barItem:hover{
+    cursor: pointer;
+    background-color: #086641;
+    color: white;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+a:visited{
+    color: black;
+}
+a.router-link-exact-active{
+    background-color: var(--btn-color);
+}
 </style>
