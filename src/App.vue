@@ -11,7 +11,7 @@
 <main>
   <img src="./assets/images/ad2.png" alt="ad picture">
   <div class="mid">
-    <div class="search">
+        <div class="search">
         <input type="text">
         <button>search</button>
     </div>
@@ -135,4 +135,8 @@ main .mid .search button:hover{
 .text > *{
   margin: 10px 30px;
 }
+.text h2{
+  margin-top: 40px;
+}
+
 </style>
