@@ -133,7 +133,7 @@ nav a:visited{
 /* nav bar ends here */
 main{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 30px;
   position: relative;
 }
@@ -213,9 +213,12 @@ section aside .location > *:hover{
   cursor: pointer;
 }
 /* end of aside bar */
+article{
+  width: calc(100% - 230px);
+}
 article .bar{
     height: 40px;
-    max-width: 70vw;
+    max-width: 100%;
     margin-top: 15px;
     background-color:#e2cfcf;
     display: flex;
@@ -224,6 +227,8 @@ article .bar{
     overflow-x: scroll;
     padding: 0 5px 0 10px;
     border-top-left-radius: 25px;
+    position: relative;
+    left: 30px;
 }
 ::-webkit-scrollbar{
     height: 8px;
@@ -239,19 +244,9 @@ article .bar{
 }
 @supports (scrollbar-color: red blue){
     *{
-        scrollbar-color: black #086641;
+        scrollbar-color: black var(--main-green);
         scrollbar-width: thin;
     }
-}
-.bar::after{
-    content: "";
-    height: 43px;
-    width:45px;
-    background: linear-gradient(90deg,rgba(174, 197, 197, 0),rgb(174, 197, 197)) ;
-    position: absolute;
-    right: 5px;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
 }
 .barItem{
     background: var(--main-color);
