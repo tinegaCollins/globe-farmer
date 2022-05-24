@@ -74,7 +74,7 @@ nav a{
 nav a:visited{
   color: #333;
 }
-@media screen and (max-width: 425px){
+@media screen and (max-width: 525px){
   nav img{
     margin-left: 10px;
   }
@@ -138,5 +138,6 @@ main .mid .search button:hover{
 .text h2{
   margin-top: 40px;
 }
+
 
 </style>
