@@ -112,6 +112,13 @@ export default {
     },
     mounted(){
         this.userId = this.$store.getters.getUserID
+        fetch('http://localhost:3000/chats/' + this.userId)
+        .then(res => res.json())
+        .then(data => {
+            this.messages = data
+        })
+        .catch(err => console.log(err))
+
     },
     beforeMount() {
         if(window.innerWidth < 768){
@@ -123,13 +130,6 @@ export default {
         .then(res => res.json())
         .then(data => {
             this.notes = data
-        })
-        .catch(err => console.log(err))
-
-       fetch('http://localhost:3000/messages')
-       .then(res => res.json())
-       .then(data => {
-            this.messages = data
         })
         .catch(err => console.log(err))
     }

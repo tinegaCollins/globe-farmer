@@ -100,6 +100,32 @@ app.get('/produces/filter/:typep', (req,res)=>{
         res.status(500).json({error: 'could not fetch the document'})
     })
 })
+app.get('/chats', (req, res)=>{
+    let chats = []
+    db.collection('chats')
+    .find()
+    .forEach(chat => chats.push(chat))
+    .then(()=>{
+        res.status(200).json(chats)
+    })
+    .catch(()=>{
+        res.status(500).json({error: 'could not fetch the documents'})
+    }
+    )
+    })
+
+app.get('/chats/:userID', (req,res)=>{
+    let chats = []
+    db.collection('chats')
+    .find({$or: [{sender1:(req.params.userID)},{sender2: (req.params.userID)}]})
+    .forEach(chat => chats.push(chat))
+    .then(()=>{
+        res.status(200).json(chats)
+    })
+    .catch(err => {
+        res.status(500).json({error: 'could not get user '})
+    })
+})
 app.get('/notifications',(req, res)=>{
 
     let notifications = []
@@ -132,16 +158,6 @@ app.get('/users/:id', (req,res)=>{
     })
     .catch(err => {
         res.status(500).json({error: 'could not fetch the document'})
-    })
-})
-app.get('/chats/:userID', (req,res)=>{
-    db.collection('chats')
-    .find({$or: [{sender1: req.params.userID},{sender2: req.params.userID}]})
-    .then(doc =>{
-        res.status(200).json(doc)
-    })
-    .catch(err => {
-        res.status(500).json({error: 'could not get user '})
     })
 })
 app.get('/user/:phone/:password', (req,res)=>{

@@ -3,7 +3,7 @@
             <div class="chats">
               <h3>chats</h3>
               <ul v-for="message in messages" :key="message._id">
-               <router-link :to = "{ name : 'tab', params : { id: message._id }}"> <li>{{ message.to }}</li></router-link>
+               <router-link :to = "{ name : 'tab', params : { id: message._id }}"> <li>{{ message.sender1 }}</li></router-link>
               </ul>
             </div>
             <div class="image">
@@ -18,17 +18,22 @@ import '../../../assets/styles/global.css'
 export default {
   data(){
     return{
+      userID: '',
       messages: [],
     }
   },
-  mounted(){
-    fetch('http://localhost:3000/messages')
-       .then(res => res.json())
-       .then(data => {
-            this.messages = data
-        })
-        .catch(err => console.log(err))
-  }
+  beforeMount(){
+    this.userID = this.$store.getters.getUserID;
+    fetch(`http://localhost:3000/chats/${this.userID}`)
+    .then(res => res.json())
+    .then(data => {
+      this.messages = data
+    })
+    .then(
+      console.log(this.messages)
+      console.log(this.messages[0].sender1, this.messages[0].sender2)
+    )
+  } 
 }
 </script>
 
