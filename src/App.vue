@@ -60,7 +60,11 @@
         <router-link to = "/sukuma wiki" class="barItem">Sukuma Wiki</router-link>
         <router-link to = "/indegenous vegetables" class="barItem">Indegenous Vegetables</router-link>
     </div>
+    <div class="items">
+      <router-view></router-view>
+    </div>
   </article>
+
   </section>
 </template>
 
@@ -215,6 +219,8 @@ section aside .location > *:hover{
 /* end of aside bar */
 article{
   width: calc(100% - 230px);
+  display: flex;
+  flex-direction: column;
 }
 article .bar{
     height: 40px;

@@ -1,43 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import home from '../views/home.vue'
 
 
 const routes = [
-    {
-        path : '/popular-items',
-        name : 'popularItems',
-        component : popularItems
-      },
-      {
-        path : '/new-items',
-        name : 'newItems',
-        component : newItems
-      },
-      {
-        path : '/',
-        name : 'Home',
-        component : Home
-      },
-      {
-        path: '/:catchAll(.*)',
-        name: 'notFound',
-        component: notFound
-      },
-      {
-        path: '/produces/:id',
-        name: 'produce',
-        component: produce
-      },
-      {
-        path: '/:type',
-        name: 'filter',
-        component: produceFilter
-      }
+  {
+    path: '/',
+    component: home,
+    name: home
+  }
 ]
 
-
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
-    routes
-  })
-  
-  export default router
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes
+})
+
+export default router
