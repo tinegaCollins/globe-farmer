@@ -64,19 +64,6 @@ app.get('/new',(req, res)=>{
         res.status(500).json({error: 'could not fetch the documents'})
     })
 })
-app.get('/popular',(req, res)=>{
-    let popularProduces = []
-    db.collection('produces')
-    .find({popular: true})
-    .sort({name : 1})
-    .forEach(produce => popularProduces.push(produce))
-    .then(()=>{
-        res.status(200).json(popularProduces)
-    })
-    .catch(()=>{
-        res.status(500).json({error: 'could not fetch the documents'})
-    })
-})
 app.get('/produces/:produce', (req,res)=>{
     db.collection('produces')
     .findOne({_id: ObjectId(req.params.produce)})
@@ -114,16 +101,6 @@ app.get('/notifications',(req, res)=>{
         res.status(500).json({error: 'could not fetch the documents'})
     })
 })
-app.get('/messages/:id', (req,res)=>{
-    db.collection('messages')
-    .findOne({_id: ObjectId(req.params.id)})
-    .then(doc =>{
-        res.status(200).json(doc)
-    })
-    .catch(err => {
-        res.status(500).json({error: 'could not fetch the document'})
-    })
-})
 app.get('/users/:id', (req,res)=>{
     db.collection('users')
     .findOne({_id: ObjectId(req.params.id)})
@@ -139,6 +116,49 @@ app.get('/user/:phone/:password', (req,res)=>{
     .findOne({phone: req.params.phone}, { password: req.params.password})
     .then(doc =>{
         res.status(200).json(doc)
+    })
+    .catch(err => {
+        res.status(500).json({error: 'could not fetch the document'})
+    })
+})
+app.get('/popular',(req, res)=>{
+    let popularProduces = []
+    db.collection('produces')
+    .find({popular: true})
+    .sort({name : 1})
+    .forEach(produce => popularProduces.push(produce))
+    .then(()=>{
+        res.status(200).json(popularProduces)
+    })
+    .catch(()=>{
+        res.status(500).json({error: 'could not fetch the documents'})
+    })
+})
+app.get('/chats/:userID', (req,res)=>{
+    let chats = []
+    db.collection('chats')
+    .find({$or:[ {sender1: req.params.userID}, {sender2: req.params.userID}]})
+    .forEach(chat => chats.push(chat))
+    .then(()=>{
+        res.status(200).json(chats)
+    })
+    .catch(()=>{
+        res.status(500).json({error: 'could not fetch the documents'})
+    })
+})
+app.get('/messages/:userID/:receiverID', (req,res)=>{
+    db.collection('chats')
+    .findOne({$or:[
+        {$and: [{sender1: req.params.userID }, {sender2: req.params.receiverID}]},
+        {$and: [{sender1: req.params.receiverID }, {sender2: req.params.userID}]}
+    ]})
+    .then(doc =>{
+        let messages = doc.messages
+        if(req.params.userID === sen)
+
+        //api to determine if this user is sender 1 or 2
+        //to group the data accordingly
+        res.status(200).json(messages)
     })
     .catch(err => {
         res.status(500).json({error: 'could not fetch the document'})
