@@ -5,16 +5,17 @@
   <a href="login.html">login</a>
   <a href="signup.html">sign up</a>
   <a href="#">sell</a>
-  <i class="fa-solid fa-magnifying-glass"></i>
+  <i class="fa-solid fa-magnifying-glass" @click="toggleSearch"></i>
   <a href="login.html"><i class="fa-solid fa-circle-user"></i></a>
+  <i class="fa-solid fa-bars" @click="toggleSideBar"></i>
 </nav>
 <main>
   <img src="./assets/images/ad2.png" alt="ad picture">
   <div class="mid">
-        <div class="search">
-        <input type="text">
-        <button>search</button>
-    </div>
+        <div class="search" v-if="searchBar">
+          <input type="text">
+          <button>search</button>
+        </div>
     <div class="text">
       <h2>looking to <strong id="text1">Buy 🤷‍♀️</strong> or <strong id="text2">Sell 🤑</strong></h2>
       <h3>We got you! 🤝</h3>
@@ -73,7 +74,26 @@
 
 import './assets/styles/main.css'
 export default{
-  name : 'App'
+  name : 'App',
+  data(){
+    return{
+      searchBar: true
+    }
+  },
+  methods: {
+    toggleSearch(){
+      this.searchBar = !this.searchBar
+    },
+    toggleSideBar(){
+      let aside = document.querySelector("aside")
+      aside.classList.toggle("normal")
+    }
+  },
+  mounted(){
+    if(window.innerWidth < 525){
+      this.searchBar = false
+    }
+  }
 }
 </script>
 
@@ -116,7 +136,21 @@ nav a{
 nav a:visited{
   color: #333;
 }
+nav .fa-bars{
+  display: none;
+}
+@media screen and (max-width: 768px){
+  nav .fa-bars{
+    display: block;
+    position: relative;
+    right: 10px;
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 525px){
+  nav h3{
+    font-size: .8rem;
+  }
   nav img{
     margin-left: 10px;
   }
@@ -225,6 +259,19 @@ article{
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 768px){
+  section aside{
+    position: absolute;
+    top: 10px;
+    left: -100%;
+  }
+  article{
+    width: 100%
+  }
+}
+.normal{
+  left: 0;
+}
 article .bar{
     height: 40px;
     max-width: 100%;
@@ -237,7 +284,6 @@ article .bar{
     padding: 0 5px 0 10px;
     border-top-left-radius: 25px;
     position: relative;
-    left: 30px;
 }
 ::-webkit-scrollbar{
     height: 8px;

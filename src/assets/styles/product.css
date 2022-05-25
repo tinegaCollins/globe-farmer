@@ -14,9 +14,6 @@ border-radius: 5px;
 padding: 15px;
 overflow: hidden;
 }
-.products:hover{
-    cursor: pointer;
-}
 .products > *{
     margin-bottom: 5px;
 }
