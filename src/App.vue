@@ -206,6 +206,9 @@ section aside{
   width: 200px;
   padding: 5px;
   border-radius: 5px;
+  height: max-content;
+  position: sticky;
+  top: 40px
 }
 section aside .location > *{
   margin: 5px;
