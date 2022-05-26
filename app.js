@@ -157,6 +157,17 @@ app.get('/chats/:userID', (req,res)=>{
         res.status(500).json({error: 'could not fetch the documents'})
     })
 })
+app.get('/name/:id', (req,res)=>{
+    db.collection('users')
+    .findOne({_id: ObjectId(req.params.id)})
+    .then((doc) =>{
+        let name = doc.name
+        res.status(200).json(name)
+    })
+    .catch(err => {
+        res.status(500).json({error: 'could not fetch the document'})
+    })
+})
 app.get('/messages/:userID/:receiverID', (req,res)=>{
     db.collection('chats')
     .findOne({$or:[
