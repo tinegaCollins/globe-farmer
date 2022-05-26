@@ -12,10 +12,11 @@ export default{
         }
     },
     mounted(){
-        fetch('http://localhost:3000/chats' + this.userID)
+        fetch('http://localhost:3000/chats/' + this.userID)
         .then(res => res.json())
         .then(data =>{
             this.chats = data
+            console.log(this.chats)
         })
         .catch(err => console.log(err))
     }
