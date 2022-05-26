@@ -149,7 +149,6 @@ app.get('/chats/:userID', (req,res)=>{
             }
         }
     })
-
     .catch(()=>{
         res.status(500).json({error: 'could not fetch the documents'})
     })
