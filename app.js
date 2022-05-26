@@ -140,8 +140,16 @@ app.get('/chats/:userID', (req,res)=>{
     .find({$or:[ {sender1: req.params.userID}, {sender2: req.params.userID}]})
     .forEach(chat => chats.push(chat))
     .then(()=>{
-        res.status(200).json(chats)
+        for (let i = 0; i < chats.length; i++) {
+            if(req.params.userID === chats[i].sender1){
+                res.status(200).json(chats[i].sender2)
+            }
+            else{
+                res.status(200).json(chats[i].sender1)
+            }
+        }
     })
+
     .catch(()=>{
         res.status(500).json({error: 'could not fetch the documents'})
     })
@@ -154,10 +162,6 @@ app.get('/messages/:userID/:receiverID', (req,res)=>{
     ]})
     .then(doc =>{
         let messages = doc.messages
-        if(req.params.userID === sen)
-
-        //api to determine if this user is sender 1 or 2
-        //to group the data accordingly
         res.status(200).json(messages)
     })
     .catch(err => {
