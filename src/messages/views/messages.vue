@@ -30,7 +30,8 @@ export default{
             id1: this.$route.params.id1,
             id2: this.$route.params.id2,
             userName: '',
-            text: ''
+            recieverName: '',
+            text: '',
         }
     },
     mounted(){
