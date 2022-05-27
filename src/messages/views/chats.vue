@@ -1,6 +1,6 @@
 <template>
     <div class="messagesWrapper">
-        <h2>messages tab</h2>
+        <h3>select a chat to display messages</h3>
     </div>
 </template>
 
@@ -17,4 +17,13 @@ export default{
 }
 </script>
 
-<style></style>
+<style scoped>
+.messagesWrapper {
+    height: calc(100vh - 80px);
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+}
+</style>

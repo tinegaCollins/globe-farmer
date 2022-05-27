@@ -2,9 +2,14 @@
     <div class="wrapper">
         <h3>inbox</h3>
         <main>
-            <div class="chats" v-for="chat in chatNames">
+            <div class="chats">
                 <h4>chats</h4>
-                <router-link :to = "{ name: 'messages',params:{id1: userID,id2: chat.chatID} }">{{chat.name}}</router-link>
+                <li v-for="chat in chatNames">
+                <router-link :to = "{ name: 'messages',params:{id1: userID,id2: chat.chatID} }">
+                <img src="./assets/icons/user-svgrepo-com.svg">
+                {{chat.name}}
+                </router-link>
+                </li>
             </div>
             <router-view></router-view>
         </main>
@@ -56,6 +61,7 @@ export default{
     font-family: var(--text-font);
 }
 /* this styles allso apply to susequent child components and views */
+
 .wrapper{
     padding: 20px;
 }
@@ -73,9 +79,9 @@ export default{
 }
 main{
     min-height: 100vh;
-    padding : 20px 50px;
+    padding : 20px 130px;
     display: flex;
-    flex-direction: row;
+    column-gap: 30px;
 }
 main .chats{
     height: calc(100vh - 80px);
@@ -83,5 +89,38 @@ main .chats{
     border: 2px solid #333;
     border-radius: 10px;
     padding: 10px;
+}
+main .chats h4{ 
+    margin-bottom: 40px;
+}
+main .chats li {
+    border-bottom: 1px solid #333;
+    position: relative;
+}
+main .chats li:nth-child(2){
+    border-top: 1px solid #333;
+}
+main .chats li a{
+  text-decoration: none;
+  color: #333;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  font-size: .8rem;
+  column-gap: 20px;
+  background-color: var(--main-yellow);
+}
+main .chats li a:hover {
+    background-color: var(--dark-yellow);
+}
+main .chats li a img {
+    height: 20px;
+    background-color: var(--main-yellow);
+}
+a:visited{
+    color: #333;
+}
+a.router-link-exact-active{
+    background-color: red;
 }
 </style>
