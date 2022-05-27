@@ -12,7 +12,6 @@
                 <p class="from">from: {{ message.from }}</p>
                 <p>{{message.message}}</p> 
             </li>
-            <p id="lastpart"></p>
         </div>
        <div class="send">
            <input type="text" placeholder="type a message" v-model="text.message">

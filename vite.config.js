@@ -12,7 +12,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        messages: resolve(__dirname, '/messages.html')
+        messages: resolve(__dirname, '/messages.html'),
+        account: resolve(__dirname, '/account.html')
       }
     }
   }
