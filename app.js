@@ -182,6 +182,29 @@ app.get('/messages/:userID/:receiverID', (req,res)=>{
         res.status(500).json({error: 'could not fetch the document'})
     })
 })
+app.get('/chat/:userID/:receiverID', (req,res)=>{
+    db.collection('chats')
+    .findOne({$or:[
+        {$and: [{sender1: req.params.userID }, {sender2: req.params.receiverID}]},
+        {$and: [{sender1: req.params.receiverID }, {sender2: req.params.userID}]}
+    ]})
+    .then(doc =>{
+        let id = doc._id
+        res.status(200).json(id)
+    })
+    .catch(err => {
+        res.status(500).json({error: 'could not fetch the document'})
+    })
+})
+app.patch('/chat/:id', (req, res)=>{
+    db.collection('chats')
+    .updateOne({ _id: ObjectId(req.params.id)}, {$set: { "messages": req.body}})
+    .then(() =>{
+        res.status(200).json({message: 'sent'})
+    })
+    .catch(err => console.log(err))
+
+})
 app.post('/users', (req,res) =>{
     db.collection('users')
     .insertOne(req.body)

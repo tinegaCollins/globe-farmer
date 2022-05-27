@@ -2,18 +2,21 @@
 <div class="messagesWrapper">
     <div class="details">
         <img src="../assets/icons/user-svgrepo-com.svg">
-        <h3>{{userName}}</h3>
+        <h3>{{recieverName}}</h3>
         <img class="call" src="../assets/icons/call-svgrepo-com.svg">
         <img class="dots" src="../assets/icons/3-dots-horizontal-svgrepo-com.svg">
     </div>
     <div class="messages" >
-        <li v-for="message in messages" :key="message.timestamp">
-            <p class="from">from: {{ message.from }}</p>
-            <p>{{message.message}}</p> 
-        </li>
+        <div class="text">
+            <li v-for="message in messages" :key="message.timestamp">
+                <p class="from">from: {{ message.from }}</p>
+                <p>{{message.message}}</p> 
+            </li>
+            <p id="lastpart"></p>
+        </div>
        <div class="send">
-           <input type="text" placeholder="type a message" v-model="text">
-           <button>
+           <input type="text" placeholder="type a message" v-model="text.message">
+           <button @click="sendMessage" :disabled="button">
                <img src="../assets/icons/send-svgrepo-com.svg">
             </button>
        </div>
@@ -23,15 +26,28 @@
 </template>
 
 <script>
+
+import axios from 'axios';
+
+
+
 export default{
     data(){
         return{
             messages: null,
+            chatID: '',
             id1: this.$route.params.id1,
             id2: this.$route.params.id2,
             userName: '',
             recieverName: '',
-            text: '',
+            text: {
+                from: null,
+                timestamp: 202205272154,
+                message: ''
+            },
+            newMessages: [],
+            button: false,
+            serverResponse: ''
         }
     },
     mounted(){
@@ -44,9 +60,45 @@ export default{
         fetch('http://localhost:3000/name/' + this.id2)
         .then(res => res.json())
         .then(data =>{
+            this.recieverName = data
+        })
+        fetch('http://localhost:3000/name/' + this.id1)
+        .then(res => res.json())
+        .then(data =>{
             this.userName = data
         })
         .catch(err => console.log(err))
+        fetch('http://localhost:3000/chat/' + this.id1 + '/' + this.id2)
+        .then(res => res.json())
+        .then(data =>{
+            this.chatID = data
+        })
+        .catch(err => console.log(err))
+    },
+    methods: {
+        sendMessage(){
+            this.button = !this.button
+            for (let i = 0; i < this.messages.length; i++) {
+                this.newMessages.push(this.messages[i])
+            }
+            this.text.from = this.userName
+            this.newMessages.push(this.text)
+            let messages = this.newMessages
+            axios.patch('http://localhost:3000/chat/' + this.chatID, messages)
+            .then(response =>{
+                this.serverResponse = response.data.message
+                this.text.message = ''
+                this.button = !this.button
+            })
+            .then(()=>{
+                fetch('http://localhost:3000/messages/' + this.id1 + '/' + this.id2)
+                .then(res => res.json())
+                .then(data =>{
+                    this.messages = data
+                })
+            })
+            .catch(err => console.log(err))
+        }
     }
 }
 </script>
@@ -86,8 +138,13 @@ export default{
 .messages {
     position: absolute;
     bottom: 0;
-    overflow-y: scroll;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.messages .text {
+    overflow-y: scroll;
+    height: 500px;
 }
 .messages li {
     margin: 20px 0;
@@ -119,13 +176,15 @@ export default{
     color: var(--main-green);
     font-size: .7rem;
 }
+
 .send{
-    height: 40px;
+    height: 50px;
     background-color: #ccc;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: nowrap;
+    padding: 0 40px;
 }
 .send input {
     margin-left: 20px;
