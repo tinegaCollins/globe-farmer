@@ -2,8 +2,8 @@
 <nav>
   <img src="../2.png" alt="company logo">
   <h3>National Farmer</h3>
-  <a href="login.html">login</a>
-  <a href="signup.html">sign up</a>
+  <a href="/account.html#/login">login</a>
+  <a href="/account.html#/signup/query">sign up</a>
   <a href="#">sell</a>
   <i class="fa-solid fa-magnifying-glass" @click="toggleSearch"></i>
   <a href="login.html"><i class="fa-solid fa-circle-user"></i></a>
