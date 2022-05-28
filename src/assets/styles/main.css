@@ -4,6 +4,8 @@
     --main-yellow: #FED200;
     --dark-yellow: hsl(48, 100%, 40%);
     --main-green: #44813E;
+    --dark-green: #44813ebe;
+    --main-red: #EA2A3D;
 }
 
 *{

@@ -39,11 +39,12 @@ import '../../assets/styles/main.css'
 export default{
     data(){
         return{
-            userID: '627e0e1ead1acf5e1d1144ac',
+            userID: null,
             userDetails: null
         }
     },
     mounted(){
+        this.userID = this.$store.getters.getUserID
         fetch('http://localhost:3000/users/' + this.userID)
         .then(res => res.json())
         .then(data => {
@@ -64,17 +65,21 @@ nav img {
 h2{
     position: relative;
     left: 60px;
+    width: max-content;
 }
 .mainContent, h2{
     font-family: var(--text-font);
 }  
+.mainContent{
+    width: 90vw;
+}
 .details{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 0;
     max-height: 100vh;
     gap: 30px;
+    padding: 0;
 }
 @media screen and (max-width: 768px){
     .details{
@@ -87,6 +92,7 @@ h2{
     box-shadow: 3px 3px 6px 5px #ccc;
     border-radius: 15px;
     width: 280px;
+    height: 90%;
 }
 
 .details .card1 > img{
@@ -96,7 +102,7 @@ h2{
 }
 .card1 p{
     font-size: .9rem;
-    margin: 17px 0;
+    margin: 14px 0;
 }
 .pass:hover{
     cursor: pointer;

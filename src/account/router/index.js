@@ -1,12 +1,44 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 import info from '../views/account-info.vue'
+import login from '../views/login.vue'
+import signup from '../views/signup.vue'
+import question from '../views/query.vue'
+import user from '../views/user.vue'
+import farmer from '../views/farmer.vue'
 
 const routes = [
     {
-        path: '/account.html/',
+        path: '/',
         name: 'account-info',
         component: info
+    },
+    {
+        path: '/login/',
+        name: 'login',
+        component: login
+    },
+    {
+        path: '/signup/',
+        name: 'signup',
+        component: signup,
+        children: [
+            {
+                path: 'query',
+                name: 'question',
+                component: question
+            },
+            {
+                path: 'user',
+                name: 'user',
+                component: user
+            },
+            {
+                path: 'farmer',
+                name: 'farmer',
+                component: farmer
+            }
+        ]
     }
 
 ]
@@ -14,7 +46,7 @@ const routes = [
 
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
+    history: createWebHashHistory(import.meta.env.BASE_URL),
     routes
   })
   

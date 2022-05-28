@@ -77,7 +77,8 @@ export default{
   name : 'App',
   data(){
     return{
-      searchBar: true
+      searchBar: true,
+      userID: null
     }
   },
   methods: {
@@ -90,6 +91,8 @@ export default{
     }
   },
   mounted(){
+    this.userID = this.$store.getters.getUserID
+    console.log(this.userID)
     if(window.innerWidth < 525){
       this.searchBar = false
     }
