@@ -2,9 +2,30 @@
 <nav>
   <img src="../2.png" alt="company logo">
   <h3>National Farmer</h3>
-  <a href="/account.html#/login">login</a>
-  <a href="/account.html#/signup/query">sign up</a>
-  <a href="#">sell</a>
+  <a href="/account.html#/login" v-if="account" class="login">login</a>
+  <a href="/account.html#/signup/query" v-if="account">sign up</a>
+  <div class="account" v-if="accountOnLogin">
+    <div class="accountIcon">
+      <h3  @click="accountDetailsToggle">account </h3>        
+      <img src="./assets/images/arrow-down-svgrepo-com.svg"  @click="accountDetailsToggle">
+    </div>
+    <div class="accountDetails" v-if="accountDetails">
+        <div class="cart">
+          <p>cart</p>
+          <img src="./assets/images/cart-svgrepo-com.svg">
+        </div>
+        <div class="messages">
+          <p>messages</p>
+          <img src="./assets/images/messages-svgrepo-com.svg">
+        </div>
+        <div class="accountInfo">
+          <!-- name binding -->
+          <p>Account name</p>
+        </div>
+        <button @click="logOut">log out</button>
+      </div>
+  </div>
+  <a href="#" class="sell">sell</a>
   <i class="fa-solid fa-magnifying-glass" @click="toggleSearch"></i>
   <a href="login.html"><i class="fa-solid fa-circle-user"></i></a>
   <i class="fa-solid fa-bars" @click="toggleSideBar"></i>
@@ -78,7 +99,10 @@ export default{
   data(){
     return{
       searchBar: true,
-      userID: null
+      userID: null,
+      account: true,
+      accountOnLogin: false,
+      accountDetails: false
     }
   },
   methods: {
@@ -88,6 +112,14 @@ export default{
     toggleSideBar(){
       let aside = document.querySelector("aside")
       aside.classList.toggle("normal")
+    },
+    logOut(){
+      let nullID = '';
+      this.$store.commit('updateUserID', nullID)
+      window.location.reload();
+    },
+    accountDetailsToggle(){
+      this.accountDetails = !this.accountDetails
     }
   },
   mounted(){
@@ -95,6 +127,14 @@ export default{
     console.log(this.userID)
     if(window.innerWidth < 525){
       this.searchBar = false
+    }
+    if(this.userID === ''){
+      this.account = true
+      this.accountOnLogin = false
+    }
+    else{
+      this.account = false
+      this.accountOnLogin = true
     }
   }
 }
@@ -105,6 +145,7 @@ nav{
   height: 15vh;
   display: flex;
   align-items: center;
+  position: relative;
 }
 nav img{
   height: 60%;
@@ -112,21 +153,83 @@ nav img{
 }
 nav h3{
   font-family: var(--title-font);
+  margin-right: auto;
 }
-nav a:nth-child(3){
+nav .login{
   margin-left: auto;
 }
-nav a:nth-child(5){
+nav .account {
+  margin-left: auto;
+  position: absolute;
+  top: 35px;
+  right: 130px;
+}
+nav .account:hover {
+  cursor: pointer;
+}
+nav .account .accountIcon {
+  display: flex;
+  align-items: center;
+}
+nav .account .accountIcon img {
+  position: relative;
+  right: 20px;
+}
+nav .account .accountDetails {
+  font-family: var(--text-font);
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  position: relative;
+  justify-content: space-between;
+  background-color: #fff;
+  z-index: 1;
+  padding: 3px 6px;
+}
+nav .account .accountDetails > * {
+  padding: 5px 0;
+  transition: all 200ms ease-in-out;
+}
+.cart, .messages {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .account .accountDetails img {
+  height: 20px;
+  width: auto;
+}
+nav .account .accountDetails > *:hover{
+  background-color: var(--main-green);
+}
+nav .account .accountDetails button {
+  width: 50px;
+  border: none;
+  border: 1px sold black;
+  appearance: none;
+  outline: none;
+  border-radius: 5px;
+  justify-self: center;
+}
+nav .account .accountDetails button:hover {
+  background-color: var(--main-red);
+}
+
+nav .account .accountDetails p {
+  font-size: .8rem;
+}
+nav .sell{
   margin-right: 20px;
   padding: 5px 10px;
   border-radius: 5px;
   background-color: var(--main-yellow);
   transition: background-color 0.3s ease-in-out;
 }
-nav a:nth-child(5):hover{
+nav .sell:hover{
   background-color: var(--dark-yellow);
 }
-nav a:nth-child(7), nav .fa-magnifying-glass{
+nav .fa-bars, nav .fa-magnifying-glass{
   display: none;
 }
 nav a{
