@@ -13,7 +13,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         messages: resolve(__dirname, '/messages.html'),
-        account: resolve(__dirname, '/account.html')
+        account: resolve(__dirname, '/account.html'),
+        product: resolve(__dirname, '/product.html')
       }
     }
   }
