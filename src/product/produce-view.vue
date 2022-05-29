@@ -5,18 +5,19 @@
           <div class="imagearea">
               <img :src="produce.image" alt="product image">
           </div>
-          <div class="details">
+          <div class="details" v-if="produce">
             <div class="sideContent">
                 <h3>{{ produce.item }}</h3>
                 <h4>price: {{ produce.price }}</h4>
                 <p>location: {{ produce.location }}</p>
                 <p><span> FarmerName: </span> {{ produce.name }} </p>
                 <p class="phone">{{ produce.phone }} </p>
+                <p>{{ response1 }}</p>
             </div>
             <div class="chat-box">
                 <div class="messages"></div>
                 <div class="send">
-                <input type="text" v-model="chat.message" placeholder="write you message here">
+                <input type="text" v-model="chat.messages[0].message" placeholder="write you message here">
                 <button @click="sendChat">send</button>
                 </div>
             </div>
@@ -40,34 +41,63 @@ export default {
           chat: {
               sender1: '',
               sender2: '',
-              message: ''
+              messages: [
+                  {
+                      from: '',
+                      timestamp: null,
+                      message: ''
+                  }
+              ],
           },
-          response: ''
+          response: '',
+        response1: '',
+        chatMessages: null
       }
    },
    mounted(){
       this.userID = this.$store.getters.getUserID
+      console.log(this.userID)
        fetch('http://localhost:3000/produces/'+ this.id)
        .then(res => res.json())
        .then(data => {
            this.produce = data
        })
        .then(()=>{
-           this.chat.sender1 = this.userID
+            this.chat.sender1 = this.userID
             this.chat.sender2 = this.produce.senderId
-           console.log(this.chat.sender1, this.chat.sender2)
+            console.log(this.chat.sender1, this.chat.sender2)
+       })
+       .then(()=>{
+           fetch('http://localhost:3000/messages/' + this.sender1 + '/' + this.sender2)
+
+            .then(res => res.json())
+            .then(data =>{
+                this.chatMessages = data
+            })
+            .catch(err => console.log(err))
        })
        .catch(err => console.log(err)) 
    },
    methods: {
        sendChat(){
-           axios.post('http://localhost:3000/chats', this.chat)
-           .then(response=>{
-                this.response = response.data.message
-           })
-           .catch(err=>{
-               console.log(err)
-           })
+           if(this.userID == ''){
+               this.response1 = `please login or sign up to send messages`
+           }
+           else {
+               if (this.chatMessages === null){
+                    axios.post('http://localhost:3000/chats/', this.chat)
+                    .then(response=>{
+                        this.response = response.data.message
+                    })
+                    .catch(err=>{
+                        console.log(err)
+                    }) 
+               }
+               else {
+                   
+               }
+            }
+           
        }
    }
 }

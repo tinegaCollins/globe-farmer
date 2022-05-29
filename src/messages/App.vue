@@ -25,12 +25,13 @@ import '../assets/styles/main.css'
 export default{
     data(){
         return{
-            userID: '627e0e1ead1acf5e1d1144ac',
+            userID: '',
             chatsIDs: [],
             chatNames : []
         }
     },
     mounted(){
+        this.userID = this.$store.getters.getUserID
         fetch('http://localhost:3000/chats/' + this.userID)
         .then(res => res.json())
         .then(data => {

@@ -10,7 +10,7 @@
         <div class="text">
             <li v-for="message in messages" :key="message.timestamp">
                 <p class="from">from: {{ message.from }}</p>
-                <p>{{message.message}}</p> 
+                <p>{{message.message}}</p>
             </li>
         </div>
        <div class="send">
@@ -55,6 +55,19 @@ export default{
         .then(data =>{
             this.messages = data
         })
+        .then(()=>{
+            let li_s = [...document.querySelectorAll(".text li")]
+            let reverse_li_s = [];
+            let lenght = li_s.length + 1
+            for (let j = 0; j < lenght; j++) {
+                let pop = li_s.pop()
+                reverse_li_s.push(pop)
+            }
+            console.log(reverse_li_s)
+            for (let i = 0; i < reverse_li_s.length; i++){
+                reverse_li_s[i].style.bottom = `${i}00px`
+            }
+        })
         .catch(err => console.log(err))
         fetch('http://localhost:3000/name/' + this.id2)
         .then(res => res.json())
@@ -82,10 +95,11 @@ export default{
             }
             this.text.from = this.userName
             this.newMessages.push(this.text)
-            let messages = this.newMessages
-            axios.patch('http://localhost:3000/chat/' + this.chatID, messages)
+            this.messages = this.newMessages
+            this.newMessages = []
+            axios.patch('http://localhost:3000/chat/' + this.chatID, this.messages)
             .then(response =>{
-                this.serverResponse = response.data.message
+                this.serverResponse = response.data
                 this.text.message = ''
                 this.button = !this.button
             })
@@ -95,6 +109,19 @@ export default{
                 .then(data =>{
                     this.messages = data
                 })
+            })
+            .then(()=>{
+                let li_s = [...document.querySelectorAll(".text li")]
+                let reverse_li_s = [];
+                let lenght = li_s.length + 1
+                for (let j = 0; j < lenght; j++) {
+                    let pop = li_s.pop()
+                    reverse_li_s.push(pop)
+                }
+                console.log(reverse_li_s)
+                for (let i = 0; i < reverse_li_s.length; i++){
+                    reverse_li_s[i].style.bottom = `${i}00px`
+                }
             })
             .catch(err => console.log(err))
         }
@@ -144,18 +171,20 @@ export default{
 .messages .text {
     overflow-y: scroll;
     height: 500px;
+    position: relative;
 }
-.messages li {
+.messages .text li {
     margin: 20px 0;
     padding: 0 15px;
     border: 2px solid #333;
     min-height: 70px;
     max-width: 30ch;
-    position: relative;
+    position: absolute;
     left: 20px;
+    bottom: 0;
     border-radius: 7px;
 }
-.messages li::before {
+.messages .text li::before {
     content: '';
     width: 0px;
     height: 0px;
@@ -167,7 +196,7 @@ export default{
     left: 10px;
     bottom: -20px;
 }
-.messages p {
+.messages .text li p {
     font-size: .8rem;
     margin: 5px 0; 
 }

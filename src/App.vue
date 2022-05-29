@@ -14,10 +14,10 @@
           <p>cart</p>
           <img src="./assets/images/cart-svgrepo-com.svg">
         </div>
-        <div class="messages">
+        <a href="/messages.html"><div class="messages">
           <p>messages</p>
           <img src="./assets/images/messages-svgrepo-com.svg">
-        </div>
+        </div></a>
         <div class="accountInfo">
           <!-- name binding -->
           <p>Account name</p>
