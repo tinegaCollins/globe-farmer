@@ -8,7 +8,7 @@
                 <p>Price :{{ product.price}} </p>
                 <p>Location : {{ product.location }}</p>
                 <p>Farmer : {{ product.name }} </p>
-                <router-link :to = "{ name: 'produce',params: {id :product._id} }"><button>Order Now</button></router-link>
+                <a :href="[url] + product._id"><button>Order Now</button></a>
             </div>
       </div>
       <h3 id="around">Around you</h3>
@@ -19,7 +19,7 @@
                 <p>Price :{{ product.price}} </p>
                 <p>Location : {{ product.location }}</p>
                 <p>Farmer : {{ product.name }} </p>
-                <router-link :to = "{ name: 'produce',params: {id :product._id} }"><button>Order Now</button></router-link>
+                <a :href="[url] + product._id"><button>Order Now</button></a>
             </div>
       </div>
    </div>
@@ -35,7 +35,8 @@ export default {
    data(){
       return{
           products: [],
-         //  userID: ''
+         //  userID: '',
+         url: 'product.html#/'
       }
    },
    mounted(){

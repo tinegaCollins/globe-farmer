@@ -3,13 +3,16 @@
         <a href="/"><img src="../../2.png" alt="logo"></a>
         <h3>add to cart</h3>
     </nav>
-
+    <main>
+        <router-view></router-view>
+    </main>
 </template>
 
 
 <script>
 
 import '../assets/styles/main.css'
+
 </script>
 
 
@@ -31,9 +34,13 @@ nav h3 {
     padding: 5px 10px;
     border-radius: 10px;
     font-weight: 300;
+    font-size: .9rem;
 }
 nav h3:hover {
     background-color: var(--dark-yellow);
     cursor: pointer;
+}
+main {
+    font-family: var(--text-font);
 }
 </style>
