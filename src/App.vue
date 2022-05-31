@@ -20,7 +20,7 @@
         </div></a>
         <div class="accountInfo">
           <!-- name binding -->
-          <p>Account name</p>
+          <p>{{userName}}</p>
         </div>
         <button @click="logOut">log out</button>
       </div>
@@ -102,7 +102,8 @@ export default{
       userID: null,
       account: true,
       accountOnLogin: false,
-      accountDetails: false
+      accountDetails: false,
+      userName: ''
     }
   },
   methods: {
@@ -124,7 +125,6 @@ export default{
   },
   mounted(){
     this.userID = this.$store.getters.getUserID
-    console.log(this.userID)
     if(window.innerWidth < 525){
       this.searchBar = false
     }
@@ -135,6 +135,12 @@ export default{
     else{
       this.account = false
       this.accountOnLogin = true
+      fetch('http://localhost:3000/name/' + this.userID)
+      .then(res => res.json())
+      .then(data => {
+        this.userName = data
+      })
+      .catch(err => console.log(err))
     }
   }
 }
