@@ -225,11 +225,11 @@ app.post('/produces', (req,res) =>{
         res.status(500).json({error: 'could not post the add'})
     })
 })
-app.post('/chats', (req,res)=>{
+app.post('/chat', (req,res)=>{
     db.collection('chats')
     .insertOne(req.body)
     .then(()=>{
-        res.status(200).json({message: 'sent'})
+        res.status(200).json({message: 'redirecting...'})
     })
     .catch(err => {
         res.status(500).json({error: 'could send message'})

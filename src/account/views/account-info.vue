@@ -6,7 +6,7 @@
         <div class="card1">
             <img src="../face-shot.png">
             <h3>My account</h3>
-            <p>Name: {{ userDetails.firstName + " " + userDetails.lastName }}</p>
+            <p>Name: {{ userDetails.name  }}</p>
             <p>Email: {{userDetails.email}}</p> 
             <p>Phone: {{userDetails.phone }}</p>
             <p class="pass"><img src="./assets/setting-svgrepo-com.svg"><span>change password</span></p>

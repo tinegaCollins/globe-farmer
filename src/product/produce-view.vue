@@ -14,17 +14,15 @@
                 <p class="phone">{{ produce.phone }} </p>
                 <p>{{ response1 }}</p>
             </div>
-            <div class="chat-box">
-                <div class="messages"></div>
-                <div class="send">
-                <input type="text" v-model="chat.messages[0].message" placeholder="write you message here">
-                <button @click="sendChat">send</button>
-                </div>
+            <p>{{response}}</p>
+            <button @click.once="createChat">
+                send a direct message
+                <img src="../messages/assets/icons/send-svgrepo-com.svg">
+            </button>
+            <div class="moreDetails">
+                <p> {{ produce.moredetails }}</p>
             </div>
-          </div> 
-      </div>
-      <div class="moreDetails">
-          <p> {{ produce.moredetails }}</p>
+          </div>
       </div>
   </div>
 </template>
@@ -35,69 +33,54 @@ import axios from 'axios'
 export default {
     data(){
       return{
-          produce: null,
-          id: this.$route.params.id,
-          userID: '',
-          chat: {
-              sender1: '',
-              sender2: '',
-              messages: [
-                  {
-                      from: '',
-                      timestamp: null,
-                      message: ''
-                  }
-              ],
-          },
-          response: '',
+        produce: null,
+        id: this.$route.params.id,
+        userID: '',
+        response: '',
         response1: '',
-        chatMessages: null
+        farmerID: '',
+        sender1: '',
+        sender2: '',
+        chat: {
+            sender1: '',
+            sender2: '',
+            messages : []
+        }
       }
    },
    mounted(){
       this.userID = this.$store.getters.getUserID
-      console.log(this.userID)
        fetch('http://localhost:3000/produces/'+ this.id)
        .then(res => res.json())
        .then(data => {
            this.produce = data
        })
        .then(()=>{
+            this.farmerID = this.produce.senderId
             this.chat.sender1 = this.userID
-            this.chat.sender2 = this.produce.senderId
-            console.log(this.chat.sender1, this.chat.sender2)
-       })
-       .then(()=>{
-           fetch('http://localhost:3000/messages/' + this.sender1 + '/' + this.sender2)
-
-            .then(res => res.json())
-            .then(data =>{
-                this.chatMessages = data
-            })
-            .catch(err => console.log(err))
+            this.chat.sender2 = this.farmerID
+            console.log(this.chat)
        })
        .catch(err => console.log(err)) 
    },
    methods: {
-       sendChat(){
+       createChat(){
            if(this.userID == ''){
-               this.response1 = `please login or sign up to send messages`
+               this.response = '☹️ you are not logged in'
            }
            else {
-               if (this.chatMessages === null){
-                    axios.post('http://localhost:3000/chats/', this.chat)
-                    .then(response=>{
-                        this.response = response.data.message
-                    })
-                    .catch(err=>{
-                        console.log(err)
-                    }) 
-               }
-               else {
-                   
-               }
-            }
-           
+                axios.post('http://localhost:3000/chat/', this.chat)
+                .then(response=>{
+                    this.response1 = response.data.message
+                })
+                .then(()=>{
+                    let link = `/messages.html#/messages/${this.userID}/${this.farmerID}`
+                    window.location.href = link
+                })
+                .catch(error=>{
+                    console.log(error);
+                })
+           }
        }
    }
 }
@@ -105,20 +88,21 @@ export default {
 
 <style scoped>
 .wrapper{
-    font-family: var(--main-font);
-    display: grid;
-    place-items: center;
+    font-family: var(--text-font);
 }
 .wrapper > h3{
-    margin-top: 5px;
-    text-decoration: underline;
+    margin: 5px 15px; 
+    text-align: start;
 }
 .maincontent{
     width: 100%;
     display: flex;
     padding: 20px;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    column-gap: 40px;
+    border: 1px solid #333;
+    box-shadow: 5px 5px 5px 5px #f2f2f2;
 }
 .maincontent img{
     width: 500px;
@@ -126,12 +110,37 @@ export default {
 }
 .imagearea{
     padding-top: 40px;
+    height: 100%;
+}
+.details {
+    width: 300px;
+    border: 1px solid #333;
+    padding: 30px;
+    border-radius: 20px;
 }
 .sideContent > *{
-    margin-top: 6px;
+    margin-top: 10px;
+}
+.details button {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 5px;
+    border: none;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: var(--dark-yellow);
+}
+.details button:hover {
+    cursor: pointer;
+}
+.details button img {
+    height: 20px;
+    width: auto;
 }
 .phone{
-    background-color: var(--main-color);
+    background-color: var(--main-green);
     padding: 8px;
     border-radius: 5px;
 }
@@ -143,35 +152,10 @@ export default {
     font-weight: 600;
 }
 .moreDetails{
-    padding: 50px;
+    margin-top: 15px;
+    font-size: .8rem;
 }
-.chat-box{
-    height: 100%;
-    background: #74e7b9;
-    width: 400px;
-    height: 300px;
-    position: relative;
-    margin-top: 10px;
-}
-.chat-box .send{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    height: 35px;
-}
-.chat-box .send button{
-    padding: 0 10px;
-    border-radius: 4%;
-    border: none;
-}
-.chat-box .send input{
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #333;
-    outline: none;
-    appearance: none;
-}
+
 @media screen and (max-width: 768px){
     .wrapper{
         display: block;

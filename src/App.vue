@@ -25,7 +25,7 @@
         <button @click="logOut">log out</button>
       </div>
   </div>
-  <a href="#" class="sell">sell</a>
+  <a href="/account.html#/post" class="sell">sell</a>
   <i class="fa-solid fa-magnifying-glass" @click="toggleSearch"></i>
   <a href="login.html"><i class="fa-solid fa-circle-user"></i></a>
   <i class="fa-solid fa-bars" @click="toggleSideBar"></i>

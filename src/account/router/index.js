@@ -6,12 +6,18 @@ import signup from '../views/signup.vue'
 import question from '../views/query.vue'
 import user from '../views/user.vue'
 import farmer from '../views/farmer.vue'
+import post from '../views/post.vue'
 
 const routes = [
     {
         path: '/',
         name: 'account-info',
         component: info
+    },
+    {
+        path: '/post',
+        name : 'post',
+        component: post
     },
     {
         path: '/login/',
