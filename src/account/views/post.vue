@@ -91,7 +91,7 @@ export default{
       fetch('http://localhost:3000/users/' + this.userID)
       .then(res => res.json())
       .then(data => {
-        this.product.name = data.firstName + ' ' + data.lastName;
+        this.product.name = data.name;
         this.product.phone = data.phone;
         this.product.location = data.county
         this.userDetails = data

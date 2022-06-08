@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     port: 8080,
+    host: true
   },
   build: {
     rollupOptions: {

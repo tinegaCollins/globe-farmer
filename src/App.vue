@@ -20,7 +20,7 @@
         </div></a>
         <div class="accountInfo">
           <!-- name binding -->
-          <p>{{userName}}</p>
+          <a href="/account">{{userName}}</a>
         </div>
         <button @click="logOut">log out</button>
       </div>
@@ -195,6 +195,11 @@ nav .account .accountDetails {
 nav .account .accountDetails > * {
   padding: 5px 0;
   transition: all 200ms ease-in-out;
+}
+nav .account .accountInfo a {
+  height: max-content;
+  padding: 4px;
+  font-size: .8rem;
 }
 .cart, .messages {
   display: flex;

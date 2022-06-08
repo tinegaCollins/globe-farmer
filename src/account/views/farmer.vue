@@ -109,7 +109,7 @@ export default{
             this.step104 = !this.step104
         },
           createUser(){
-            this.UserData.name = this.firstName + this.lastName
+            this.UserData.name = this.firstName + ' ' + this.lastName
             axios.post('http://localhost:3000/users', this.UserData)
             .then(response=>{
                 this.button = !this.button
