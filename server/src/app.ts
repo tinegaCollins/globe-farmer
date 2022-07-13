@@ -24,8 +24,10 @@ const startServer = ()=>{
     });
     app.use(express.json());
     app.post('/add-post', postController.addPost);
+    app.get('/get-popular', postController.getPopular);
     //user routes
     app.post('/register-user', userControllers.addNewSeller);
     app.post('/login-user', userControllers.login);
-    http.createServer(app).listen('5000', ()=> console.log('listening on port 5000'))
+    http.createServer(app).listen('5000', ()=> console.log('listening on port 5000'));
+
 }

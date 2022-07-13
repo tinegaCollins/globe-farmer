@@ -19,14 +19,19 @@
 
 <style>
 .location-filter {
-    border: 1px solid black;
     width: 220px;
-    padding: 10px;
 }
 .location{
     margin-top: 10px;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+}
+@media screen and (max-width: 768px) {
+    .location-filter{
+        position: absolute;
+        background-color: var(--light-green);
+        left: -100%;
+    }
 }
 </style>

@@ -22,6 +22,7 @@ useHead({
 
 <style>
 .dynamic-data{
+    margin-top: 30px;
     padding: 20px;
     animation: opac 3000ms 1;
     display: flex;
