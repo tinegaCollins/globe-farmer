@@ -12,7 +12,7 @@ const postSchema = new mongoose.Schema({
     farmerName: String,
     price: Number,
     quantity: String,
-    images: [String]
-})
+    images : [String]
+});
 
 module.exports = mongoose.model('post', postSchema);

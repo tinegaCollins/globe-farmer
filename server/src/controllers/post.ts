@@ -2,8 +2,8 @@ const post = require('../models/posts.ts');
 import { Request, Response} from 'express';
 
 exports.addPost = async (req: Request,res: Response) =>{
-    const {name, type, senderID, location, farmerName, price , quantity} = req.body;
-    const temp = { name, type,senderID,location,farmerName,price,quantity}
+    const {name, type, senderID, location, farmerName, price , quantity, images, popular} = req.body;
+    const temp = { name, type,senderID,location,farmerName,price,quantity, images, popular};
     const newPost = new post(temp);
     await newPost.save();
     res.status(200).json({ message: 'saved'})
@@ -36,5 +36,4 @@ exports.deletePost = async (req:Request, res:Response) => {
 exports.updatePost = async(req:Request, res:Response)=>{
     const id = req.body.postID;
     let curPost:object = getId(id);
-    
 }

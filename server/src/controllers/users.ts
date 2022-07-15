@@ -2,7 +2,7 @@ const sellers = require('../models/users.ts');
 import { Request, Response } from 'express';
 const bcrypt = require("bcrypt");
 
-exports.addNewSeller = async (req:Request, res: Response)=> {
+exports.addNewUser = async (req:Request, res: Response)=> {
     try{
         const  { name, phone, unHashPassword, location, avatar} = req.body;
         const checkPhone:Array<object> = await sellers.find({phone: phone});
