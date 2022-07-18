@@ -13,7 +13,8 @@ exports.addNewUser = async (req:Request, res: Response)=> {
                 name, phone, password, location, avatar
             })
             await newSeller.save()
-            res.send(newSeller._id)
+            // res.send(newSeller._id)
+            res.status(200).json(newSeller);
         }
         else{
             res.status(404).json({message: "phone exist"})

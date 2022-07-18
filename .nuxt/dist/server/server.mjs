@@ -117,13 +117,9 @@ __vite_ssr_exports__.default = (ctx) => entry(ctx);
 // - /components/location-filter.vue ($id_9fd3ba4e)
 // - /components/popular-items.vue ($id_fda60bf2)
 // - /pages/index/index.vue?macro=true ($id_5878fe75)
-// - /pages/login.vue?macro=true ($id_213baa8a)
-// - /pages/signup/index.vue?macro=true ($id_238e06f1)
-// - /pages/signup/new.vue?macro=true ($id_7cd8074e)
+// - /pages/signup.vue?macro=true ($id_ae8d024a)
 // - /pages/index/index.vue ($id_a200782a)
-// - /pages/login.vue ($id_b0922173)
-// - /pages/signup/index.vue ($id_5a9a5b2f)
-// - /pages/signup/new.vue ($id_c7595ba4)
+// - /pages/signup.vue ($id_31eb92be)
 // - /node_modules/nuxt/dist/app/components/nuxt-root.vue ($id_e9bfada3)
 // - /node_modules/nuxt/dist/app/compat/capi.mjs ($id_0c5717a4)
 // - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs ($id_8029a879)
@@ -1496,9 +1492,9 @@ __vite_ssr_exports__.default = defineNuxtLink({ componentName: "NuxtLink" });
 // Parents: 
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
 // - /pages/index/index.vue?macro=true ($id_5878fe75)
-// - /pages/signup/index.vue?macro=true ($id_238e06f1)
+// - /pages/signup.vue?macro=true ($id_ae8d024a)
 // - /pages/index/index.vue ($id_a200782a)
-// - /pages/signup/index.vue ($id_5a9a5b2f)
+// - /pages/signup.vue ($id_31eb92be)
 // - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs ($id_8029a879)
 // Dependencies: 
 // - /node_modules/nuxt/dist/head/runtime/composables.mjs ($id_04ea9504)
@@ -2721,21 +2717,17 @@ Object.defineProperty(__vite_ssr_exports__, "_wrapIf", { enumerable: true, confi
 // Dependencies: 
 // - /pages/index/index.vue?macro=true ($id_5878fe75)
 // - /pages/login.vue?macro=true ($id_213baa8a)
-// - /pages/signup/index.vue?macro=true ($id_238e06f1)
-// - /pages/signup/new.vue?macro=true ($id_7cd8074e)
+// - /pages/signup.vue?macro=true ($id_ae8d024a)
 // - /pages/index/index.vue ($id_a200782a)
 // - /pages/login.vue ($id_b0922173)
-// - /pages/signup/index.vue ($id_5a9a5b2f)
-// - /pages/signup/new.vue ($id_c7595ba4)
+// - /pages/signup.vue ($id_31eb92be)
 // --------------------
 const $id_150812ed = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/pages/index/index.vue?macro=true");
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/pages/login.vue?macro=true");
 
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/pages/signup/index.vue?macro=true");
-
-const __vite_ssr_import_3__ = await __vite_ssr_import__("/pages/signup/new.vue?macro=true");
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/pages/signup.vue?macro=true");
 
 __vite_ssr_exports__.default = [
   {
@@ -2759,20 +2751,11 @@ __vite_ssr_exports__.default = [
   {
     name: "signup",
     path: "/signup",
-    file: "/home/tinega/Desktop/dont/globe-farmer/pages/signup/index.vue",
+    file: "/home/tinega/Desktop/dont/globe-farmer/pages/signup.vue",
     children: [],
     meta: __vite_ssr_import_2__.meta,
     alias: __vite_ssr_import_2__.meta?.alias || [],
-    component: () => __vite_ssr_dynamic_import__('/pages/signup/index.vue')
-  },
-  {
-    name: "signup-new",
-    path: "/signup/new",
-    file: "/home/tinega/Desktop/dont/globe-farmer/pages/signup/new.vue",
-    children: [],
-    meta: __vite_ssr_import_3__.meta,
-    alias: __vite_ssr_import_3__.meta?.alias || [],
-    component: () => __vite_ssr_dynamic_import__('/pages/signup/new.vue')
+    component: () => __vite_ssr_dynamic_import__('/pages/signup.vue')
   }
 ];
 }
@@ -2997,11 +2980,9 @@ __vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_8__.default(_sf
 // - /components/location-filter.vue ($id_9fd3ba4e)
 // - /components/popular-items.vue ($id_fda60bf2)
 // - /pages/index/index.vue?macro=true ($id_5878fe75)
-// - /pages/signup/index.vue?macro=true ($id_238e06f1)
-// - /pages/signup/new.vue?macro=true ($id_7cd8074e)
+// - /pages/signup.vue?macro=true ($id_ae8d024a)
 // - /pages/index/index.vue ($id_a200782a)
-// - /pages/signup/index.vue ($id_5a9a5b2f)
-// - /pages/signup/new.vue ($id_c7595ba4)
+// - /pages/signup.vue ($id_31eb92be)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-404.vue ($id_b90d4d0f)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-500.vue ($id_14c8b574)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue ($id_bc2d74a1)
@@ -3029,8 +3010,8 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/vue/server-re
 // Request: /assets/icons/2.png
 // Parents: 
 // - /components/nav-bar.vue ($id_12afc13c)
-// - /pages/signup/index.vue?macro=true ($id_238e06f1)
-// - /pages/signup/index.vue ($id_5a9a5b2f)
+// - /pages/signup.vue?macro=true ($id_ae8d024a)
+// - /pages/signup.vue ($id_31eb92be)
 // Dependencies: 
 
 // --------------------
@@ -3059,13 +3040,9 @@ __vite_ssr_exports__.default = "nav{align-items:center;display:flex;gap:20px;hei
 // - /components/location-filter.vue ($id_9fd3ba4e)
 // - /components/popular-items.vue ($id_fda60bf2)
 // - /pages/index/index.vue?macro=true ($id_5878fe75)
-// - /pages/login.vue?macro=true ($id_213baa8a)
-// - /pages/signup/index.vue?macro=true ($id_238e06f1)
-// - /pages/signup/new.vue?macro=true ($id_7cd8074e)
+// - /pages/signup.vue?macro=true ($id_ae8d024a)
 // - /pages/index/index.vue ($id_a200782a)
-// - /pages/login.vue ($id_b0922173)
-// - /pages/signup/index.vue ($id_5a9a5b2f)
-// - /pages/signup/new.vue ($id_c7595ba4)
+// - /pages/signup.vue ($id_31eb92be)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-404.vue ($id_b90d4d0f)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-500.vue ($id_14c8b574)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue ($id_bc2d74a1)
@@ -3504,9 +3481,9 @@ __vite_ssr_exports__.default = ".popular-items{width:100%}.popular-content,.skel
 // Request: /assets/styles/variables.css
 // Parents: 
 // - /pages/index/index.vue?macro=true ($id_5878fe75)
-// - /pages/signup/index.vue?macro=true ($id_238e06f1)
+// - /pages/signup.vue?macro=true ($id_ae8d024a)
 // - /pages/index/index.vue ($id_a200782a)
-// - /pages/signup/index.vue ($id_5a9a5b2f)
+// - /pages/signup.vue ($id_31eb92be)
 // Dependencies: 
 
 // --------------------
@@ -3546,32 +3523,15 @@ __vite_ssr_exports__.default = ".dynamic-data{-webkit-animation:opac 3s 1;animat
 // Parents: 
 // - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
 // Dependencies: 
-// - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
-// - /@id/plugin-vue:export-helper ($id_bbb863c1)
+
 // --------------------
 const $id_213baa8a = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-const _sfc_main = {}
-
-
-
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
-
-const _sfc_setup = _sfc_main.setup
-_sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_0__.useSSRContext()
-  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/login.vue")
-  return _sfc_setup ? _sfc_setup(props, ctx) : undefined
-}
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
-
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_1__.default(_sfc_main, [['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/login.vue"]])
-const meta = undefined
-Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
+/* empty */;
 }
 
 
 // --------------------
-// Request: /pages/signup/index.vue?macro=true
+// Request: /pages/signup.vue?macro=true
 // Parents: 
 // - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
 // Dependencies: 
@@ -3580,10 +3540,10 @@ Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configur
 // - /assets/styles/variables.css ($id_c537320a)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /assets/icons/2.png ($id_896c7e35)
-// - /pages/signup/index.vue?vue&type=style&index=0&lang.css ($id_b7ce11c0)
+// - /pages/signup.vue?vue&type=style&index=0&lang.css ($id_f2a1f585)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
-const $id_238e06f1 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_ae8d024a = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist/head/runtime/index.mjs");
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
@@ -3593,11 +3553,11 @@ const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/dist/
 const __vite_ssr_import_3__ = await __vite_ssr_import__("/assets/styles/variables.css");
 
 const _sfc_main = /* @__PURE__ */ __vite_ssr_import_2__.defineComponent({
-  __name: "index",
+  __name: "signup",
   setup(__props, { expose }) {
     expose();
     __vite_ssr_import_0__.useHead({
-      title: "national farmer/sign up",
+      title: "sign up",
       link: [
         { rel: "icon", href: "../../assets/icons/2.png" }
       ]
@@ -3638,7 +3598,8 @@ const _sfc_main = /* @__PURE__ */ __vite_ssr_import_2__.defineComponent({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dataToSend)
       });
-      const message = response.json();
+      const message = await response.json();
+      const userID = message._id;
     };
     const __returned__ = { ifPhone, ifPassword, ifDisabled, checkOptions, phone, password, rpassword, terms, name, checkPhone, checkPasswords, signUp };
     Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
@@ -3654,19 +3615,19 @@ const __vite_ssr_import_6__ = await __vite_ssr_import__("/assets/icons/2.png");
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<div${__vite_ssr_import_5__.ssrRenderAttrs(__vite_ssr_import_4__.mergeProps({ class: "login" }, _attrs))}><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_6__.default)} alt="" srcset=""><div class="logins"><div class="name"><label for="name">name:</label><input type="text" name="" id="name"${__vite_ssr_import_5__.ssrRenderAttr("value", $setup.name)}></div><div class="phone"><label for="phone">enter your phone:</label><input type="number" id="phone"${__vite_ssr_import_5__.ssrRenderAttr("value", $setup.phone)}></div><div class="password"><label for="password">enter your password:</label><input type="password" id="password"${__vite_ssr_import_5__.ssrRenderAttr("value", $setup.password)}></div><div class="rpassword"><label for="rpassword">repeat password:</label><input type="password" id="rpassword"${__vite_ssr_import_5__.ssrRenderAttr("value", $setup.rpassword)}></div><div class="terms"><label for="check">accept the terms and conditions</label><input type="checkbox" name="" id=""${__vite_ssr_import_5__.ssrIncludeBooleanAttr(Array.isArray($setup.terms) ? __vite_ssr_import_5__.ssrLooseContain($setup.terms, null) : $setup.terms) ? " checked" : ""}></div><button${__vite_ssr_import_5__.ssrIncludeBooleanAttr($setup.ifDisabled) ? " disabled" : ""}>Sign up</button></div></div>`);
 }
-const __vite_ssr_import_7__ = await __vite_ssr_import__("/pages/signup/index.vue?vue&type=style&index=0&lang.css");
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/pages/signup.vue?vue&type=style&index=0&lang.css");
 
 const __vite_ssr_import_8__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
   const ssrContext = __vite_ssr_import_8__.useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/signup/index.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/signup.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 const __vite_ssr_import_9__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_9__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/signup/index.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_9__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/signup.vue"]]);
 
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
@@ -3674,50 +3635,15 @@ Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configur
 
 
 // --------------------
-// Request: /pages/signup/index.vue?vue&type=style&index=0&lang.css
+// Request: /pages/signup.vue?vue&type=style&index=0&lang.css
 // Parents: 
-// - /pages/signup/index.vue?macro=true ($id_238e06f1)
-// - /pages/signup/index.vue ($id_5a9a5b2f)
+// - /pages/signup.vue?macro=true ($id_ae8d024a)
+// - /pages/signup.vue ($id_31eb92be)
 // Dependencies: 
 
 // --------------------
-const $id_b7ce11c0 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = ".login{align-items:center;display:flex;flex-direction:column;padding:15px}.login>img{height:80px;width:auto}.logins{margin-top:10vh;width:80%}.logins,.logins>*{display:flex;flex-direction:column}.logins>*{gap:10px;margin:10px 0;width:100%}.name input,.password input,.phone input,.rpassword input{border:1px solid var(--main-yellow);border-radius:5px;height:30px;outline:none;padding-left:5px;width:100%}.terms{flex-direction:row;justify-content:space-between}.logins button{align-self:center;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--light-green);border:none;border-radius:5px;outline:none;padding:.8em 2em;transition:all .2s ease-in-out;width:-webkit-max-content;width:-moz-max-content;width:max-content}.logins button:disabled{background-color:#055c1e}";
-}
-
-
-// --------------------
-// Request: /pages/signup/new.vue?macro=true
-// Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
-// Dependencies: 
-// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
-// - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
-// - /@id/plugin-vue:export-helper ($id_bbb863c1)
-// --------------------
-const $id_7cd8074e = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-const _sfc_main = {}
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
-
-
-function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  _push(`<h2${__vite_ssr_import_0__.ssrRenderAttrs(_attrs)}>head</h2>`)
-}
-
-
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
-
-const _sfc_setup = _sfc_main.setup
-_sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_1__.useSSRContext()
-  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/signup/new.vue")
-  return _sfc_setup ? _sfc_setup(props, ctx) : undefined
-}
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
-
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_2__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/signup/new.vue"]])
-const meta = undefined
-Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
+const $id_f2a1f585 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = ".login{align-items:center;display:flex;flex-direction:column;padding:15px}.login>img{height:80px;width:auto}.logins{display:flex;flex-direction:column;margin-top:10vh;width:80%}@media screen and (min-width:768px){.logins{width:30%}}.logins>*{display:flex;flex-direction:column;gap:10px;margin:10px 0;width:100%}.name input,.password input,.phone input,.rpassword input{border:1px solid var(--main-yellow);border-radius:5px;height:30px;outline:none;padding-left:5px;width:100%}.terms{flex-direction:row;justify-content:space-between}.logins button{align-self:center;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:var(--light-green);border:none;border-radius:5px;outline:none;padding:.8em 2em;transition:all .2s ease-in-out;width:-webkit-max-content;width:-moz-max-content;width:max-content}.logins button:disabled{background-color:#055c1e}";
 }
 
 
@@ -3809,30 +3735,15 @@ __vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_s
 // Parents: 
 // - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
 // Dependencies: 
-// - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
-// - /@id/plugin-vue:export-helper ($id_bbb863c1)
+
 // --------------------
 const $id_b0922173 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-const _sfc_main = {}
-
-
-
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
-
-const _sfc_setup = _sfc_main.setup
-_sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_0__.useSSRContext()
-  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/login.vue")
-  return _sfc_setup ? _sfc_setup(props, ctx) : undefined
-}
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
-
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_1__.default(_sfc_main, [['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/login.vue"]]);
+/* empty */;
 }
 
 
 // --------------------
-// Request: /pages/signup/index.vue
+// Request: /pages/signup.vue
 // Parents: 
 // - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
 // Dependencies: 
@@ -3841,10 +3752,10 @@ __vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_1__.default(_sfc_m
 // - /assets/styles/variables.css ($id_c537320a)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /assets/icons/2.png ($id_896c7e35)
-// - /pages/signup/index.vue?vue&type=style&index=0&lang.css ($id_b7ce11c0)
+// - /pages/signup.vue?vue&type=style&index=0&lang.css ($id_f2a1f585)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
-const $id_5a9a5b2f = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_31eb92be = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist/head/runtime/index.mjs");
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
@@ -3854,11 +3765,11 @@ const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/dist/
 const __vite_ssr_import_3__ = await __vite_ssr_import__("/assets/styles/variables.css");
 
 const _sfc_main = /* @__PURE__ */ __vite_ssr_import_2__.defineComponent({
-  __name: "index",
+  __name: "signup",
   setup(__props, { expose }) {
     expose();
     __vite_ssr_import_0__.useHead({
-      title: "national farmer/sign up",
+      title: "sign up",
       link: [
         { rel: "icon", href: "../../assets/icons/2.png" }
       ]
@@ -3899,7 +3810,8 @@ const _sfc_main = /* @__PURE__ */ __vite_ssr_import_2__.defineComponent({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dataToSend)
       });
-      const message = response.json();
+      const message = await response.json();
+      const userID = message._id;
     };
     const __returned__ = { ifPhone, ifPassword, ifDisabled, checkOptions, phone, password, rpassword, terms, name, checkPhone, checkPasswords, signUp };
     Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
@@ -3915,53 +3827,20 @@ const __vite_ssr_import_6__ = await __vite_ssr_import__("/assets/icons/2.png");
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   _push(`<div${__vite_ssr_import_5__.ssrRenderAttrs(__vite_ssr_import_4__.mergeProps({ class: "login" }, _attrs))}><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_6__.default)} alt="" srcset=""><div class="logins"><div class="name"><label for="name">name:</label><input type="text" name="" id="name"${__vite_ssr_import_5__.ssrRenderAttr("value", $setup.name)}></div><div class="phone"><label for="phone">enter your phone:</label><input type="number" id="phone"${__vite_ssr_import_5__.ssrRenderAttr("value", $setup.phone)}></div><div class="password"><label for="password">enter your password:</label><input type="password" id="password"${__vite_ssr_import_5__.ssrRenderAttr("value", $setup.password)}></div><div class="rpassword"><label for="rpassword">repeat password:</label><input type="password" id="rpassword"${__vite_ssr_import_5__.ssrRenderAttr("value", $setup.rpassword)}></div><div class="terms"><label for="check">accept the terms and conditions</label><input type="checkbox" name="" id=""${__vite_ssr_import_5__.ssrIncludeBooleanAttr(Array.isArray($setup.terms) ? __vite_ssr_import_5__.ssrLooseContain($setup.terms, null) : $setup.terms) ? " checked" : ""}></div><button${__vite_ssr_import_5__.ssrIncludeBooleanAttr($setup.ifDisabled) ? " disabled" : ""}>Sign up</button></div></div>`);
 }
-const __vite_ssr_import_7__ = await __vite_ssr_import__("/pages/signup/index.vue?vue&type=style&index=0&lang.css");
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/pages/signup.vue?vue&type=style&index=0&lang.css");
 
 const __vite_ssr_import_8__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
   const ssrContext = __vite_ssr_import_8__.useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/signup/index.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/signup.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 const __vite_ssr_import_9__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_9__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/signup/index.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_9__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/signup.vue"]]);
 ;
-}
-
-
-// --------------------
-// Request: /pages/signup/new.vue
-// Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
-// Dependencies: 
-// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
-// - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
-// - /@id/plugin-vue:export-helper ($id_bbb863c1)
-// --------------------
-const $id_c7595ba4 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-const _sfc_main = {}
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
-
-
-function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  _push(`<h2${__vite_ssr_import_0__.ssrRenderAttrs(_attrs)}>head</h2>`)
-}
-
-
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
-
-const _sfc_setup = _sfc_main.setup
-_sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_1__.useSSRContext()
-  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/signup/new.vue")
-  return _sfc_setup ? _sfc_setup(props, ctx) : undefined
-}
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
-
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_2__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/signup/new.vue"]]);
 }
 
 
@@ -4934,13 +4813,11 @@ const __modules__ = {
   "/assets/styles/main.css": $id_41a284b6,
   "/pages/index/index.vue?vue&type=style&index=0&lang.css": $id_64728f64,
   "/pages/login.vue?macro=true": $id_213baa8a,
-  "/pages/signup/index.vue?macro=true": $id_238e06f1,
-  "/pages/signup/index.vue?vue&type=style&index=0&lang.css": $id_b7ce11c0,
-  "/pages/signup/new.vue?macro=true": $id_7cd8074e,
+  "/pages/signup.vue?macro=true": $id_ae8d024a,
+  "/pages/signup.vue?vue&type=style&index=0&lang.css": $id_f2a1f585,
   "/pages/index/index.vue": $id_a200782a,
   "/pages/login.vue": $id_b0922173,
-  "/pages/signup/index.vue": $id_5a9a5b2f,
-  "/pages/signup/new.vue": $id_c7595ba4,
+  "/pages/signup.vue": $id_31eb92be,
   "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/router.options.mjs": $id_82d6bcff,
   "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/middleware.mjs": $id_247e8eca,
   "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/root-component.mjs": $id_cd99bfa7,

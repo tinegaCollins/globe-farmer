@@ -10,7 +10,7 @@ export default {
     "assets/styles/variables.css",
     "assets/styles/main.css",
     "pages/index/index.vue?vue&type=style&index=0&lang.css",
-    "pages/signup/index.vue?vue&type=style&index=0&lang.css",
+    "pages/signup.vue?vue&type=style&index=0&lang.css",
     "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue?vue&type=style&index=0&scoped=true&lang.css",
     "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue?vue&type=style&index=0&scoped=true&lang.css",
     "node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue?vue&type=style&index=0&scoped=true&lang.css"
@@ -25,7 +25,7 @@ export default {
     "assets/styles/variables.css",
     "assets/styles/main.css",
     "pages/index/index.vue?vue&type=style&index=0&lang.css",
-    "pages/signup/index.vue?vue&type=style&index=0&lang.css",
+    "pages/signup.vue?vue&type=style&index=0&lang.css",
     "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue?vue&type=style&index=0&scoped=true&lang.css",
     "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue?vue&type=style&index=0&scoped=true&lang.css",
     "node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue?vue&type=style&index=0&scoped=true&lang.css"

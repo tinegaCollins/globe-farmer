@@ -32,7 +32,7 @@
 
 import '~/assets/styles/variables.css'
 useHead({
-    title: "national farmer/sign up",
+    title: "sign up",
     link:[
         { rel: 'icon', href: '../../assets/icons/2.png'}
     ]
@@ -74,7 +74,8 @@ const signUp = async ()=>{
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(dataToSend)
     })
-    const message = response.json();
+    const message = await response.json();
+    const userID = message._id;
 }
 </script>
 
@@ -95,6 +96,11 @@ const signUp = async ()=>{
     width: 80%;
     display: flex;
     flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+    .logins{
+       width: 30%; 
+    }
 }
 .logins > *{
     margin: 10px 0;
