@@ -20,7 +20,7 @@
 </template>
 
 
-<script>
+<script setup lang="ts">
 
 useHead({
     title: 'login',
@@ -30,26 +30,22 @@ useHead({
 })
 const ifDisabled = ref<boolean>(true);
 const password = ref<string>();
-const phone = ref();
+const phone = ref<Number>();
 const checkDetails = ()=>{
     if(password.value != null || undefined || '' && phone.value != null || undefined){
-        
+        ifDisabled.value = false;
+    }else{
+        ifDisabled.value = true;
     }
 }
 </script>
 
 <style>
-.keep{
-    display: flex;
-    justify-content: space-between !important;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-.keep input {
+#check {
     height: 15px;
     margin-left: auto;
+    position: relative;
+    bottom: 15px;
 }
 </style>
 
