@@ -3692,6 +3692,8 @@ __vite_ssr_exports__.default = "#check{bottom:15px;height:15px;margin-left:auto;
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /assets/icons/2.png ($id_896c7e35)
 // - /assets/temp/avatar.jpg ($id_964d5059)
+// - /assets/icons/arrow-down-svgrepo-com.svg ($id_5f240f89)
+// - /assets/icons/search-svgrepo-com.svg ($id_8a99202f)
 // - /pages/messages/index.vue?vue&type=style&index=0&lang.css ($id_5c90c532)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
@@ -3710,6 +3712,9 @@ const _sfc_main = /* @__PURE__ */ __vite_ssr_import_3__.defineComponent({
   __name: "index",
   setup(__props, { expose }) {
     expose();
+    __vite_ssr_import_3__.useCssVars((_ctx) => ({
+      "f0ddf0f0-ifOnline": ifOnline.value
+    }));
     __vite_ssr_import_1__.useHead({
       title: "messages",
       link: [
@@ -3718,7 +3723,8 @@ const _sfc_main = /* @__PURE__ */ __vite_ssr_import_3__.defineComponent({
     });
     const chartClicked = __vite_ssr_import_2__.ref();
     const available = __vite_ssr_import_2__.ref("available");
-    const __returned__ = { chartClicked, available };
+    const ifOnline = __vite_ssr_import_2__.ref("green");
+    const __returned__ = { chartClicked, available, ifOnline };
     Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
     return __returned__;
   }
@@ -3731,19 +3737,26 @@ const __vite_ssr_import_7__ = await __vite_ssr_import__("/assets/icons/2.png");
 
 const __vite_ssr_import_8__ = await __vite_ssr_import__("/assets/temp/avatar.jpg");
 
+const __vite_ssr_import_9__ = await __vite_ssr_import__("/assets/icons/arrow-down-svgrepo-com.svg");
+
+const __vite_ssr_import_10__ = await __vite_ssr_import__("/assets/icons/search-svgrepo-com.svg");
+
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_NuxtLink = __vite_ssr_import_0__.default;
   const _component_NuxtPage = __vite_ssr_import_5__.resolveComponent("NuxtPage");
-  _push(`<div${__vite_ssr_import_6__.ssrRenderAttrs(__vite_ssr_import_5__.mergeProps({ class: "messages" }, _attrs))}><section class="nav-messages"><a href="/"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="logo" srcset=""></a><h4>messages</h4></section><div class="messages-content"><div class="left-bar"><div class="user-details"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""><p>ariana grande</p><p>${__vite_ssr_import_6__.ssrInterpolate($setup.available)}</p></div><section class="chats">`);
+  const _cssVars = { style: {
+    "--f0ddf0f0-ifOnline": $setup.ifOnline
+  } };
+  _push(`<div${__vite_ssr_import_6__.ssrRenderAttrs(__vite_ssr_import_5__.mergeProps({ class: "messages" }, _attrs, _cssVars))}><section class="nav-messages"><a href="/"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="logo" srcset=""></a><h4>messages</h4></section><div class="messages-content"><div class="left-bar"><section class="chats"><div class="user-details-top"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""><p>ariana grande</p><p class="avail">${__vite_ssr_import_6__.ssrInterpolate($setup.available)} <img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset=""></p></div><div class="search-bar"><input type="text" id="search" placeholder="search"><label for="search"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_10__.default)} alt="" srcset=""></label></div>`);
   _push(__vite_ssr_import_6__.ssrRenderComponent(_component_NuxtLink, { to: "/messages/chat-4444" }, {
     default: __vite_ssr_import_5__.withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)}${_scopeId}><div class="user-details"${_scopeId}><h5${_scopeId}>tinega</h5><p${_scopeId}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.</p></div>`);
+        _push2(`<img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)}${_scopeId}><div class="user-details"${_scopeId}><h4${_scopeId}>tinega</h4><p${_scopeId}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.</p></div>`);
       } else {
         return [
           __vite_ssr_import_5__.createVNode("img", { src: __vite_ssr_import_8__.default }),
           __vite_ssr_import_5__.createVNode("div", { class: "user-details" }, [
-            __vite_ssr_import_5__.createVNode("h5", null, "tinega"),
+            __vite_ssr_import_5__.createVNode("h4", null, "tinega"),
             __vite_ssr_import_5__.createVNode("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.")
           ])
         ];
@@ -3755,19 +3768,19 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   _push(__vite_ssr_import_6__.ssrRenderComponent(_component_NuxtPage, null, null, _parent));
   _push(`</div></div>`);
 }
-const __vite_ssr_import_9__ = await __vite_ssr_import__("/pages/messages/index.vue?vue&type=style&index=0&lang.css");
+const __vite_ssr_import_11__ = await __vite_ssr_import__("/pages/messages/index.vue?vue&type=style&index=0&lang.css");
 
-const __vite_ssr_import_10__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+const __vite_ssr_import_12__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_10__.useSSRContext();
+  const ssrContext = __vite_ssr_import_12__.useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/messages/index.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const __vite_ssr_import_11__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+const __vite_ssr_import_13__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_11__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_13__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index.vue"]]);
 
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
@@ -3778,12 +3791,42 @@ Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configur
 // Request: /assets/temp/avatar.jpg
 // Parents: 
 // - /pages/messages/index.vue?macro=true ($id_c05e001e)
+// - /pages/messages/index/chat-[id].vue?macro=true ($id_2c470c1f)
+// - /pages/messages/index/chat-[id].vue ($id_6739ac96)
 // - /pages/messages/index.vue ($id_8ad27286)
 // Dependencies: 
 
 // --------------------
 const $id_964d5059 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 __vite_ssr_exports__.default = "/_nuxt/assets/temp/avatar.jpg";
+}
+
+
+// --------------------
+// Request: /assets/icons/arrow-down-svgrepo-com.svg
+// Parents: 
+// - /pages/messages/index.vue?macro=true ($id_c05e001e)
+// - /pages/messages/index.vue ($id_8ad27286)
+// Dependencies: 
+
+// --------------------
+const $id_5f240f89 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = "/_nuxt/assets/icons/arrow-down-svgrepo-com.svg";
+}
+
+
+// --------------------
+// Request: /assets/icons/search-svgrepo-com.svg
+// Parents: 
+// - /pages/messages/index.vue?macro=true ($id_c05e001e)
+// - /pages/messages/index/chat-[id].vue?macro=true ($id_2c470c1f)
+// - /pages/messages/index/chat-[id].vue ($id_6739ac96)
+// - /pages/messages/index.vue ($id_8ad27286)
+// Dependencies: 
+
+// --------------------
+const $id_8a99202f = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = "/_nuxt/assets/icons/search-svgrepo-com.svg";
 }
 
 
@@ -3796,7 +3839,7 @@ __vite_ssr_exports__.default = "/_nuxt/assets/temp/avatar.jpg";
 
 // --------------------
 const $id_5c90c532 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = ".messages{overflow:hidden}.nav-messages{align-items:center;display:flex;gap:30px;height:10vh;padding:0 40px}.nav-messages>a{height:100%}.nav-messages>a>img{height:70%}.messages-content{display:flex}.messages-content .left-bar{align-items:center;display:flex;flex-direction:column}.messages-content .user-details img{border-radius:50%;height:90px;-o-object-fit:cover;object-fit:cover;width:90px}.chats{border-right:2px solid var(--light-green);height:84vh;overflow-x:hidden;overflow-y:scroll;padding:10px;width:340px}.chats a{background-color:#f2f2f2;-moz-column-gap:7px;column-gap:7px;display:flex;margin-top:3px;padding:10px;transition:background-color .2s ease-in-out;width:100%}.chats a:hover{background-color:hsla(0,0%,95%,.3)}.chats a .user-details{display:grid}.chats a p{font-size:.7rem;width:-webkit-max-content;width:-moz-max-content;width:max-content}.chats a img{border-radius:50%;height:40px;-o-object-fit:cover;object-fit:cover;width:40px}::-webkit-scrollbar{border-left:1px solid #e6ecf8;width:0}::-webkit-scrollbar-thumb{background-color:#d6872c}::-moz-scrollbar{border-left:1px solid #e6ecf8;width:0}::-moz-scrollbar-thumb{background-color:#d6872c}";
+__vite_ssr_exports__.default = ".messages{overflow:hidden}.nav-messages{align-items:center;display:flex;gap:30px;height:10vh;padding:0 40px}.nav-messages>a{height:100%}.nav-messages>a>img{height:70%}.messages-content{display:grid;grid-template-columns:1fr 5fr;padding:10px}.messages-content .left-bar{align-items:center;display:flex;flex-direction:column;height:calc(90vh - 90px);overflow-y:hidden;padding:40px 0;width:340px}.messages-content .user-details-top{align-items:center;display:flex;flex-direction:column;font-size:.8rem;margin-bottom:20px;position:relative;row-gap:7px;text-align:center}.messages-content .user-details-top .avail{background-color:rgba(0,128,0,.3);border-radius:5px;display:flex;font-size:.6rem;gap:3px;padding:3px 5px;width:-webkit-min-content;width:-moz-min-content;width:min-content}.messages-content .user-details-top .avail>img{height:10px;width:10px}.messages-content .user-details-top img{border-radius:50%;height:90px;-o-object-fit:cover;object-fit:cover;position:relative;width:90px}.messages-content .user-details-top:before{background-color:var(--f0ddf0f0-ifOnline);border:1px solid #fff;border-radius:50%;content:\"\";height:10px;position:absolute;right:130px;top:70px;width:10px;z-index:1}.chats{overflow-y:scroll;width:100%}.chats,.chats a{overflow-x:hidden}.chats a{border-radius:10px;-moz-column-gap:7px;column-gap:7px;display:flex;margin-top:6px;padding:10px;transition:background-color .2s ease-in-out;width:90%}.chats a:active{background-color:red}.chats a:hover{background-color:hsla(0,0%,95%,.3)}.chats a .user-details h4{margin-bottom:4px}.chats a p{font-size:.7rem;width:-webkit-max-content;width:-moz-max-content;width:max-content}.chats a img{border-radius:50%;height:40px;-o-object-fit:cover;object-fit:cover;width:40px}.search-bar{align-items:center;background-color:rgba(255,175,15,.753);border-radius:10px;display:flex;justify-content:space-between;margin-bottom:10px;padding:10px;position:-webkit-sticky;position:sticky;top:0;width:90%;z-index:1}.search-bar img{height:20px;width:20px}.search-bar input{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:none;height:30px;outline:none;padding:0 7px;width:80%}::-webkit-scrollbar{border-left:1px solid #e6ecf8;width:0}::-webkit-scrollbar-thumb{background-color:#d6872c}::-moz-scrollbar{border-left:1px solid #e6ecf8;width:0}::-moz-scrollbar-thumb{background-color:#d6872c}";
 }
 
 
@@ -3808,6 +3851,12 @@ __vite_ssr_exports__.default = ".messages{overflow:hidden}.nav-messages{align-it
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
+// - /assets/temp/avatar.jpg ($id_964d5059)
+// - /assets/icons/call-svgrepo-com.svg ($id_8ef770a9)
+// - /assets/icons/search-svgrepo-com.svg ($id_8a99202f)
+// - /assets/icons/three-dots-vertical-svgrepo-com.svg ($id_0d3156b8)
+// - /assets/icons/send-svgrepo-com.svg ($id_8ce01f61)
+// - /pages/messages/index/chat-[id].vue?vue&type=style&index=0&lang.css ($id_0a3f114a)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
 const $id_2c470c1f = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
@@ -3815,38 +3864,136 @@ const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
+const _sfc_main = {
+  __name: 'chat-[id]',
+  setup(__props, { expose }) {
+  expose();
+
+const router = __vite_ssr_import_0__.useRoute();
+const param = __vite_ssr_import_1__.ref(router.params.id);
+__vite_ssr_import_1__.onMounted(()=>{
+    alignText()
+})
+const alignText = ()=>{
+    let li_s = [...document.querySelectorAll(".messages-tab div")]
+    let reverse_li_s = [];
+    let lenght = li_s.length + 1
+    for (let j = 0; j < lenght; j++) {
+        let pop = li_s.pop()
+        reverse_li_s.push(pop)
+    }
+    console.log(reverse_li_s)
+    for (let i = 0; i < reverse_li_s.length; i++){
+        reverse_li_s[i].style.bottom = `${i}00px`
+    }
+}
+
+const __returned__ = { router, param, alignText }
+Object.defineProperty(__returned__, '__isScriptSetup', { enumerable: false, value: true })
+return __returned__
+}
+
+}
 const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const _sfc_main = /* @__PURE__ */ __vite_ssr_import_2__.defineComponent({
-  __name: "chat-[id]",
-  setup(__props, { expose }) {
-    expose();
-    const router = __vite_ssr_import_0__.useRoute();
-    const param = __vite_ssr_import_1__.ref(router.params.id);
-    const __returned__ = { router, param };
-    Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-    return __returned__;
-  }
-});
 const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
 
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/assets/temp/avatar.jpg");
+
+const __vite_ssr_import_5__ = await __vite_ssr_import__("/assets/icons/call-svgrepo-com.svg");
+
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/assets/icons/search-svgrepo-com.svg");
+
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/assets/icons/three-dots-vertical-svgrepo-com.svg");
+
+const __vite_ssr_import_8__ = await __vite_ssr_import__("/assets/icons/send-svgrepo-com.svg");
+
+
+
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<!--[--><h1>messages</h1><p>${__vite_ssr_import_3__.ssrInterpolate($setup.param)}</p><!--]-->`);
+  _push(`<div${
+    __vite_ssr_import_3__.ssrRenderAttrs(__vite_ssr_import_2__.mergeProps({ class: "chat-id" }, _attrs))
+  }><div class="chat-itself"><div class="chat-top-bar"><img${
+    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_4__.default)
+  } alt="" srcset=""><div class="chat-single-details"><div class="last-seen"><h4>Ariana grande</h4><p>last seen 4:04pm tue</p></div><div class="chat-icons"><img id="call-icon"${
+    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_5__.default)
+  } alt="" srcset=""><img${
+    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_6__.default)
+  } alt="" srcset=""><img${
+    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_7__.default)
+  } alt="" srcset=""></div></div></div><div class="messages-tab"><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor ffkfbm.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum tuytt tfw.</p></div><div class="left"><span>11:06am</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p></div><div class="left"><span>11:06am</span><p>last .</p></div><div class="left"><span>11:06am</span><p>last .</p></div></div><div class="chat-input"><textarea name="" id="" cols="30" rows="10" placeholder="write your message..."></textarea><button><img${
+    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_8__.default)
+  } alt="" srcset=""></button></div></div><div class="reciever-profile"></div></div>`)
 }
-const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const _sfc_setup = _sfc_main.setup;
+const __vite_ssr_import_9__ = await __vite_ssr_import__("/pages/messages/index/chat-[id].vue?vue&type=style&index=0&lang.css");
+
+
+const __vite_ssr_import_10__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const _sfc_setup = _sfc_main.setup
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_4__.useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/messages/index/chat-[id].vue");
-  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
-};
-const __vite_ssr_import_5__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+  const ssrContext = __vite_ssr_import_10__.useSSRContext()
+  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/messages/index/chat-[id].vue")
+  return _sfc_setup ? _sfc_setup(props, ctx) : undefined
+}
+const __vite_ssr_import_11__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_5__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/chat-[id].vue"]]);
-
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_11__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/chat-[id].vue"]])
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
+}
+
+
+// --------------------
+// Request: /assets/icons/call-svgrepo-com.svg
+// Parents: 
+// - /pages/messages/index/chat-[id].vue?macro=true ($id_2c470c1f)
+// - /pages/messages/index/chat-[id].vue ($id_6739ac96)
+// Dependencies: 
+
+// --------------------
+const $id_8ef770a9 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = "/_nuxt/assets/icons/call-svgrepo-com.svg";
+}
+
+
+// --------------------
+// Request: /assets/icons/three-dots-vertical-svgrepo-com.svg
+// Parents: 
+// - /pages/messages/index/chat-[id].vue?macro=true ($id_2c470c1f)
+// - /pages/messages/index/chat-[id].vue ($id_6739ac96)
+// Dependencies: 
+
+// --------------------
+const $id_0d3156b8 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = "/_nuxt/assets/icons/three-dots-vertical-svgrepo-com.svg";
+}
+
+
+// --------------------
+// Request: /assets/icons/send-svgrepo-com.svg
+// Parents: 
+// - /pages/messages/index/chat-[id].vue?macro=true ($id_2c470c1f)
+// - /pages/messages/index/chat-[id].vue ($id_6739ac96)
+// Dependencies: 
+
+// --------------------
+const $id_8ce01f61 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = "/_nuxt/assets/icons/send-svgrepo-com.svg";
+}
+
+
+// --------------------
+// Request: /pages/messages/index/chat-[id].vue?vue&type=style&index=0&lang.css
+// Parents: 
+// - /pages/messages/index/chat-[id].vue?macro=true ($id_2c470c1f)
+// - /pages/messages/index/chat-[id].vue ($id_6739ac96)
+// Dependencies: 
+
+// --------------------
+const $id_0a3f114a = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = ".chat-id{display:grid;grid-template-columns:3fr 1fr;overflow-y:hidden;padding:0 10px}.chat-id,.chat-itself{height:calc(90vh - 13px);width:100%}.chat-itself{background-color:rgba(96,216,130,.2);border-radius:20px;position:relative}.reciever-profile{height:100%}.chat-top-bar{align-items:center;background-color:rgba(0,128,0,.2);border-top-left-radius:20px;border-top-right-radius:20px;display:flex;gap:10px;padding:10px 15px}.chat-top-bar>img{border-radius:50%;height:40px;width:40px}.chat-icons{align-items:center;display:flex;flex-direction:row}.chat-icons>img{height:23px;margin:0 5px;width:23px}#call-icon{height:27px;width:27px}.chat-single-details{align-items:center;display:flex;justify-content:space-between;width:100%}.last-seen{font-size:.8rem}.last-seen h4{position:relative;top:3px}.last-seen p{margin-top:4px}.chat-input{align-items:center;background-color:#fff;bottom:0;display:flex;height:50px;justify-content:space-between;position:absolute;width:100%}.chat-input textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:none;height:10px;outline:none;padding:10px;width:80%}.chat-input button{background-color:var(--main-yellow);border:none;border-radius:5px;padding:5px 10px}.chat-input img{height:25px}.messages-tab{display:flex;flex-direction:column;gap:10px;height:80%;overflow-y:scroll;position:relative;width:100%}.messages-tab>*{bottom:0;position:absolute}.messages-tab>* p{background-color:var(--main-yellow);border-radius:10px;font-size:.9rem;max-width:40%;padding:15px 10px;position:relative}.messages-tab>* p:before{border-right:15px solid transparent;border-top:15px solid var(--main-yellow);bottom:-7px;content:\"\";left:0;position:absolute}.messages-tab span{font-size:.6rem}";
 }
 
 
@@ -3855,31 +4002,33 @@ Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configur
 // Parents: 
 // - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
 // Dependencies: 
-// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
+// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
 const $id_1b61346f = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const _sfc_main = {}
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
 
 
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  _push(`<h1${__vite_ssr_import_0__.ssrRenderAttrs(_attrs)}>new333</h1>`)
+  _push(`<div${__vite_ssr_import_1__.ssrRenderAttrs(__vite_ssr_import_0__.mergeProps({ class: "chat-id" }, _attrs))}><div class="chat-itself"><div class="chat-top-barr"></div></div><div class="reciever-profile"></div></div>`)
 }
 
 
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 const _sfc_setup = _sfc_main.setup
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_1__.useSSRContext()
+  const ssrContext = __vite_ssr_import_2__.useSSRContext()
   ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/messages/index/index.vue")
   return _sfc_setup ? _sfc_setup(props, ctx) : undefined
 }
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+const __vite_ssr_import_3__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_2__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/index.vue"]])
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_3__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/index.vue"]])
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
 }
@@ -4163,6 +4312,12 @@ __vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_8__.default(_sf
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
+// - /assets/temp/avatar.jpg ($id_964d5059)
+// - /assets/icons/call-svgrepo-com.svg ($id_8ef770a9)
+// - /assets/icons/search-svgrepo-com.svg ($id_8a99202f)
+// - /assets/icons/three-dots-vertical-svgrepo-com.svg ($id_0d3156b8)
+// - /assets/icons/send-svgrepo-com.svg ($id_8ce01f61)
+// - /pages/messages/index/chat-[id].vue?vue&type=style&index=0&lang.css ($id_0a3f114a)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
 const $id_6739ac96 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
@@ -4170,36 +4325,82 @@ const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
+const _sfc_main = {
+  __name: 'chat-[id]',
+  setup(__props, { expose }) {
+  expose();
+
+const router = __vite_ssr_import_0__.useRoute();
+const param = __vite_ssr_import_1__.ref(router.params.id);
+__vite_ssr_import_1__.onMounted(()=>{
+    alignText()
+})
+const alignText = ()=>{
+    let li_s = [...document.querySelectorAll(".messages-tab div")]
+    let reverse_li_s = [];
+    let lenght = li_s.length + 1
+    for (let j = 0; j < lenght; j++) {
+        let pop = li_s.pop()
+        reverse_li_s.push(pop)
+    }
+    console.log(reverse_li_s)
+    for (let i = 0; i < reverse_li_s.length; i++){
+        reverse_li_s[i].style.bottom = `${i}00px`
+    }
+}
+
+const __returned__ = { router, param, alignText }
+Object.defineProperty(__returned__, '__isScriptSetup', { enumerable: false, value: true })
+return __returned__
+}
+
+}
 const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const _sfc_main = /* @__PURE__ */ __vite_ssr_import_2__.defineComponent({
-  __name: "chat-[id]",
-  setup(__props, { expose }) {
-    expose();
-    const router = __vite_ssr_import_0__.useRoute();
-    const param = __vite_ssr_import_1__.ref(router.params.id);
-    const __returned__ = { router, param };
-    Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
-    return __returned__;
-  }
-});
 const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
 
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/assets/temp/avatar.jpg");
+
+const __vite_ssr_import_5__ = await __vite_ssr_import__("/assets/icons/call-svgrepo-com.svg");
+
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/assets/icons/search-svgrepo-com.svg");
+
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/assets/icons/three-dots-vertical-svgrepo-com.svg");
+
+const __vite_ssr_import_8__ = await __vite_ssr_import__("/assets/icons/send-svgrepo-com.svg");
+
+
+
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<!--[--><h1>messages</h1><p>${__vite_ssr_import_3__.ssrInterpolate($setup.param)}</p><!--]-->`);
+  _push(`<div${
+    __vite_ssr_import_3__.ssrRenderAttrs(__vite_ssr_import_2__.mergeProps({ class: "chat-id" }, _attrs))
+  }><div class="chat-itself"><div class="chat-top-bar"><img${
+    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_4__.default)
+  } alt="" srcset=""><div class="chat-single-details"><div class="last-seen"><h4>Ariana grande</h4><p>last seen 4:04pm tue</p></div><div class="chat-icons"><img id="call-icon"${
+    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_5__.default)
+  } alt="" srcset=""><img${
+    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_6__.default)
+  } alt="" srcset=""><img${
+    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_7__.default)
+  } alt="" srcset=""></div></div></div><div class="messages-tab"><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor ffkfbm.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum tuytt tfw.</p></div><div class="left"><span>11:06am</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p></div><div class="left"><span>11:06am</span><p>last .</p></div><div class="left"><span>11:06am</span><p>last .</p></div></div><div class="chat-input"><textarea name="" id="" cols="30" rows="10" placeholder="write your message..."></textarea><button><img${
+    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_8__.default)
+  } alt="" srcset=""></button></div></div><div class="reciever-profile"></div></div>`)
 }
-const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const _sfc_setup = _sfc_main.setup;
+const __vite_ssr_import_9__ = await __vite_ssr_import__("/pages/messages/index/chat-[id].vue?vue&type=style&index=0&lang.css");
+
+
+const __vite_ssr_import_10__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const _sfc_setup = _sfc_main.setup
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_4__.useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/messages/index/chat-[id].vue");
-  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
-};
-const __vite_ssr_import_5__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+  const ssrContext = __vite_ssr_import_10__.useSSRContext()
+  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/messages/index/chat-[id].vue")
+  return _sfc_setup ? _sfc_setup(props, ctx) : undefined
+}
+const __vite_ssr_import_11__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_5__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/chat-[id].vue"]]);
-;
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_11__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/chat-[id].vue"]]);
 }
 
 
@@ -4208,31 +4409,33 @@ __vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_5__.default(_sf
 // Parents: 
 // - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
 // Dependencies: 
-// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
+// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
 const $id_603050a3 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const _sfc_main = {}
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
 
 
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  _push(`<h1${__vite_ssr_import_0__.ssrRenderAttrs(_attrs)}>new333</h1>`)
+  _push(`<div${__vite_ssr_import_1__.ssrRenderAttrs(__vite_ssr_import_0__.mergeProps({ class: "chat-id" }, _attrs))}><div class="chat-itself"><div class="chat-top-barr"></div></div><div class="reciever-profile"></div></div>`)
 }
 
 
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 const _sfc_setup = _sfc_main.setup
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_1__.useSSRContext()
+  const ssrContext = __vite_ssr_import_2__.useSSRContext()
   ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/messages/index/index.vue")
   return _sfc_setup ? _sfc_setup(props, ctx) : undefined
 }
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+const __vite_ssr_import_3__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_2__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/index.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_3__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/index.vue"]]);
 }
 
 
@@ -4248,6 +4451,8 @@ __vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_2__.default(_sfc_m
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /assets/icons/2.png ($id_896c7e35)
 // - /assets/temp/avatar.jpg ($id_964d5059)
+// - /assets/icons/arrow-down-svgrepo-com.svg ($id_5f240f89)
+// - /assets/icons/search-svgrepo-com.svg ($id_8a99202f)
 // - /pages/messages/index.vue?vue&type=style&index=0&lang.css ($id_5c90c532)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
@@ -4266,6 +4471,9 @@ const _sfc_main = /* @__PURE__ */ __vite_ssr_import_3__.defineComponent({
   __name: "index",
   setup(__props, { expose }) {
     expose();
+    __vite_ssr_import_3__.useCssVars((_ctx) => ({
+      "f0ddf0f0-ifOnline": ifOnline.value
+    }));
     __vite_ssr_import_1__.useHead({
       title: "messages",
       link: [
@@ -4274,7 +4482,8 @@ const _sfc_main = /* @__PURE__ */ __vite_ssr_import_3__.defineComponent({
     });
     const chartClicked = __vite_ssr_import_2__.ref();
     const available = __vite_ssr_import_2__.ref("available");
-    const __returned__ = { chartClicked, available };
+    const ifOnline = __vite_ssr_import_2__.ref("green");
+    const __returned__ = { chartClicked, available, ifOnline };
     Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
     return __returned__;
   }
@@ -4287,19 +4496,26 @@ const __vite_ssr_import_7__ = await __vite_ssr_import__("/assets/icons/2.png");
 
 const __vite_ssr_import_8__ = await __vite_ssr_import__("/assets/temp/avatar.jpg");
 
+const __vite_ssr_import_9__ = await __vite_ssr_import__("/assets/icons/arrow-down-svgrepo-com.svg");
+
+const __vite_ssr_import_10__ = await __vite_ssr_import__("/assets/icons/search-svgrepo-com.svg");
+
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_NuxtLink = __vite_ssr_import_0__.default;
   const _component_NuxtPage = __vite_ssr_import_5__.resolveComponent("NuxtPage");
-  _push(`<div${__vite_ssr_import_6__.ssrRenderAttrs(__vite_ssr_import_5__.mergeProps({ class: "messages" }, _attrs))}><section class="nav-messages"><a href="/"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="logo" srcset=""></a><h4>messages</h4></section><div class="messages-content"><div class="left-bar"><div class="user-details"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""><p>ariana grande</p><p>${__vite_ssr_import_6__.ssrInterpolate($setup.available)}</p></div><section class="chats">`);
+  const _cssVars = { style: {
+    "--f0ddf0f0-ifOnline": $setup.ifOnline
+  } };
+  _push(`<div${__vite_ssr_import_6__.ssrRenderAttrs(__vite_ssr_import_5__.mergeProps({ class: "messages" }, _attrs, _cssVars))}><section class="nav-messages"><a href="/"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="logo" srcset=""></a><h4>messages</h4></section><div class="messages-content"><div class="left-bar"><section class="chats"><div class="user-details-top"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""><p>ariana grande</p><p class="avail">${__vite_ssr_import_6__.ssrInterpolate($setup.available)} <img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset=""></p></div><div class="search-bar"><input type="text" id="search" placeholder="search"><label for="search"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_10__.default)} alt="" srcset=""></label></div>`);
   _push(__vite_ssr_import_6__.ssrRenderComponent(_component_NuxtLink, { to: "/messages/chat-4444" }, {
     default: __vite_ssr_import_5__.withCtx((_, _push2, _parent2, _scopeId) => {
       if (_push2) {
-        _push2(`<img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)}${_scopeId}><div class="user-details"${_scopeId}><h5${_scopeId}>tinega</h5><p${_scopeId}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.</p></div>`);
+        _push2(`<img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)}${_scopeId}><div class="user-details"${_scopeId}><h4${_scopeId}>tinega</h4><p${_scopeId}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.</p></div>`);
       } else {
         return [
           __vite_ssr_import_5__.createVNode("img", { src: __vite_ssr_import_8__.default }),
           __vite_ssr_import_5__.createVNode("div", { class: "user-details" }, [
-            __vite_ssr_import_5__.createVNode("h5", null, "tinega"),
+            __vite_ssr_import_5__.createVNode("h4", null, "tinega"),
             __vite_ssr_import_5__.createVNode("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.")
           ])
         ];
@@ -4311,19 +4527,19 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   _push(__vite_ssr_import_6__.ssrRenderComponent(_component_NuxtPage, null, null, _parent));
   _push(`</div></div>`);
 }
-const __vite_ssr_import_9__ = await __vite_ssr_import__("/pages/messages/index.vue?vue&type=style&index=0&lang.css");
+const __vite_ssr_import_11__ = await __vite_ssr_import__("/pages/messages/index.vue?vue&type=style&index=0&lang.css");
 
-const __vite_ssr_import_10__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+const __vite_ssr_import_12__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_10__.useSSRContext();
+  const ssrContext = __vite_ssr_import_12__.useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/messages/index.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const __vite_ssr_import_11__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+const __vite_ssr_import_13__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_11__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_13__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index.vue"]]);
 ;
 }
 
@@ -5402,8 +5618,14 @@ const __modules__ = {
   "/pages/login.vue?vue&type=style&index=0&lang.css": $id_af77e8ef,
   "/pages/messages/index.vue?macro=true": $id_c05e001e,
   "/assets/temp/avatar.jpg": $id_964d5059,
+  "/assets/icons/arrow-down-svgrepo-com.svg": $id_5f240f89,
+  "/assets/icons/search-svgrepo-com.svg": $id_8a99202f,
   "/pages/messages/index.vue?vue&type=style&index=0&lang.css": $id_5c90c532,
   "/pages/messages/index/chat-[id].vue?macro=true": $id_2c470c1f,
+  "/assets/icons/call-svgrepo-com.svg": $id_8ef770a9,
+  "/assets/icons/three-dots-vertical-svgrepo-com.svg": $id_0d3156b8,
+  "/assets/icons/send-svgrepo-com.svg": $id_8ce01f61,
+  "/pages/messages/index/chat-[id].vue?vue&type=style&index=0&lang.css": $id_0a3f114a,
   "/pages/messages/index/index.vue?macro=true": $id_1b61346f,
   "/pages/signup.vue?macro=true": $id_ae8d024a,
   "/pages/signup.vue?vue&type=style&index=0&lang.css": $id_f2a1f585,

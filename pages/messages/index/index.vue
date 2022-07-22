@@ -1,3 +1,12 @@
 <template>
-<h1>new333</h1>
+    <div class="chat-id">
+        <div class="chat-itself">
+            <div class="chat-top-barr">
+                
+            </div>
+        </div>
+        <div class="reciever-profile">
+
+        </div>
+    </div>
 </template>
