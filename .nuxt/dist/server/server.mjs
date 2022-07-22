@@ -3884,7 +3884,7 @@ const alignText = ()=>{
     }
     console.log(reverse_li_s)
     for (let i = 0; i < reverse_li_s.length; i++){
-        reverse_li_s[i].style.bottom = `${i}00px`
+        reverse_li_s[i].style.marginBottom = `${i}00px`
     }
 }
 
@@ -3993,7 +3993,7 @@ __vite_ssr_exports__.default = "/_nuxt/assets/icons/send-svgrepo-com.svg";
 
 // --------------------
 const $id_0a3f114a = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = ".chat-id{display:grid;grid-template-columns:3fr 1fr;overflow-y:hidden;padding:0 10px}.chat-id,.chat-itself{height:calc(90vh - 13px);width:100%}.chat-itself{background-color:rgba(96,216,130,.2);border-radius:20px;position:relative}.reciever-profile{height:100%}.chat-top-bar{align-items:center;background-color:rgba(0,128,0,.2);border-top-left-radius:20px;border-top-right-radius:20px;display:flex;gap:10px;padding:10px 15px}.chat-top-bar>img{border-radius:50%;height:40px;width:40px}.chat-icons{align-items:center;display:flex;flex-direction:row}.chat-icons>img{height:23px;margin:0 5px;width:23px}#call-icon{height:27px;width:27px}.chat-single-details{align-items:center;display:flex;justify-content:space-between;width:100%}.last-seen{font-size:.8rem}.last-seen h4{position:relative;top:3px}.last-seen p{margin-top:4px}.chat-input{align-items:center;background-color:#fff;bottom:0;display:flex;height:50px;justify-content:space-between;position:absolute;width:100%}.chat-input textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:none;height:10px;outline:none;padding:10px;width:80%}.chat-input button{background-color:var(--main-yellow);border:none;border-radius:5px;padding:5px 10px}.chat-input img{height:25px}.messages-tab{display:flex;flex-direction:column;gap:10px;height:80%;overflow-y:scroll;position:relative;width:100%}.messages-tab>*{bottom:0;position:absolute}.messages-tab>* p{background-color:var(--main-yellow);border-radius:10px;font-size:.9rem;max-width:40%;padding:15px 10px;position:relative}.messages-tab>* p:before{border-right:15px solid transparent;border-top:15px solid var(--main-yellow);bottom:-7px;content:\"\";left:0;position:absolute}.messages-tab span{font-size:.6rem}";
+__vite_ssr_exports__.default = ".chat-id{display:grid;grid-template-columns:3fr 1fr;overflow-y:hidden;padding:0 10px}.chat-id,.chat-itself{height:calc(90vh - 13px);width:100%}.chat-itself{background-color:rgba(96,216,130,.2);border-radius:20px;position:relative}.reciever-profile{height:100%}.chat-top-bar{align-items:center;background-color:rgba(0,128,0,.2);border-top-left-radius:20px;border-top-right-radius:20px;display:flex;gap:10px;padding:10px 15px}.chat-top-bar>img{border-radius:50%;height:40px;width:40px}.chat-icons{align-items:center;display:flex;flex-direction:row}.chat-icons>img{height:23px;margin:0 5px;width:23px}#call-icon{height:27px;width:27px}.chat-single-details{align-items:center;display:flex;justify-content:space-between;width:100%}.last-seen{font-size:.8rem}.last-seen h4{position:relative;top:3px}.last-seen p{margin-top:4px}.chat-input{align-items:center;background-color:#fff;bottom:0;display:flex;height:50px;justify-content:space-between;position:absolute;width:100%}.chat-input textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:none;height:10px;outline:none;padding:10px;width:80%}.chat-input button{background-color:var(--main-yellow);border:none;border-radius:5px;padding:5px 10px}.chat-input img{height:25px}.messages-tab{display:flex;flex-direction:column;gap:10px;height:80%;overflow-y:scroll;position:relative;width:100%}.messages-tab>*{bottom:0;position:absolute;width:100%}.messages-tab>* p{background-color:var(--main-yellow);border-radius:10px;font-size:.9rem;max-width:40%;padding:15px 10px;position:relative}.messages-tab>* p:before{border-right:15px solid transparent;border-top:15px solid var(--main-yellow);bottom:-7px;content:\"\";left:0;position:absolute}.messages-tab span{font-size:.6rem}";
 }
 
 
@@ -4345,7 +4345,7 @@ const alignText = ()=>{
     }
     console.log(reverse_li_s)
     for (let i = 0; i < reverse_li_s.length; i++){
-        reverse_li_s[i].style.bottom = `${i}00px`
+        reverse_li_s[i].style.marginBottom = `${i}00px`
     }
 }
 

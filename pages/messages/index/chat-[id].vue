@@ -96,7 +96,7 @@ const alignText = ()=>{
     }
     console.log(reverse_li_s)
     for (let i = 0; i < reverse_li_s.length; i++){
-        reverse_li_s[i].style.bottom = `${i}00px`
+        reverse_li_s[i].style.marginBottom = `${i}00px`
     }
 }
 </script>
@@ -204,6 +204,7 @@ const alignText = ()=>{
 }
 .messages-tab > *{
     position: absolute;
+    width: 100%;
     bottom: 0;
 }
 .messages-tab > * p {
