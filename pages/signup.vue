@@ -8,19 +8,19 @@
         </div>
         <div class="phone">
             <label for="phone">enter your phone:</label>
-            <input type="number" id="phone" v-model="phone" @focusout="checkPhone" @mouseout="checkOptions">
+            <input type="number" id="phone" v-model="phone" @keyup="checkPhone">
         </div>
         <div class="password">
             <label for="password">enter your password:</label>
-            <input type="password" id="password" v-model="password">
+            <input type="password" id="password" v-model="password" @keyup="checkOptions">
         </div>
         <div class="rpassword">
             <label for="rpassword">repeat password:</label>
-            <input type="password" id="rpassword" v-model="rpassword" @focusout="checkPasswords" @mouseout="checkOptions">
+            <input type="password" id="rpassword" v-model="rpassword" @keyup="checkPasswords">
         </div>
         <div class="terms">
             <label for="check">accept the terms and conditions</label>
-            <input type="checkbox" name="" id="" v-model="terms" @click="checkOptions">
+            <input type="checkbox" name="" id="" v-model="terms" @change="checkOptions">
         </div>
         <button :disabled="ifDisabled" @click="signUp">Sign up</button>
     </div>
@@ -41,27 +41,33 @@ let ifPhone = false;
 let ifPassword = false;
 const ifDisabled = ref(true);
 const checkOptions = ()=>{
-    if(ifPhone && ifPassword && terms.value == false){
+    if(ifPhone && ifPassword && terms.value === true){
         ifDisabled.value = false;
     }else{
         ifDisabled.value = true;
     }
+    console.log(ifPhone, ifPassword, terms.value);
 }
 const phone = ref<Number>();
 const password = ref<String>();
 const rpassword = ref<String>();
 const terms = ref(false);
 const name = ref<String | Number>('');
-const checkPhone = ()=>{
-    if(phone.value != null){
-        ifPhone = true
+const checkPhone = async ()=>{
+    if(phone.value != null || undefined){
+        ifPhone = true;
+    }else{
+        ifPhone = false;
     }
-
+    checkOptions();
 }
 const checkPasswords = ()=>{
     if(password.value == rpassword.value){
         ifPassword = true;
+    }else{
+        ifPassword = false;
     }
+    checkOptions();
 }
 const signUp = async ()=>{
     const dataToSend = {

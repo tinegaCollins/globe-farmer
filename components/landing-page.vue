@@ -22,10 +22,14 @@
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     padding: 20px;
+    background-color: rgb(24, 119, 24);
 }
 .landing .title, .landing .image-background{
     display: none;
 }
+ .landing > img {
+        height: 300px;
+    }
 .landing-content{
     display: flex;
     flex-direction: column;

@@ -7,7 +7,8 @@ const sellerSchema = new mongoose.Schema({
     posts:[String],
     location: String,
     avatar: String,
-    seller: Boolean
+    seller: Boolean,
+    chats: [String]
 })
 
 module.exports = mongoose.model('seller', sellerSchema);

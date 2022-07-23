@@ -2,7 +2,7 @@
     <nav>
         <svg width="32px" height="32px" fill="black" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M 4 7 L 4 9 L 28 9 L 28 7 Z M 4 15 L 4 17 L 28 17 L 28 15 Z M 4 23 L 4 25 L 28 25 L 28 23 Z"/></svg>
         <img src="~/assets/icons/2.png" alt="" srcset="">
-        <h3>national farmer</h3>
+        <h4>national farmer</h4>
         <svg class="acc" version="1.1" id="Capa_1"  x="0px" y="0px" @click="toggleAcount" width="24px" height="24px"
 	            viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
                 <g>
@@ -44,20 +44,23 @@ function toggleAcount(){
 
 <style>
 nav{
-    height: 16vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     gap: 20px;
     padding: 0 50px;
-    position: relative;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 nav > img {
     height: 80%;
 }
-nav h3 {
+nav h4 {
     margin-right: auto;
     font-family: var(--cambo);
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 nav .acc {
     margin-left: auto;
@@ -94,7 +97,7 @@ nav svg {
     nav {
         height: 10vh;
         padding: 10px;
-        gap: 5px;
+        gap: 3px;
     }
     nav button{
         padding: .3em 1em;
@@ -110,7 +113,7 @@ nav svg {
         fill: black;
     }
     .account {
-        margin: 0 5px 0 auto;
+        margin: 0 3px 0 auto;
     }
     .wrapper-in-nav{
         display: none;
