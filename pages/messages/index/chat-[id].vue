@@ -15,63 +15,17 @@
                     </div>
                 </div>
             </div>
-            <div class="messages-tab">
-                <div class="left">
-                    <span>11:06am</span>
-                    <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <div class="left">
-                    <span>11:06am</span>
-                    <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <div class="left">
-                    <span>11:06am</span>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p>
-                </div>
-                <div class="left">
-                    <span>11:06am</span>
-                    <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <div class="left">
-                    <span>11:06am</span>
-                    <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <div class="left">
-                    <span>11:06am</span>
-                    <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <div class="left">
-                    <span>11:06am</span>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p>
-                </div>
-                <div class="left">
-                    <span>11:06am</span>
-                    <p>Lorem ipsum dolor sit.</p>
-                </div>
-                <div class="left">
-                    <span>11:06am</span>
-                    <p>Lorem ipsum dolor ffkfbm.</p>
-                </div>
-                <div class="left">
-                    <span>11:06am</span>
-                    <p>Lorem ipsum tuytt tfw.</p>
-                </div>
-                <div class="left">
-                    <span>11:06am</span>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p>
-                </div>
-                <div class="left">
-                    <span>11:06am</span>
-                    <p>last .</p>
-                </div>
-                <div class="left">
-                    <span>11:06am</span>
-                    <p>last .</p>
+            <div class="messages-tab" ref="messages-tab">
+                <div class="padding-wrapper">
+                    <div class="right" :class="message.sender1" v-for="message in messages">
+                        <span>{{messages.time}}</span>
+                        <p>{{messages.body}}</p>
+                    </div>
                 </div>
             </div>
             <div class="chat-input">
-                <textarea name="" id="" cols="30" rows="10" placeholder="write your message..."></textarea>
-                <button><img src="~/assets/icons/send-svgrepo-com.svg" alt="" srcset=""></button>
+                <textarea name="" id="" cols="30" rows="10" placeholder="write your message..." v-model="textMessage"></textarea>
+                <button @click="scrolltoBottom"><img src="~/assets/icons/send-svgrepo-com.svg" alt="" srcset=""></button>
             </div>
         </div>
         <div class="reciever-profile">
@@ -80,24 +34,52 @@
     </div>
 </template>
 
-<script setup >
+<script setup lang="ts">
 const router = useRoute();
-const param = ref(router.params.id);
-onMounted(()=>{
-    alignText()
+const param = router.params.id;
+let userId:string;
+const messages = ref();
+onMounted(async()=>{
+    const dataToSend = {
+        sender1: userId,
+        sender2: param
+    }
+    const response =  await fetch('http://localhost:8080/get-single-chat',{
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dataToSend)
+    });
+    messages.value = await response.json();
+    await scrolltoBottom();
+    await alignMessages();
 })
-const alignText = ()=>{
-    let li_s = [...document.querySelectorAll(".messages-tab div")]
-    let reverse_li_s = [];
-    let lenght = li_s.length + 1
-    for (let j = 0; j < lenght; j++) {
-        let pop = li_s.pop()
-        reverse_li_s.push(pop)
+const scrolltoBottom = async ()=>{
+    const messages = document.querySelector('.messages-tab');
+    messages.scrollTop = messages.scrollHeight;
+}
+const alignMessages = async ()=>{
+    const messages = [...document.querySelectorAll('.messages-tab div')];
+    for (let i = 0; i < messages.length; i++) {
+        if(messages[i].classList.contains(userId)){
+            messages[i].classList.add('right-message');
+        }else {
+            messages[i].classList.add('left-message');
+        }
     }
-    console.log(reverse_li_s)
-    for (let i = 0; i < reverse_li_s.length; i++){
-        reverse_li_s[i].style.marginBottom = `${i}00px`
+}
+const textMessage = ref<string>();
+const sendMessage = async ()=>{
+    const dataToSend = {
+        from: userId,
+        body: textMessage.value,
+        time: Date.now().toString()
     }
+    const send = await fetch('http://localhost:8080/send-message', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dataToSend)
+    })
+    const response = send.json();
 }
 </script>
 
@@ -105,7 +87,7 @@ const alignText = ()=>{
 .chat-id {
     padding: 0 10px;
     width: 100%;
-    height: calc(90vh - 13px);
+    height: calc(91vh - 13px);
     display: grid;
     grid-template-columns: 3fr 1fr;
     overflow-y: hidden;
@@ -116,6 +98,7 @@ const alignText = ()=>{
     border-radius: 20px;
     position: relative;
     width: 100%;
+    overflow-x: hidden;
 }
 .reciever-profile{
     height: 100%;
@@ -173,7 +156,6 @@ const alignText = ()=>{
     display: flex;
     justify-content: space-between; 
     align-items: center;
-
 }
 .chat-input textarea{
     padding: 10px;
@@ -194,20 +176,26 @@ const alignText = ()=>{
     height: 25px;
 }
 .messages-tab {
-    height: 80%;
+    height: calc(90vh- 140px);
     width: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+}
+.messages-tab > div{
     position: relative;
+    margin: 8px 0;
 }
-.messages-tab > *{
-    position: absolute;
+.right-message{
+    position: relative;
     width: 100%;
-    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
-.messages-tab > * p {
+.messages-tab p{
     font-size: .9rem;
     max-width: 40%;
     background-color: var(--main-yellow);
@@ -215,7 +203,13 @@ const alignText = ()=>{
     border-radius: 10px;
     position: relative;
 }
-.messages-tab > * p::before{
+.right-message p {
+    width: 40%;
+}
+.messages-tab span{
+    font-size: .6rem;
+}
+.left-message > p::before{
       content: '';
       position: absolute;
       bottom: -7px;
@@ -223,7 +217,15 @@ const alignText = ()=>{
       left: 0;
       border-right: 15px solid transparent;
 }
-.messages-tab span{
-    font-size: .6rem;
+.right-message >  p::before{
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    border-top: 15px solid var(--main-yellow);
+    right: 0;
+    border-left: 15px solid transparent;
+}
+.padding-wrapper{
+    padding: 20px;
 }
 </style>

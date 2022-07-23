@@ -7,7 +7,6 @@ const sellerSchema = new mongoose.Schema({
     posts:[String],
     location: String,
     avatar: String,
-    charts: Number,
     seller: Boolean
 })
 

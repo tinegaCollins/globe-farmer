@@ -9,7 +9,7 @@
                 <section class="chats">
                     <div class="user-details-top">
                         <img src="~/assets/temp/avatar.jpg" alt="" srcset="">
-                        <p>ariana grande</p>
+                        <p>{{user.name}}</p>
                         <p class="avail">{{available}} <img src="~/assets/icons/arrow-down-svgrepo-com.svg" alt="" srcset=""></p>
                     </div>
                     <div class="search-bar">
@@ -18,11 +18,11 @@
                             <img src="~/assets/icons/search-svgrepo-com.svg" alt="" srcset="">
                         </label>
                     </div>
-                    <NuxtLink to="/messages/chat-4444">
+                    <NuxtLink :to="chats.id" v-for="chat in chats">
                         <img src="~/assets/temp/avatar.jpg">
                         <div class="user-details">
-                            <h4>tinega</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.</p>
+                            <h4>{{chat.name}}</h4>
+                            <p>{{chat.recent}}</p>
                         </div>
                     </NuxtLink>
                 </section>
@@ -41,10 +41,21 @@ useHead({
         { rel: 'icon', href: '../../assets/icons/2.png'}
     ]
 })
-
+const messageString = '/messages/chat-';
+const id:String = 'heyPorsce'
+let chats = ref();
+let user = ref();
+onMounted(async ()=>{
+    const chatsData = await fetch(`http://localhost:8080/get-recent-chats/${id}`);
+    chats.value = await chatsData.json();
+    const userData = await fetch(`http://localhost:8080/get-data-at-messages/${id}`);
+    user.value = userData.json();
+})
 const chartClicked = ref<Boolean>();
 const available = ref<String>("available");
 const ifOnline = ref<String>('green');
+
+
 </script>
 
 <style>
@@ -52,7 +63,7 @@ const ifOnline = ref<String>('green');
     overflow: hidden;
 }
 .nav-messages {
-    height: 10vh;
+    height: 8vh;
     padding: 0 40px;
     display: flex;
     align-items: center;
@@ -62,7 +73,7 @@ const ifOnline = ref<String>('green');
     height: 100%;
 }
 .nav-messages  > a > img{
-    height: 70%;
+    height: 100%;
 }
 .messages-content{
     display: grid;

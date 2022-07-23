@@ -3721,10 +3721,20 @@ const _sfc_main = /* @__PURE__ */ __vite_ssr_import_3__.defineComponent({
         { rel: "icon", href: "../../assets/icons/2.png" }
       ]
     });
+    const messageString = "/messages/chat-";
+    const id = "heyPorsce";
+    let chats = __vite_ssr_import_2__.ref();
+    let user = __vite_ssr_import_2__.ref();
+    __vite_ssr_import_2__.onMounted(async () => {
+      const chatsData = await fetch(`http://localhost:8080/get-recent-chats/${id}`);
+      chats.value = await chatsData.json();
+      const userData = await fetch(`http://localhost:8080/get-data-at-messages/${id}`);
+      user.value = userData.json();
+    });
     const chartClicked = __vite_ssr_import_2__.ref();
     const available = __vite_ssr_import_2__.ref("available");
     const ifOnline = __vite_ssr_import_2__.ref("green");
-    const __returned__ = { chartClicked, available, ifOnline };
+    const __returned__ = { messageString, id, chats, user, chartClicked, available, ifOnline };
     Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
     return __returned__;
   }
@@ -3747,24 +3757,28 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   const _cssVars = { style: {
     "--f0ddf0f0-ifOnline": $setup.ifOnline
   } };
-  _push(`<div${__vite_ssr_import_6__.ssrRenderAttrs(__vite_ssr_import_5__.mergeProps({ class: "messages" }, _attrs, _cssVars))}><section class="nav-messages"><a href="/"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="logo" srcset=""></a><h4>messages</h4></section><div class="messages-content"><div class="left-bar"><section class="chats"><div class="user-details-top"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""><p>ariana grande</p><p class="avail">${__vite_ssr_import_6__.ssrInterpolate($setup.available)} <img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset=""></p></div><div class="search-bar"><input type="text" id="search" placeholder="search"><label for="search"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_10__.default)} alt="" srcset=""></label></div>`);
-  _push(__vite_ssr_import_6__.ssrRenderComponent(_component_NuxtLink, { to: "/messages/chat-4444" }, {
-    default: __vite_ssr_import_5__.withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)}${_scopeId}><div class="user-details"${_scopeId}><h4${_scopeId}>tinega</h4><p${_scopeId}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.</p></div>`);
-      } else {
-        return [
-          __vite_ssr_import_5__.createVNode("img", { src: __vite_ssr_import_8__.default }),
-          __vite_ssr_import_5__.createVNode("div", { class: "user-details" }, [
-            __vite_ssr_import_5__.createVNode("h4", null, "tinega"),
-            __vite_ssr_import_5__.createVNode("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.")
-          ])
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</section></div>`);
+  _push(`<div${__vite_ssr_import_6__.ssrRenderAttrs(__vite_ssr_import_5__.mergeProps({ class: "messages" }, _attrs, _cssVars))}><section class="nav-messages"><a href="/"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="logo" srcset=""></a><h4>messages</h4></section><div class="messages-content"><div class="left-bar"><section class="chats"><div class="user-details-top"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""><p>${__vite_ssr_import_6__.ssrInterpolate($setup.user.name)}</p><p class="avail">${__vite_ssr_import_6__.ssrInterpolate($setup.available)} <img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset=""></p></div><div class="search-bar"><input type="text" id="search" placeholder="search"><label for="search"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_10__.default)} alt="" srcset=""></label></div><!--[-->`);
+  __vite_ssr_import_6__.ssrRenderList($setup.chats, (chat) => {
+    _push(__vite_ssr_import_6__.ssrRenderComponent(_component_NuxtLink, {
+      to: $setup.chats.id
+    }, {
+      default: __vite_ssr_import_5__.withCtx((_, _push2, _parent2, _scopeId) => {
+        if (_push2) {
+          _push2(`<img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)}${_scopeId}><div class="user-details"${_scopeId}><h4${_scopeId}>${__vite_ssr_import_6__.ssrInterpolate(chat.name)}</h4><p${_scopeId}>${__vite_ssr_import_6__.ssrInterpolate(chat.recent)}</p></div>`);
+        } else {
+          return [
+            __vite_ssr_import_5__.createVNode("img", { src: __vite_ssr_import_8__.default }),
+            __vite_ssr_import_5__.createVNode("div", { class: "user-details" }, [
+              __vite_ssr_import_5__.createVNode("h4", null, __vite_ssr_import_5__.toDisplayString(chat.name), 1),
+              __vite_ssr_import_5__.createVNode("p", null, __vite_ssr_import_5__.toDisplayString(chat.recent), 1)
+            ])
+          ];
+        }
+      }),
+      _: 2
+    }, _parent));
+  });
+  _push(`<!--]--></section></div>`);
   _push(__vite_ssr_import_6__.ssrRenderComponent(_component_NuxtPage, null, null, _parent));
   _push(`</div></div>`);
 }
@@ -3839,7 +3853,7 @@ __vite_ssr_exports__.default = "/_nuxt/assets/icons/search-svgrepo-com.svg";
 
 // --------------------
 const $id_5c90c532 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = ".messages{overflow:hidden}.nav-messages{align-items:center;display:flex;gap:30px;height:10vh;padding:0 40px}.nav-messages>a{height:100%}.nav-messages>a>img{height:70%}.messages-content{display:grid;grid-template-columns:1fr 5fr;padding:10px}.messages-content .left-bar{align-items:center;display:flex;flex-direction:column;height:calc(90vh - 90px);overflow-y:hidden;padding:40px 0;width:340px}.messages-content .user-details-top{align-items:center;display:flex;flex-direction:column;font-size:.8rem;margin-bottom:20px;position:relative;row-gap:7px;text-align:center}.messages-content .user-details-top .avail{background-color:rgba(0,128,0,.3);border-radius:5px;display:flex;font-size:.6rem;gap:3px;padding:3px 5px;width:-webkit-min-content;width:-moz-min-content;width:min-content}.messages-content .user-details-top .avail>img{height:10px;width:10px}.messages-content .user-details-top img{border-radius:50%;height:90px;-o-object-fit:cover;object-fit:cover;position:relative;width:90px}.messages-content .user-details-top:before{background-color:var(--f0ddf0f0-ifOnline);border:1px solid #fff;border-radius:50%;content:\"\";height:10px;position:absolute;right:130px;top:70px;width:10px;z-index:1}.chats{overflow-y:scroll;width:100%}.chats,.chats a{overflow-x:hidden}.chats a{border-radius:10px;-moz-column-gap:7px;column-gap:7px;display:flex;margin-top:6px;padding:10px;transition:background-color .2s ease-in-out;width:90%}.chats a:active{background-color:red}.chats a:hover{background-color:hsla(0,0%,95%,.3)}.chats a .user-details h4{margin-bottom:4px}.chats a p{font-size:.7rem;width:-webkit-max-content;width:-moz-max-content;width:max-content}.chats a img{border-radius:50%;height:40px;-o-object-fit:cover;object-fit:cover;width:40px}.search-bar{align-items:center;background-color:rgba(255,175,15,.753);border-radius:10px;display:flex;justify-content:space-between;margin-bottom:10px;padding:10px;position:-webkit-sticky;position:sticky;top:0;width:90%;z-index:1}.search-bar img{height:20px;width:20px}.search-bar input{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:none;height:30px;outline:none;padding:0 7px;width:80%}::-webkit-scrollbar{border-left:1px solid #e6ecf8;width:0}::-webkit-scrollbar-thumb{background-color:#d6872c}::-moz-scrollbar{border-left:1px solid #e6ecf8;width:0}::-moz-scrollbar-thumb{background-color:#d6872c}";
+__vite_ssr_exports__.default = ".messages{overflow:hidden}.nav-messages{align-items:center;display:flex;gap:30px;height:8vh;padding:0 40px}.nav-messages>a,.nav-messages>a>img{height:100%}.messages-content{display:grid;grid-template-columns:1fr 5fr;padding:10px}.messages-content .left-bar{align-items:center;display:flex;flex-direction:column;height:calc(90vh - 90px);overflow-y:hidden;padding:40px 0;width:340px}.messages-content .user-details-top{align-items:center;display:flex;flex-direction:column;font-size:.8rem;margin-bottom:20px;position:relative;row-gap:7px;text-align:center}.messages-content .user-details-top .avail{background-color:rgba(0,128,0,.3);border-radius:5px;display:flex;font-size:.6rem;gap:3px;padding:3px 5px;width:-webkit-min-content;width:-moz-min-content;width:min-content}.messages-content .user-details-top .avail>img{height:10px;width:10px}.messages-content .user-details-top img{border-radius:50%;height:90px;-o-object-fit:cover;object-fit:cover;position:relative;width:90px}.messages-content .user-details-top:before{background-color:var(--f0ddf0f0-ifOnline);border:1px solid #fff;border-radius:50%;content:\"\";height:10px;position:absolute;right:130px;top:70px;width:10px;z-index:1}.chats{overflow-y:scroll;width:100%}.chats,.chats a{overflow-x:hidden}.chats a{border-radius:10px;-moz-column-gap:7px;column-gap:7px;display:flex;margin-top:6px;padding:10px;transition:background-color .2s ease-in-out;width:90%}.chats a:active{background-color:red}.chats a:hover{background-color:hsla(0,0%,95%,.3)}.chats a .user-details h4{margin-bottom:4px}.chats a p{font-size:.7rem;width:-webkit-max-content;width:-moz-max-content;width:max-content}.chats a img{border-radius:50%;height:40px;-o-object-fit:cover;object-fit:cover;width:40px}.search-bar{align-items:center;background-color:rgba(255,175,15,.753);border-radius:10px;display:flex;justify-content:space-between;margin-bottom:10px;padding:10px;position:-webkit-sticky;position:sticky;top:0;width:90%;z-index:1}.search-bar img{height:20px;width:20px}.search-bar input{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:none;height:30px;outline:none;padding:0 7px;width:80%}::-webkit-scrollbar{border-left:1px solid #e6ecf8;width:0}::-webkit-scrollbar-thumb{background-color:#d6872c}::-moz-scrollbar{border-left:1px solid #e6ecf8;width:0}::-moz-scrollbar-thumb{background-color:#d6872c}";
 }
 
 
@@ -3864,82 +3878,98 @@ const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const _sfc_main = {
-  __name: 'chat-[id]',
-  setup(__props, { expose }) {
-  expose();
-
-const router = __vite_ssr_import_0__.useRoute();
-const param = __vite_ssr_import_1__.ref(router.params.id);
-__vite_ssr_import_1__.onMounted(()=>{
-    alignText()
-})
-const alignText = ()=>{
-    let li_s = [...document.querySelectorAll(".messages-tab div")]
-    let reverse_li_s = [];
-    let lenght = li_s.length + 1
-    for (let j = 0; j < lenght; j++) {
-        let pop = li_s.pop()
-        reverse_li_s.push(pop)
-    }
-    console.log(reverse_li_s)
-    for (let i = 0; i < reverse_li_s.length; i++){
-        reverse_li_s[i].style.marginBottom = `${i}00px`
-    }
-}
-
-const __returned__ = { router, param, alignText }
-Object.defineProperty(__returned__, '__isScriptSetup', { enumerable: false, value: true })
-return __returned__
-}
-
-}
 const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
+const _sfc_main = /* @__PURE__ */ __vite_ssr_import_2__.defineComponent({
+  __name: "chat-[id]",
+  setup(__props, { expose }) {
+    expose();
+    const router = __vite_ssr_import_0__.useRoute();
+    const param = router.params.id;
+    let userId;
+    const messages = __vite_ssr_import_1__.ref();
+    __vite_ssr_import_1__.onMounted(async () => {
+      const dataToSend = {
+        sender1: userId,
+        sender2: param
+      };
+      const response = await fetch("http://localhost:8080/get-single-chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dataToSend)
+      });
+      messages.value = await response.json();
+      await scrolltoBottom();
+      await alignMessages();
+    });
+    const scrolltoBottom = async () => {
+      const messages2 = document.querySelector(".messages-tab");
+      messages2.scrollTop = messages2.scrollHeight;
+    };
+    const alignMessages = async () => {
+      const messages2 = [...document.querySelectorAll(".messages-tab div")];
+      for (let i = 0; i < messages2.length; i++) {
+        if (messages2[i].classList.contains(userId)) {
+          messages2[i].classList.add("right-message");
+        } else {
+          messages2[i].classList.add("left-message");
+        }
+      }
+    };
+    const textMessage = __vite_ssr_import_1__.ref();
+    const sendMessage = async () => {
+      const dataToSend = {
+        from: userId,
+        body: textMessage.value,
+        time: Date.now().toString()
+      };
+      const send = await fetch("http://localhost:8080/send-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dataToSend)
+      });
+      const response = send.json();
+    };
+    const __returned__ = { router, param, userId, messages, scrolltoBottom, alignMessages, textMessage, sendMessage };
+    Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+    return __returned__;
+  }
+});
+const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const __vite_ssr_import_4__ = await __vite_ssr_import__("/assets/temp/avatar.jpg");
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
 
-const __vite_ssr_import_5__ = await __vite_ssr_import__("/assets/icons/call-svgrepo-com.svg");
+const __vite_ssr_import_5__ = await __vite_ssr_import__("/assets/temp/avatar.jpg");
 
-const __vite_ssr_import_6__ = await __vite_ssr_import__("/assets/icons/search-svgrepo-com.svg");
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/assets/icons/call-svgrepo-com.svg");
 
-const __vite_ssr_import_7__ = await __vite_ssr_import__("/assets/icons/three-dots-vertical-svgrepo-com.svg");
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/assets/icons/search-svgrepo-com.svg");
 
-const __vite_ssr_import_8__ = await __vite_ssr_import__("/assets/icons/send-svgrepo-com.svg");
+const __vite_ssr_import_8__ = await __vite_ssr_import__("/assets/icons/three-dots-vertical-svgrepo-com.svg");
 
-
+const __vite_ssr_import_9__ = await __vite_ssr_import__("/assets/icons/send-svgrepo-com.svg");
 
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${
-    __vite_ssr_import_3__.ssrRenderAttrs(__vite_ssr_import_2__.mergeProps({ class: "chat-id" }, _attrs))
-  }><div class="chat-itself"><div class="chat-top-bar"><img${
-    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_4__.default)
-  } alt="" srcset=""><div class="chat-single-details"><div class="last-seen"><h4>Ariana grande</h4><p>last seen 4:04pm tue</p></div><div class="chat-icons"><img id="call-icon"${
-    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_5__.default)
-  } alt="" srcset=""><img${
-    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_6__.default)
-  } alt="" srcset=""><img${
-    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_7__.default)
-  } alt="" srcset=""></div></div></div><div class="messages-tab"><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor ffkfbm.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum tuytt tfw.</p></div><div class="left"><span>11:06am</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p></div><div class="left"><span>11:06am</span><p>last .</p></div><div class="left"><span>11:06am</span><p>last .</p></div></div><div class="chat-input"><textarea name="" id="" cols="30" rows="10" placeholder="write your message..."></textarea><button><img${
-    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_8__.default)
-  } alt="" srcset=""></button></div></div><div class="reciever-profile"></div></div>`)
+  _push(`<div${__vite_ssr_import_4__.ssrRenderAttrs(__vite_ssr_import_3__.mergeProps({ class: "chat-id" }, _attrs))}><div class="chat-itself"><div class="chat-top-bar"><img${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_5__.default)} alt="" srcset=""><div class="chat-single-details"><div class="last-seen"><h4>Ariana grande</h4><p>last seen 4:04pm tue</p></div><div class="chat-icons"><img id="call-icon"${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_6__.default)} alt="" srcset=""><img${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="" srcset=""><img${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""></div></div></div><div class="messages-tab"><div class="padding-wrapper"><!--[-->`);
+  __vite_ssr_import_4__.ssrRenderList($setup.messages, (message) => {
+    _push(`<div class="${__vite_ssr_import_4__.ssrRenderClass([message.sender1, "right"])}"><span>${__vite_ssr_import_4__.ssrInterpolate($setup.messages.time)}</span><p>${__vite_ssr_import_4__.ssrInterpolate($setup.messages.body)}</p></div>`);
+  });
+  _push(`<!--]--></div></div><div class="chat-input"><textarea name="" id="" cols="30" rows="10" placeholder="write your message...">${__vite_ssr_import_4__.ssrInterpolate($setup.textMessage)}</textarea><button><img${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset=""></button></div></div><div class="reciever-profile"></div></div>`);
 }
+const __vite_ssr_import_10__ = await __vite_ssr_import__("/pages/messages/index/chat-[id].vue?vue&type=style&index=0&lang.css");
 
-const __vite_ssr_import_9__ = await __vite_ssr_import__("/pages/messages/index/chat-[id].vue?vue&type=style&index=0&lang.css");
+const __vite_ssr_import_11__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-
-const __vite_ssr_import_10__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
-
-const _sfc_setup = _sfc_main.setup
+const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_10__.useSSRContext()
-  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/messages/index/chat-[id].vue")
-  return _sfc_setup ? _sfc_setup(props, ctx) : undefined
-}
-const __vite_ssr_import_11__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+  const ssrContext = __vite_ssr_import_11__.useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/messages/index/chat-[id].vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const __vite_ssr_import_12__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_11__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/chat-[id].vue"]])
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/chat-[id].vue"]]);
+
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
 }
@@ -3993,7 +4023,7 @@ __vite_ssr_exports__.default = "/_nuxt/assets/icons/send-svgrepo-com.svg";
 
 // --------------------
 const $id_0a3f114a = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = ".chat-id{display:grid;grid-template-columns:3fr 1fr;overflow-y:hidden;padding:0 10px}.chat-id,.chat-itself{height:calc(90vh - 13px);width:100%}.chat-itself{background-color:rgba(96,216,130,.2);border-radius:20px;position:relative}.reciever-profile{height:100%}.chat-top-bar{align-items:center;background-color:rgba(0,128,0,.2);border-top-left-radius:20px;border-top-right-radius:20px;display:flex;gap:10px;padding:10px 15px}.chat-top-bar>img{border-radius:50%;height:40px;width:40px}.chat-icons{align-items:center;display:flex;flex-direction:row}.chat-icons>img{height:23px;margin:0 5px;width:23px}#call-icon{height:27px;width:27px}.chat-single-details{align-items:center;display:flex;justify-content:space-between;width:100%}.last-seen{font-size:.8rem}.last-seen h4{position:relative;top:3px}.last-seen p{margin-top:4px}.chat-input{align-items:center;background-color:#fff;bottom:0;display:flex;height:50px;justify-content:space-between;position:absolute;width:100%}.chat-input textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:none;height:10px;outline:none;padding:10px;width:80%}.chat-input button{background-color:var(--main-yellow);border:none;border-radius:5px;padding:5px 10px}.chat-input img{height:25px}.messages-tab{display:flex;flex-direction:column;gap:10px;height:80%;overflow-y:scroll;position:relative;width:100%}.messages-tab>*{bottom:0;position:absolute;width:100%}.messages-tab>* p{background-color:var(--main-yellow);border-radius:10px;font-size:.9rem;max-width:40%;padding:15px 10px;position:relative}.messages-tab>* p:before{border-right:15px solid transparent;border-top:15px solid var(--main-yellow);bottom:-7px;content:\"\";left:0;position:absolute}.messages-tab span{font-size:.6rem}";
+__vite_ssr_exports__.default = ".chat-id{display:grid;grid-template-columns:3fr 1fr;height:calc(91vh - 13px);overflow-y:hidden;padding:0 10px;width:100%}.chat-itself{background-color:rgba(96,216,130,.2);border-radius:20px;height:calc(90vh - 13px);overflow-x:hidden;position:relative;width:100%}.reciever-profile{height:100%}.chat-top-bar{align-items:center;background-color:rgba(0,128,0,.2);border-top-left-radius:20px;border-top-right-radius:20px;display:flex;gap:10px;padding:10px 15px}.chat-top-bar>img{border-radius:50%;height:40px;width:40px}.chat-icons{align-items:center;display:flex;flex-direction:row}.chat-icons>img{height:23px;margin:0 5px;width:23px}#call-icon{height:27px;width:27px}.chat-single-details{align-items:center;display:flex;justify-content:space-between;width:100%}.last-seen{font-size:.8rem}.last-seen h4{position:relative;top:3px}.last-seen p{margin-top:4px}.chat-input{align-items:center;background-color:#fff;bottom:0;display:flex;height:50px;justify-content:space-between;position:absolute;width:100%}.chat-input textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:none;height:10px;outline:none;padding:10px;width:80%}.chat-input button{background-color:var(--main-yellow);border:none;border-radius:5px;padding:5px 10px}.chat-input img{height:25px}.messages-tab{display:flex;flex-direction:column;height:calc(90vh - 140px);overflow-x:hidden;overflow-y:scroll;position:relative;width:100%}.messages-tab>div{margin:8px 0;position:relative}.right-message{align-items:flex-end;display:flex;flex-direction:column;position:relative;width:100%}.messages-tab p{background-color:var(--main-yellow);border-radius:10px;font-size:.9rem;max-width:40%;padding:15px 10px;position:relative}.right-message p{width:40%}.messages-tab span{font-size:.6rem}.left-message>p:before{border-right:15px solid transparent;left:0}.left-message>p:before,.right-message>p:before{border-top:15px solid var(--main-yellow);bottom:-7px;content:\"\";position:absolute}.right-message>p:before{border-left:15px solid transparent;right:0}.padding-wrapper{padding:20px}";
 }
 
 
@@ -4325,82 +4355,98 @@ const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const _sfc_main = {
-  __name: 'chat-[id]',
-  setup(__props, { expose }) {
-  expose();
-
-const router = __vite_ssr_import_0__.useRoute();
-const param = __vite_ssr_import_1__.ref(router.params.id);
-__vite_ssr_import_1__.onMounted(()=>{
-    alignText()
-})
-const alignText = ()=>{
-    let li_s = [...document.querySelectorAll(".messages-tab div")]
-    let reverse_li_s = [];
-    let lenght = li_s.length + 1
-    for (let j = 0; j < lenght; j++) {
-        let pop = li_s.pop()
-        reverse_li_s.push(pop)
-    }
-    console.log(reverse_li_s)
-    for (let i = 0; i < reverse_li_s.length; i++){
-        reverse_li_s[i].style.marginBottom = `${i}00px`
-    }
-}
-
-const __returned__ = { router, param, alignText }
-Object.defineProperty(__returned__, '__isScriptSetup', { enumerable: false, value: true })
-return __returned__
-}
-
-}
 const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
+const _sfc_main = /* @__PURE__ */ __vite_ssr_import_2__.defineComponent({
+  __name: "chat-[id]",
+  setup(__props, { expose }) {
+    expose();
+    const router = __vite_ssr_import_0__.useRoute();
+    const param = router.params.id;
+    let userId;
+    const messages = __vite_ssr_import_1__.ref();
+    __vite_ssr_import_1__.onMounted(async () => {
+      const dataToSend = {
+        sender1: userId,
+        sender2: param
+      };
+      const response = await fetch("http://localhost:8080/get-single-chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dataToSend)
+      });
+      messages.value = await response.json();
+      await scrolltoBottom();
+      await alignMessages();
+    });
+    const scrolltoBottom = async () => {
+      const messages2 = document.querySelector(".messages-tab");
+      messages2.scrollTop = messages2.scrollHeight;
+    };
+    const alignMessages = async () => {
+      const messages2 = [...document.querySelectorAll(".messages-tab div")];
+      for (let i = 0; i < messages2.length; i++) {
+        if (messages2[i].classList.contains(userId)) {
+          messages2[i].classList.add("right-message");
+        } else {
+          messages2[i].classList.add("left-message");
+        }
+      }
+    };
+    const textMessage = __vite_ssr_import_1__.ref();
+    const sendMessage = async () => {
+      const dataToSend = {
+        from: userId,
+        body: textMessage.value,
+        time: Date.now().toString()
+      };
+      const send = await fetch("http://localhost:8080/send-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dataToSend)
+      });
+      const response = send.json();
+    };
+    const __returned__ = { router, param, userId, messages, scrolltoBottom, alignMessages, textMessage, sendMessage };
+    Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+    return __returned__;
+  }
+});
+const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const __vite_ssr_import_4__ = await __vite_ssr_import__("/assets/temp/avatar.jpg");
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
 
-const __vite_ssr_import_5__ = await __vite_ssr_import__("/assets/icons/call-svgrepo-com.svg");
+const __vite_ssr_import_5__ = await __vite_ssr_import__("/assets/temp/avatar.jpg");
 
-const __vite_ssr_import_6__ = await __vite_ssr_import__("/assets/icons/search-svgrepo-com.svg");
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/assets/icons/call-svgrepo-com.svg");
 
-const __vite_ssr_import_7__ = await __vite_ssr_import__("/assets/icons/three-dots-vertical-svgrepo-com.svg");
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/assets/icons/search-svgrepo-com.svg");
 
-const __vite_ssr_import_8__ = await __vite_ssr_import__("/assets/icons/send-svgrepo-com.svg");
+const __vite_ssr_import_8__ = await __vite_ssr_import__("/assets/icons/three-dots-vertical-svgrepo-com.svg");
 
-
+const __vite_ssr_import_9__ = await __vite_ssr_import__("/assets/icons/send-svgrepo-com.svg");
 
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${
-    __vite_ssr_import_3__.ssrRenderAttrs(__vite_ssr_import_2__.mergeProps({ class: "chat-id" }, _attrs))
-  }><div class="chat-itself"><div class="chat-top-bar"><img${
-    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_4__.default)
-  } alt="" srcset=""><div class="chat-single-details"><div class="last-seen"><h4>Ariana grande</h4><p>last seen 4:04pm tue</p></div><div class="chat-icons"><img id="call-icon"${
-    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_5__.default)
-  } alt="" srcset=""><img${
-    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_6__.default)
-  } alt="" srcset=""><img${
-    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_7__.default)
-  } alt="" srcset=""></div></div></div><div class="messages-tab"><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor sit.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum dolor ffkfbm.</p></div><div class="left"><span>11:06am</span><p>Lorem ipsum tuytt tfw.</p></div><div class="left"><span>11:06am</span><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ex dolorem corrupti accusamus voluptatibus illo odio beatae aut accusantium sed.</p></div><div class="left"><span>11:06am</span><p>last .</p></div><div class="left"><span>11:06am</span><p>last .</p></div></div><div class="chat-input"><textarea name="" id="" cols="30" rows="10" placeholder="write your message..."></textarea><button><img${
-    __vite_ssr_import_3__.ssrRenderAttr("src", __vite_ssr_import_8__.default)
-  } alt="" srcset=""></button></div></div><div class="reciever-profile"></div></div>`)
+  _push(`<div${__vite_ssr_import_4__.ssrRenderAttrs(__vite_ssr_import_3__.mergeProps({ class: "chat-id" }, _attrs))}><div class="chat-itself"><div class="chat-top-bar"><img${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_5__.default)} alt="" srcset=""><div class="chat-single-details"><div class="last-seen"><h4>Ariana grande</h4><p>last seen 4:04pm tue</p></div><div class="chat-icons"><img id="call-icon"${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_6__.default)} alt="" srcset=""><img${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="" srcset=""><img${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""></div></div></div><div class="messages-tab"><div class="padding-wrapper"><!--[-->`);
+  __vite_ssr_import_4__.ssrRenderList($setup.messages, (message) => {
+    _push(`<div class="${__vite_ssr_import_4__.ssrRenderClass([message.sender1, "right"])}"><span>${__vite_ssr_import_4__.ssrInterpolate($setup.messages.time)}</span><p>${__vite_ssr_import_4__.ssrInterpolate($setup.messages.body)}</p></div>`);
+  });
+  _push(`<!--]--></div></div><div class="chat-input"><textarea name="" id="" cols="30" rows="10" placeholder="write your message...">${__vite_ssr_import_4__.ssrInterpolate($setup.textMessage)}</textarea><button><img${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset=""></button></div></div><div class="reciever-profile"></div></div>`);
 }
+const __vite_ssr_import_10__ = await __vite_ssr_import__("/pages/messages/index/chat-[id].vue?vue&type=style&index=0&lang.css");
 
-const __vite_ssr_import_9__ = await __vite_ssr_import__("/pages/messages/index/chat-[id].vue?vue&type=style&index=0&lang.css");
+const __vite_ssr_import_11__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-
-const __vite_ssr_import_10__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
-
-const _sfc_setup = _sfc_main.setup
+const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_10__.useSSRContext()
-  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/messages/index/chat-[id].vue")
-  return _sfc_setup ? _sfc_setup(props, ctx) : undefined
-}
-const __vite_ssr_import_11__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+  const ssrContext = __vite_ssr_import_11__.useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/messages/index/chat-[id].vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+const __vite_ssr_import_12__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_11__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/chat-[id].vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/chat-[id].vue"]]);
+;
 }
 
 
@@ -4480,10 +4526,20 @@ const _sfc_main = /* @__PURE__ */ __vite_ssr_import_3__.defineComponent({
         { rel: "icon", href: "../../assets/icons/2.png" }
       ]
     });
+    const messageString = "/messages/chat-";
+    const id = "heyPorsce";
+    let chats = __vite_ssr_import_2__.ref();
+    let user = __vite_ssr_import_2__.ref();
+    __vite_ssr_import_2__.onMounted(async () => {
+      const chatsData = await fetch(`http://localhost:8080/get-recent-chats/${id}`);
+      chats.value = await chatsData.json();
+      const userData = await fetch(`http://localhost:8080/get-data-at-messages/${id}`);
+      user.value = userData.json();
+    });
     const chartClicked = __vite_ssr_import_2__.ref();
     const available = __vite_ssr_import_2__.ref("available");
     const ifOnline = __vite_ssr_import_2__.ref("green");
-    const __returned__ = { chartClicked, available, ifOnline };
+    const __returned__ = { messageString, id, chats, user, chartClicked, available, ifOnline };
     Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
     return __returned__;
   }
@@ -4506,24 +4562,28 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   const _cssVars = { style: {
     "--f0ddf0f0-ifOnline": $setup.ifOnline
   } };
-  _push(`<div${__vite_ssr_import_6__.ssrRenderAttrs(__vite_ssr_import_5__.mergeProps({ class: "messages" }, _attrs, _cssVars))}><section class="nav-messages"><a href="/"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="logo" srcset=""></a><h4>messages</h4></section><div class="messages-content"><div class="left-bar"><section class="chats"><div class="user-details-top"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""><p>ariana grande</p><p class="avail">${__vite_ssr_import_6__.ssrInterpolate($setup.available)} <img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset=""></p></div><div class="search-bar"><input type="text" id="search" placeholder="search"><label for="search"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_10__.default)} alt="" srcset=""></label></div>`);
-  _push(__vite_ssr_import_6__.ssrRenderComponent(_component_NuxtLink, { to: "/messages/chat-4444" }, {
-    default: __vite_ssr_import_5__.withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`<img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)}${_scopeId}><div class="user-details"${_scopeId}><h4${_scopeId}>tinega</h4><p${_scopeId}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.</p></div>`);
-      } else {
-        return [
-          __vite_ssr_import_5__.createVNode("img", { src: __vite_ssr_import_8__.default }),
-          __vite_ssr_import_5__.createVNode("div", { class: "user-details" }, [
-            __vite_ssr_import_5__.createVNode("h4", null, "tinega"),
-            __vite_ssr_import_5__.createVNode("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, temporibus.")
-          ])
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</section></div>`);
+  _push(`<div${__vite_ssr_import_6__.ssrRenderAttrs(__vite_ssr_import_5__.mergeProps({ class: "messages" }, _attrs, _cssVars))}><section class="nav-messages"><a href="/"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="logo" srcset=""></a><h4>messages</h4></section><div class="messages-content"><div class="left-bar"><section class="chats"><div class="user-details-top"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""><p>${__vite_ssr_import_6__.ssrInterpolate($setup.user.name)}</p><p class="avail">${__vite_ssr_import_6__.ssrInterpolate($setup.available)} <img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset=""></p></div><div class="search-bar"><input type="text" id="search" placeholder="search"><label for="search"><img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_10__.default)} alt="" srcset=""></label></div><!--[-->`);
+  __vite_ssr_import_6__.ssrRenderList($setup.chats, (chat) => {
+    _push(__vite_ssr_import_6__.ssrRenderComponent(_component_NuxtLink, {
+      to: $setup.chats.id
+    }, {
+      default: __vite_ssr_import_5__.withCtx((_, _push2, _parent2, _scopeId) => {
+        if (_push2) {
+          _push2(`<img${__vite_ssr_import_6__.ssrRenderAttr("src", __vite_ssr_import_8__.default)}${_scopeId}><div class="user-details"${_scopeId}><h4${_scopeId}>${__vite_ssr_import_6__.ssrInterpolate(chat.name)}</h4><p${_scopeId}>${__vite_ssr_import_6__.ssrInterpolate(chat.recent)}</p></div>`);
+        } else {
+          return [
+            __vite_ssr_import_5__.createVNode("img", { src: __vite_ssr_import_8__.default }),
+            __vite_ssr_import_5__.createVNode("div", { class: "user-details" }, [
+              __vite_ssr_import_5__.createVNode("h4", null, __vite_ssr_import_5__.toDisplayString(chat.name), 1),
+              __vite_ssr_import_5__.createVNode("p", null, __vite_ssr_import_5__.toDisplayString(chat.recent), 1)
+            ])
+          ];
+        }
+      }),
+      _: 2
+    }, _parent));
+  });
+  _push(`<!--]--></section></div>`);
   _push(__vite_ssr_import_6__.ssrRenderComponent(_component_NuxtPage, null, null, _parent));
   _push(`</div></div>`);
 }
