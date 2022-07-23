@@ -1,4 +1,4 @@
-const chats = require('../models/chats.ts');
+const chats = require('../models/chatSchema.ts');
 const users = require('../models/users.ts');
 import { Request, Response } from 'express';
 
