@@ -2,18 +2,19 @@
 <div class="login">
     <img src="~/assets/icons/2.png" alt="" srcset="">
     <div class="logins">
+        <p>{{messageResponse}}</p>
         <div class="phone">
             <label for="phone">phone Number:</label>
-            <input type="number" id="phone">
+            <input type="number" id="phone" v-model="phone">
         </div>
         <div class="password">
             <label for="password">password</label>
-            <input type="password"  id="password">
+            <input type="password"  id="password" v-model="password">
             <div class="keep">
                 <label for="check">kept me logged in</label>
-                <input type="checkbox" name="" id="check">
+                <input type="checkbox" name="" id="check" v-model="ifKeepLoggedIn">
             </div>
-            <button :disabled="ifDisabled">log in</button>
+            <button @click="signIn">log in</button>
         </div>
     </div>
 </div>
@@ -28,14 +29,31 @@ useHead({
         { rel: 'icon', href: './../assets/icons/2.png'}
     ]
 })
-const ifDisabled = ref<boolean>(true);
 const password = ref<string>();
 const phone = ref<Number>();
-const checkDetails = ()=>{
-    if(password.value != null || undefined || '' && phone.value != null || undefined){
-        ifDisabled.value = false;
+const ifKeepLoggedIn = ref<boolean>(false);
+const messageResponse = ref<string>();
+
+const signIn = async ()=>{
+    const dataToSend = {
+        phone: phone.value,
+        unHashPassword:password.value
+    }
+    const response = await fetch('http://localhost:8000/login-user',{
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dataToSend)
+    })
+    const data = await response.json();    
+    if(response.status == 200){
+        messageResponse.value = "succesfully logged in"
+        if(ifKeepLoggedIn){
+            localStorage.setItem('userId', data)
+        }else{
+            sessionStorage.setItem('userId', data)
+        }
     }else{
-        ifDisabled.value = true;
+        messageResponse.value = data.message;
     }
 }
 </script>

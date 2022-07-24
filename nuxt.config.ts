@@ -1,7 +1,7 @@
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from 'nuxt';
 // 
 export default defineNuxtConfig({
-    // buildModules: [
-    //     '@pinia/nuxt'
-    //   ]
+    buildModules: [
+        '@pinia/nuxt'
+    ]
 })

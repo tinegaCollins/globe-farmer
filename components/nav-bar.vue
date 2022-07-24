@@ -2,7 +2,7 @@
     <nav>
         <svg width="32px" height="32px" fill="black" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M 4 7 L 4 9 L 28 9 L 28 7 Z M 4 15 L 4 17 L 28 17 L 28 15 Z M 4 23 L 4 25 L 28 25 L 28 23 Z"/></svg>
         <img src="~/assets/icons/2.png" alt="" srcset="">
-        <h4>national farmer</h4>
+        <h4>National farmer</h4>
         <svg class="acc" version="1.1" id="Capa_1"  x="0px" y="0px" @click="toggleAcount" width="24px" height="24px"
 	            viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
                 <g>
@@ -18,8 +18,16 @@
             </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
         </svg>
         <div class="wrapper-in-nav" ref="wrapperInNav">
-            <div class="if-logged-in" v-if="userID">
-                <NuxtLink to="/">your account</NuxtLink>
+            <div class="if-logged-in" v-if="userAvailable">
+                <div class="drop-down">
+                    <p @click="toggleAccountDetails">account <img src="~/assets/icons/arrow-down-svgrepo-com.svg" alt="" srcset=""></p>
+                </div>
+                <div class="acc-links" ref="accLinks">
+                    <NuxtLink to="/messages">mesages</NuxtLink>
+                    <NuxtLink to="/">Your Account</NuxtLink>
+                    <NuxtLink to="/">your ads</NuxtLink>
+                    <button>logout</button>
+                </div>
             </div>
             <div class="if-not-logged" v-else>
                 <NuxtLink to="/signup">Sign Up</NuxtLink>
@@ -33,12 +41,30 @@
 </template>
 
 <script setup lang="ts">
-const userID = ref<string>();
+
+let userID:string;
 const wrapperInNav = ref();
 function toggleAcount(){
     wrapperInNav.value.classList.toggle('show-flex')
 }
+const userAvailable = ref<boolean>();
+onMounted(()=>{
+    if(localStorage.getItem('userId')){
+        userID = localStorage.getItem('userId');
+        userAvailable.value = true;
+    }else if(sessionStorage.getItem('userId')){
+        userID = sessionStorage.getItem('userId');
+        userAvailable.value = true;
+    }
+    if(userID){
 
+    }
+})
+
+const toggleAccountDetails = ()=>{
+    const accLinks = ref();
+    accLinks.value.classList.toggle('show-flex')
+}
 </script>
 
 
@@ -51,7 +77,7 @@ nav{
     padding: 0 50px;
     position: sticky;
     top: 0;
-    background-color: #fff;
+    background-color: var(--main-yellow);
     box-shadow: 3px 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 nav > img {
@@ -85,7 +111,7 @@ nav button{
     transition: all 300ms ease-in-out;
 }
 nav button:hover{
-    background: linear-gradient(90deg,var(--main-red), var(--main-yellow));
+    background: linear-gradient(140deg,var(--main-red), var(--main-yellow));
 }
 .if-not-logged > *{
     margin: 0 10px;
@@ -95,14 +121,14 @@ nav svg {
 }
 @media screen and (max-width: 768px) {
     nav {
-        height: 10vh;
+        height: 6vh;
         padding: 10px;
         gap: 3px;
     }
     nav button{
         padding: .3em 1em;
     }
-    nav h3{
+    nav h4{
         display: none;
     }
     nav .sell{
@@ -125,5 +151,12 @@ nav svg {
     .show-flex{
         display: flex;
     }
+    .drop-down{
+        display: none;
+    }
+}
+.acc-links{
+    display: none;
+    flex-direction: column;
 }
 </style>

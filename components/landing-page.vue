@@ -106,7 +106,6 @@
         background-size: contain;
         animation: background 20s infinite;
     }
-
 }
 @keyframes swipe-right {
     from{
@@ -144,9 +143,11 @@
     }
     40%{
        background-image: url('~/assets/images/ad2.png');
+       opacity: 0;
     }
     70%{
         background-image: url('~/assets/images/ad1.png');
+        opacity: 1;
     }
     100%{
         background-image: url('~/assets/images/ad1.png');

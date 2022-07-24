@@ -2,6 +2,7 @@
 <div class="login">
     <img src="~/assets/icons/2.png" alt="" srcset="">
     <div class="logins">
+        <p>{{messageResponse}}</p>
         <div class="name">
             <label for="name">name:</label>
             <input type="text" name="" id="name" v-model="name">
@@ -37,6 +38,7 @@ useHead({
         { rel: 'icon', href: '../../assets/icons/2.png'}
     ]
 })
+
 let ifPhone = false;
 let ifPassword = false;
 const ifDisabled = ref(true);
@@ -53,7 +55,7 @@ const password = ref<String>();
 const rpassword = ref<String>();
 const terms = ref(false);
 const name = ref<String | Number>('');
-const checkPhone = async ()=>{
+const checkPhone = ()=>{
     if(phone.value != null || undefined){
         ifPhone = true;
     }else{
@@ -69,19 +71,32 @@ const checkPasswords = ()=>{
     }
     checkOptions();
 }
+const messageResponse = ref<String>();
 const signUp = async ()=>{
     const dataToSend = {
         name: name.value,
         phone: phone.value,
-        unHashPassword: password.value
+        unHashPassword: password.value,
+        location: 'nakuru',
+        avatar: 'assets/temp/pine.jpeg'
     }
-    const response = await fetch('http://localhost:8080/register-user',{
+    const response = await fetch('http://localhost:8000/register-user',{
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(dataToSend)
     })
     const message = await response.json();
-    const userID = message._id;
+    if(response.status === 200){
+        messageResponse.value = "user created";
+        let userId = message._id;
+        sessionStorage.setItem('userId', userId);
+        const route = useRouter();
+        route.push('/');
+    }
+    else{
+        messageResponse.value = message.message
+    }
+
 }
 </script>
 

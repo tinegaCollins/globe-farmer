@@ -11,7 +11,7 @@ mongoose.connect('mongodb://localhost:27017/fam')
     console.log('connected')
     startServer()
 })
-.catch( error => console.log(error))
+.catch( (error: any) => console.log(error))
 
 const startServer = ()=>{
     app.use((req:Request,res:Response,next:NextFunction)=>{
@@ -19,7 +19,7 @@ const startServer = ()=>{
         res.header('Access-Control-Allow-Headers', 'Origin,X-Requested-With, Content-Type, Accept, Authorization')
 
         if(req.method == 'OPTIONS'){
-            res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELEte, GET');
+            res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
             return res.status(200).json({});
         }
         next();
@@ -30,7 +30,7 @@ const startServer = ()=>{
     //user routes
     app.post('/register-user', userControllers.addNewUser);
     app.post('/login-user', userControllers.login);
-    http.createServer(app).listen('8080', ()=> console.log('listening on port 8080'));
+    http.createServer(app).listen('8000', ()=> console.log('listening on port 8000'));
 
     //chats controllers
     app.post('/add-new-chat', chatControllers.addNewChat);

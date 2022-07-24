@@ -11,17 +11,16 @@ exports.addNewUser = async (req:Request, res: Response)=> {
             const password = await bcrypt.hash(unHashPassword, salt);
             const newSeller = new users({
                 name, phone, password, location, avatar
-            })
-            await newSeller.save()
+            });
+            await newSeller.save();
             res.status(200).json(newSeller);
         }
         else{
-            res.status(404).json({message: "phone exist"})
+            res.status(404).json({message: "phone exist"});
         }
-  
     }
     catch{
-        res.status(404).json({ message: "couldn't create user"})
+        res.status(403).json({ message: "error, couldn't create user"})
     }
 }
 
@@ -30,14 +29,14 @@ exports.login = async (req:Request, res:Response)=>{
     const user = await users.findOne({phone: phone});
     if(user){
         if( await bcrypt.compare(unHashPassword, user.password)){
-            res.send(user);
+            res.status(200).json(user._id);
         }
         else{
             res.status(500).json({ message : "wrong password"})
         }
     }
     else{
-        res.status(500).json({message: "user not found"});
+        res.status(500).json({message: "please enter a valid phone"});
     }
 }
 
