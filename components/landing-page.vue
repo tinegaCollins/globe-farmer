@@ -1,110 +1,104 @@
 <template>
     <section class="landing">
-        <img src="~/assets/images/ad2.png" alt="" srcset="" class="image1">
+        <img class="image1" src="~/assets/images/1.png" alt="" srcset="">
         <div class="landing-content">
-            <h1>Connecting the world through fresh farm produces</h1>
-            <p class="p2">while making the world a happier place</p>
+            <h1>buy,sell,fresh</h1>
             <p>search for anything</p>
             <div class="search-box">
                 <input type="text" placeholder="search produce or location">
                 <button>search</button>
             </div>
+            <p class="last-text">buy or sell groceries to consumers across the country comfortably</p>
         </div>
-        <img src="~/assets/images/ad1.png" alt="" srcset="" class="image2">
-        <div class="image-background"></div>
-        <h1 class="title">national farmer</h1>
+        <img class="image2" src="~/assets/images/2.png" alt="" srcset="">
     </section>
 </template>
 
 <style>
 .landing{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    padding: 20px;
-    background-color: rgb(24, 119, 24);
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 45vh;
 }
-.landing .title, .landing .image-background{
-    display: none;
+.landing .image2{
+    transform: rotate(180deg);
+    z-index: -1;
 }
- .landing > img {
-        height: 300px;
-    }
-.landing-content{
+.landing > img {
+    height: 45vh;
+    width: auto;
+}
+.landing .landing-content{
+    justify-self: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    animation: swipe-up 2000ms 1;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
 }
 .landing-content h1{
-    color: var(--dark-green);
-    text-align: center;
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, var(--main-yellow), var(--dark-green));
+    background-clip: text;
+    color: transparent;
 }
-.landing .p2{
-    margin: 10px 0;
+.landing-content .last-text{
+    font-size: .8rem;
 }
-.image1{
-    animation: swipe-right 1000ms 1;
-}
-.image2{
-    animation: swipe-left 1000ms 1;
-}
-.search-box{
-    margin-top: 10px;
+.search-box {
+    width: 60%;
+    height: 40px;
+    border: 1px solid var(--main-yellow);
     display: flex;
     flex-wrap: nowrap;
-    width: 80%;
 }
-.search-box input{
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--main-yellow);
-  font-family: var(--text-font);
-  font-weight: 200;
-  outline: none;
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
 }
-.search-box button{
-  width: 100px;
-  padding: 10px;
-  background-color: var(--main-yellow);
-  color: #333;
-  font-weight: 200;
-  transition: background-color 0.3s ease-in-out;
-  border: none;
+.search-box button {
+    border: none;
+    padding: 0 10px;
+    background-color: var(--main-yellow);
 }
-.search-box button:hover{
-  background-color: var(--light-green);
-  cursor: pointer;
-}
-@media screen and (max-width: 1100px) {
-    .landing > img {
-        height: 300px;
-    }
-}
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .landing{
         display: flex;
-        flex-direction: column-reverse;
-        row-gap: 20px;
-    }
-    .landing .title{
-        display: block;
-    }
-    .landing > img{
-        display: none;
+        position: relative;
+        height: 60vh;
     }
     .landing-content{
-        width: 100%;
+        height: 60vh;
+        width: 100vw !important;
+        position: absolute;
+        align-items: flex-end !important;
+        padding-right: 20px;
+        z-index: 1;
+        right: 0;
+        background-color: rgba(0, 0, 0, .1) !important;
+        backdrop-filter: blur(2px);
     }
-    .landing .image-background{
-        display: block;
-        height: 300px;
-        width: 300px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        animation: background 20s infinite;
+    .landing .image1{
+        height: 100%;
+    }
+    .landing .image2{
+        display: none;
+    }
+    .search-box, .last-text{
+        width: 80vw;
+        z-index: 1;
+    }
+    .last-text{
+        font-size: 1.5rem !important;
+        font-weight: 800;
+        text-align: end;
+        width: 80% !important;
+        background: linear-gradient(90deg, var(--main-yellow),var(--dark-green));
+        background-clip: text;
+        color: transparent;
     }
 }
 @keyframes swipe-right {

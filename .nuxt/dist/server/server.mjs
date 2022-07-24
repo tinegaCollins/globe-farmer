@@ -2968,7 +2968,7 @@ const __vite_ssr_import_6__ = await __vite_ssr_import__("/assets/icons/arrow-dow
 
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_NuxtLink = __vite_ssr_import_0__.default;
-  _push(`<nav${__vite_ssr_import_4__.ssrRenderAttrs(_attrs)}><svg width="32px" height="32px" fill="black" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M 4 7 L 4 9 L 28 9 L 28 7 Z M 4 15 L 4 17 L 28 17 L 28 15 Z M 4 23 L 4 25 L 28 25 L 28 23 Z"></path></svg><img${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_5__.default)} alt="" srcset=""><h4>National farmer</h4><svg class="acc" version="1.1" id="Capa_1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 489 489" style="${__vite_ssr_import_4__.ssrRenderStyle({ "enable-background": "new 0 0 489 489" })}" xml:space="preserve"><g><g><path d="M417.4,71.6C371.2,25.4,309.8,0,244.5,0S117.8,25.4,71.6,71.6S0,179.2,0,244.5s25.4,126.7,71.6,172.9S179.2,489,244.5,489
+  _push(`<nav${__vite_ssr_import_4__.ssrRenderAttrs(_attrs)}><svg width="32px" height="32px" fill="black" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M 4 7 L 4 9 L 28 9 L 28 7 Z M 4 15 L 4 17 L 28 17 L 28 15 Z M 4 23 L 4 25 L 28 25 L 28 23 Z"></path></svg><img${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_5__.default)} alt="" srcset=""><h4>Fresh Pickens</h4><svg class="acc" version="1.1" id="Capa_1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 489 489" style="${__vite_ssr_import_4__.ssrRenderStyle({ "enable-background": "new 0 0 489 489" })}" xml:space="preserve"><g><g><path d="M417.4,71.6C371.2,25.4,309.8,0,244.5,0S117.8,25.4,71.6,71.6S0,179.2,0,244.5s25.4,126.7,71.6,172.9S179.2,489,244.5,489
 			s126.7-25.4,172.9-71.6S489,309.8,489,244.5S463.6,117.8,417.4,71.6z M244.5,462C124.6,462,27,364.4,27,244.5S124.6,27,244.5,27
 			S462,124.6,462,244.5S364.4,462,244.5,462z"></path><path d="M244.5,203.2c35.1,0,63.6-28.6,63.6-63.6s-28.5-63.7-63.6-63.7s-63.6,28.6-63.6,63.6S209.4,203.2,244.5,203.2z
 			 M244.5,102.9c20.2,0,36.6,16.4,36.6,36.6s-16.4,36.6-36.6,36.6s-36.6-16.4-36.6-36.6S224.3,102.9,244.5,102.9z"></path><path d="M340.9,280.5c-22.3-32.8-54.7-49.5-96.4-49.5s-74.1,16.6-96.4,49.5c-16.6,24.4-27.2,57.7-31.4,98.7
@@ -3158,7 +3158,7 @@ __vite_ssr_exports__.default = "/_nuxt/assets/icons/arrow-down-svgrepo-com.svg";
 
 // --------------------
 const $id_3d87111a = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = "nav{align-items:center;background-color:var(--main-yellow);box-shadow:3px 3px 3px 5px rgba(0,0,0,.1);display:flex;gap:20px;height:10vh;padding:0 50px;position:-webkit-sticky;position:sticky;top:0}nav>img{height:80%}nav h4{font-family:var(--cambo);font-size:1.7rem;margin-right:auto}nav .acc{margin-left:auto;margin-right:10px}nav a{text-decoration:none}nav a,nav a:visited{color:#333}nav .sell{margin-right:25px}nav button{background:var(--light-green);border:none;border-radius:20px;font-size:1.2rem;padding:.3em 1.7em;transition:all .3s ease-in-out}nav button:hover{background:linear-gradient(140deg,var(--main-red),var(--main-yellow))}.if-not-logged>*{margin:0 10px}nav svg{display:none}@media screen and (max-width:768px){nav{gap:3px;height:6vh;padding:10px}nav button{padding:.3em 1em}nav h4{display:none}nav .sell{margin-right:10px}nav svg{fill:#000;display:block}.account{margin:0 3px 0 auto}.wrapper-in-nav{background-color:red;display:none;position:absolute;right:0;top:10vh}.show-flex{display:flex}.drop-down{display:none}}.acc-links{display:none;flex-direction:column}";
+__vite_ssr_exports__.default = "nav{align-items:center;background-color:#fff;box-shadow:3px 3px 3px 3px rgba(0,0,0,.1);display:flex;gap:20px;height:10vh;padding:0 50px;position:-webkit-sticky;position:sticky;top:0}nav>img{height:80%}nav h4{font-size:1.7rem;font-weight:300;margin-right:auto}nav .acc{margin-left:auto;margin-right:10px}nav a{text-decoration:none}nav a,nav a:visited{color:#333}nav .sell{margin-right:25px}nav button{background:var(--light-green);border:none;border-radius:20px;font-size:1.2rem;padding:.3em 1.7em;transition:all .3s ease-in-out}nav button:hover{background:linear-gradient(140deg,var(--main-red),var(--main-yellow))}.if-not-logged>*{margin:0 10px}nav svg{display:none}@media screen and (max-width:768px){nav{gap:3px;height:6vh;padding:10px}nav button{padding:.3em 1em}nav h4{display:none}nav .sell{margin-right:10px}nav svg{fill:#000;display:block}.account{margin:0 3px 0 auto}.wrapper-in-nav{background-color:red;display:none;position:absolute;right:0;top:10vh}.show-flex{display:flex}.drop-down{display:none}}.acc-links{display:none;flex-direction:column}";
 }
 
 
@@ -3211,8 +3211,8 @@ __vite_ssr_exports__.default = (sfc, props) => {
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
-// - /assets/images/ad2.png ($id_5d890809)
-// - /assets/images/ad1.png ($id_3a55e414)
+// - /assets/images/1.png ($id_c749df18)
+// - /assets/images/2.png ($id_4d0ce18e)
 // - /components/landing-page.vue?vue&type=style&index=0&lang.css ($id_e75921d4)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
@@ -3222,20 +3222,20 @@ const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
 
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/assets/images/ad2.png");
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/assets/images/1.png");
 
-const __vite_ssr_import_3__ = await __vite_ssr_import__("/assets/images/ad1.png");
+const __vite_ssr_import_3__ = await __vite_ssr_import__("/assets/images/2.png");
 
 
 
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   _push(`<section${
     __vite_ssr_import_1__.ssrRenderAttrs(__vite_ssr_import_0__.mergeProps({ class: "landing" }, _attrs))
-  }><img${
+  }><img class="image1"${
     __vite_ssr_import_1__.ssrRenderAttr("src", __vite_ssr_import_2__.default)
-  } alt="" srcset="" class="image1"><div class="landing-content"><h1>Connecting the world through fresh farm produces</h1><p class="p2">while making the world a happier place</p><p>search for anything</p><div class="search-box"><input type="text" placeholder="search produce or location"><button>search</button></div></div><img${
+  } alt="" srcset=""><div class="landing-content"><h1>buy,sell,fresh</h1><p>search for anything</p><div class="search-box"><input type="text" placeholder="search produce or location"><button>search</button></div><p class="last-text">buy or sell groceries to consumers across the country comfortably</p></div><img class="image2"${
     __vite_ssr_import_1__.ssrRenderAttr("src", __vite_ssr_import_3__.default)
-  } alt="" srcset="" class="image2"><div class="image-background"></div><h1 class="title">national farmer</h1></section>`)
+  } alt="" srcset=""></section>`)
 }
 
 const __vite_ssr_import_4__ = await __vite_ssr_import__("/components/landing-page.vue?vue&type=style&index=0&lang.css");
@@ -3256,26 +3256,26 @@ __vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_m
 
 
 // --------------------
-// Request: /assets/images/ad2.png
+// Request: /assets/images/1.png
 // Parents: 
 // - /components/landing-page.vue ($id_f281e5fb)
 // Dependencies: 
 
 // --------------------
-const $id_5d890809 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = "/_nuxt/assets/images/ad2.png";
+const $id_c749df18 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = "/_nuxt/assets/images/1.png";
 }
 
 
 // --------------------
-// Request: /assets/images/ad1.png
+// Request: /assets/images/2.png
 // Parents: 
 // - /components/landing-page.vue ($id_f281e5fb)
 // Dependencies: 
 
 // --------------------
-const $id_3a55e414 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = "/_nuxt/assets/images/ad1.png";
+const $id_4d0ce18e = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = "/_nuxt/assets/images/2.png";
 }
 
 
@@ -3287,7 +3287,7 @@ __vite_ssr_exports__.default = "/_nuxt/assets/images/ad1.png";
 
 // --------------------
 const $id_e75921d4 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = ".landing{align-items:center;background-color:#187718;display:grid;grid-template-columns:1fr 2fr 1fr;padding:20px}.landing .image-background,.landing .title{display:none}.landing>img{height:300px}.landing-content{align-items:center;-webkit-animation:swipe-up 2s 1;animation:swipe-up 2s 1;display:flex;flex-direction:column;justify-content:center}.landing-content h1{color:var(--dark-green);text-align:center}.landing .p2{margin:10px 0}.image1{-webkit-animation:swipe-right 1s 1;animation:swipe-right 1s 1}.image2{-webkit-animation:swipe-left 1s 1;animation:swipe-left 1s 1}.search-box{display:flex;flex-wrap:nowrap;margin-top:10px;width:80%}.search-box input{border:1px solid var(--main-yellow);font-family:var(--text-font);font-weight:200;outline:none;padding:10px;width:100%}.search-box button{background-color:var(--main-yellow);border:none;color:#333;font-weight:200;padding:10px;transition:background-color .3s ease-in-out;width:100px}.search-box button:hover{background-color:var(--light-green);cursor:pointer}@media screen and (max-width:1100px){.landing>img{height:300px}}@media screen and (max-width:768px){.landing{display:flex;flex-direction:column-reverse;row-gap:20px}.landing .title{display:block}.landing>img{display:none}.landing-content{width:100%}.landing .image-background{-webkit-animation:background 20s infinite;animation:background 20s infinite;background-position:50%;background-repeat:no-repeat;background-size:contain;display:block;height:300px;width:300px}}@-webkit-keyframes swipe-right{0%{transform:translateX(-330px)}to{transform:translateX(0)}}@keyframes swipe-right{0%{transform:translateX(-330px)}to{transform:translateX(0)}}@-webkit-keyframes swipe-left{0%{transform:translateX(330px)}to{transform:translateX(0)}}@keyframes swipe-left{0%{transform:translateX(330px)}to{transform:translateX(0)}}@-webkit-keyframes swipe-up{10%{opacity:0;transform:translateY(200px)}50%{opacity:0;transform:translateY(200px)}to{opacity:1;transform:translateY(0)}}@keyframes swipe-up{10%{opacity:0;transform:translateY(200px)}50%{opacity:0;transform:translateY(200px)}to{opacity:1;transform:translateY(0)}}@-webkit-keyframes background{10%{background-image:url(/_nuxt/assets/images/ad2.png)}40%{background-image:url(/_nuxt/assets/images/ad2.png);opacity:0}70%{background-image:url(/_nuxt/assets/images/ad1.png);opacity:1}to{background-image:url(/_nuxt/assets/images/ad1.png)}}@keyframes background{10%{background-image:url(/_nuxt/assets/images/ad2.png)}40%{background-image:url(/_nuxt/assets/images/ad2.png);opacity:0}70%{background-image:url(/_nuxt/assets/images/ad1.png);opacity:1}to{background-image:url(/_nuxt/assets/images/ad1.png)}}";
+__vite_ssr_exports__.default = ".landing{display:grid;grid-template-columns:1fr 3fr 1fr;height:45vh}.landing .image2{transform:rotate(180deg);z-index:-1}.landing>img{height:45vh;width:auto}.landing .landing-content{align-items:center;display:flex;flex-direction:column;gap:20px;justify-content:center;justify-self:center;width:100%}.landing-content h1{background:linear-gradient(90deg,var(--main-yellow),var(--dark-green));-webkit-background-clip:text;background-clip:text;color:transparent;font-size:2.5rem}.landing-content .last-text{font-size:.8rem}.search-box{border:1px solid var(--main-yellow);display:flex;flex-wrap:nowrap;height:40px;width:60%}.search-box input{border:none;outline:none;padding:0 10px;width:100%}.search-box button{background-color:var(--main-yellow);border:none;padding:0 10px}@media screen and (max-width:768px){.landing{display:flex;height:60vh;position:relative}.landing-content{align-items:flex-end!important;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);background-color:rgba(0,0,0,.1)!important;height:60vh;padding-right:20px;position:absolute;right:0;width:100vw!important;z-index:1}.landing .image1{height:100%}.landing .image2{display:none}.last-text,.search-box{width:80vw;z-index:1}.last-text{background:linear-gradient(90deg,var(--main-yellow),var(--dark-green));-webkit-background-clip:text;background-clip:text;color:transparent;font-size:1.5rem!important;font-weight:800;text-align:end;width:80%!important}}@-webkit-keyframes swipe-right{0%{transform:translateX(-330px)}to{transform:translateX(0)}}@keyframes swipe-right{0%{transform:translateX(-330px)}to{transform:translateX(0)}}@-webkit-keyframes swipe-left{0%{transform:translateX(330px)}to{transform:translateX(0)}}@keyframes swipe-left{0%{transform:translateX(330px)}to{transform:translateX(0)}}@-webkit-keyframes swipe-up{10%{opacity:0;transform:translateY(200px)}50%{opacity:0;transform:translateY(200px)}to{opacity:1;transform:translateY(0)}}@keyframes swipe-up{10%{opacity:0;transform:translateY(200px)}50%{opacity:0;transform:translateY(200px)}to{opacity:1;transform:translateY(0)}}@-webkit-keyframes background{10%{background-image:url(/_nuxt/assets/images/ad2.png)}40%{background-image:url(/_nuxt/assets/images/ad2.png);opacity:0}70%{background-image:url(/_nuxt/assets/images/ad1.png);opacity:1}to{background-image:url(/_nuxt/assets/images/ad1.png)}}@keyframes background{10%{background-image:url(/_nuxt/assets/images/ad2.png)}40%{background-image:url(/_nuxt/assets/images/ad2.png);opacity:0}70%{background-image:url(/_nuxt/assets/images/ad1.png);opacity:1}to{background-image:url(/_nuxt/assets/images/ad1.png)}}";
 }
 
 
@@ -3628,7 +3628,7 @@ __vite_ssr_exports__.default = ".popular-items{width:100%}.popular-content,.skel
 
 // --------------------
 const $id_c537320a = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = "@import url(\"https://fonts.googleapis.com/css2?family=Cambo&display=swap\");:root{--main-red:#ea2a3d;--main-yellow:#ffaf10;--dark-green:#159e97;--light-green:#60d882;--dm:\"DM Sans\";--cambo:\"Cambo\",serif}";
+__vite_ssr_exports__.default = "@import url(\"https://fonts.googleapis.com/css2?family=Cambo&display=swap\");:root{--main-red:#ea2a3d;--main-yellow:#ffaf10;--dark-green:#159e97;--light-green:#60d882;--dm:\"DM Sans\";--light-yellow:#fbeb89;--cambo:\"Cambo\",serif}";
 }
 
 
@@ -5868,8 +5868,8 @@ const __modules__ = {
   "/components/nav-bar.vue?vue&type=style&index=0&lang.css": $id_3d87111a,
   "/@id/plugin-vue:export-helper": $id_bbb863c1,
   "/components/landing-page.vue": $id_f281e5fb,
-  "/assets/images/ad2.png": $id_5d890809,
-  "/assets/images/ad1.png": $id_3a55e414,
+  "/assets/images/1.png": $id_c749df18,
+  "/assets/images/2.png": $id_4d0ce18e,
   "/components/landing-page.vue?vue&type=style&index=0&lang.css": $id_e75921d4,
   "/components/location-filter.vue": $id_9fd3ba4e,
   "/components/location-filter.vue?vue&type=style&index=0&lang.css": $id_68bc8fa0,
