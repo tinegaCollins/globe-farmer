@@ -22,10 +22,14 @@
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     padding: 20px;
+    background-color: rgb(24, 119, 24);
 }
 .landing .title, .landing .image-background{
     display: none;
 }
+ .landing > img {
+        height: 300px;
+    }
 .landing-content{
     display: flex;
     flex-direction: column;
@@ -102,7 +106,6 @@
         background-size: contain;
         animation: background 20s infinite;
     }
-
 }
 @keyframes swipe-right {
     from{
@@ -140,9 +143,11 @@
     }
     40%{
        background-image: url('~/assets/images/ad2.png');
+       opacity: 0;
     }
     70%{
         background-image: url('~/assets/images/ad1.png');
+        opacity: 1;
     }
     100%{
         background-image: url('~/assets/images/ad1.png');

@@ -7,9 +7,10 @@ const chatSchema = new mongoose.Schema({
         {
             from : String,
             body: String,
-            time: new Date()
+            time: String,
+            day: String,
         }
-    ],
+    ]
 });
 
 module.exports = mongoose.model('chat', chatSchema);
