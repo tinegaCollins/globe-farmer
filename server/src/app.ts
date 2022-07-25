@@ -25,11 +25,11 @@ const startServer = ()=>{
         next();
     });
     app.use(express.json());
-    app.post('/add-post', postController.addPost);
-    app.get('/get-popular', postController.getPopular);
+
     //user routes
     app.post('/register-user', userControllers.addNewUser);
     app.post('/login-user', userControllers.login);
+
     http.createServer(app).listen('8000', ()=> console.log('listening on port 8000'));
 
     //chats controllers
@@ -40,4 +40,8 @@ const startServer = ()=>{
     app.get('/get-data-at-messages/:id', userControllers.getUserAtMessage);
     app.post('/get-single-chat', chatControllers.getSingleChat);
 
+    //post controllers 
+    app.get('/get-by-id/:id', postController.getByID);
+    app.post('/add-post', postController.addPost);
+    app.get('/get-popular', postController.getPopular);
 }
