@@ -1,6 +1,6 @@
 <template>
     <section class="landing">
-        <img class="image1" src="~/assets/images/1.png" alt="" srcset="">
+        <img class="image1" src="~/assets/images/ad1.png" alt="" srcset="">
         <div class="landing-content">
             <h1>buy,sell,fresh</h1>
             <p>search for anything</p>
@@ -64,6 +64,12 @@
     padding: 0 10px;
     background-color: var(--main-yellow);
 }
+.search-box button:hover {
+    background-color: var(--dark-green);
+}
+.search-box button:hover .search-box{
+    border: 1px solid var(--dark-green);    
+}
 @media screen and (max-width: 768px) {
     .landing{
         display: flex;
@@ -79,7 +85,7 @@
         z-index: 1;
         right: 0;
         background-color: rgba(0, 0, 0, .1) !important;
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(3px);
     }
     .landing .image1{
         height: 100%;
@@ -96,7 +102,7 @@
         font-weight: 800;
         text-align: end;
         width: 80% !important;
-        background: linear-gradient(90deg, var(--main-yellow),var(--dark-green));
+        background: linear-gradient(90deg, var(--dark-green),var(--main-red));
         background-clip: text;
         color: transparent;
     }

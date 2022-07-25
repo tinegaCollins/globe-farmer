@@ -77,6 +77,7 @@ nav{
     padding: 0 50px;
     position: sticky;
     top: 0;
+    z-index: 190000;
     background-color: #fff;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
@@ -85,7 +86,6 @@ nav > img {
 }
 nav h4 {
     margin-right: auto;
-    /* font-family: var(--cambo); */
     font-size: 1.7rem;
     font-weight: 300;
 }

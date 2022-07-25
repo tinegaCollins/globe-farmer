@@ -2861,7 +2861,7 @@ const _sfc_main = /* @__PURE__ */ __vite_ssr_import_5__.defineComponent({
   setup(__props, { expose }) {
     expose();
     __vite_ssr_import_4__.useHead({
-      title: "national farmer",
+      title: "fresh pickens",
       link: [
         { rel: "icon", href: "../../assets/icons/2.png" }
       ]
@@ -3158,7 +3158,7 @@ __vite_ssr_exports__.default = "/_nuxt/assets/icons/arrow-down-svgrepo-com.svg";
 
 // --------------------
 const $id_3d87111a = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = "nav{align-items:center;background-color:#fff;box-shadow:3px 3px 3px 3px rgba(0,0,0,.1);display:flex;gap:20px;height:10vh;padding:0 50px;position:-webkit-sticky;position:sticky;top:0}nav>img{height:80%}nav h4{font-size:1.7rem;font-weight:300;margin-right:auto}nav .acc{margin-left:auto;margin-right:10px}nav a{text-decoration:none}nav a,nav a:visited{color:#333}nav .sell{margin-right:25px}nav button{background:var(--light-green);border:none;border-radius:20px;font-size:1.2rem;padding:.3em 1.7em;transition:all .3s ease-in-out}nav button:hover{background:linear-gradient(140deg,var(--main-red),var(--main-yellow))}.if-not-logged>*{margin:0 10px}nav svg{display:none}@media screen and (max-width:768px){nav{gap:3px;height:6vh;padding:10px}nav button{padding:.3em 1em}nav h4{display:none}nav .sell{margin-right:10px}nav svg{fill:#000;display:block}.account{margin:0 3px 0 auto}.wrapper-in-nav{background-color:red;display:none;position:absolute;right:0;top:10vh}.show-flex{display:flex}.drop-down{display:none}}.acc-links{display:none;flex-direction:column}";
+__vite_ssr_exports__.default = "nav{align-items:center;background-color:#fff;box-shadow:3px 3px 3px 3px rgba(0,0,0,.1);display:flex;gap:20px;height:10vh;padding:0 50px;position:-webkit-sticky;position:sticky;top:0;z-index:190000}nav>img{height:80%}nav h4{font-size:1.7rem;font-weight:300;margin-right:auto}nav .acc{margin-left:auto;margin-right:10px}nav a{text-decoration:none}nav a,nav a:visited{color:#333}nav .sell{margin-right:25px}nav button{background:var(--light-green);border:none;border-radius:20px;font-size:1.2rem;padding:.3em 1.7em;transition:all .3s ease-in-out}nav button:hover{background:linear-gradient(140deg,var(--main-red),var(--main-yellow))}.if-not-logged>*{margin:0 10px}nav svg{display:none}@media screen and (max-width:768px){nav{gap:3px;height:6vh;padding:10px}nav button{padding:.3em 1em}nav h4{display:none}nav .sell{margin-right:10px}nav svg{fill:#000;display:block}.account{margin:0 3px 0 auto}.wrapper-in-nav{background-color:red;display:none;position:absolute;right:0;top:10vh}.show-flex{display:flex}.drop-down{display:none}}.acc-links{display:none;flex-direction:column}";
 }
 
 
@@ -3211,7 +3211,7 @@ __vite_ssr_exports__.default = (sfc, props) => {
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
-// - /assets/images/1.png ($id_c749df18)
+// - /assets/images/ad1.png ($id_3a55e414)
 // - /assets/images/2.png ($id_4d0ce18e)
 // - /components/landing-page.vue?vue&type=style&index=0&lang.css ($id_e75921d4)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
@@ -3222,7 +3222,7 @@ const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
 
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/assets/images/1.png");
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/assets/images/ad1.png");
 
 const __vite_ssr_import_3__ = await __vite_ssr_import__("/assets/images/2.png");
 
@@ -3256,14 +3256,14 @@ __vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_m
 
 
 // --------------------
-// Request: /assets/images/1.png
+// Request: /assets/images/ad1.png
 // Parents: 
 // - /components/landing-page.vue ($id_f281e5fb)
 // Dependencies: 
 
 // --------------------
-const $id_c749df18 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = "/_nuxt/assets/images/1.png";
+const $id_3a55e414 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = "/_nuxt/assets/images/ad1.png";
 }
 
 
@@ -3287,7 +3287,7 @@ __vite_ssr_exports__.default = "/_nuxt/assets/images/2.png";
 
 // --------------------
 const $id_e75921d4 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = ".landing{display:grid;grid-template-columns:1fr 3fr 1fr;height:45vh}.landing .image2{transform:rotate(180deg);z-index:-1}.landing>img{height:45vh;width:auto}.landing .landing-content{align-items:center;display:flex;flex-direction:column;gap:20px;justify-content:center;justify-self:center;width:100%}.landing-content h1{background:linear-gradient(90deg,var(--main-yellow),var(--dark-green));-webkit-background-clip:text;background-clip:text;color:transparent;font-size:2.5rem}.landing-content .last-text{font-size:.8rem}.search-box{border:1px solid var(--main-yellow);display:flex;flex-wrap:nowrap;height:40px;width:60%}.search-box input{border:none;outline:none;padding:0 10px;width:100%}.search-box button{background-color:var(--main-yellow);border:none;padding:0 10px}@media screen and (max-width:768px){.landing{display:flex;height:60vh;position:relative}.landing-content{align-items:flex-end!important;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);background-color:rgba(0,0,0,.1)!important;height:60vh;padding-right:20px;position:absolute;right:0;width:100vw!important;z-index:1}.landing .image1{height:100%}.landing .image2{display:none}.last-text,.search-box{width:80vw;z-index:1}.last-text{background:linear-gradient(90deg,var(--main-yellow),var(--dark-green));-webkit-background-clip:text;background-clip:text;color:transparent;font-size:1.5rem!important;font-weight:800;text-align:end;width:80%!important}}@-webkit-keyframes swipe-right{0%{transform:translateX(-330px)}to{transform:translateX(0)}}@keyframes swipe-right{0%{transform:translateX(-330px)}to{transform:translateX(0)}}@-webkit-keyframes swipe-left{0%{transform:translateX(330px)}to{transform:translateX(0)}}@keyframes swipe-left{0%{transform:translateX(330px)}to{transform:translateX(0)}}@-webkit-keyframes swipe-up{10%{opacity:0;transform:translateY(200px)}50%{opacity:0;transform:translateY(200px)}to{opacity:1;transform:translateY(0)}}@keyframes swipe-up{10%{opacity:0;transform:translateY(200px)}50%{opacity:0;transform:translateY(200px)}to{opacity:1;transform:translateY(0)}}@-webkit-keyframes background{10%{background-image:url(/_nuxt/assets/images/ad2.png)}40%{background-image:url(/_nuxt/assets/images/ad2.png);opacity:0}70%{background-image:url(/_nuxt/assets/images/ad1.png);opacity:1}to{background-image:url(/_nuxt/assets/images/ad1.png)}}@keyframes background{10%{background-image:url(/_nuxt/assets/images/ad2.png)}40%{background-image:url(/_nuxt/assets/images/ad2.png);opacity:0}70%{background-image:url(/_nuxt/assets/images/ad1.png);opacity:1}to{background-image:url(/_nuxt/assets/images/ad1.png)}}";
+__vite_ssr_exports__.default = ".landing{display:grid;grid-template-columns:1fr 3fr 1fr;height:45vh}.landing .image2{transform:rotate(180deg);z-index:-1}.landing>img{height:45vh;width:auto}.landing .landing-content{align-items:center;display:flex;flex-direction:column;gap:20px;justify-content:center;justify-self:center;width:100%}.landing-content h1{background:linear-gradient(90deg,var(--main-yellow),var(--dark-green));-webkit-background-clip:text;background-clip:text;color:transparent;font-size:2.5rem}.landing-content .last-text{font-size:.8rem}.search-box{border:1px solid var(--main-yellow);display:flex;flex-wrap:nowrap;height:40px;width:60%}.search-box input{border:none;outline:none;padding:0 10px;width:100%}.search-box button{background-color:var(--main-yellow);border:none;padding:0 10px}.search-box button:hover{background-color:var(--dark-green)}.search-box button:hover .search-box{border:1px solid var(--dark-green)}@media screen and (max-width:768px){.landing{display:flex;height:60vh;position:relative}.landing-content{align-items:flex-end!important;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);background-color:rgba(0,0,0,.1)!important;height:60vh;padding-right:20px;position:absolute;right:0;width:100vw!important;z-index:1}.landing .image1{height:100%}.landing .image2{display:none}.last-text,.search-box{width:80vw;z-index:1}.last-text{background:linear-gradient(90deg,var(--dark-green),var(--main-red));-webkit-background-clip:text;background-clip:text;color:transparent;font-size:1.5rem!important;font-weight:800;text-align:end;width:80%!important}}@-webkit-keyframes swipe-right{0%{transform:translateX(-330px)}to{transform:translateX(0)}}@keyframes swipe-right{0%{transform:translateX(-330px)}to{transform:translateX(0)}}@-webkit-keyframes swipe-left{0%{transform:translateX(330px)}to{transform:translateX(0)}}@keyframes swipe-left{0%{transform:translateX(330px)}to{transform:translateX(0)}}@-webkit-keyframes swipe-up{10%{opacity:0;transform:translateY(200px)}50%{opacity:0;transform:translateY(200px)}to{opacity:1;transform:translateY(0)}}@keyframes swipe-up{10%{opacity:0;transform:translateY(200px)}50%{opacity:0;transform:translateY(200px)}to{opacity:1;transform:translateY(0)}}@-webkit-keyframes background{10%{background-image:url(/_nuxt/assets/images/ad2.png)}40%{background-image:url(/_nuxt/assets/images/ad2.png);opacity:0}70%{background-image:url(/_nuxt/assets/images/ad1.png);opacity:1}to{background-image:url(/_nuxt/assets/images/ad1.png)}}@keyframes background{10%{background-image:url(/_nuxt/assets/images/ad2.png)}40%{background-image:url(/_nuxt/assets/images/ad2.png);opacity:0}70%{background-image:url(/_nuxt/assets/images/ad1.png);opacity:1}to{background-image:url(/_nuxt/assets/images/ad1.png)}}";
 }
 
 
@@ -3489,7 +3489,6 @@ __vite_ssr_exports__.default = ".location-filter{width:220px}.location{display:f
 // - /node_modules/nuxt/dist/app/components/nuxt-link.mjs ($id_ffac87b5)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
-// - /assets/temp/carrots.webp ($id_fb8d975f)
 // - /assets/icons/bookmark-svgrepo-com.svg ($id_f0ad61d1)
 // - /components/popular-items.vue?vue&type=style&index=0&lang.css ($id_e129fdfd)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
@@ -3506,11 +3505,14 @@ const _sfc_main = /* @__PURE__ */ __vite_ssr_import_2__.defineComponent({
   setup(__props, { expose }) {
     expose();
     const data = __vite_ssr_import_1__.ref();
+    const to = __vite_ssr_import_1__.ref("/items/");
     __vite_ssr_import_1__.onMounted(async () => {
-      const response = await fetch("http://localhost:8080/get-popular");
+      const response = await fetch("http://localhost:8000/get-popular");
       data.value = await response.json();
     });
-    const __returned__ = { data };
+    const toggleSaved = async () => {
+    };
+    const __returned__ = { data, to, toggleSaved };
     Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
     return __returned__;
   }
@@ -3519,9 +3521,7 @@ const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/vue/dist/
 
 const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
 
-const __vite_ssr_import_5__ = await __vite_ssr_import__("/assets/temp/carrots.webp");
-
-const __vite_ssr_import_6__ = await __vite_ssr_import__("/assets/icons/bookmark-svgrepo-com.svg");
+const __vite_ssr_import_5__ = await __vite_ssr_import__("/assets/icons/bookmark-svgrepo-com.svg");
 
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_NuxtLink = __vite_ssr_import_0__.default;
@@ -3529,32 +3529,30 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   if ($setup.data) {
     _push(`<div class="popular-content"><!--[-->`);
     __vite_ssr_import_4__.ssrRenderList($setup.data, (item) => {
+      _push(`<div class="single-item">`);
       _push(__vite_ssr_import_4__.ssrRenderComponent(_component_NuxtLink, {
-        to: item._id,
-        class: "single-item",
-        key: item._id
+        to: $setup.to + item._id
       }, {
         default: __vite_ssr_import_3__.withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<img${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_5__.default)}${_scopeId}><div class="details"${_scopeId}><h4${_scopeId}>${__vite_ssr_import_4__.ssrInterpolate(item.name)}</h4><p${_scopeId}>KSH ${__vite_ssr_import_4__.ssrInterpolate(item.price)} per ${__vite_ssr_import_4__.ssrInterpolate(item.quantity)}</p><p${_scopeId}>farmer: ${__vite_ssr_import_4__.ssrInterpolate(item.farmerName)}</p><p${_scopeId}>${__vite_ssr_import_4__.ssrInterpolate(item.location)}</p></div><img class="book-mark"${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_6__.default)}${_scopeId}>`);
+            _push2(`<img${__vite_ssr_import_4__.ssrRenderAttr("src", item.images[0])}${_scopeId}><div class="details"${_scopeId}><h4${_scopeId}>${__vite_ssr_import_4__.ssrInterpolate(item.name)}</h4><p${_scopeId}>KSH ${__vite_ssr_import_4__.ssrInterpolate(item.price)} per ${__vite_ssr_import_4__.ssrInterpolate(item.quantity)}</p><p${_scopeId}>farmer: ${__vite_ssr_import_4__.ssrInterpolate(item.farmerName)}</p><p${_scopeId}>${__vite_ssr_import_4__.ssrInterpolate(item.location)}</p></div>`);
           } else {
             return [
-              __vite_ssr_import_3__.createVNode("img", { src: __vite_ssr_import_5__.default }),
+              __vite_ssr_import_3__.createVNode("img", {
+                src: item.images[0]
+              }, null, 8, ["src"]),
               __vite_ssr_import_3__.createVNode("div", { class: "details" }, [
                 __vite_ssr_import_3__.createVNode("h4", null, __vite_ssr_import_3__.toDisplayString(item.name), 1),
                 __vite_ssr_import_3__.createVNode("p", null, "KSH " + __vite_ssr_import_3__.toDisplayString(item.price) + " per " + __vite_ssr_import_3__.toDisplayString(item.quantity), 1),
                 __vite_ssr_import_3__.createVNode("p", null, "farmer: " + __vite_ssr_import_3__.toDisplayString(item.farmerName), 1),
                 __vite_ssr_import_3__.createVNode("p", null, __vite_ssr_import_3__.toDisplayString(item.location), 1)
-              ]),
-              __vite_ssr_import_3__.createVNode("img", {
-                class: "book-mark",
-                src: __vite_ssr_import_6__.default
-              })
+              ])
             ];
           }
         }),
         _: 2
       }, _parent));
+      _push(`<img class="book-mark"${__vite_ssr_import_4__.ssrRenderAttr("src", __vite_ssr_import_5__.default)}></div>`);
     });
     _push(`<!--]--></div>`);
   } else {
@@ -3562,32 +3560,20 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   }
   _push(`</section>`);
 }
-const __vite_ssr_import_7__ = await __vite_ssr_import__("/components/popular-items.vue?vue&type=style&index=0&lang.css");
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/components/popular-items.vue?vue&type=style&index=0&lang.css");
 
-const __vite_ssr_import_8__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_8__.useSSRContext();
+  const ssrContext = __vite_ssr_import_7__.useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/popular-items.vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const __vite_ssr_import_9__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+const __vite_ssr_import_8__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_9__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/components/popular-items.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_8__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/components/popular-items.vue"]]);
 ;
-}
-
-
-// --------------------
-// Request: /assets/temp/carrots.webp
-// Parents: 
-// - /components/popular-items.vue ($id_fda60bf2)
-// Dependencies: 
-
-// --------------------
-const $id_fb8d975f = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = "/_nuxt/assets/temp/carrots.webp";
 }
 
 
@@ -3611,7 +3597,7 @@ __vite_ssr_exports__.default = "/_nuxt/assets/icons/bookmark-svgrepo-com.svg";
 
 // --------------------
 const $id_e129fdfd = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = ".popular-items{width:100%}.popular-content,.skeleton{display:grid;font-size:.8rem;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));padding:30px 10px 10px}@media screen and (max-width:600px){.popular-content,.skeleton{gap:5px;grid-template-columns:1fr 1fr;padding:10px 2px 2px}}.single-item{border:1px solid #000;border-radius:7px;padding:10px 30px 10px 10px;position:relative}.single-item .book-mark{height:20px;position:absolute;right:10px;top:10px;width:20px}.single-item img{height:130px;-o-object-fit:cover;object-fit:cover;width:130px}.skeleton .single{height:150px;padding:10px}.skeleton .mover{-webkit-animation:mover 2s infinite;animation:mover 2s infinite;-webkit-animation-fill-mode:backwards;animation-fill-mode:backwards;background-color:rgba(0,0,0,.1);border-bottom-right-radius:10%;border-top-right-radius:10%;height:100%;width:100%}.single:nth-child(2) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*4);animation-delay:calc(var(--staggered-delay)*4)}.single:nth-child(3) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*7);animation-delay:calc(var(--staggered-delay)*7)}.single:nth-child(4) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*2);animation-delay:calc(var(--staggered-delay)*2)}.single:nth-child(5) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*4);animation-delay:calc(var(--staggered-delay)*4)}.single:nth-child(6) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*8);animation-delay:calc(var(--staggered-delay)*8)}.single:nth-child(7) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*5);animation-delay:calc(var(--staggered-delay)*5)}.single:nth-child(8) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*3);animation-delay:calc(var(--staggered-delay)*3)}.single:nth-child(9) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*4);animation-delay:calc(var(--staggered-delay)*4)}.single:nth-child(10) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*6);animation-delay:calc(var(--staggered-delay)*6)}@-webkit-keyframes mover{0%{width:0}50%{width:100%}to{width:0}}@keyframes mover{0%{width:0}50%{width:100%}to{width:0}}";
+__vite_ssr_exports__.default = ".popular-items{width:100%}.popular-content,.skeleton{display:grid;font-size:.8rem;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));padding:30px 10px 10px}@media screen and (max-width:600px){.popular-content,.skeleton{gap:5px;grid-template-columns:1fr 1fr;padding:10px 2px 2px}.popular-content{padding:0}}.single-item{border:1px solid #000;border-radius:7px;display:grid;padding:20px 30px 10px 10px;place-items:center;position:relative}.single-item>a>*{margin:3px 0}.single-item .book-mark{height:15px;position:absolute;right:10px;top:10px;width:15px}.single-item .book-mark:hover{cursor:pointer}.single-item img{height:130px;-o-object-fit:cover;object-fit:cover;width:130px}.skeleton .single{height:150px;padding:10px}.skeleton .mover{-webkit-animation:mover 2s infinite;animation:mover 2s infinite;-webkit-animation-fill-mode:backwards;animation-fill-mode:backwards;background-color:rgba(0,0,0,.1);border-bottom-right-radius:10%;border-top-right-radius:10%;height:100%;width:100%}.single:nth-child(2) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*4);animation-delay:calc(var(--staggered-delay)*4)}.single:nth-child(3) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*7);animation-delay:calc(var(--staggered-delay)*7)}.single:nth-child(4) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*2);animation-delay:calc(var(--staggered-delay)*2)}.single:nth-child(5) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*4);animation-delay:calc(var(--staggered-delay)*4)}.single:nth-child(6) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*8);animation-delay:calc(var(--staggered-delay)*8)}.single:nth-child(7) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*5);animation-delay:calc(var(--staggered-delay)*5)}.single:nth-child(8) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*3);animation-delay:calc(var(--staggered-delay)*3)}.single:nth-child(9) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*4);animation-delay:calc(var(--staggered-delay)*4)}.single:nth-child(10) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*6);animation-delay:calc(var(--staggered-delay)*6)}@-webkit-keyframes mover{0%{width:0}50%{width:100%}to{width:0}}@keyframes mover{0%{width:0}50%{width:100%}to{width:0}}";
 }
 
 
@@ -3654,7 +3640,7 @@ __vite_ssr_exports__.default = "body{background-color:#fff;color:#333;font-famil
 
 // --------------------
 const $id_64728f64 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = ".dynamic-data{-webkit-animation:opac 3s 1;animation:opac 3s 1;display:flex;gap:20px;margin-top:30px;padding:20px}@-webkit-keyframes opac{0%{opacity:0}50%{opacity:0}70%{opacity:0}to{opacity:1}}@keyframes opac{0%{opacity:0}50%{opacity:0}70%{opacity:0}to{opacity:1}}";
+__vite_ssr_exports__.default = ".dynamic-data{display:flex;gap:20px;margin-top:30px;padding:20px}";
 }
 
 
@@ -4307,7 +4293,7 @@ const _sfc_main = /* @__PURE__ */ __vite_ssr_import_5__.defineComponent({
   setup(__props, { expose }) {
     expose();
     __vite_ssr_import_4__.useHead({
-      title: "national farmer",
+      title: "fresh pickens",
       link: [
         { rel: "icon", href: "../../assets/icons/2.png" }
       ]
@@ -5868,13 +5854,12 @@ const __modules__ = {
   "/components/nav-bar.vue?vue&type=style&index=0&lang.css": $id_3d87111a,
   "/@id/plugin-vue:export-helper": $id_bbb863c1,
   "/components/landing-page.vue": $id_f281e5fb,
-  "/assets/images/1.png": $id_c749df18,
+  "/assets/images/ad1.png": $id_3a55e414,
   "/assets/images/2.png": $id_4d0ce18e,
   "/components/landing-page.vue?vue&type=style&index=0&lang.css": $id_e75921d4,
   "/components/location-filter.vue": $id_9fd3ba4e,
   "/components/location-filter.vue?vue&type=style&index=0&lang.css": $id_68bc8fa0,
   "/components/popular-items.vue": $id_fda60bf2,
-  "/assets/temp/carrots.webp": $id_fb8d975f,
   "/assets/icons/bookmark-svgrepo-com.svg": $id_f0ad61d1,
   "/components/popular-items.vue?vue&type=style&index=0&lang.css": $id_e129fdfd,
   "/assets/styles/variables.css": $id_c537320a,

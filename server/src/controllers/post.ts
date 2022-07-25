@@ -14,7 +14,7 @@ const getId = async (id:string)=>{
 }
 exports.getPopular = async (req:Request, res:Response)=>{
     const popular = await post.find({ popular: true})
-    res.send(popular)
+    res.send(popular);
 }
 exports.getByID =async (req:Request, res: Response) => {
     try{
