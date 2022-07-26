@@ -2,7 +2,7 @@
     <nav>
         <svg width="32px" height="32px" fill="black" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M 4 7 L 4 9 L 28 9 L 28 7 Z M 4 15 L 4 17 L 28 17 L 28 15 Z M 4 23 L 4 25 L 28 25 L 28 23 Z"/></svg>
         <img src="~/assets/icons/2.png" alt="" srcset="">
-        <h4>National farmer</h4>
+        <h4>Fresh Pickens</h4>
         <svg class="acc" version="1.1" id="Capa_1"  x="0px" y="0px" @click="toggleAcount" width="24px" height="24px"
 	            viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
                 <g>
@@ -77,16 +77,17 @@ nav{
     padding: 0 50px;
     position: sticky;
     top: 0;
-    background-color: var(--main-yellow);
-    box-shadow: 3px 3px 3px 5px rgba(0, 0, 0, 0.1);
+    z-index: 190000;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 nav > img {
     height: 80%;
 }
 nav h4 {
     margin-right: auto;
-    font-family: var(--cambo);
     font-size: 1.7rem;
+    font-weight: 300;
 }
 nav .acc {
     margin-left: auto;

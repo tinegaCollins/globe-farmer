@@ -2,16 +2,18 @@
     <section class="popular-items">
         <h4>popular-items</h4>
         <div class="popular-content" v-if="data">
-            <NuxtLink :to="item._id" class="single-item" v-for="item in data" :key="item._id">
-                <img src="~/assets/temp/carrots.webp">
-                <div class="details">
-                    <h4>{{item.name}}</h4>
-                    <p>KSH {{item.price}} per {{item.quantity}}</p>
-                    <p>farmer: {{item.farmerName}}</p>
-                    <p>{{item.location}}</p>
-                </div>
-                <img class="book-mark" src="~/assets/icons/bookmark-svgrepo-com.svg">
-            </NuxtLink>
+            <div class="single-item" v-for="item in data" :key="item._id">
+                <NuxtLink :to="to + item._id" >
+                    <img :src="item.images[0]">
+                    <div class="details">
+                        <h4>{{item.name}}</h4>
+                        <p>KSH {{item.price}} per {{item.quantity}}</p>
+                        <p>farmer: {{item.farmerName}}</p>
+                        <p>{{item.location}}</p>
+                    </div>
+                </NuxtLink>
+                <img class="book-mark" src="~/assets/icons/bookmark-svgrepo-com.svg" @click="toggleSaved">
+            </div>
         </div>
         <div class="skeleton" v-else>
             <div class="single">
@@ -51,11 +53,17 @@
 
 <script setup lang="ts">
 const data = ref();
+const to = ref('/items/');
 onMounted( async()=>{
-    const response = await fetch('http://localhost:8080/get-popular');
+    const response = await fetch('http://localhost:8000/get-popular');
     data.value = await response.json();
 
 })
+
+
+const toggleSaved = async ()=>{
+
+}
 </script>
 <style>
 .popular-items{
@@ -76,19 +84,30 @@ onMounted( async()=>{
         grid-template-columns: 1fr 1fr;
         gap: 5px;
     }
+    .popular-content{
+        padding: 0;
+    }
 }
 .single-item{
     border: 1px solid black;
-    padding: 10px 30px 10px 10px;
+    padding: 20px 30px 10px 10px;
     border-radius: 7px;
     position: relative;
+    display: grid;
+    place-items: center;
+}
+.single-item > a > *{
+    margin: 3px 0;
 }
 .single-item .book-mark{
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     position: absolute;
     top: 10px;
     right: 10px;
+}
+.single-item .book-mark:hover{
+    cursor: pointer;
 }
 .single-item img{
     height: 130px;

@@ -8,20 +8,18 @@ exports.addPost = async (req: Request,res: Response) =>{
     await newPost.save();
     res.status(200).json({ message: 'saved'})
 }
-const getId = async (id:string)=>{
-    const item:object = await post.findById(id);
-    return item
-}
 exports.getPopular = async (req:Request, res:Response)=>{
     const popular = await post.find({ popular: true})
-    res.send(popular)
+    res.send(popular);
 }
 exports.getByID =async (req:Request, res: Response) => {
     try{
-        res.send(getId(req.params.id));
+        const id = req.params.id;
+        const item = await post.findById(id);
+        res.status(200).json(item);
     }
     catch{
-        res.status(404).json({ message: 'not found'})
+        res.status(404).json({message: "not found, try again"})
     }
 }
 exports.deletePost = async (req:Request, res:Response) => {
@@ -33,7 +31,7 @@ exports.deletePost = async (req:Request, res:Response) => {
         res.status(404).json({ message: "couldn't delete"})
     }
 }
-exports.updatePost = async(req:Request, res:Response)=>{
-    const id = req.body.postID;
-    let curPost:object = getId(id);
-}
+// exports.updatePost = async(req:Request, res:Response)=>{
+//     const id = req.body.postID;
+//     let curPost:object = getId(id);
+// }
