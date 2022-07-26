@@ -1,6 +1,6 @@
 <template>
     <section class="popular-items">
-        <h4>popular-items</h4>
+        <h4>trending items</h4>
         <div class="popular-content" v-if="data">
             <div class="single-item" v-for="item in data" :key="item._id">
                 <NuxtLink :to="to + item._id" >
@@ -16,30 +16,6 @@
             </div>
         </div>
         <div class="skeleton" v-else>
-            <div class="single">
-                <div class="mover"></div>
-            </div>
-            <div class="single">
-                <div class="mover"></div>
-            </div>
-            <div class="single">
-                <div class="mover"></div>
-            </div>
-            <div class="single">
-                <div class="mover"></div>
-            </div>
-            <div class="single">
-                <div class="mover"></div>
-            </div>
-            <div class="single">
-                <div class="mover"></div>
-            </div>
-            <div class="single">
-                <div class="mover"></div>
-            </div>
-            <div class="single">
-                <div class="mover"></div>
-            </div>
             <div class="single">
                 <div class="mover"></div>
             </div>
@@ -68,6 +44,12 @@ const toggleSaved = async ()=>{
 <style>
 .popular-items{
     width: 100%;
+}
+.popular-items> h4{
+    font-family: var(--cambo);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 .popular-content, .skeleton {
     padding: 10px;

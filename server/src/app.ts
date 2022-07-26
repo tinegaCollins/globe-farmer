@@ -45,3 +45,4 @@ const startServer = ()=>{
     app.post('/add-post', postController.addPost);
     app.get('/get-popular', postController.getPopular);
 }
+
