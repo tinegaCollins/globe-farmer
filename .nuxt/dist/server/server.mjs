@@ -3548,7 +3548,7 @@ const __vite_ssr_import_5__ = await __vite_ssr_import__("/assets/icons/bookmark-
 
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_NuxtLink = __vite_ssr_import_0__.default;
-  _push(`<section${__vite_ssr_import_4__.ssrRenderAttrs(__vite_ssr_import_3__.mergeProps({ class: "popular-items" }, _attrs))}><h4>popular-items</h4>`);
+  _push(`<section${__vite_ssr_import_4__.ssrRenderAttrs(__vite_ssr_import_3__.mergeProps({ class: "popular-items" }, _attrs))}><h4>trending items</h4>`);
   if ($setup.data) {
     _push(`<div class="popular-content"><!--[-->`);
     __vite_ssr_import_4__.ssrRenderList($setup.data, (item) => {
@@ -3579,7 +3579,7 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
     });
     _push(`<!--]--></div>`);
   } else {
-    _push(`<div class="skeleton"><div class="single"><div class="mover"></div></div><div class="single"><div class="mover"></div></div><div class="single"><div class="mover"></div></div><div class="single"><div class="mover"></div></div><div class="single"><div class="mover"></div></div><div class="single"><div class="mover"></div></div><div class="single"><div class="mover"></div></div><div class="single"><div class="mover"></div></div><div class="single"><div class="mover"></div></div><div class="single"><div class="mover"></div></div></div>`);
+    _push(`<div class="skeleton"><div class="single"><div class="mover"></div></div><div class="single"><div class="mover"></div></div></div>`);
   }
   _push(`</section>`);
 }
@@ -3620,7 +3620,7 @@ __vite_ssr_exports__.default = "/_nuxt/assets/icons/bookmark-svgrepo-com.svg";
 
 // --------------------
 const $id_e129fdfd = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = ".popular-items{width:100%}.popular-content,.skeleton{display:grid;font-size:.8rem;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));padding:30px 10px 10px}@media screen and (max-width:600px){.popular-content,.skeleton{gap:5px;grid-template-columns:1fr 1fr;padding:10px 2px 2px}.popular-content{padding:0}}.single-item{border:1px solid #000;border-radius:7px;display:grid;padding:20px 30px 10px 10px;place-items:center;position:relative}.single-item>a>*{margin:3px 0}.single-item .book-mark{height:15px;position:absolute;right:10px;top:10px;width:15px}.single-item .book-mark:hover{cursor:pointer}.single-item img{height:130px;-o-object-fit:cover;object-fit:cover;width:130px}.skeleton .single{height:150px;padding:10px}.skeleton .mover{-webkit-animation:mover 2s infinite;animation:mover 2s infinite;-webkit-animation-fill-mode:backwards;animation-fill-mode:backwards;background-color:rgba(0,0,0,.1);border-bottom-right-radius:10%;border-top-right-radius:10%;height:100%;width:100%}.single:nth-child(2) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*4);animation-delay:calc(var(--staggered-delay)*4)}.single:nth-child(3) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*7);animation-delay:calc(var(--staggered-delay)*7)}.single:nth-child(4) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*2);animation-delay:calc(var(--staggered-delay)*2)}.single:nth-child(5) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*4);animation-delay:calc(var(--staggered-delay)*4)}.single:nth-child(6) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*8);animation-delay:calc(var(--staggered-delay)*8)}.single:nth-child(7) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*5);animation-delay:calc(var(--staggered-delay)*5)}.single:nth-child(8) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*3);animation-delay:calc(var(--staggered-delay)*3)}.single:nth-child(9) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*4);animation-delay:calc(var(--staggered-delay)*4)}.single:nth-child(10) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*6);animation-delay:calc(var(--staggered-delay)*6)}@-webkit-keyframes mover{0%{width:0}50%{width:100%}to{width:0}}@keyframes mover{0%{width:0}50%{width:100%}to{width:0}}";
+__vite_ssr_exports__.default = ".popular-items{width:100%}.popular-items>h4{font-family:var(--cambo);font-size:1.5rem;font-weight:700;margin-bottom:20px}.popular-content,.skeleton{display:grid;font-size:.8rem;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));padding:30px 10px 10px}@media screen and (max-width:600px){.popular-content,.skeleton{gap:5px;grid-template-columns:1fr 1fr;padding:10px 2px 2px}.popular-content{padding:0}}.single-item{border:1px solid #000;border-radius:7px;display:grid;padding:20px 30px 10px 10px;place-items:center;position:relative}.single-item>a>*{margin:3px 0}.single-item .book-mark{height:15px;position:absolute;right:10px;top:10px;width:15px}.single-item .book-mark:hover{cursor:pointer}.single-item img{height:130px;-o-object-fit:cover;object-fit:cover;width:130px}.skeleton .single{height:150px;padding:10px}.skeleton .mover{-webkit-animation:mover 2s infinite;animation:mover 2s infinite;-webkit-animation-fill-mode:backwards;animation-fill-mode:backwards;background-color:rgba(0,0,0,.1);border-bottom-right-radius:10%;border-top-right-radius:10%;height:100%;width:100%}.single:nth-child(2) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*4);animation-delay:calc(var(--staggered-delay)*4)}.single:nth-child(3) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*7);animation-delay:calc(var(--staggered-delay)*7)}.single:nth-child(4) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*2);animation-delay:calc(var(--staggered-delay)*2)}.single:nth-child(5) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*4);animation-delay:calc(var(--staggered-delay)*4)}.single:nth-child(6) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*8);animation-delay:calc(var(--staggered-delay)*8)}.single:nth-child(7) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*5);animation-delay:calc(var(--staggered-delay)*5)}.single:nth-child(8) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*3);animation-delay:calc(var(--staggered-delay)*3)}.single:nth-child(9) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*4);animation-delay:calc(var(--staggered-delay)*4)}.single:nth-child(10) .mover{-webkit-animation-delay:calc(var(--staggered-delay)*6);animation-delay:calc(var(--staggered-delay)*6)}@-webkit-keyframes mover{0%{width:0}50%{width:100%}to{width:0}}@keyframes mover{0%{width:0}50%{width:100%}to{width:0}}";
 }
 
 
@@ -3676,6 +3676,10 @@ __vite_ssr_exports__.default = ".dynamic-data{display:flex;gap:20px;margin-top:3
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
+// - /assets/temp/brocolli.jpeg ($id_6ebb17b5)
+// - /assets/temp/carrots.webp ($id_fb8d975f)
+// - /assets/temp/images.jpeg ($id_be7a4b96)
+// - /assets/icons/location-svgrepo-com.svg ($id_7576eb66)
 // - /pages/items/[id].vue?vue&type=style&index=0&lang.css ($id_f1ec3444)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
@@ -3707,7 +3711,18 @@ const _sfc_main = /* @__PURE__ */ __vite_ssr_import_3__.defineComponent({
       }
     };
     fetchData();
-    const __returned__ = { route, itemId, messageResponse, item, fetchData };
+    const getSimilarProducts = async (types) => {
+      const data = await fetch("http//localhost:8000/get-similar-products/" + types);
+      const status = data.status;
+      if (status === 200) {
+        const similarProducts = await data.json();
+        console.log(similarProducts);
+      } else {
+        messageResponse.value = "kuna kashida mahali, check net yako ama uchill nifix";
+      }
+    };
+    const ifHistory = __vite_ssr_import_2__.ref();
+    const __returned__ = { route, itemId, messageResponse, item, fetchData, getSimilarProducts, ifHistory };
     Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
     return __returned__;
   }
@@ -3716,34 +3731,103 @@ const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/vue/dist/
 
 const __vite_ssr_import_5__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
 
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/assets/temp/brocolli.jpeg");
+
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/assets/temp/carrots.webp");
+
+const __vite_ssr_import_8__ = await __vite_ssr_import__("/assets/temp/images.jpeg");
+
+const __vite_ssr_import_9__ = await __vite_ssr_import__("/assets/icons/location-svgrepo-com.svg");
+
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_nav_bar = __vite_ssr_import_0__.default;
   _push(`<div${__vite_ssr_import_5__.ssrRenderAttrs(__vite_ssr_import_4__.mergeProps({ class: "items-page" }, _attrs))}>`);
   _push(__vite_ssr_import_5__.ssrRenderComponent(_component_nav_bar, null, null, _parent));
   _push(`<p>${__vite_ssr_import_5__.ssrInterpolate($setup.messageResponse)}</p>`);
   if ($setup.item) {
-    _push(`<div class="item"><h2>${__vite_ssr_import_5__.ssrInterpolate($setup.item.farmerName)}&#39;s ${__vite_ssr_import_5__.ssrInterpolate($setup.item.name)}</h2><div class="images"><img${__vite_ssr_import_5__.ssrRenderAttr("src", $setup.item.images[0])}></div><div class="details"><p>location ${__vite_ssr_import_5__.ssrInterpolate($setup.item.location)}</p><p>price:${__vite_ssr_import_5__.ssrInterpolate($setup.item.price)} per ${__vite_ssr_import_5__.ssrInterpolate($setup.item.quantity)}</p><p>respondes in minutes</p></div><div class="messsages"></div></div>`);
+    _push(`<div class="item"><div class="images"><img${__vite_ssr_import_5__.ssrRenderAttr("src", $setup.item.images[0])}><div class="smaller-images"><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_6__.default)} alt="" srcset=""><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="" srcset=""><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""></div></div><div class="title"><h1>${__vite_ssr_import_5__.ssrInterpolate($setup.item.name)}</h1><h3 style="${__vite_ssr_import_5__.ssrRenderStyle({ "color": "green" })}">KSH ${__vite_ssr_import_5__.ssrInterpolate($setup.item.price)} per ${__vite_ssr_import_5__.ssrInterpolate($setup.item.quantity)}</h3><h4><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset="">${__vite_ssr_import_5__.ssrInterpolate($setup.item.location)}</h4><h5>From: ${__vite_ssr_import_5__.ssrInterpolate($setup.item.farmerName)}</h5></div><div class="messsages">`);
+    if ($setup.ifHistory) {
+      _push(`<div class="if-history"><button>go to chat</button></div>`);
+    } else {
+      _push(`<div class="if-not-history"><div class="suggestions"><p>is it available</p><p>can you deliver to...</p><p>call me</p></div><input type="text" placeholder="write your message"><button>start a chat</button></div>`);
+    }
+    _push(`</div><div class="description"><h4>description</h4><p>${__vite_ssr_import_5__.ssrInterpolate($setup.item.description)}</p></div><div class="item-details"><p>type: fruit</p><p>availability: available</p><p>delivery-report: can delivery</p></div><div class="similar-products"><h4>similar products</h4><!-- <div class="similar-product" v-for="similarProduct in item.similarProducts">
+                <img :src="similarProduct.images[0]">
+                <p>{{similarProduct.name}}</p>
+            </div> --></div></div>`);
   } else {
     _push(`<!---->`);
   }
   _push(`</div>`);
 }
-const __vite_ssr_import_6__ = await __vite_ssr_import__("/pages/items/[id].vue?vue&type=style&index=0&lang.css");
+const __vite_ssr_import_10__ = await __vite_ssr_import__("/pages/items/[id].vue?vue&type=style&index=0&lang.css");
 
-const __vite_ssr_import_7__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+const __vite_ssr_import_11__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_7__.useSSRContext();
+  const ssrContext = __vite_ssr_import_11__.useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/items/[id].vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const __vite_ssr_import_8__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+const __vite_ssr_import_12__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_8__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/items/[id].vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/items/[id].vue"]]);
 
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
+}
+
+
+// --------------------
+// Request: /assets/temp/brocolli.jpeg
+// Parents: 
+// - /pages/items/[id].vue?macro=true ($id_e17efa85)
+// - /pages/items/[id].vue ($id_79d578c8)
+// Dependencies: 
+
+// --------------------
+const $id_6ebb17b5 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = "/_nuxt/assets/temp/brocolli.jpeg";
+}
+
+
+// --------------------
+// Request: /assets/temp/carrots.webp
+// Parents: 
+// - /pages/items/[id].vue?macro=true ($id_e17efa85)
+// - /pages/items/[id].vue ($id_79d578c8)
+// Dependencies: 
+
+// --------------------
+const $id_fb8d975f = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = "/_nuxt/assets/temp/carrots.webp";
+}
+
+
+// --------------------
+// Request: /assets/temp/images.jpeg
+// Parents: 
+// - /pages/items/[id].vue?macro=true ($id_e17efa85)
+// - /pages/items/[id].vue ($id_79d578c8)
+// Dependencies: 
+
+// --------------------
+const $id_be7a4b96 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = "/_nuxt/assets/temp/images.jpeg";
+}
+
+
+// --------------------
+// Request: /assets/icons/location-svgrepo-com.svg
+// Parents: 
+// - /pages/items/[id].vue?macro=true ($id_e17efa85)
+// - /pages/items/[id].vue ($id_79d578c8)
+// Dependencies: 
+
+// --------------------
+const $id_7576eb66 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+__vite_ssr_exports__.default = "/_nuxt/assets/icons/location-svgrepo-com.svg";
 }
 
 
@@ -3756,7 +3840,7 @@ Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configur
 
 // --------------------
 const $id_f1ec3444 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = ".item{align-items:center;display:flex;flex-direction:column;gap:10px;padding:15px 0}.item .images{display:grid;place-items:center;width:100%}.item .images img{height:40vh;-o-object-fit:cover;object-fit:cover;width:90%}";
+__vite_ssr_exports__.default = ".item{display:flex;flex-direction:column;font-family:var(--cambo);gap:10px;padding:5px 0}.item .images{display:grid;place-items:center;width:100%}.item .images>img{height:40vh;-o-object-fit:cover;object-fit:cover;width:100%}.smaller-images{display:grid;gap:10px;grid-template-columns:repeat(6,1fr);margin-top:10px}.smaller-images>img{border:1px solid var(--dark-green);height:60px;-o-object-fit:cover;object-fit:cover;width:60px}.title{display:grid;gap:10px;grid-template-columns:1fr 1fr;padding:10px}.title,.title h4{align-items:center}.title h4{display:flex;font-size:1.2rem;font-weight:700;gap:5px}.title img{height:30px;-o-object-fit:cover;object-fit:cover;width:30px}.title h5{font-size:large;grid-column:1/3}.messsages{padding:10px}.if-history{display:grid;height:50px;place-items:center;width:100%}.if-history button{background-color:var(--light-green);border:none;border-radius:5px;color:#fff;font-size:1.2rem;font-weight:700;height:100%;outline:none;transition:all .3s ease-in-out;width:100%}.if-history button:hover{background-color:var(--dark-green)}.if-not-history{gap:10px;grid-template-columns:1fr}.if-not-history,.suggestions{align-items:center;display:grid}.suggestions{gap:5px;grid-template-columns:1fr 1.5fr 1fr}.suggestions>p{background-color:var(--light-green);border-radius:6px;padding:6px 2px;text-align:center}.if-not-history input{border:1px solid var(--dark-green);border-radius:5px;font-size:1.2rem;font-weight:700;height:50px;outline:none;transition:all .3s ease-in-out;width:100%}.if-not-history input:focus{border:1px solid var(--light-green)}.if-not-history button{background-color:var(--light-green);border:none;border-radius:5px;color:#fff;font-size:1.2rem;font-weight:700;height:50px;outline:none;transition:all .3s ease-in-out;width:100%}.if-not-history button:hover{background-color:var(--dark-green)}.description{display:grid;gap:10px;padding:10px}";
 }
 
 
@@ -4462,6 +4546,10 @@ __vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_s
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
+// - /assets/temp/brocolli.jpeg ($id_6ebb17b5)
+// - /assets/temp/carrots.webp ($id_fb8d975f)
+// - /assets/temp/images.jpeg ($id_be7a4b96)
+// - /assets/icons/location-svgrepo-com.svg ($id_7576eb66)
 // - /pages/items/[id].vue?vue&type=style&index=0&lang.css ($id_f1ec3444)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
@@ -4493,7 +4581,18 @@ const _sfc_main = /* @__PURE__ */ __vite_ssr_import_3__.defineComponent({
       }
     };
     fetchData();
-    const __returned__ = { route, itemId, messageResponse, item, fetchData };
+    const getSimilarProducts = async (types) => {
+      const data = await fetch("http//localhost:8000/get-similar-products/" + types);
+      const status = data.status;
+      if (status === 200) {
+        const similarProducts = await data.json();
+        console.log(similarProducts);
+      } else {
+        messageResponse.value = "kuna kashida mahali, check net yako ama uchill nifix";
+      }
+    };
+    const ifHistory = __vite_ssr_import_2__.ref();
+    const __returned__ = { route, itemId, messageResponse, item, fetchData, getSimilarProducts, ifHistory };
     Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
     return __returned__;
   }
@@ -4502,31 +4601,48 @@ const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/vue/dist/
 
 const __vite_ssr_import_5__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
 
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/assets/temp/brocolli.jpeg");
+
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/assets/temp/carrots.webp");
+
+const __vite_ssr_import_8__ = await __vite_ssr_import__("/assets/temp/images.jpeg");
+
+const __vite_ssr_import_9__ = await __vite_ssr_import__("/assets/icons/location-svgrepo-com.svg");
+
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
   const _component_nav_bar = __vite_ssr_import_0__.default;
   _push(`<div${__vite_ssr_import_5__.ssrRenderAttrs(__vite_ssr_import_4__.mergeProps({ class: "items-page" }, _attrs))}>`);
   _push(__vite_ssr_import_5__.ssrRenderComponent(_component_nav_bar, null, null, _parent));
   _push(`<p>${__vite_ssr_import_5__.ssrInterpolate($setup.messageResponse)}</p>`);
   if ($setup.item) {
-    _push(`<div class="item"><h2>${__vite_ssr_import_5__.ssrInterpolate($setup.item.farmerName)}&#39;s ${__vite_ssr_import_5__.ssrInterpolate($setup.item.name)}</h2><div class="images"><img${__vite_ssr_import_5__.ssrRenderAttr("src", $setup.item.images[0])}></div><div class="details"><p>location ${__vite_ssr_import_5__.ssrInterpolate($setup.item.location)}</p><p>price:${__vite_ssr_import_5__.ssrInterpolate($setup.item.price)} per ${__vite_ssr_import_5__.ssrInterpolate($setup.item.quantity)}</p><p>respondes in minutes</p></div><div class="messsages"></div></div>`);
+    _push(`<div class="item"><div class="images"><img${__vite_ssr_import_5__.ssrRenderAttr("src", $setup.item.images[0])}><div class="smaller-images"><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_6__.default)} alt="" srcset=""><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="" srcset=""><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""></div></div><div class="title"><h1>${__vite_ssr_import_5__.ssrInterpolate($setup.item.name)}</h1><h3 style="${__vite_ssr_import_5__.ssrRenderStyle({ "color": "green" })}">KSH ${__vite_ssr_import_5__.ssrInterpolate($setup.item.price)} per ${__vite_ssr_import_5__.ssrInterpolate($setup.item.quantity)}</h3><h4><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset="">${__vite_ssr_import_5__.ssrInterpolate($setup.item.location)}</h4><h5>From: ${__vite_ssr_import_5__.ssrInterpolate($setup.item.farmerName)}</h5></div><div class="messsages">`);
+    if ($setup.ifHistory) {
+      _push(`<div class="if-history"><button>go to chat</button></div>`);
+    } else {
+      _push(`<div class="if-not-history"><div class="suggestions"><p>is it available</p><p>can you deliver to...</p><p>call me</p></div><input type="text" placeholder="write your message"><button>start a chat</button></div>`);
+    }
+    _push(`</div><div class="description"><h4>description</h4><p>${__vite_ssr_import_5__.ssrInterpolate($setup.item.description)}</p></div><div class="item-details"><p>type: fruit</p><p>availability: available</p><p>delivery-report: can delivery</p></div><div class="similar-products"><h4>similar products</h4><!-- <div class="similar-product" v-for="similarProduct in item.similarProducts">
+                <img :src="similarProduct.images[0]">
+                <p>{{similarProduct.name}}</p>
+            </div> --></div></div>`);
   } else {
     _push(`<!---->`);
   }
   _push(`</div>`);
 }
-const __vite_ssr_import_6__ = await __vite_ssr_import__("/pages/items/[id].vue?vue&type=style&index=0&lang.css");
+const __vite_ssr_import_10__ = await __vite_ssr_import__("/pages/items/[id].vue?vue&type=style&index=0&lang.css");
 
-const __vite_ssr_import_7__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+const __vite_ssr_import_11__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_7__.useSSRContext();
+  const ssrContext = __vite_ssr_import_11__.useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("pages/items/[id].vue");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
-const __vite_ssr_import_8__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+const __vite_ssr_import_12__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_8__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/items/[id].vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/items/[id].vue"]]);
 ;
 }
 
@@ -6060,6 +6176,10 @@ const __modules__ = {
   "/assets/styles/main.css": $id_41a284b6,
   "/pages/index/index.vue?vue&type=style&index=0&lang.css": $id_64728f64,
   "/pages/items/[id].vue?macro=true": $id_e17efa85,
+  "/assets/temp/brocolli.jpeg": $id_6ebb17b5,
+  "/assets/temp/carrots.webp": $id_fb8d975f,
+  "/assets/temp/images.jpeg": $id_be7a4b96,
+  "/assets/icons/location-svgrepo-com.svg": $id_7576eb66,
   "/pages/items/[id].vue?vue&type=style&index=0&lang.css": $id_f1ec3444,
   "/pages/login.vue?macro=true": $id_213baa8a,
   "/pages/login.vue?vue&type=style&index=0&lang.css": $id_af77e8ef,
