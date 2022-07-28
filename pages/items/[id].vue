@@ -4,7 +4,11 @@
     <p>{{messageResponse}}</p>
     <div class="item" v-if="item">
         <div class="images">
-            <img :src="item.images[0]">
+            <div class="main-image">
+                <div class="left-pointer"></div>
+                <img :src="item.images[0]" id="main-image">
+                <div class="right-pointer"></div>
+            </div>
             <div class="smaller-images">
                 <img src="~/assets/temp/brocolli.jpeg" alt="" srcset="">
                 <img src="~/assets/temp/carrots.webp" alt="" srcset="">
@@ -36,6 +40,7 @@
             <p>{{item.description}}</p>
         </div>
         <div class="item-details">
+            <!-- icons  -->
             <p>type: fruit</p>
             <p>availability: available</p>
             <p>delivery-report: can delivery</p>
@@ -81,7 +86,6 @@ const getSimilarProducts = async (types: string)=>{
         messageResponse.value = "kuna kashida mahali, check net yako ama uchill nifix"
     }
 }
-
 const ifHistory = ref<boolean>();
 </script>
 <style>
@@ -97,10 +101,31 @@ const ifHistory = ref<boolean>();
     display: grid;
     place-items: center;
 }
-.item .images> img {
+.item .main-image #main-image {
     width: 100%;
     height: 40vh;
     object-fit: cover;
+}
+.main-image{
+    position: relative;
+}
+.main-image > div {
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.089);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 40%;
+}
+.left-pointer {
+    left: 0;
+    background-image: url(~/assets/icons/left-arrow-svgrepo-com.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.right-pointer {
+    right: 0;
+    background-image: url(~/assets/icons/right-arrow-svgrepo-com.svg);
 }
 .smaller-images {
     display: grid;
@@ -173,7 +198,7 @@ const ifHistory = ref<boolean>();
     grid-template-columns: 1fr 1.5fr 1fr;
     align-items: center;
 }
-.suggestions>p{
+.suggestions > p{
     background-color: var(--light-green);
     text-align: center;
     padding: 6px 2px;
@@ -211,5 +236,17 @@ const ifHistory = ref<boolean>();
     display: grid;
     gap: 10px;
     padding: 10px;
+}
+.item-details {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    padding: 10px;
+}
+.item-details > *{
+    background-color: var(--light-green);
+    display: grid;
+    place-items: center;
+    padding: 0px 3px;
 }
 </style>

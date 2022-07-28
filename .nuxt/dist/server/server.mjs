@@ -1,34 +1,34 @@
 
 // --------------------
-// Request: /home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/app/entry
+// Request: /home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/app/entry
 // Parents: 
 // - <entry> ($id_c757eb9e)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/ohmyfetch/dist/index.mjs ($id_780217c4)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/paths.mjs ($id_3bfdbe9c)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/paths.mjs ($id_881e0e21)
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/css.mjs ($id_bf600039)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/plugins/server.mjs ($id_80eedd06)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/root-component.mjs ($id_cd99bfa7)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/app-component.mjs ($id_e3e27670)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/css.mjs ($id_536b31ad)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/plugins/server.mjs ($id_ba5243c6)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/root-component.mjs ($id_c3d2b597)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/app-component.mjs ($id_557bb212)
 // --------------------
-const $id_a3fa1848 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_68bcca5a = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/ohmyfetch/dist/index.mjs");
 
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/paths.mjs");
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/paths.mjs");
 
 const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/index.mjs");
 
-const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/css.mjs");
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/css.mjs");
 
-const __vite_ssr_import_5__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/plugins/server.mjs");
+const __vite_ssr_import_5__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/plugins/server.mjs");
 
-const __vite_ssr_import_6__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/root-component.mjs");
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/root-component.mjs");
 
-const __vite_ssr_import_7__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/app-component.mjs");
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/app-component.mjs");
 
 if (!globalThis.$fetch) {
   globalThis.$fetch = __vite_ssr_import_1__.$fetch.create({
@@ -93,7 +93,7 @@ __vite_ssr_exports__.default = (ctx) => entry(ctx);
 // --------------------
 // Request: /node_modules/vue/dist/vue.cjs.js
 // Parents: 
-// - /home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/app/entry ($id_a3fa1848)
+// - /home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/app/entry ($id_68bcca5a)
 // - /node_modules/nuxt/dist/app/nuxt.mjs ($id_e069d411)
 // - /node_modules/nuxt/dist/app/composables/component.mjs ($id_53345950)
 // - /node_modules/nuxt/dist/app/composables/asyncData.mjs ($id_d5b6a221)
@@ -103,7 +103,7 @@ __vite_ssr_exports__.default = (ctx) => entry(ctx);
 // - /node_modules/nuxt/dist/app/composables/cookie.mjs ($id_511b441d)
 // - /node_modules/nuxt/dist/app/components/nuxt-link.mjs ($id_ffac87b5)
 // - /node_modules/nuxt/dist/head/runtime/composables.mjs ($id_04ea9504)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/components.plugin.mjs ($id_454c6b03)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/components.plugin.mjs ($id_71719a14)
 // - /node_modules/@vueuse/head/dist/index.mjs ($id_c032264e)
 // - /node_modules/nuxt/dist/head/runtime/lib/vueuse-head.plugin.mjs ($id_e6f12003)
 // - /node_modules/nuxt/dist/head/runtime/plugin.mjs ($id_a2650341)
@@ -131,20 +131,20 @@ __vite_ssr_exports__.default = (ctx) => entry(ctx);
 // - /pages/messages/index.vue ($id_8ad27286)
 // - /pages/signup.vue ($id_31eb92be)
 // - /node_modules/nuxt/dist/app/compat/capi.mjs ($id_0c5717a4)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs ($id_8029a879)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs ($id_95afa67b)
 // - /node_modules/nuxt/dist/app/components/nuxt-root.vue ($id_e9bfada3)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-404.vue ($id_b90d4d0f)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-500.vue ($id_14c8b574)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue ($id_bc2d74a1)
 // - /node_modules/nuxt/dist/app/components/nuxt-error-page.vue ($id_8cc6d73f)
 // - /node_modules/nuxt/dist/app/components/layout.mjs ($id_39003883)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/layouts.mjs ($id_a750b145)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/layouts.mjs ($id_cb453640)
 // - /node_modules/nuxt/dist/pages/runtime/app.vue ($id_6c61010f)
 // Dependencies: 
 
 // --------------------
 const $id_60f0615f = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/vue/dist/vue.cjs.js")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/vue/dist/vue.cjs.js")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -153,19 +153,19 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/vue/dist/vue.
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/vue/dist/vue.cjs.js\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/vue/dist/vue.cjs.js\".")
   })
 
 
 // --------------------
 // Request: /node_modules/ohmyfetch/dist/index.mjs
 // Parents: 
-// - /home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/app/entry ($id_a3fa1848)
+// - /home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/app/entry ($id_68bcca5a)
 // Dependencies: 
 
 // --------------------
 const $id_780217c4 = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/ohmyfetch/dist/index.mjs")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/ohmyfetch/dist/index.mjs")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -174,18 +174,18 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/ohmyfetch/dis
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/ohmyfetch/dist/index.mjs\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/ohmyfetch/dist/index.mjs\".")
   })
 
 
 // --------------------
-// Request: /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/paths.mjs
+// Request: /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/paths.mjs
 // Parents: 
-// - /home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/app/entry ($id_a3fa1848)
+// - /home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/app/entry ($id_68bcca5a)
 // Dependencies: 
 // - /node_modules/ufo/dist/index.mjs ($id_614de060)
 // --------------------
-const $id_3bfdbe9c = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_881e0e21 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/ufo/dist/index.mjs");
 
 const appConfig = {"baseURL":"/","buildAssetsDir":"/_nuxt/","assetsPath":{},"cdnURL":"","head":{"charset":"utf-8","viewport":"width=device-width, initial-scale=1","meta":[],"link":[],"style":[],"script":[]}}
@@ -206,7 +206,7 @@ Object.defineProperty(__vite_ssr_exports__, "publicAssetsURL", { enumerable: tru
 // --------------------
 // Request: /node_modules/ufo/dist/index.mjs
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/paths.mjs ($id_3bfdbe9c)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/paths.mjs ($id_881e0e21)
 // - /node_modules/nuxt/dist/app/composables/router.mjs ($id_db4d90a8)
 // - /node_modules/nuxt/dist/app/components/nuxt-link.mjs ($id_ffac87b5)
 // - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
@@ -214,7 +214,7 @@ Object.defineProperty(__vite_ssr_exports__, "publicAssetsURL", { enumerable: tru
 
 // --------------------
 const $id_614de060 = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/ufo/dist/index.mjs")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/ufo/dist/index.mjs")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -223,14 +223,14 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/ufo/dist/inde
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/ufo/dist/index.mjs\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/ufo/dist/index.mjs\".")
   })
 
 
 // --------------------
 // Request: /node_modules/nuxt/dist/app/index.mjs
 // Parents: 
-// - /home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/app/entry ($id_a3fa1848)
+// - /home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/app/entry ($id_68bcca5a)
 // - /node_modules/nuxt/dist/app/composables/asyncData.mjs ($id_d5b6a221)
 // - /node_modules/nuxt/dist/app/composables/hydrate.mjs ($id_0063df1b)
 // - /node_modules/nuxt/dist/app/composables/state.mjs ($id_7d872108)
@@ -251,7 +251,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/ufo/dist/inde
 // - /pages/items/[id].vue ($id_79d578c8)
 // - /pages/messages/index/chat-[id].vue ($id_6739ac96)
 // - /pages/signup.vue ($id_31eb92be)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs ($id_8029a879)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs ($id_95afa67b)
 // - /node_modules/nuxt/dist/app/components/nuxt-root.vue ($id_e9bfada3)
 // - /node_modules/nuxt/dist/app/components/layout.mjs ($id_39003883)
 // Dependencies: 
@@ -448,7 +448,7 @@ function defineGetter(obj, key, val) {
 
 // --------------------
 const $id_a2c811c4 = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/hookable/dist/index.mjs")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/hookable/dist/index.mjs")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -457,7 +457,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/hookable/dist
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/hookable/dist/index.mjs\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/hookable/dist/index.mjs\".")
   })
 
 
@@ -469,7 +469,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/hookable/dist
 
 // --------------------
 const $id_a569ca2d = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/unctx/dist/index.mjs")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/unctx/dist/index.mjs")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -478,7 +478,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/unctx/dist/in
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/unctx/dist/index.mjs\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/unctx/dist/index.mjs\".")
   })
 
 
@@ -610,7 +610,7 @@ Object.defineProperty(__vite_ssr_exports__, "legacyPlugin", { enumerable: true, 
 
 // --------------------
 const $id_39e12da7 = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/unenv/runtime/mock/proxy.mjs")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/unenv/runtime/mock/proxy.mjs")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -619,7 +619,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/unenv/runtime
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/unenv/runtime/mock/proxy.mjs\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/unenv/runtime/mock/proxy.mjs\".")
   })
 
 
@@ -756,7 +756,7 @@ Object.defineProperty(__vite_ssr_exports__, "defineNuxtComponent", { enumerable:
 
 // --------------------
 const $id_f9a4a698 = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/vue-router/dist/vue-router.cjs.js")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/vue-router/dist/vue-router.cjs.js")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -765,7 +765,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/vue-router/di
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/vue-router/dist/vue-router.cjs.js\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/vue-router/dist/vue-router.cjs.js\".")
   })
 
 
@@ -1087,7 +1087,7 @@ Object.defineProperty(__vite_ssr_exports__, "useLazyFetch", { enumerable: true, 
 
 // --------------------
 const $id_b1b82cf3 = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/ohash/dist/index.mjs")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/ohash/dist/index.mjs")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -1096,7 +1096,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/ohash/dist/in
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/ohash/dist/index.mjs\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/ohash/dist/index.mjs\".")
   })
 
 
@@ -1189,7 +1189,7 @@ function writeServerCookie(event, name, value, opts = {}) {
 
 // --------------------
 const $id_f4975261 = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/cookie-es/dist/index.mjs")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/cookie-es/dist/index.mjs")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -1198,7 +1198,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/cookie-es/dis
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/cookie-es/dist/index.mjs\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/cookie-es/dist/index.mjs\".")
   })
 
 
@@ -1212,7 +1212,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/cookie-es/dis
 
 // --------------------
 const $id_57d7ded6 = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/h3/dist/index.mjs")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/h3/dist/index.mjs")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -1221,7 +1221,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/h3/dist/index
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/h3/dist/index.mjs\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/h3/dist/index.mjs\".")
   })
 
 
@@ -1233,7 +1233,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/h3/dist/index
 
 // --------------------
 const $id_03d15ecd = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/destr/dist/index.mjs")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/destr/dist/index.mjs")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -1242,7 +1242,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/destr/dist/in
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/destr/dist/index.mjs\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/destr/dist/index.mjs\".")
   })
 
 
@@ -1517,7 +1517,7 @@ __vite_ssr_exports__.default = defineNuxtLink({ componentName: "NuxtLink" });
 // - /pages/login.vue ($id_b0922173)
 // - /pages/messages/index.vue ($id_8ad27286)
 // - /pages/signup.vue ($id_31eb92be)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs ($id_8029a879)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs ($id_95afa67b)
 // Dependencies: 
 // - /node_modules/nuxt/dist/head/runtime/composables.mjs ($id_04ea9504)
 // --------------------
@@ -1567,7 +1567,7 @@ Object.defineProperty(__vite_ssr_exports__, "useMeta", { enumerable: true, confi
 
 // --------------------
 const $id_852b06a2 = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/@vue/shared/dist/shared.cjs.js")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/@vue/shared/dist/shared.cjs.js")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -1576,38 +1576,38 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/@vue/shared/d
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/@vue/shared/dist/shared.cjs.js\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/@vue/shared/dist/shared.cjs.js\".")
   })
 
 
 // --------------------
-// Request: /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/css.mjs
+// Request: /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/css.mjs
 // Parents: 
-// - /home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/app/entry ($id_a3fa1848)
+// - /home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/app/entry ($id_68bcca5a)
 // Dependencies: 
 
 // --------------------
-const $id_bf600039 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_536b31ad = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 /* empty */;
 }
 
 
 // --------------------
-// Request: /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/plugins/server.mjs
+// Request: /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/plugins/server.mjs
 // Parents: 
-// - /home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/app/entry ($id_a3fa1848)
+// - /home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/app/entry ($id_68bcca5a)
 // Dependencies: 
 // - /node_modules/nuxt/dist/app/plugins/preload.server.mjs ($id_9871bba0)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/components.plugin.mjs ($id_454c6b03)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/components.plugin.mjs ($id_71719a14)
 // - /node_modules/nuxt/dist/head/runtime/lib/vueuse-head.plugin.mjs ($id_e6f12003)
 // - /node_modules/nuxt/dist/head/runtime/plugin.mjs ($id_a2650341)
 // - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
 // - /node_modules/@pinia/nuxt/dist/runtime/plugin.vue3.mjs ($id_8bd22d7a)
 // --------------------
-const $id_80eedd06 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_ba5243c6 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/plugins/preload.server.mjs");
 
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/components.plugin.mjs");
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/components.plugin.mjs");
 
 const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/nuxt/dist/head/runtime/lib/vueuse-head.plugin.mjs");
 
@@ -1631,7 +1631,7 @@ __vite_ssr_exports__.default = [
 // --------------------
 // Request: /node_modules/nuxt/dist/app/plugins/preload.server.mjs
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/plugins/server.mjs ($id_80eedd06)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/plugins/server.mjs ($id_ba5243c6)
 // Dependencies: 
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
 // --------------------
@@ -1652,13 +1652,13 @@ __vite_ssr_exports__.default = __vite_ssr_import_0__.defineNuxtPlugin((nuxtApp) 
 
 
 // --------------------
-// Request: /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/components.plugin.mjs
+// Request: /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/components.plugin.mjs
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/plugins/server.mjs ($id_80eedd06)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/plugins/server.mjs ($id_ba5243c6)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // --------------------
-const $id_454c6b03 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_71719a14 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 
@@ -1677,7 +1677,7 @@ __vite_ssr_exports__.default = function (nuxtApp) {
 // --------------------
 // Request: /node_modules/nuxt/dist/head/runtime/lib/vueuse-head.plugin.mjs
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/plugins/server.mjs ($id_80eedd06)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/plugins/server.mjs ($id_ba5243c6)
 // Dependencies: 
 // - /node_modules/@vueuse/head/dist/index.mjs ($id_c032264e)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
@@ -2160,7 +2160,7 @@ Object.defineProperty(__vite_ssr_exports__, "useHead", { enumerable: true, confi
 
 // --------------------
 const $id_d7afab65 = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/defu/dist/defu.mjs")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/defu/dist/defu.mjs")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -2169,20 +2169,20 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/defu/dist/def
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/defu/dist/defu.mjs\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/defu/dist/defu.mjs\".")
   })
 
 
 // --------------------
 // Request: /node_modules/nuxt/dist/head/runtime/plugin.mjs
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/plugins/server.mjs ($id_80eedd06)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/plugins/server.mjs ($id_ba5243c6)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/nuxt/dist/head/runtime/components.mjs ($id_b2a29d6f)
 // - /node_modules/nuxt/dist/head/runtime/composables.mjs ($id_04ea9504)
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/meta.config.mjs ($id_7ea00ba2)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/meta.config.mjs ($id_6f914a72)
 // --------------------
 const $id_a2650341 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
@@ -2193,7 +2193,7 @@ const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/nuxt/dist
 
 const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/index.mjs");
 
-const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/meta.config.mjs");
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/meta.config.mjs");
 
 const metaMixin = {
   created() {
@@ -2441,13 +2441,13 @@ Object.defineProperty(__vite_ssr_exports__, "Body", { enumerable: true, configur
 
 
 // --------------------
-// Request: /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/meta.config.mjs
+// Request: /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/meta.config.mjs
 // Parents: 
 // - /node_modules/nuxt/dist/head/runtime/plugin.mjs ($id_a2650341)
 // Dependencies: 
 
 // --------------------
-const $id_7ea00ba2 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_6f914a72 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 __vite_ssr_exports__.default = {"globalMeta":{"charset":"utf-8","viewport":"width=device-width, initial-scale=1","meta":[],"link":[],"style":[],"script":[]}};
 }
 
@@ -2455,7 +2455,7 @@ __vite_ssr_exports__.default = {"globalMeta":{"charset":"utf-8","viewport":"widt
 // --------------------
 // Request: /node_modules/nuxt/dist/pages/runtime/router.mjs
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/plugins/server.mjs ($id_80eedd06)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/plugins/server.mjs ($id_ba5243c6)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue-router/dist/vue-router.cjs.js ($id_f9a4a698)
@@ -2463,9 +2463,9 @@ __vite_ssr_exports__.default = {"globalMeta":{"charset":"utf-8","viewport":"widt
 // - /node_modules/ufo/dist/index.mjs ($id_614de060)
 // - /node_modules/nuxt/dist/pages/runtime/page.mjs ($id_5fc14cdc)
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/router.options.mjs ($id_82d6bcff)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/middleware.mjs ($id_247e8eca)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/router.options.mjs ($id_f95560b6)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/middleware.mjs ($id_024f7ccc)
 // --------------------
 const $id_a090977b = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
@@ -2480,11 +2480,11 @@ const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/nuxt/dist
 
 const __vite_ssr_import_5__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/index.mjs");
 
-const __vite_ssr_import_6__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs");
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs");
 
-const __vite_ssr_import_7__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/router.options.mjs");
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/router.options.mjs");
 
-const __vite_ssr_import_8__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/middleware.mjs");
+const __vite_ssr_import_8__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/middleware.mjs");
 
 function createCurrentLocation(base, location) {
   const { pathname, search, hash } = location;
@@ -2737,7 +2737,7 @@ Object.defineProperty(__vite_ssr_exports__, "_wrapIf", { enumerable: true, confi
 
 
 // --------------------
-// Request: /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs
+// Request: /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs
 // Parents: 
 // - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
 // Dependencies: 
@@ -2756,7 +2756,7 @@ Object.defineProperty(__vite_ssr_exports__, "_wrapIf", { enumerable: true, confi
 // - /pages/messages/index.vue ($id_8ad27286)
 // - /pages/signup.vue ($id_31eb92be)
 // --------------------
-const $id_150812ed = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_791c4e58 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/pages/index/index.vue?macro=true");
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/pages/items/[id].vue?macro=true");
@@ -2775,7 +2775,7 @@ __vite_ssr_exports__.default = [
   {
     name: "index",
     path: "/",
-    file: "/home/tinega/Desktop/dont/globe-farmer/pages/index/index.vue",
+    file: "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/index/index.vue",
     children: [],
     meta: __vite_ssr_import_0__.meta,
     alias: __vite_ssr_import_0__.meta?.alias || [],
@@ -2784,7 +2784,7 @@ __vite_ssr_exports__.default = [
   {
     name: "items-id",
     path: "/items/:id",
-    file: "/home/tinega/Desktop/dont/globe-farmer/pages/items/[id].vue",
+    file: "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/items/[id].vue",
     children: [],
     meta: __vite_ssr_import_1__.meta,
     alias: __vite_ssr_import_1__.meta?.alias || [],
@@ -2793,7 +2793,7 @@ __vite_ssr_exports__.default = [
   {
     name: "login",
     path: "/login",
-    file: "/home/tinega/Desktop/dont/globe-farmer/pages/login.vue",
+    file: "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/login.vue",
     children: [],
     meta: __vite_ssr_import_2__.meta,
     alias: __vite_ssr_import_2__.meta?.alias || [],
@@ -2801,12 +2801,12 @@ __vite_ssr_exports__.default = [
   },
   {
     path: "/messages",
-    file: "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index.vue",
+    file: "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/messages/index.vue",
     children: [
   {
     name: "messages-index-chat-id",
     path: "chat-:id",
-    file: "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/chat-[id].vue",
+    file: "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/messages/index/chat-[id].vue",
     children: [],
     meta: __vite_ssr_import_4__.meta,
     alias: __vite_ssr_import_4__.meta?.alias || [],
@@ -2815,7 +2815,7 @@ __vite_ssr_exports__.default = [
   {
     name: "messages-index",
     path: "",
-    file: "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/index.vue",
+    file: "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/messages/index/index.vue",
     children: [],
     meta: __vite_ssr_import_5__.meta,
     alias: __vite_ssr_import_5__.meta?.alias || [],
@@ -2829,7 +2829,7 @@ __vite_ssr_exports__.default = [
   {
     name: "signup",
     path: "/signup",
-    file: "/home/tinega/Desktop/dont/globe-farmer/pages/signup.vue",
+    file: "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/signup.vue",
     children: [],
     meta: __vite_ssr_import_6__.meta,
     alias: __vite_ssr_import_6__.meta?.alias || [],
@@ -2842,7 +2842,7 @@ __vite_ssr_exports__.default = [
 // --------------------
 // Request: /pages/index/index.vue?macro=true
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /components/nav-bar.vue ($id_12afc13c)
 // - /components/landing-page.vue ($id_f281e5fb)
@@ -2917,7 +2917,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_12__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/index/index.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/index/index.vue"]]);
 
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
@@ -3090,7 +3090,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_9__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_9__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/components/nav-bar.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_9__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/components/nav-bar.vue"]]);
 ;
 }
 
@@ -3126,7 +3126,7 @@ __vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_9__.default(_sf
 
 // --------------------
 const $id_b215fa1c = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/vue/server-renderer/index.js")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/vue/server-renderer/index.js")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -3135,7 +3135,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/vue/server-re
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/vue/server-renderer/index.js\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/vue/server-renderer/index.js\".")
   })
 
 
@@ -3274,7 +3274,7 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_6__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/components/landing-page.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/components/landing-page.vue"]]);
 }
 
 
@@ -3487,7 +3487,7 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_5__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_5__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/components/location-filter.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_5__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/components/location-filter.vue"]]);
 }
 
 
@@ -3595,7 +3595,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_8__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_8__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/components/popular-items.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_8__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/components/popular-items.vue"]]);
 ;
 }
 
@@ -3670,7 +3670,7 @@ __vite_ssr_exports__.default = ".dynamic-data{display:flex;gap:20px;margin-top:3
 // --------------------
 // Request: /pages/items/[id].vue?macro=true
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /components/nav-bar.vue ($id_12afc13c)
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
@@ -3745,13 +3745,13 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   _push(__vite_ssr_import_5__.ssrRenderComponent(_component_nav_bar, null, null, _parent));
   _push(`<p>${__vite_ssr_import_5__.ssrInterpolate($setup.messageResponse)}</p>`);
   if ($setup.item) {
-    _push(`<div class="item"><div class="images"><img${__vite_ssr_import_5__.ssrRenderAttr("src", $setup.item.images[0])}><div class="smaller-images"><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_6__.default)} alt="" srcset=""><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="" srcset=""><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""></div></div><div class="title"><h1>${__vite_ssr_import_5__.ssrInterpolate($setup.item.name)}</h1><h3 style="${__vite_ssr_import_5__.ssrRenderStyle({ "color": "green" })}">KSH ${__vite_ssr_import_5__.ssrInterpolate($setup.item.price)} per ${__vite_ssr_import_5__.ssrInterpolate($setup.item.quantity)}</h3><h4><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset="">${__vite_ssr_import_5__.ssrInterpolate($setup.item.location)}</h4><h5>From: ${__vite_ssr_import_5__.ssrInterpolate($setup.item.farmerName)}</h5></div><div class="messsages">`);
+    _push(`<div class="item"><div class="images"><div class="main-image"><div class="left-pointer"></div><img${__vite_ssr_import_5__.ssrRenderAttr("src", $setup.item.images[0])} id="main-image"><div class="right-pointer"></div></div><div class="smaller-images"><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_6__.default)} alt="" srcset=""><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="" srcset=""><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""></div></div><div class="title"><h1>${__vite_ssr_import_5__.ssrInterpolate($setup.item.name)}</h1><h3 style="${__vite_ssr_import_5__.ssrRenderStyle({ "color": "green" })}">KSH ${__vite_ssr_import_5__.ssrInterpolate($setup.item.price)} per ${__vite_ssr_import_5__.ssrInterpolate($setup.item.quantity)}</h3><h4><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset="">${__vite_ssr_import_5__.ssrInterpolate($setup.item.location)}</h4><h5>From: ${__vite_ssr_import_5__.ssrInterpolate($setup.item.farmerName)}</h5></div><div class="messsages">`);
     if ($setup.ifHistory) {
       _push(`<div class="if-history"><button>go to chat</button></div>`);
     } else {
       _push(`<div class="if-not-history"><div class="suggestions"><p>is it available</p><p>can you deliver to...</p><p>call me</p></div><input type="text" placeholder="write your message"><button>start a chat</button></div>`);
     }
-    _push(`</div><div class="description"><h4>description</h4><p>${__vite_ssr_import_5__.ssrInterpolate($setup.item.description)}</p></div><div class="item-details"><p>type: fruit</p><p>availability: available</p><p>delivery-report: can delivery</p></div><div class="similar-products"><h4>similar products</h4><!-- <div class="similar-product" v-for="similarProduct in item.similarProducts">
+    _push(`</div><div class="description"><h4>description</h4><p>${__vite_ssr_import_5__.ssrInterpolate($setup.item.description)}</p></div><div class="item-details"><!-- icons  --><p>type: fruit</p><p>availability: available</p><p>delivery-report: can delivery</p></div><div class="similar-products"><h4>similar products</h4><!-- <div class="similar-product" v-for="similarProduct in item.similarProducts">
                 <img :src="similarProduct.images[0]">
                 <p>{{similarProduct.name}}</p>
             </div> --></div></div>`);
@@ -3772,7 +3772,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_12__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/items/[id].vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/items/[id].vue"]]);
 
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
@@ -3840,14 +3840,14 @@ __vite_ssr_exports__.default = "/_nuxt/assets/icons/location-svgrepo-com.svg";
 
 // --------------------
 const $id_f1ec3444 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = ".item{display:flex;flex-direction:column;font-family:var(--cambo);gap:10px;padding:5px 0}.item .images{display:grid;place-items:center;width:100%}.item .images>img{height:40vh;-o-object-fit:cover;object-fit:cover;width:100%}.smaller-images{display:grid;gap:10px;grid-template-columns:repeat(6,1fr);margin-top:10px}.smaller-images>img{border:1px solid var(--dark-green);height:60px;-o-object-fit:cover;object-fit:cover;width:60px}.title{display:grid;gap:10px;grid-template-columns:1fr 1fr;padding:10px}.title,.title h4{align-items:center}.title h4{display:flex;font-size:1.2rem;font-weight:700;gap:5px}.title img{height:30px;-o-object-fit:cover;object-fit:cover;width:30px}.title h5{font-size:large;grid-column:1/3}.messsages{padding:10px}.if-history{display:grid;height:50px;place-items:center;width:100%}.if-history button{background-color:var(--light-green);border:none;border-radius:5px;color:#fff;font-size:1.2rem;font-weight:700;height:100%;outline:none;transition:all .3s ease-in-out;width:100%}.if-history button:hover{background-color:var(--dark-green)}.if-not-history{gap:10px;grid-template-columns:1fr}.if-not-history,.suggestions{align-items:center;display:grid}.suggestions{gap:5px;grid-template-columns:1fr 1.5fr 1fr}.suggestions>p{background-color:var(--light-green);border-radius:6px;padding:6px 2px;text-align:center}.if-not-history input{border:1px solid var(--dark-green);border-radius:5px;font-size:1.2rem;font-weight:700;height:50px;outline:none;transition:all .3s ease-in-out;width:100%}.if-not-history input:focus{border:1px solid var(--light-green)}.if-not-history button{background-color:var(--light-green);border:none;border-radius:5px;color:#fff;font-size:1.2rem;font-weight:700;height:50px;outline:none;transition:all .3s ease-in-out;width:100%}.if-not-history button:hover{background-color:var(--dark-green)}.description{display:grid;gap:10px;padding:10px}";
+__vite_ssr_exports__.default = ".item{display:flex;flex-direction:column;font-family:var(--cambo);gap:10px;padding:5px 0}.item .images{display:grid;place-items:center;width:100%}.item .main-image #main-image{height:40vh;-o-object-fit:cover;object-fit:cover;width:100%}.main-image{position:relative}.main-image>div{-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);background-color:rgba(0,0,0,.089);height:50px;position:absolute;top:40%;width:50px}.left-pointer{background-image:url(/_nuxt/assets/icons/left-arrow-svgrepo-com.svg);background-position:50%;background-repeat:no-repeat;left:0}.right-pointer{background-image:url(/_nuxt/assets/icons/right-arrow-svgrepo-com.svg);right:0}.smaller-images{display:grid;gap:10px;grid-template-columns:repeat(6,1fr);margin-top:10px}.smaller-images>img{border:1px solid var(--dark-green);height:60px;-o-object-fit:cover;object-fit:cover;width:60px}.title{display:grid;gap:10px;grid-template-columns:1fr 1fr;padding:10px}.title,.title h4{align-items:center}.title h4{display:flex;font-size:1.2rem;font-weight:700;gap:5px}.title img{height:30px;-o-object-fit:cover;object-fit:cover;width:30px}.title h5{font-size:large;grid-column:1/3}.messsages{padding:10px}.if-history{display:grid;height:50px;place-items:center;width:100%}.if-history button{background-color:var(--light-green);border:none;border-radius:5px;color:#fff;font-size:1.2rem;font-weight:700;height:100%;outline:none;transition:all .3s ease-in-out;width:100%}.if-history button:hover{background-color:var(--dark-green)}.if-not-history{gap:10px;grid-template-columns:1fr}.if-not-history,.suggestions{align-items:center;display:grid}.suggestions{gap:5px;grid-template-columns:1fr 1.5fr 1fr}.suggestions>p{background-color:var(--light-green);border-radius:6px;padding:6px 2px;text-align:center}.if-not-history input{border:1px solid var(--dark-green);border-radius:5px;font-size:1.2rem;font-weight:700;height:50px;outline:none;transition:all .3s ease-in-out;width:100%}.if-not-history input:focus{border:1px solid var(--light-green)}.if-not-history button{background-color:var(--light-green);border:none;border-radius:5px;color:#fff;font-size:1.2rem;font-weight:700;height:50px;outline:none;transition:all .3s ease-in-out;width:100%}.if-not-history button:hover{background-color:var(--dark-green)}.description,.item-details{display:grid;gap:10px;padding:10px}.item-details{grid-template-columns:repeat(3,1fr)}.item-details>*{background-color:var(--light-green);display:grid;padding:0 3px;place-items:center}";
 }
 
 
 // --------------------
 // Request: /pages/login.vue?macro=true
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /node_modules/nuxt/dist/head/runtime/index.mjs ($id_b7351483)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
@@ -3925,7 +3925,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_8__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_8__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/login.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_8__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/login.vue"]]);
 
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
@@ -3948,7 +3948,7 @@ __vite_ssr_exports__.default = "#check{bottom:15px;height:15px;margin-left:auto;
 // --------------------
 // Request: /pages/messages/index.vue?macro=true
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /node_modules/nuxt/dist/app/components/nuxt-link.mjs ($id_ffac87b5)
 // - /node_modules/nuxt/dist/head/runtime/index.mjs ($id_b7351483)
@@ -4059,7 +4059,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_13__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_13__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_13__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/messages/index.vue"]]);
 
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
@@ -4112,7 +4112,7 @@ __vite_ssr_exports__.default = ".messages{overflow:hidden}.nav-messages{align-it
 // --------------------
 // Request: /pages/messages/index/chat-[id].vue?macro=true
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
@@ -4220,7 +4220,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_12__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/chat-[id].vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/messages/index/chat-[id].vue"]]);
 
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
@@ -4282,7 +4282,7 @@ __vite_ssr_exports__.default = ".chat-id{display:grid;grid-template-columns:3fr 
 // --------------------
 // Request: /pages/messages/index/index.vue?macro=true
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
@@ -4310,7 +4310,7 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_3__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_3__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/index.vue"]])
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_3__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/messages/index/index.vue"]])
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
 }
@@ -4319,7 +4319,7 @@ Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configur
 // --------------------
 // Request: /pages/signup.vue?macro=true
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /node_modules/nuxt/dist/head/runtime/index.mjs ($id_b7351483)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
@@ -4434,7 +4434,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_10__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_10__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/signup.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_10__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/signup.vue"]]);
 
 const meta = undefined
 Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
@@ -4457,7 +4457,7 @@ __vite_ssr_exports__.default = ".login{align-items:center;display:flex;flex-dire
 // --------------------
 // Request: /pages/index/index.vue
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /components/nav-bar.vue ($id_12afc13c)
 // - /components/landing-page.vue ($id_f281e5fb)
@@ -4532,7 +4532,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_12__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/index/index.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/index/index.vue"]]);
 ;
 }
 
@@ -4540,7 +4540,7 @@ __vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_s
 // --------------------
 // Request: /pages/items/[id].vue
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /components/nav-bar.vue ($id_12afc13c)
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
@@ -4615,13 +4615,13 @@ function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $op
   _push(__vite_ssr_import_5__.ssrRenderComponent(_component_nav_bar, null, null, _parent));
   _push(`<p>${__vite_ssr_import_5__.ssrInterpolate($setup.messageResponse)}</p>`);
   if ($setup.item) {
-    _push(`<div class="item"><div class="images"><img${__vite_ssr_import_5__.ssrRenderAttr("src", $setup.item.images[0])}><div class="smaller-images"><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_6__.default)} alt="" srcset=""><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="" srcset=""><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""></div></div><div class="title"><h1>${__vite_ssr_import_5__.ssrInterpolate($setup.item.name)}</h1><h3 style="${__vite_ssr_import_5__.ssrRenderStyle({ "color": "green" })}">KSH ${__vite_ssr_import_5__.ssrInterpolate($setup.item.price)} per ${__vite_ssr_import_5__.ssrInterpolate($setup.item.quantity)}</h3><h4><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset="">${__vite_ssr_import_5__.ssrInterpolate($setup.item.location)}</h4><h5>From: ${__vite_ssr_import_5__.ssrInterpolate($setup.item.farmerName)}</h5></div><div class="messsages">`);
+    _push(`<div class="item"><div class="images"><div class="main-image"><div class="left-pointer"></div><img${__vite_ssr_import_5__.ssrRenderAttr("src", $setup.item.images[0])} id="main-image"><div class="right-pointer"></div></div><div class="smaller-images"><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_6__.default)} alt="" srcset=""><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_7__.default)} alt="" srcset=""><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_8__.default)} alt="" srcset=""></div></div><div class="title"><h1>${__vite_ssr_import_5__.ssrInterpolate($setup.item.name)}</h1><h3 style="${__vite_ssr_import_5__.ssrRenderStyle({ "color": "green" })}">KSH ${__vite_ssr_import_5__.ssrInterpolate($setup.item.price)} per ${__vite_ssr_import_5__.ssrInterpolate($setup.item.quantity)}</h3><h4><img${__vite_ssr_import_5__.ssrRenderAttr("src", __vite_ssr_import_9__.default)} alt="" srcset="">${__vite_ssr_import_5__.ssrInterpolate($setup.item.location)}</h4><h5>From: ${__vite_ssr_import_5__.ssrInterpolate($setup.item.farmerName)}</h5></div><div class="messsages">`);
     if ($setup.ifHistory) {
       _push(`<div class="if-history"><button>go to chat</button></div>`);
     } else {
       _push(`<div class="if-not-history"><div class="suggestions"><p>is it available</p><p>can you deliver to...</p><p>call me</p></div><input type="text" placeholder="write your message"><button>start a chat</button></div>`);
     }
-    _push(`</div><div class="description"><h4>description</h4><p>${__vite_ssr_import_5__.ssrInterpolate($setup.item.description)}</p></div><div class="item-details"><p>type: fruit</p><p>availability: available</p><p>delivery-report: can delivery</p></div><div class="similar-products"><h4>similar products</h4><!-- <div class="similar-product" v-for="similarProduct in item.similarProducts">
+    _push(`</div><div class="description"><h4>description</h4><p>${__vite_ssr_import_5__.ssrInterpolate($setup.item.description)}</p></div><div class="item-details"><!-- icons  --><p>type: fruit</p><p>availability: available</p><p>delivery-report: can delivery</p></div><div class="similar-products"><h4>similar products</h4><!-- <div class="similar-product" v-for="similarProduct in item.similarProducts">
                 <img :src="similarProduct.images[0]">
                 <p>{{similarProduct.name}}</p>
             </div> --></div></div>`);
@@ -4642,7 +4642,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_12__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/items/[id].vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/items/[id].vue"]]);
 ;
 }
 
@@ -4650,7 +4650,7 @@ __vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_s
 // --------------------
 // Request: /pages/login.vue
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /node_modules/nuxt/dist/head/runtime/index.mjs ($id_b7351483)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
@@ -4728,7 +4728,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_8__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_8__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/login.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_8__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/login.vue"]]);
 ;
 }
 
@@ -4736,7 +4736,7 @@ __vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_8__.default(_sf
 // --------------------
 // Request: /pages/messages/index/chat-[id].vue
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
@@ -4844,7 +4844,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_12__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/chat-[id].vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/messages/index/chat-[id].vue"]]);
 ;
 }
 
@@ -4852,7 +4852,7 @@ __vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_12__.default(_s
 // --------------------
 // Request: /pages/messages/index/index.vue
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
@@ -4880,14 +4880,14 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_3__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_3__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/pages/messages/index/index.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_3__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/messages/index/index.vue"]]);
 }
 
 
 // --------------------
 // Request: /pages/messages/index.vue
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /node_modules/nuxt/dist/app/components/nuxt-link.mjs ($id_ffac87b5)
 // - /node_modules/nuxt/dist/head/runtime/index.mjs ($id_b7351483)
@@ -4998,7 +4998,7 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_13__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_13__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/messages/index.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_13__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/messages/index.vue"]]);
 ;
 }
 
@@ -5006,7 +5006,7 @@ __vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_13__.default(_s
 // --------------------
 // Request: /pages/signup.vue
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs ($id_150812ed)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs ($id_791c4e58)
 // Dependencies: 
 // - /node_modules/nuxt/dist/head/runtime/index.mjs ($id_b7351483)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
@@ -5121,19 +5121,19 @@ _sfc_main.setup = (props, ctx) => {
 };
 const __vite_ssr_import_10__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_10__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/dont/globe-farmer/pages/signup.vue"]]);
+__vite_ssr_exports__.default = /* @__PURE__ */ __vite_ssr_import_10__.default(_sfc_main, [["ssrRender", _sfc_ssrRender], ["__file", "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/pages/signup.vue"]]);
 ;
 }
 
 
 // --------------------
-// Request: /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/router.options.mjs
+// Request: /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/router.options.mjs
 // Parents: 
 // - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
 // Dependencies: 
 
 // --------------------
-const $id_82d6bcff = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_f95560b6 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const configRouterOptions = {}
 __vite_ssr_exports__.default = {
 ...configRouterOptions,
@@ -5142,13 +5142,13 @@ __vite_ssr_exports__.default = {
 
 
 // --------------------
-// Request: /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/middleware.mjs
+// Request: /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/middleware.mjs
 // Parents: 
 // - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
 // Dependencies: 
 
 // --------------------
-const $id_247e8eca = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_024f7ccc = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const globalMiddleware = []
 Object.defineProperty(__vite_ssr_exports__, "globalMiddleware", { enumerable: true, configurable: true, get(){ return globalMiddleware }});
 const namedMiddleware = {}
@@ -5159,15 +5159,15 @@ Object.defineProperty(__vite_ssr_exports__, "namedMiddleware", { enumerable: tru
 // --------------------
 // Request: /node_modules/@pinia/nuxt/dist/runtime/plugin.vue3.mjs
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/plugins/server.mjs ($id_80eedd06)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/plugins/server.mjs ($id_ba5243c6)
 // Dependencies: 
 // - /node_modules/pinia/dist/pinia.mjs ($id_b1920624)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs ($id_8029a879)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs ($id_95afa67b)
 // --------------------
 const $id_8bd22d7a = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/pinia/dist/pinia.mjs");
 
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs");
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs");
 
 __vite_ssr_exports__.default = __vite_ssr_import_1__.defineNuxtPlugin((nuxtApp) => {
   const pinia = __vite_ssr_import_0__.createPinia();
@@ -5197,7 +5197,7 @@ __vite_ssr_exports__.default = __vite_ssr_import_1__.defineNuxtPlugin((nuxtApp) 
 
 // --------------------
 const $id_b1920624 = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/pinia/dist/pinia.mjs")
+import("file:///home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/pinia/dist/pinia.mjs")
   .then(r => {
     if (r.default && r.default.__esModule)
       r = r.default
@@ -5206,12 +5206,12 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/pinia/dist/pi
   })
   .catch(e => {
     console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/dont/globe-farmer/node_modules/pinia/dist/pinia.mjs\".")
+    throw new Error("[vite dev] Error loading external \"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/pinia/dist/pinia.mjs\".")
   })
 
 
 // --------------------
-// Request: /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs
+// Request: /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs
 // Parents: 
 // - /node_modules/@pinia/nuxt/dist/runtime/plugin.vue3.mjs ($id_8bd22d7a)
 // - /node_modules/@pinia/nuxt/dist/runtime/composables.mjs ($id_675b6856)
@@ -5226,7 +5226,7 @@ import("file:///home/tinega/Desktop/dont/globe-farmer/node_modules/pinia/dist/pi
 // - /node_modules/@pinia/nuxt/dist/runtime/composables.mjs ($id_675b6856)
 // - /node_modules/nuxt/dist/pages/runtime/composables.mjs ($id_ff6ed455)
 // --------------------
-const $id_8029a879 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_95afa67b = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist/head/runtime/index.mjs");
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/compat/vue-demi.mjs");
@@ -5344,7 +5344,7 @@ Object.defineProperty(__vite_ssr_exports__, "definePageMeta", { enumerable: true
 // --------------------
 // Request: /node_modules/nuxt/dist/app/compat/vue-demi.mjs
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs ($id_8029a879)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs ($id_95afa67b)
 // Dependencies: 
 // - /node_modules/nuxt/dist/app/compat/capi.mjs ($id_0c5717a4)
 // --------------------
@@ -5399,13 +5399,13 @@ Object.defineProperty(__vite_ssr_exports__, "del", { enumerable: true, configura
 // --------------------
 // Request: /node_modules/@pinia/nuxt/dist/runtime/composables.mjs
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs ($id_8029a879)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs ($id_95afa67b)
 // Dependencies: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs ($id_8029a879)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs ($id_95afa67b)
 // - /node_modules/pinia/dist/pinia.mjs ($id_b1920624)
 // --------------------
 const $id_675b6856 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs");
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs");
 
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/pinia/dist/pinia.mjs");
 __vite_ssr_exportAll__(__vite_ssr_import_1__);
@@ -5418,7 +5418,7 @@ Object.defineProperty(__vite_ssr_exports__, "usePinia", { enumerable: true, conf
 // --------------------
 // Request: /node_modules/nuxt/dist/pages/runtime/composables.mjs
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs ($id_8029a879)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs ($id_95afa67b)
 // Dependencies: 
 
 // --------------------
@@ -5435,13 +5435,13 @@ Object.defineProperty(__vite_ssr_exports__, "definePageMeta", { enumerable: true
 
 
 // --------------------
-// Request: /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/root-component.mjs
+// Request: /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/root-component.mjs
 // Parents: 
-// - /home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/app/entry ($id_a3fa1848)
+// - /home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/app/entry ($id_68bcca5a)
 // Dependencies: 
 // - /node_modules/nuxt/dist/app/components/nuxt-root.vue ($id_e9bfada3)
 // --------------------
-const $id_cd99bfa7 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_c3d2b597 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/components/nuxt-root.vue");
 
 Object.defineProperty(__vite_ssr_exports__, "default", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_0__.default }});;
@@ -5451,11 +5451,11 @@ Object.defineProperty(__vite_ssr_exports__, "default", { enumerable: true, confi
 // --------------------
 // Request: /node_modules/nuxt/dist/app/components/nuxt-root.vue
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/root-component.mjs ($id_cd99bfa7)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/root-component.mjs ($id_c3d2b597)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/error-component.mjs ($id_5c5858c3)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/error-component.mjs ($id_adadb83a)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
@@ -5465,7 +5465,7 @@ const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/index.mjs");
 
 // @ts-ignore
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/error-component.mjs");
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/error-component.mjs");
 
 
 
@@ -5529,18 +5529,18 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_6__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/app/components/nuxt-root.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/app/components/nuxt-root.vue"]]);
 }
 
 
 // --------------------
-// Request: /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/error-component.mjs
+// Request: /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/error-component.mjs
 // Parents: 
 // - /node_modules/nuxt/dist/app/components/nuxt-root.vue ($id_e9bfada3)
 // Dependencies: 
 // - /node_modules/nuxt/dist/app/components/nuxt-error-page.vue ($id_8cc6d73f)
 // --------------------
-const $id_5c5858c3 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_adadb83a = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/components/nuxt-error-page.vue");
 
 Object.defineProperty(__vite_ssr_exports__, "default", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_0__.default }});;
@@ -5550,7 +5550,7 @@ Object.defineProperty(__vite_ssr_exports__, "default", { enumerable: true, confi
 // --------------------
 // Request: /node_modules/nuxt/dist/app/components/nuxt-error-page.vue
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/error-component.mjs ($id_5c5858c3)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/error-component.mjs ($id_adadb83a)
 // Dependencies: 
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-404.vue ($id_b90d4d0f)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-500.vue ($id_14c8b574)
@@ -5635,7 +5635,7 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_6__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/app/components/nuxt-error-page.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/app/components/nuxt-error-page.vue"]]);
 }
 
 
@@ -5645,7 +5645,7 @@ __vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_m
 // - /node_modules/nuxt/dist/app/components/nuxt-error-page.vue ($id_8cc6d73f)
 // Dependencies: 
 // - /node_modules/nuxt/dist/app/components/nuxt-link.mjs ($id_ffac87b5)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs ($id_8029a879)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs ($id_95afa67b)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-404.vue?vue&type=style&index=0&scoped=true&lang.css ($id_e68b6b38)
@@ -5654,7 +5654,7 @@ __vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_m
 const $id_b90d4d0f = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/components/nuxt-link.mjs");
 
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs");
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs");
 
 
 const _sfc_main = {
@@ -5753,7 +5753,7 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_6__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',"data-v-573335c0"],['__file',"/home/tinega/Desktop/dont/globe-farmer/node_modules/@nuxt/ui-templates/dist/templates/error-404.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',"data-v-573335c0"],['__file',"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/@nuxt/ui-templates/dist/templates/error-404.vue"]]);
 }
 
 
@@ -5774,14 +5774,14 @@ __vite_ssr_exports__.default = ".bg-white[data-v-573335c0]{--tw-bg-opacity:1;bac
 // Parents: 
 // - /node_modules/nuxt/dist/app/components/nuxt-error-page.vue ($id_8cc6d73f)
 // Dependencies: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs ($id_8029a879)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs ($id_95afa67b)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-500.vue?vue&type=style&index=0&scoped=true&lang.css ($id_a2b3b709)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
 const $id_14c8b574 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs");
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs");
 
 
 const _sfc_main = {
@@ -5858,7 +5858,7 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_5__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_5__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',"data-v-0914425d"],['__file',"/home/tinega/Desktop/dont/globe-farmer/node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_5__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',"data-v-0914425d"],['__file',"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"]]);
 }
 
 
@@ -5879,14 +5879,14 @@ __vite_ssr_exports__.default = ".bg-white[data-v-0914425d]{--tw-bg-opacity:1;bac
 // Parents: 
 // - /node_modules/nuxt/dist/app/components/nuxt-error-page.vue ($id_8cc6d73f)
 // Dependencies: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs ($id_8029a879)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs ($id_95afa67b)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue?vue&type=style&index=0&scoped=true&lang.css ($id_2691164c)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
 const $id_bc2d74a1 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs");
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs");
 
 
 const _sfc_main = {
@@ -5969,7 +5969,7 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_5__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_5__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',"data-v-1da4697d"],['__file',"/home/tinega/Desktop/dont/globe-farmer/node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_5__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',"data-v-1da4697d"],['__file',"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue"]]);
 }
 
 
@@ -5986,13 +5986,13 @@ __vite_ssr_exports__.default = ".bg-white[data-v-1da4697d]{--tw-bg-opacity:1;bac
 
 
 // --------------------
-// Request: /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/app-component.mjs
+// Request: /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/app-component.mjs
 // Parents: 
-// - /home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/app/entry ($id_a3fa1848)
+// - /home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/app/entry ($id_68bcca5a)
 // Dependencies: 
 // - /node_modules/nuxt/dist/pages/runtime/app.vue ($id_6c61010f)
 // --------------------
-const $id_e3e27670 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_557bb212 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist/pages/runtime/app.vue");
 
 Object.defineProperty(__vite_ssr_exports__, "default", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_0__.default }});;
@@ -6002,7 +6002,7 @@ Object.defineProperty(__vite_ssr_exports__, "default", { enumerable: true, confi
 // --------------------
 // Request: /node_modules/nuxt/dist/pages/runtime/app.vue
 // Parents: 
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/app-component.mjs ($id_e3e27670)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/app-component.mjs ($id_557bb212)
 // Dependencies: 
 // - /node_modules/nuxt/dist/app/components/layout.mjs ($id_39003883)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
@@ -6047,7 +6047,7 @@ _sfc_main.setup = (props, ctx) => {
 }
 const __vite_ssr_import_4__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_4__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/pages/runtime/app.vue"]]);
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_4__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/pages/runtime/app.vue"]]);
 }
 
 
@@ -6059,7 +6059,7 @@ __vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_4__.default(_sfc_m
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/nuxt/dist/app/components/utils.mjs ($id_69c52686)
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
-// - /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/layouts.mjs ($id_a750b145)
+// - /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/layouts.mjs ($id_cb453640)
 // --------------------
 const $id_39003883 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
@@ -6068,7 +6068,7 @@ const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/nuxt/dist
 
 const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/index.mjs");
 
-const __vite_ssr_import_3__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/layouts.mjs");
+const __vite_ssr_import_3__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/layouts.mjs");
 
 const defaultLayoutTransition = { name: "layout", mode: "out-in" };
 __vite_ssr_exports__.default = __vite_ssr_import_0__.defineComponent({
@@ -6095,13 +6095,13 @@ __vite_ssr_exports__.default = __vite_ssr_import_0__.defineComponent({
 
 
 // --------------------
-// Request: /@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/layouts.mjs
+// Request: /@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/layouts.mjs
 // Parents: 
 // - /node_modules/nuxt/dist/app/components/layout.mjs ($id_39003883)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // --------------------
-const $id_a750b145 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_cb453640 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 __vite_ssr_exports__.default = {};
@@ -6109,10 +6109,10 @@ __vite_ssr_exports__.default = {};
 
 
 const __modules__ = {
-  "/home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/app/entry": $id_a3fa1848,
+  "/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/app/entry": $id_68bcca5a,
   "/node_modules/vue/dist/vue.cjs.js": $id_60f0615f,
   "/node_modules/ohmyfetch/dist/index.mjs": $id_780217c4,
-  "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/paths.mjs": $id_3bfdbe9c,
+  "/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/paths.mjs": $id_881e0e21,
   "/node_modules/ufo/dist/index.mjs": $id_614de060,
   "/node_modules/nuxt/dist/app/index.mjs": $id_36927477,
   "/node_modules/nuxt/dist/app/nuxt.mjs": $id_e069d411,
@@ -6141,21 +6141,21 @@ const __modules__ = {
   "/node_modules/nuxt/dist/head/runtime/index.mjs": $id_b7351483,
   "/node_modules/nuxt/dist/head/runtime/composables.mjs": $id_04ea9504,
   "/node_modules/@vue/shared/dist/shared.cjs.js": $id_852b06a2,
-  "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/css.mjs": $id_bf600039,
-  "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/plugins/server.mjs": $id_80eedd06,
+  "/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/css.mjs": $id_536b31ad,
+  "/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/plugins/server.mjs": $id_ba5243c6,
   "/node_modules/nuxt/dist/app/plugins/preload.server.mjs": $id_9871bba0,
-  "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/components.plugin.mjs": $id_454c6b03,
+  "/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/components.plugin.mjs": $id_71719a14,
   "/node_modules/nuxt/dist/head/runtime/lib/vueuse-head.plugin.mjs": $id_e6f12003,
   "/node_modules/@vueuse/head/dist/index.mjs": $id_c032264e,
   "/node_modules/defu/dist/defu.mjs": $id_d7afab65,
   "/node_modules/nuxt/dist/head/runtime/plugin.mjs": $id_a2650341,
   "/node_modules/nuxt/dist/head/runtime/components.mjs": $id_b2a29d6f,
-  "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/meta.config.mjs": $id_7ea00ba2,
+  "/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/meta.config.mjs": $id_6f914a72,
   "/node_modules/nuxt/dist/pages/runtime/router.mjs": $id_a090977b,
   "/node_modules/nuxt/dist/pages/runtime/page.mjs": $id_5fc14cdc,
   "/node_modules/nuxt/dist/pages/runtime/utils.mjs": $id_80f433aa,
   "/node_modules/nuxt/dist/app/components/utils.mjs": $id_69c52686,
-  "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/routes.mjs": $id_150812ed,
+  "/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/routes.mjs": $id_791c4e58,
   "/pages/index/index.vue?macro=true": $id_5878fe75,
   "/components/nav-bar.vue": $id_12afc13c,
   "/node_modules/vue/server-renderer/index.js": $id_b215fa1c,
@@ -6202,18 +6202,18 @@ const __modules__ = {
   "/pages/messages/index/index.vue": $id_603050a3,
   "/pages/messages/index.vue": $id_8ad27286,
   "/pages/signup.vue": $id_31eb92be,
-  "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/router.options.mjs": $id_82d6bcff,
-  "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/middleware.mjs": $id_247e8eca,
+  "/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/router.options.mjs": $id_f95560b6,
+  "/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/middleware.mjs": $id_024f7ccc,
   "/node_modules/@pinia/nuxt/dist/runtime/plugin.vue3.mjs": $id_8bd22d7a,
   "/node_modules/pinia/dist/pinia.mjs": $id_b1920624,
-  "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/imports.mjs": $id_8029a879,
+  "/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/imports.mjs": $id_95afa67b,
   "/node_modules/nuxt/dist/app/compat/vue-demi.mjs": $id_a8110be7,
   "/node_modules/nuxt/dist/app/compat/capi.mjs": $id_0c5717a4,
   "/node_modules/@pinia/nuxt/dist/runtime/composables.mjs": $id_675b6856,
   "/node_modules/nuxt/dist/pages/runtime/composables.mjs": $id_ff6ed455,
-  "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/root-component.mjs": $id_cd99bfa7,
+  "/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/root-component.mjs": $id_c3d2b597,
   "/node_modules/nuxt/dist/app/components/nuxt-root.vue": $id_e9bfada3,
-  "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/error-component.mjs": $id_5c5858c3,
+  "/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/error-component.mjs": $id_adadb83a,
   "/node_modules/nuxt/dist/app/components/nuxt-error-page.vue": $id_8cc6d73f,
   "/node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": $id_b90d4d0f,
   "/node_modules/@nuxt/ui-templates/dist/templates/error-404.vue?vue&type=style&index=0&scoped=true&lang.css": $id_e68b6b38,
@@ -6221,10 +6221,10 @@ const __modules__ = {
   "/node_modules/@nuxt/ui-templates/dist/templates/error-500.vue?vue&type=style&index=0&scoped=true&lang.css": $id_a2b3b709,
   "/node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue": $id_bc2d74a1,
   "/node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue?vue&type=style&index=0&scoped=true&lang.css": $id_2691164c,
-  "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/app-component.mjs": $id_e3e27670,
+  "/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/app-component.mjs": $id_557bb212,
   "/node_modules/nuxt/dist/pages/runtime/app.vue": $id_6c61010f,
   "/node_modules/nuxt/dist/app/components/layout.mjs": $id_39003883,
-  "/@id/virtual:nuxt:/home/tinega/Desktop/dont/globe-farmer/.nuxt/layouts.mjs": $id_a750b145
+  "/@id/virtual:nuxt:/home/tinega/Desktop/everything/git-repos/globe-farmer-main/.nuxt/layouts.mjs": $id_cb453640
 }
 
 
@@ -6312,4 +6312,4 @@ async function __instantiateModule__(url, urlStack) {
 }
 
 
-export default await __ssrLoadModule__("/home/tinega/Desktop/dont/globe-farmer/node_modules/nuxt/dist/app/entry")
+export default await __ssrLoadModule__("/home/tinega/Desktop/everything/git-repos/globe-farmer-main/node_modules/nuxt/dist/app/entry")
