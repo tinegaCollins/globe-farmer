@@ -1,0 +1,54 @@
+.landing{
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: var(--font-family);
+}
+.landing .content .top-text h1{
+    font-size: 3.5rem;
+    color: #fff;
+}
+.landing .content .top-text h3{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 300;
+    position: relative;
+    bottom: 50px;
+}
+.landing .search{
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    width: 400px;
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+.landing .search img{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+}
+.landing input{
+    background: transparent;
+    border: none;
+}
+.landing .search button{
+    background-color: var(--main-yellow);
+    border: none;
+    height: 100%;
+    margin-left: auto;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    width: 20%;
+}
+.landing-image img{
+    height: 110%;
+}

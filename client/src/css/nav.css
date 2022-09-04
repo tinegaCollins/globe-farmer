@@ -1,0 +1,71 @@
+nav {
+    padding: 20px 40px;
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav .icon {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav .icon img {
+    height: 50px;
+    margin-right: 10px;
+}
+nav .account {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+nav .account .cart{
+    background-color: #fff;
+    opacity: .2;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+
+}
+nav .account .cart img{
+    height: 24px;
+}
+nav .account-details button{
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255,.3);
+    color: #fff;
+}
+nav .nav-links{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+.nav-links a:visited{
+    color: #fff;
+}
+.nav-links a:active.a {
+    background-color: red;
+}
+a.router-link-exact-active{
+    color: #ffffff;
+    border-left: 2px solid #ffffff;
+}
+a.router-link-exact-active > svg {
+	fill: #ffffff;
+}
