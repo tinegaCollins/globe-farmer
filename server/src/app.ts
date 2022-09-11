@@ -6,7 +6,7 @@ const userControllers = require('./controllers/users.ts');
 const chatControllers = require('./controllers/chats.ts');
 import { Request, Response, NextFunction } from 'express';
 const app = express();
-mongoose.connect('mongodb+srv://CEMS_admin:admin1@cems.5le7maf.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGODBURI)
 .then(()=>{
     console.log('connected')
     startServer()
