@@ -1,54 +1,74 @@
 .landing{
-    padding: 40px 60px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    padding: 10px 50px;
     font-family: var(--font-family);
+    gap: 30px;
+    margin-top: 10px;
 }
-.landing .content .top-text h1{
-    font-size: 3.5rem;
-    color: #fff;
-}
-.landing .content .top-text h3{
-    font-size: 3rem;
-    color: #fff;
-    font-weight: 300;
-    position: relative;
-    bottom: 50px;
-}
-.landing .search{
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.14);
-    border-radius: 50px;
+.landing-image{
+    overflow: hidden;
+    display: flex;
+    width: min-content;
+   /* From https://css.glass */
+    background: rgba(255, 232, 45, 0.16);
+    border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.6px);
-    -webkit-backdrop-filter: blur(7.6px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    width: 400px;
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(255, 232, 45, 0.78);
+}
+.landing-image > img{
     position: relative;
-    height: 50px;
+    top: 90px;
+    right: 40px;
+    height: 80%;
+}
+.landing-text img{
+    height: 20px;
+}
+.landing-text h1{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 20px;
+}
+.landing-text .first-text{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    position: relative;
+    top: 50px;
+    right: 30px;
+}
+.landing .landing-text .second-text{
+    font-weight: 400;
+    margin-bottom: 10px;
+    position: relative;
+    top: 50px;
+    right: 30px;
+}
+.landing-text a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #333;
+    transition: all 0.1s ease-in-out;
+    padding: 7px 15px;
+    position: relative;
+    top: 60px;
+    right: 30px;
+    background-color: var(--main-yellow);
+    border-radius: 3px;
     display: flex;
     align-items: center;
-    padding: 2px;
+    width: max-content;
+    gap: 10px;
 }
-.landing .search img{
-    height: 20px;
-    width: 20px;
-    position: absolute;
+.landing-text a:hover{
+    background-color: var(--main-red);
+    color: #fff;
 }
-.landing input{
-    background: transparent;
-    border: none;
-}
-.landing .search button{
-    background-color: var(--main-yellow);
-    border: none;
-    height: 100%;
-    margin-left: auto;
-    border-bottom-right-radius: 50px;
-    border-top-right-radius: 50px;
-    width: 20%;
-}
-.landing-image img{
-    height: 110%;
+.landing-text a:visited{
+    color: #333;
 }

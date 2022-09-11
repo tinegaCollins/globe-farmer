@@ -12,16 +12,23 @@ import heart from '../assets/icons/heart.svg';
 import login from '../assets/icons/login.svg';
 import userCheck from '../assets/icons/user-check.svg';
 const NavBar = (props) => {
-    const [showMenu, setShowMenu] = useState(true);
+    const [showMenu, setShowMenu] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [showArrow, setShowArrow] = useState(arrowDown);
     const handleMenu = () => {
         setShowMenu(!showMenu);
+        if (showArrow === arrowDown) {
+            setShowArrow(arrowUp);
+        }
+        else {
+            setShowArrow(arrowDown);
+        }
     }
     useEffect(() => {
         if (localStorage.getItem('token')) {
             setIsLoggedIn(true);
         }
-    }, [])
+    }, [isLoggedIn])
     return ( 
         <nav>
             <div className="icon">
@@ -35,7 +42,7 @@ const NavBar = (props) => {
                     <div className="dropdown" onClick={handleMenu}>
                         <img src={user} alt="" srcset="" className="user-icon" />
                         <p>Account</p>
-                        <img src={arrowDown} alt="" srcset="" className="arrow-down" />
+                        <img src={showArrow} alt="" srcset="" className="arrow-down" />
                     </div>
                     <div className="dropdown-content"style={
                         showMenu ? {display: 'block'} : {display: 'none'}
