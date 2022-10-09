@@ -12,6 +12,7 @@ import other from '../assets/icons/other.svg'
 
 <template>
     <div className="filters">
+        <h4>Categories</h4>
         <a href="/Fruits">
             <img :src="apple" alt="" />
             Fruits
@@ -61,7 +62,9 @@ import other from '../assets/icons/other.svg'
     gap: 10px;
     padding: 5px;
 }
-
+h4 {
+    color: #333;
+}
 .filters a {
     text-decoration: none;
     color: #333;
@@ -83,4 +86,11 @@ import other from '../assets/icons/other.svg'
     height: 25px;
     margin-right: 20px;
 }
+@media screen and (max-width: 768px) {
+    .filters {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+    
 </style>
