@@ -155,7 +155,6 @@ nav .nav-links {
   gap: 30px;
   align-items: center;
 }
-
 .nav-links a {
   color: #fff;
   text-decoration: none;
@@ -239,7 +238,7 @@ nav .nav-links {
 }
 @media screen and (max-width: 768px) {
   nav {
-    padding: 14px;
+    padding: 14px 10px;
   }
   nav .nav-links {
     flex-direction: column;
@@ -282,11 +281,10 @@ nav .nav-links {
   .blur {
     position: absolute;
     top: 0;
-    right: -130%;
+    left: -130%;
     width: 100vw;
     height: 100vh;
     z-index: 2;
-    transition: all 200ms ease-in-out;
     background: rgba(46, 39, 39, 0.19);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

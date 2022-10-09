@@ -54,17 +54,24 @@ import search from '../assets/icons/search.svg';
 }
 @media screen and (max-width: 768px){
     .search-box {
-        padding: 10px;
-        gap: 5px;
+        /* padding: 10px; */
+        gap: 0px;
         position: relative;
         left: -3px;
+        margin-top: 10px;
     }
     .search-box input {
         margin: 0;
-        width: 70vw;
-        padding: 0 5px 0 30px;
+        width: 100%;
+        padding: 0 5px 0 35px;
+        border-radius: 0;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
     }
     .search-box button{
+        border-radius: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
         padding:0px 15px;
     }
     .search-box img {
