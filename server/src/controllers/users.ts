@@ -1,34 +1,52 @@
 const users = require('../models/users.ts');
 import { Request, Response } from 'express';
+import { UserTypes } from '../types';
 const bcrypt = require("bcrypt");
 
-exports.addNewUser = async (req:Request, res: Response)=> {
+exports.createNewUser = async (req:Request, res: Response)=> {
     try{
-        const  { name, phone, unHashPassword, location, avatar} = req.body;
+        const  { name,userName,email, phone, unSecurepassword,seller, location} = req.body;
         const checkPhone:Array<object> = await users.find({phone: phone});
-        if(checkPhone.length == 0){
-            const salt = await bcrypt.genSalt();
-            const password = await bcrypt.hash(unHashPassword, salt);
+        const checkEmail:Array<object> = await users.find({email: email});
+        if(checkPhone.length == 0 && checkEmail.length == 0){
+            const salt = await bcrypt.genSalt(10);
+            const password = await bcrypt.hash(unSecurepassword, salt);
             const newSeller = new users({
-                name, phone, password, location, avatar
+                name, 
+                userName, 
+                phone, 
+                email,
+                password,
+                location, 
+                seller
             });
             await newSeller.save();
             res.status(200).json(newSeller);
         }
         else{
-            res.status(404).json({message: "phone exist"});
+            if(checkPhone.length != 0){
+                res.status(500).json({message: "phone already exists"});
+            }
+           if(checkEmail.length != 0){
+                res.status(500).json({message: "email already exists"});
+            }
         }
     }
-    catch{
+    catch(err){
         res.status(403).json({ message: "error, couldn't create user"})
     }
 }
 
 exports.login = async (req:Request, res:Response)=>{
-    const { phone, unHashPassword} = req.body;
-    const user = await users.findOne({phone: phone});
+    const { phone,email, password, loginType} = req.body;
+    let user: UserTypes; 
+    if(loginType == "phone"){
+        user = await users.findOne({phone: phone});
+    }else{
+        user = await users.findOne({email: email});
+    }
     if(user){
-        if( await bcrypt.compare(unHashPassword, user.password)){
+        if( await bcrypt.compare(password, user.password)){
             res.status(200).json(user._id);
         }
         else{
@@ -36,18 +54,40 @@ exports.login = async (req:Request, res:Response)=>{
         }
     }
     else{
-        res.status(500).json({message: "please enter a valid phone"});
+        res.status(500).json({ message : `${loginType} not found`})
+    }
+}
+exports.getUser = async (req:Request, res:Response)=>{
+    const { id } = req.params;
+    const user: UserTypes = await users.findById(id);
+    res.status(200).json(user);
+}
+exports.editUser = async (req:Request, res:Response)=>{
+    const { name,userName,email, phone, password, seller, location, id} = req.body;
+    const user = await users.findOneAndUpdate({_id: id}, {
+        name, 
+        userName, 
+        phone, 
+        email,
+        password,
+        location, 
+        seller
+    });
+    if(user){
+        res.status(200).json({message: "user updated"});
+    }
+    else{
+        res.status(500).json({ message : "user not found"})
+    }
+}
+exports.deleteUser = async (req:Request, res:Response)=>{
+    const { id } = req.body;
+    const user = await users.findOneAndDelete({_id: id});
+    if(user){
+        res.status(200).json({message: "user deleted"});
+    }
+    else{
+        res.status(500).json({ message : "user not found"})
     }
 }
 
-exports.getUserAtMessage = async (req:Request, res:Response)=>{
-    try{
-        const user = await users.findById(req.params.id);
-        const data = {
-            name: user.name,
-            img: user.avatar
-        }
-    }catch{
-        res.status(500).json({message: "user not found"});
-    }
-}

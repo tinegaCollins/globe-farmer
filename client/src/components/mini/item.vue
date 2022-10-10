@@ -1,28 +1,32 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import Item from '../../types/types';
+import saved from './saved.vue'
 import heart from '../../assets/icons/heart.svg'
 const props = defineProps<{
     item: Item
 }>()
+const ifSaved = ref<Boolean>(props.item.saved)
 </script>
 <template>
     <div class="item">
-        <div class="saved">
-            <img :src="heart" alt="" />
-        </div>
+        <saved :ifSaved="ifSaved"/>
         <div class="item-image">
             <img :src="item.img" alt="item" />
-        </div>
-        <div class="text-wrapper">
-            <div class="upper-round-text">
-                <h1>{{ item.name }}</h1>
-                <p>{{ item.description }}</p>
-            </div>
-            <div class="lower-round-text">
-                <h1>{{ item.price }}</h1>
-                <p>{{ item.location }}</p>
+            <div class="item-price">
+                KSH {{item.price}}
             </div>
         </div>
+        <div class="item-details">
+            <div class="item-name">
+                {{item.name}}
+            </div>
+            
+            <div class="item-location">
+                {{item.location}}
+            </div>
+        </div>
+        <button>Add To Cart</button>
     </div>
 </template>
 
@@ -33,29 +37,32 @@ const props = defineProps<{
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 300px;
-    height: 300px;
     margin: 10px;
     border-radius: 10px;
     border: 1px solid #333;
 }
 .item-image img {
-    width: 100px;
-    height: 100px;
-    background-color: blue;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
     object-fit: cover;
 }
-.saved {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.007);
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.item-image {
+    width: 100%;
+    padding: 20px;
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 </style>

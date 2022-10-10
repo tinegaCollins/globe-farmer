@@ -6,7 +6,7 @@ const userControllers = require('./controllers/users.ts');
 const chatControllers = require('./controllers/chats.ts');
 import { Request, Response, NextFunction } from 'express';
 const app = express();
-mongoose.connect(process.env.MONGODBURI)
+mongoose.connect('mongodb+srv://CEMS_admin:admin1@cems.5le7maf.mongodb.net/?retryWrites=true&w=majority')
 .then(()=>{
     console.log('connected')
     startServer()
@@ -27,8 +27,8 @@ const startServer = ()=>{
     app.use(express.json());
 
     //user routes
-    app.post('/register-user', userControllers.addNewUser);
-    app.post('/login-user', userControllers.login);
+    app.post('/api/register-user', userControllers.createNewUser);
+    app.post('/api/login', userControllers.login);
 
     http.createServer(app).listen('8000', ()=> console.log('listening on port 8000'));
 

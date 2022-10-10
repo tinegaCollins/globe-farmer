@@ -1,48 +1,78 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import itemTemplate from './mini/item.vue'
-import tomato from '../assets/images/tomato.png'
-import bell from '../assets/images/bell.png'
-import pineapple from '../assets/images/pineapple.png'
-import broccoli from '../assets/images/brocolli.png'
+import itemTemplate from './mini/item.vue';
 import Item from '../types/types';
 
+import mangoes from "../assets/temp/mangoes.jpg";
+import apples from "../assets/temp/apples.jpg";
+import bananas from "../assets/temp/banana.jpg";
+import avocados from "../assets/temp/avocado.jpg";
+// import milk from "../assets/temp/milk.jpg";
+import spinach from "../assets/temp/spinach.jpg";
 const items = ref<Item[]>([
     {
         name: 'Apple',
         price: 2.99,
         description: 'A red apple',
         location: 'New York',
-        img: tomato
+        img: apples,
+        saved: true,
+        id: 1
     },
     {
-        name: 'Bell Pepper',
+        name: 'mangoes',
         price: 2.99,
         description: 'A red apple',
         location: 'New York',
-        img: bell
+        img: mangoes,
+        saved: false,
+        id: 2
     },
     {
-        name: 'Pineapple',
+        name: 'spinach',
         price: 2.99,
         description: 'A red apple',
         location: 'New York',
-        img: pineapple
+        img: spinach,
+        saved: true,
+        id: 3
     },
     {
-        name: 'Broccoli',
+        name: 'Bananas',
         price: 2.99,
         description: 'A red apple',
         location: 'New York',
-        img: broccoli
-    }
+        img: bananas,
+        saved: false,
+        id: 4
+    },
+    {
+        name: 'Avocados',
+        price: 2.99,
+        description: 'A red apple',
+        location: 'New York',
+        img: avocados,
+        saved: true,
+        id: 5
+    },
 ])
 </script>
 <template>
     <div class="featured">
         <h1>Featured Products</h1>
             <div class="products">
-                <itemTemplate v-for="item in items" :key="item.name" :item="item" />
+                <div class="exotic">
+                    <img src="../assets/temp/exotic.jpg" alt="" srcset="">
+                </div>
+                <div class="meats">
+                    <img src="../assets/temp/meats.jpg" alt="" srcset="">
+                </div>
+                <div class="cheese">
+                    <img src="../assets/temp/cheese.jpg" alt="" srcset="">
+                </div>
+                <div class="bake">
+                    <img src="../assets/temp/bake.jpg" alt="" srcset="">
+                </div>
             </div>
     </div>
 </template>
@@ -55,18 +85,18 @@ const items = ref<Item[]>([
     justify-content: center;
     position: relative;
     padding: 15px 0;
+    width: 100%;
 }
 
 h1 {
     font-family: var(--title-font);
 }
 .products {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    padding: 15px 0;
+    padding: 30px 4rem 0 4rem;
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 </style>

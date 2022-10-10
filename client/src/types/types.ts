@@ -4,6 +4,8 @@ interface Item {
     description: string;
     location: string;
     img: any;
+    saved: boolean;
+    id: number;
 }
 
 export default Item;
