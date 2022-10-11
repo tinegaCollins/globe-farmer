@@ -11,7 +11,9 @@ interface UserTypes {
     chats: string[],
     createdAt: Date,
     saved: string[],
-    _id: string
+    _id: string,
+    products: string[],
+    productLine: string
 }
 interface PostTypes {
     title: string,

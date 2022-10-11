@@ -2,11 +2,11 @@ const express = require('express');
 const http = require('http');
 const mongoose = require('mongoose');
 const postController = require('./controllers/post.ts');
-const userControllers = require('./controllers/users.ts');
 const chatControllers = require('./controllers/chats.ts');
 import { Request, Response, NextFunction } from 'express';
 const app = express();
-mongoose.connect('mongodb+srv://CEMS_admin:admin1@cems.5le7maf.mongodb.net/?retryWrites=true&w=majority')
+console.log(process.env.MONGO_URI);
+mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
     console.log('connected')
     startServer()
@@ -25,24 +25,22 @@ const startServer = ()=>{
         next();
     });
     app.use(express.json());
-
     //user routes
-    app.post('/api/register-user', userControllers.createNewUser);
-    app.post('/api/login', userControllers.login);
-
-    http.createServer(app).listen('8000', ()=> console.log('listening on port 8000'));
-
+    app.use('/api/user', require('./routes/user-routes.ts'));
     //chats controllers
     app.post('/add-new-chat', chatControllers.addNewChat);
     app.get('/check-if-chat/:sender1/:sender2/:full', chatControllers.checkIfChatAvailable);
     app.post('/send-message', chatControllers.sendMessage);
     app.get('/get-all-chats/:id', chatControllers.getAllChats);
-    app.get('/get-data-at-messages/:id', userControllers.getUserAtMessage);
     app.post('/get-single-chat', chatControllers.getSingleChat);
 
     //post controllers 
     app.get('/get-by-id/:id', postController.getByID);
     app.post('/add-post', postController.addPost);
     app.get('/get-popular', postController.getPopular);
+
+
+    //server on
+    http.createServer(app).listen(process.env.DEV_PORT, ()=> console.log('listening on port 8000'));
 }
 

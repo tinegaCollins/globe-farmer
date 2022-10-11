@@ -38,6 +38,8 @@ const sellerSchema = new mongoose.Schema<UserTypes>({
         default: new Date()
     },
     saved: [String],
+    products: [String],
+    productLine: String
 })
 
 module.exports = mongoose.model('globefarmer-user', sellerSchema);

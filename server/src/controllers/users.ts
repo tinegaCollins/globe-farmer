@@ -2,7 +2,8 @@ const users = require('../models/users.ts');
 import { Request, Response } from 'express';
 import { UserTypes } from '../types';
 const bcrypt = require("bcrypt");
-
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
 exports.createNewUser = async (req:Request, res: Response)=> {
     try{
         const  { name,userName,email, phone, unSecurepassword,seller, location} = req.body;
@@ -47,7 +48,9 @@ exports.login = async (req:Request, res:Response)=>{
     }
     if(user){
         if( await bcrypt.compare(password, user.password)){
-            res.status(200).json(user._id);
+            const userName = user.userName;
+            const token = jwt.sign({userName}, process.env.ACCESS_TOKEN_SECRET);
+            res.status(200).json({ accessToken: token, userName: userName});
         }
         else{
             res.status(500).json({ message : "wrong password"})
@@ -57,6 +60,7 @@ exports.login = async (req:Request, res:Response)=>{
         res.status(500).json({ message : `${loginType} not found`})
     }
 }
+
 exports.getUser = async (req:Request, res:Response)=>{
     const { id } = req.params;
     const user: UserTypes = await users.findById(id);
@@ -90,4 +94,25 @@ exports.deleteUser = async (req:Request, res:Response)=>{
         res.status(500).json({ message : "user not found"})
     }
 }
+exports.getUsers = async (req:Request, res:Response)=>{
+    const usersList = await users.find();
+    res.status(200).json(usersList);
+}
+exports.registerSeller = async (req:Request, res:Response)=>{
+    const { id } = req.body;
+    const user = await users.findOneAndUpdate({_id: id}, {
+        seller: true,
+        productLine : req.body.productLine,
+        products: req.body.products,
+        posts: req.body.posts
+    });
+    if(user){
+        res.status(200).json({message: "user updated"});
+    }
+    else{
+        res.status(500).json({ message : "user not found"})
+    }
+}
+
+
 
