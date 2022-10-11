@@ -2,3 +2,4 @@ node_modules
 .nuxt
 .git
 nuxt
+.env
