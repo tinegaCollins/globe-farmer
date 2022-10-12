@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 const postController = require('./controllers/post.ts');
 const chatControllers = require('./controllers/chats.ts');
 import { Request, Response, NextFunction } from 'express';
+import { config } from './config/config';
 const app = express();
-console.log(process.env.MONGO_URI);
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(config.mongo.url)
 .then(()=>{
     console.log('connected')
     startServer()

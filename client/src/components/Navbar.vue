@@ -20,10 +20,7 @@ if(window.innerWidth < 768){
 const dropdownMenu = () => {
   showMenu.value = !showMenu.value;
 };
-const curentUser = ref<Object>({
-  name: "John Doe",
-  email: "rt",
-});
+const curentUser = ref<Object>();
 const sideBar = ref<HTMLBodyElement | null>(null);
 const blur = ref<HTMLBodyElement | null>(null);
 const openBar = ref<Boolean>(false);
@@ -73,14 +70,14 @@ const toggleSidebar = () => {
             </a>
           </div>
           <div class="isNotLoggedIn" v-else>
-            <a href="/login" class="login">
+            <RouterLink to="/auth/login" class="login">
               <img :src="login" alt="" srcset="" />
               Login
-            </a>
-            <a href="/signup" class="signup">
+            </RouterLink>
+            <RouterLink to="/auth/signup" class="signup">
               <img :src="userCheck" alt="" srcset="" />
               Sign up
-            </a>
+            </RouterLink>
           </div>
         </div>
       </div>
