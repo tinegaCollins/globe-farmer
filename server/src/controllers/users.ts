@@ -113,6 +113,26 @@ exports.registerSeller = async (req:Request, res:Response)=>{
         res.status(500).json({ message : "user not found"})
     }
 }
+exports.checkUserName = async (req:Request, res:Response)=>{
+    const { userName } = req.body;
+    const user = await users.findOne({userName: userName});
+    if(user){
+        res.status(200).json({message: "user name exists"});
+    }
+    else{
+        res.status(500).json({ message : "user name not found"})
+    }
+}
 
+exports.checkEmail = async (req:Request, res:Response)=>{
+    const email = req.params.email;
+    const user = await users.findOne({email: email});
+    if(user){
+        res.status(200).json({message: "email exists"});
+    }
+    else{
+        res.status(500).json({ message : "email not found"})
+    }
+}
 
 

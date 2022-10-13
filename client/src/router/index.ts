@@ -20,6 +20,11 @@ const routes = [
         path: "/auth/forgot-password",
         name: "forgot",
         component: ()=> import("../views/auth/forgot.vue")
+    },
+    {
+        path: "/auth/alt-login",
+        name: "alt-login",
+        component: ()=> import("../views/auth/alt.vue")
     }
 ];
 
