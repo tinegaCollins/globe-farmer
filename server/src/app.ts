@@ -28,6 +28,10 @@ const startServer = ()=>{
     //user routes
     app.use('/api/user', require('./routes/user-routes.ts'));
     //chats controllers
+    app.get('/test', (req:Request, res:Response)=>{
+        res.status(200).json({message: "hello world"})
+    })
+    
     app.post('/add-new-chat', chatControllers.addNewChat);
     app.get('/check-if-chat/:sender1/:sender2/:full', chatControllers.checkIfChatAvailable);
     app.post('/send-message', chatControllers.sendMessage);
@@ -41,6 +45,6 @@ const startServer = ()=>{
 
 
     //server on
-    http.createServer(app).listen(process.env.DEV_PORT, ()=> console.log('listening on port 8000'));
+    http.createServer(app).listen(8000, ()=> console.log('listening on port 8000'));
 }
 

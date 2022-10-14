@@ -120,7 +120,7 @@ exports.checkUserName = async (req:Request, res:Response)=>{
         res.status(200).json({message: "user name exists"});
     }
     else{
-        res.status(500).json({ message : "user name not found"})
+        res.status(201).json({ message : "user name not found"})
     }
 }
 
@@ -131,7 +131,7 @@ exports.checkEmail = async (req:Request, res:Response)=>{
         res.status(200).json({message: "email exists"});
     }
     else{
-        res.status(500).json({ message : "email not found"})
+        res.status(201).json({ message : "email not found"})
     }
 }
 
