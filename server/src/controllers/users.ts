@@ -39,25 +39,27 @@ exports.createNewUser = async (req:Request, res: Response)=> {
 }
 
 exports.login = async (req:Request, res:Response)=>{
-    const { phone,email, password, loginType} = req.body;
+    const { userName ,email, password, loginType} = req.body;
     let user: UserTypes; 
-    if(loginType == "phone"){
-        user = await users.findOne({phone: phone});
+    if(loginType == "username"){
+        user = await users.findOne({userName: userName});
     }else{
         user = await users.findOne({email: email});
     }
     if(user){
         if( await bcrypt.compare(password, user.password)){
             const userName = user.userName;
-            const token = jwt.sign({userName}, process.env.ACCESS_TOKEN_SECRET);
-            res.status(200).json({ accessToken: token, userName: userName});
+            const email = user.email;
+            const avatar = user.avatar;
+            const token = jwt.sign({userName, email}, process.env.ACCESS_TOKEN_SECRET);
+            res.status(200).json({ token: token, userName: userName});
         }
         else{
-            res.status(500).json({ message : "wrong password"})
+            res.status(204).json( { message : "wrong password"} )
         }
     }
     else{
-        res.status(500).json({ message : `${loginType} not found`})
+        res.status(205).json({ message : `${loginType} not found`})
     }
 }
 
@@ -117,7 +119,11 @@ exports.checkUserName = async (req:Request, res:Response)=>{
     const  userName  = req.params.userName;
     const user = await users.findOne({userName: userName});
     if(user){
-        res.status(200).json({message: "user name exists"});
+        res.status(200).json({message: "user name exists", data : {
+            userName: user.userName,
+            email : user.email,
+            avatar: user.avatar,
+        }});
     }
     else{
         res.status(201).json({ message : "user name not found"})
@@ -128,7 +134,11 @@ exports.checkEmail = async (req:Request, res:Response)=>{
     const email = req.params.email;
     const user = await users.findOne({email: email});
     if(user){
-        res.status(200).json({message: "email exists"});
+        res.status(200).json({message: "email exists", data : {
+            userName: user.userName,
+            email : user.email,
+            avatar: user.avatar,
+        }});
     }
     else{
         res.status(201).json({ message : "email not found"})

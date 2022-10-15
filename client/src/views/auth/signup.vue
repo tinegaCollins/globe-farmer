@@ -226,6 +226,7 @@ async function register():Promise<boolean>{
     font-weight: 600;
     color: #333;
     align-self: flex-start;
+    padding: 0 5%;
 }
 .user-details h3 {
     font-size: .9rem;
@@ -234,7 +235,7 @@ async function register():Promise<boolean>{
     align-self: flex-start;
 }
 input {
-    width: 100%;
+    width: 90%;
     height: 50px;
     margin: 10px 0;
     border: none;
@@ -252,7 +253,7 @@ input::placeholder {
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    width: 100%;
+    width: 90%;
 }
 
 .if-seller input {
@@ -262,7 +263,7 @@ input::placeholder {
 }
 
 button {
-    width: 100%;
+    width: 90%;
     height: 50px;
     border: none;
     border-radius: 5px;

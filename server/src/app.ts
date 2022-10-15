@@ -45,6 +45,6 @@ const startServer = ()=>{
 
 
     //server on
-    http.createServer(app).listen(8000, ()=> console.log('listening on port 8000'));
+    http.createServer(app).listen(8000,'0.0.0.0', ()=> console.log('listening on port 8000'));
 }
 

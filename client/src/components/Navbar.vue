@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useUserStore } from "../stores/user";
+
+//images import
+
 import icon from "../assets/icon.png";
 import cart from "../assets/icons/cart.svg";
 import user from "../assets/icons/user.svg";
@@ -12,15 +16,19 @@ import login from "../assets/icons/login.svg";
 import userCheck from "../assets/icons/user-check.svg";
 import bars from "../assets/icons/bars.svg";
 import x from "../assets/icons/x.svg";
-
 const showMenu = ref<Boolean>(false);
-if(window.innerWidth < 768){
-    showMenu.value = true;
+if (window.innerWidth < 768) {
+  showMenu.value = true;
 }
 const dropdownMenu = () => {
   showMenu.value = !showMenu.value;
 };
-const curentUser = ref<Object>();
+interface User {
+  token: string;
+  username: string;
+  email: string;
+}
+const curentUser = ref<User>();
 const sideBar = ref<HTMLBodyElement | null>(null);
 const blur = ref<HTMLBodyElement | null>(null);
 const openBar = ref<Boolean>(false);
@@ -28,6 +36,22 @@ const toggleSidebar = () => {
   blur.value?.classList.toggle("active");
   openBar.value = !openBar.value;
   sideBar.value?.classList.toggle("active");
+};
+
+const userStore = useUserStore();
+const ifLoggedIn = ref<Boolean>(false);
+if (userStore.token !== '') {
+  ifLoggedIn.value = true;
+}
+curentUser.value = {
+  token: userStore.token,
+  username: userStore.userName,
+  email: userStore.email,
+};
+
+const logoutUser = () => {
+  userStore.logout();
+  ifLoggedIn.value = false;
 };
 </script>
 <template>
@@ -38,36 +62,27 @@ const toggleSidebar = () => {
     </div>
     <div class="nav-links sidebar" ref="sideBar">
       <a href="/home">Home</a>
-      <a href="/categories">Categories</a>
+      <a href="/filters">Filters</a>
       <div class="dropdown">
         <div class="dropdown" @click="dropdownMenu">
           <img :src="user" alt="" srcset="" class="user-icon" />
           <p>Account</p>
-          <img
-            :src="showMenu ? arrowUp : arrowDown"
-            alt=""
-            srcset=""
-            class="arrow-down"
-          />
+          <img :src="showMenu ? arrowUp : arrowDown" alt="" srcset="" class="arrow-down" />
         </div>
         <div class="dropdown-content" v-if="showMenu">
-          <div class="isLoggedIn" v-if="curentUser">
-            <a href="/profile">
+          <div class="isLoggedIn" v-if="ifLoggedIn">
+            <a href="/user/profile">
               <img :src="profile" alt="" srcset="" />
               Profile
             </a>
-            <a href="/cart">
-              <img :src="cart" alt="" srcset="" />
-              Cart
-            </a>
             <a href="/saved">
               <img :src="heart" alt="" srcset="" />
-              Saved
+              <p>saved</p>
             </a>
-            <a href="/logout">
+            <div @click="logoutUser">
               <img :src="logout" alt="" srcset="" />
-              Logout
-            </a>
+              <p>logout</p>
+            </div>
           </div>
           <div class="isNotLoggedIn" v-else>
             <RouterLink to="/auth/login" class="login">
@@ -152,6 +167,7 @@ nav .nav-links {
   gap: 30px;
   align-items: center;
 }
+
 .nav-links a {
   color: #fff;
   text-decoration: none;
@@ -225,18 +241,37 @@ nav .nav-links {
   padding: 0 0 0 10px;
 }
 
-.isLoggedIn a img,
-.isNotLoggedIn a img {
+.isLoggedIn div,
+.isNotLoggedIn div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 0 0 0 10px;
+}
+
+.isLoggedIn img,
+.isNotLoggedIn img {
   height: 23px;
   margin-right: 20px;
 }
+
+.isLoggedIn p,
+.isNotLoggedIn p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
 .bars {
   display: none;
 }
+
 @media screen and (max-width: 768px) {
   nav {
     padding: 14px 10px;
   }
+
   nav .nav-links {
     flex-direction: column;
     position: absolute;
@@ -251,18 +286,22 @@ nav .nav-links {
     padding: 70px 10px;
     transition: all 200ms ease-in-out;
   }
+
   .active {
     left: 0 !important;
   }
+
   nav .bars {
     display: block;
     margin: 0 0px 0 auto;
   }
+
   .bars img {
     z-index: 1000;
     height: 30px;
     transition: all 200ms ease-in-out;
   }
+
   .dropdown-content {
     position: relative;
     top: 0;
@@ -275,6 +314,17 @@ nav .nav-links {
     padding: 0;
     background-color: transparent;
   }
+
+  .isLoggedIn,
+  .isNotLoggedIn {
+    color: #fff;
+    padding: 5px 0;
+  }
+
+  .dropdown-content img {
+    display: none;
+  }
+
   .blur {
     position: absolute;
     top: 0;
@@ -289,11 +339,14 @@ nav .nav-links {
     -webkit-backdrop-filter: blur(4.7px);
     border: 1px solid rgba(46, 39, 39, 0.3);
   }
+
   .contact {
-    position: relative;
-    top: 210px;
+    position: absolute;
+    bottom: 50px;
+    z-index: 1000;
   }
-  .dropdown > img {
+
+  .dropdown>img {
     display: none;
   }
 }
