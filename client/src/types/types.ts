@@ -3,9 +3,13 @@ interface Item {
     price: number;
     description: string;
     location: string;
-    img: any;
+    img: string;
+    category: string;
     saved: boolean;
-    id: number;
+    id: string;
+    createdAt: string;
+    seller: string;
+    sellerId: string;
 }
 
 interface UserRegister {

@@ -60,7 +60,8 @@ import other from '../assets/icons/other.svg'
     width: 220px;
     font-family: var(--font-family);
     gap: 10px;
-    padding: 5px;
+    padding: 15px;
+    border-radius: 10px;
 }
 h4 {
     color: #333;

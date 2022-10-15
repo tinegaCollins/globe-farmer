@@ -4,6 +4,7 @@ import SearchBar from '../components/SearchBar.vue';
 import Filters from '../components/Filters.vue';
 import MidLanding from '../components/mid-landing.vue';
 import Featured from '../components/Featured.vue';
+import Recent from '../components/recent.vue';
 </script>
 
 <template>
@@ -11,8 +12,9 @@ import Featured from '../components/Featured.vue';
         <Navbar />
         <SearchBar />
         <div class="landing">
-            <Filters />
+            <Recent />
             <MidLanding />
+            <Filters />
         </div>
         <Featured />
     </div>
@@ -21,7 +23,8 @@ import Featured from '../components/Featured.vue';
 <style scoped>
 .landing {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-direction: row-reverse; */
+    justify-content: space-around;
     gap: 20px;
     padding: 30px 4rem;
     margin-top: 20px;
@@ -29,7 +32,7 @@ import Featured from '../components/Featured.vue';
 @media screen and (max-width: 768px) {
     .landing {
         padding: 15px;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 }
 
