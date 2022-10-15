@@ -8,4 +8,5 @@ router.post('/login', userControllers.login);
 router.get('/get-users', userControllers.getUsers);
 router.get('/check-email/:email', userControllers.checkEmail);
 router.get('/check-user-name/:userName', userControllers.checkUserName);
+router.get('/check-phone/:phone', userControllers.checkPhone);
 module.exports = router;

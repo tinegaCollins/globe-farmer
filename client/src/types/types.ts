@@ -8,4 +8,14 @@ interface Item {
     id: number;
 }
 
-export default Item;
+interface UserRegister {
+    userName: string;
+    phone: string;
+    names: string;
+    email: string;
+    password: string;
+    seller: boolean;
+    location: string;
+}
+
+export type { Item, UserRegister };

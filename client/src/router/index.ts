@@ -7,9 +7,21 @@ const routes = [
         component: () => import("../views/Home.vue"),
     },
     {
-        path: "/auth/login",
-        name: "login",
-        component: ()=> import("../views/auth/login.vue")
+        path: "/auth",
+        name: "Auth",
+        component: () => import("../views/auth/auth.vue"),
+        children: [
+            {
+                path: "login",
+                name: "Login",
+                component: () => import("../views//auth/login.vue"),
+            },
+            {
+                path: "register",
+                name: "Register",
+                component: () => import("../views/auth/signup.vue"),
+            },
+        ],
     },
     {
         path: "/auth/signup",
@@ -21,11 +33,6 @@ const routes = [
         name: "forgot",
         component: ()=> import("../views/auth/forgot.vue")
     },
-    {
-        path: "/auth/alt-login",
-        name: "alt-login",
-        component: ()=> import("../views/auth/alt.vue")
-    }
 ];
 
 const router = createRouter({

@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mallanna&display=swap');
+
 *{
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
 }
 :root{
-  --font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family: "Mallanna", cursive;
   --main-yellow: rgb(255, 232, 45);
   --jungle-green: #4F9A45;
   --dark-green: #142F14;
   --main-red: #F8412B;
   --title-font: 'Darker Grotesque', sans-serif;
   --alt-font: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --logo-font: 'Damion', cursive;
 }
 body {
   font-family: var(--font-family);

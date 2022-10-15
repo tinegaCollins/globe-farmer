@@ -114,7 +114,7 @@ exports.registerSeller = async (req:Request, res:Response)=>{
     }
 }
 exports.checkUserName = async (req:Request, res:Response)=>{
-    const { userName } = req.body;
+    const  userName  = req.params.userName;
     const user = await users.findOne({userName: userName});
     if(user){
         res.status(200).json({message: "user name exists"});
@@ -135,4 +135,14 @@ exports.checkEmail = async (req:Request, res:Response)=>{
     }
 }
 
+exports.checkPhone = async (req:Request, res:Response)=>{
+    const phone = req.params.phone;
+    const user = await users.findOne({phone: phone});
+    if(user){
+        res.status(200).json({message: "phone exists"});
+    }
+    else{
+        res.status(201).json({ message : "phone not found"})
+    }
+}
 
