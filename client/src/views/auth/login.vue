@@ -8,7 +8,7 @@ import { useUserStore } from '../../stores/user';
 const DevUrl = import.meta.env.VITE_DEV_URL;
 const userStore = useUserStore();
 
-let steps = ref<number>(2);
+let steps = ref<number>(1);
 interface user {
     userName: string,
     email: string,

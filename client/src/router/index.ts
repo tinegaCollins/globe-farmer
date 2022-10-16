@@ -24,11 +24,6 @@ const routes = [
         ],
     },
     {
-        path: "/auth/signup",
-        name: "signup",
-        component: ()=> import("../views/auth/signup.vue")
-    },
-    {
         path: "/auth/forgot-password",
         name: "forgot",
         component: ()=> import("../views/auth/forgot.vue")

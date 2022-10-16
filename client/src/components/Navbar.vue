@@ -5,7 +5,6 @@ import { useUserStore } from "../stores/user";
 //images import
 
 import icon from "../assets/icon.png";
-import cart from "../assets/icons/cart.svg";
 import user from "../assets/icons/user.svg";
 import arrowDown from "../assets/icons/arrow-down.svg";
 import arrowUp from "../assets/icons/arrow-up.svg";
@@ -79,6 +78,9 @@ const logoutUser = () => {
               <img :src="heart" alt="" srcset="" />
               <p>saved</p>
             </a>
+            <div class="sell">
+              <button>sell</button>
+            </div>
             <div @click="logoutUser">
               <img :src="logout" alt="" srcset="" />
               <p>logout</p>
@@ -89,7 +91,7 @@ const logoutUser = () => {
               <img :src="login" alt="" srcset="" />
               Login
             </RouterLink>
-            <RouterLink to="/auth/signup" class="signup">
+            <RouterLink to="/auth/register" class="signup">
               <img :src="userCheck" alt="" srcset="" />
               Sign up
             </RouterLink>
@@ -255,7 +257,17 @@ nav .nav-links {
   height: 23px;
   margin-right: 20px;
 }
-
+.sell button {
+  background-color: var(--main-yellow);
+  border: none;
+  border-radius: 5px;
+  padding: 7px 40px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
 .isLoggedIn p,
 .isNotLoggedIn p {
   font-size: 16px;
