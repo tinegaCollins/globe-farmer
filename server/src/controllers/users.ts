@@ -51,8 +51,9 @@ exports.login = async (req:Request, res:Response)=>{
             const userName = user.userName;
             const email = user.email;
             const avatar = user.avatar;
+            const seller = user.seller;
             const token = jwt.sign({userName, email}, process.env.ACCESS_TOKEN_SECRET);
-            res.status(200).json({ token: token, userName: userName});
+            res.status(200).json({ token: token, userName: userName, email: email, avatar: avatar, seller: seller});
         }
         else{
             res.status(204).json( { message : "wrong password"} )

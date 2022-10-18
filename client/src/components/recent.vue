@@ -6,16 +6,6 @@ import pineapple from '../assets/temp/avocado.jpg';
 import banana from '../assets/temp/banana.jpg';
 import bake from '../assets/temp/bake.jpg';
 
-const from2011 = ()=> {
-    //get the time difference between now and 2011
-    const now = new Date();
-    const then = new Date(2011, 0, 1);
-    const diff = now.getTime() - then.getTime();
-    //get the difference in years
-    const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
-    console.log(years);
-}
-from2011()
 const tempList = ref([
     {
         name: "Avocadoes",
@@ -93,7 +83,7 @@ const tempList = ref([
     <div class="recent-wrapper">
         <div class="item" v-for="item in tempList" :id="item.id">
             <saved :if-saved="item.saved" class="item-saved" />
-            <RouterLink to="/posts/:id">
+            <RouterLink to="/ads/:id">
                 <div class="tab1">
                     <img :src="item.img" alt="item image">
                     <div class="item-tab2">

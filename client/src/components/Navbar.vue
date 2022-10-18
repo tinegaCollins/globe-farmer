@@ -70,16 +70,18 @@ const logoutUser = () => {
         </div>
         <div class="dropdown-content" v-if="showMenu">
           <div class="isLoggedIn" v-if="ifLoggedIn">
-            <a href="/user/profile">
+            <RouterLink to="/user/profile">
               <img :src="profile" alt="" srcset="" />
               Profile
-            </a>
-            <a href="/saved">
+            </RouterLink>
+            <RouterLink to="/user/saved">
               <img :src="heart" alt="" srcset="" />
               <p>saved</p>
-            </a>
+            </RouterLink>
             <div class="sell">
-              <button>sell</button>
+              <RouterLink to="/user/posts">
+                <button>sell</button>
+              </RouterLink>
             </div>
             <div @click="logoutUser">
               <img :src="logout" alt="" srcset="" />
@@ -278,7 +280,9 @@ nav .nav-links {
 .bars {
   display: none;
 }
-
+.sell a{
+  padding: 0;
+}
 @media screen and (max-width: 768px) {
   nav {
     padding: 14px 10px;
@@ -306,6 +310,7 @@ nav .nav-links {
   nav .bars {
     display: block;
     margin: 0 0px 0 auto;
+    z-index: 10000;
   }
 
   .bars img {
@@ -354,7 +359,7 @@ nav .nav-links {
 
   .contact {
     position: absolute;
-    bottom: 50px;
+    bottom: 70px;
     z-index: 1000;
   }
 

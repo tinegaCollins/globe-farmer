@@ -6,6 +6,7 @@ export const useUserStore = defineStore({
         token: sessionStorage.getItem("token") || "",
         userName: sessionStorage.getItem("userName") || "",
         email: sessionStorage.getItem("email") || "",
+        seller: sessionStorage.getItem("seller") || "",
     }),
     getters: {
         isLoggedIn(): boolean {
@@ -28,6 +29,7 @@ export const useUserStore = defineStore({
             this.token = user.token;
             this.userName = user.userName;
             this.email = user.email;
+            this.seller = user.seller; 
         },
         logout() {
             this.token = "";

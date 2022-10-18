@@ -28,7 +28,6 @@ const currentUser = ref<user>({
 const email = ref<string>("");
 const checkEmail = () => {
     isLoading.value = true;
-    //regex to check if email is valid
     const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-0]\d{1,2}\.[0-0]\d{1,2}\.[0-0]\d{1,2}\.[0-0]\d{1,2}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (regex.test(email.value)) {
         console.log("valid email");
@@ -102,11 +101,6 @@ async function login() {
         }
     }).then(res => {
         if (res.status === 200) {
-            userStore.login({
-                userName: currentUser.value.userName,
-                email: currentUser.value.email,
-                token: res.data.token,
-            })
             //save token to session storage
             sessionStorage.setItem("token", res.data.token);
             //decode token
@@ -120,6 +114,14 @@ async function login() {
             const decoded:decode = jwt_decode(res.data.token);
             sessionStorage.setItem("userName", decoded.userName);
             sessionStorage.setItem("email", decoded.email);
+            sessionStorage.setItem("seller", res.data.seller);
+            console.log(res.data.userName)
+            userStore.login({
+                userName: res.data.userName,
+                email: res.data.email,
+                seller: res.data.seller,
+                token: res.data.token,
+            })
             window.location.href = "/";
             isLoading.value = false;
         } else if (res.status === 204) {
