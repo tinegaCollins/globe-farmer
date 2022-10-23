@@ -87,6 +87,9 @@ const charts = ref<chart[]>([
 <template>
     <div class="chats-side">
         <div class="top-bar">
+            <a href="/">
+                <img src="../../icon.png" alt="logo">
+            </a>
             <h3>Messages </h3>
             <img src="../assets/icons/messages/plus-circle-svgrepo-com.svg" alt="" srcset="" class="add-chat">
             <img src="../assets/icons/messages/dots-3-svgrepo-com.svg" alt="" srcset="">
@@ -96,19 +99,20 @@ const charts = ref<chart[]>([
             <img src="../assets/icons/messages/filter-svgrepo-com.svg" alt="" srcset="">
         </div>
         <div class="now-chats">
-            <RouterLink v-for="chart in charts" :key="chart.id" :to="'/messages/' + chart.id">
+            <RouterLink v-for="chat in charts" :key="chat.id" :to="{ name: 'Chat', params: { id: chat.id}}">
                 <div class="chat">
                     <div class="chat-img">
-                        <img :src="chart.avatar" alt="" srcset="">
+                        <img :src="chat.avatar" alt="" srcset="">
+                        <div class="if-active"></div>
                     </div>
                     <div class="chat-info">
-                        <h3>{{chart.name}}</h3>
-                        <p>{{chart.lastMessage}}</p>
+                        <h3>{{chat.name}}</h3>
+                        <p>{{chat.lastMessage}}</p>
                     </div>
                     <div class="chat-time">
-                        <p>{{chart.lastMessageTime}}</p>
-                        <div class="unread-messages" v-if="chart.unreadMessages > 0">
-                            <p>{{chart.unreadMessages}}</p>
+                        <p>{{chat.lastMessageTime}}</p>
+                        <div class="unread-messages" v-if="chat.unreadMessages > 0">
+                            <p>{{chat.unreadMessages}}</p>
                         </div>
                     </div>
                 </div>
@@ -119,7 +123,7 @@ const charts = ref<chart[]>([
 
 <style scoped>
 .chats-side {
-    height: calc(100vh - 40px);
+    height: calc(100vh );
     color: #333;  
     padding: 5px;
 }
@@ -164,6 +168,20 @@ const charts = ref<chart[]>([
     height: 50px;
     object-fit: cover;
     border-radius: 50%;
+    position: relative;
+}
+.chat-img{
+    position: relative;
+}
+.if-active {
+    width: 15px;
+    height: 15px;
+    background-color: #4cd137;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    border: 2px solid #fff;
 }
 .chat {
     display: flex;
@@ -180,6 +198,25 @@ const charts = ref<chart[]>([
     text-decoration: none;
     color: #333;
 }
+.chat-info {
+    margin-left: 10px;
+}
+.chat-time {
+    margin-left: auto;
+}
+.unread-messages {
+    background-color: var(--jungle-green);
+    color: #fff;
+    font-size: .8rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
 @media screen and (min-width: 1024px) {
     .chats-side {
         width: 25%;

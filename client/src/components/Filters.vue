@@ -87,7 +87,7 @@ h4 {
     height: 25px;
     margin-right: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .filters {
         width: 100%;
         margin-bottom: 20px;

@@ -1,16 +1,23 @@
 import mongoose from 'mongoose';
 
-const chatSchema = new mongoose.Schema({
-    sender1: String,
-    sender2: String,
-    messages:[
-        {
-            from : String,
-            body: String,
-            time: String,
-            day: String,
-        }
-    ]
+import { singleChat, } from '../types';
+const chatSchema = new mongoose.Schema<singleChat>({
+    chatId: {
+        type: String,
+    },
+    users: {
+        type: [String],
+    },
+    messages: {
+        type: [Object],
+    },
+    createdAt: {
+        type: Date,
+        default: new Date()
+    },
+    updatedAt: {
+        type: Date,
+    }
 });
 
 module.exports = mongoose.model('chat', chatSchema);

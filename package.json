@@ -1,0 +1,24 @@
+{
+  "name": "globe-farmer",
+  "version": "1.0.0",
+  "description": "ecc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-dev" : "cd client && npm run dev",
+    "client-build" : "cd client && npm run build",
+    "server-dev" : "cd server && npm run dev",
+    "server-build" : "cd server && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinegaCollins/globe-farmer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tinegaCollins/globe-farmer/issues"
+  },
+  "homepage": "https://github.com/tinegaCollins/globe-farmer#readme"
+}

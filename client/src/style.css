@@ -14,6 +14,7 @@
   --title-font: 'Darker Grotesque', sans-serif;
   --alt-font: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --logo-font: 'Damion', cursive;
+  --light-green : #396746;
 }
 body {
   font-family: var(--font-family);

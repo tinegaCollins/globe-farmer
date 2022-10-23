@@ -29,11 +29,20 @@ import Recent from '../components/recent.vue';
     padding: 30px 4rem;
     margin-top: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .landing {
-        padding: 15px;
+        padding: 15px 40px;
         flex-direction: column;
     }
+    .mid-landing {
+        margin: 40px 0;
+    }
 }
+@media  screen and (max-width: 768px) {
+    .landing {
+        padding: 15px;
+    }
+}
+
 
 </style>

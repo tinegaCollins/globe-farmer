@@ -31,18 +31,6 @@ const startServer = ()=>{
     app.get('/test', (req:Request, res:Response)=>{
         res.status(200).json({message: "hello world"})
     })
-    
-    app.post('/add-new-chat', chatControllers.addNewChat);
-    app.get('/check-if-chat/:sender1/:sender2/:full', chatControllers.checkIfChatAvailable);
-    app.post('/send-message', chatControllers.sendMessage);
-    app.get('/get-all-chats/:id', chatControllers.getAllChats);
-    app.post('/get-single-chat', chatControllers.getSingleChat);
-
-    //post controllers 
-    app.get('/get-by-id/:id', postController.getByID);
-    app.post('/add-post', postController.addPost);
-    app.get('/get-popular', postController.getPopular);
-
 
     //server on
     http.createServer(app).listen(8000,'0.0.0.0', ()=> console.log('listening on port 8000'));

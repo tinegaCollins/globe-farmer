@@ -17,10 +17,12 @@ import chatSide from '../../../components/chartSide.vue';
     background: #fff;
     color: #333;
     padding: 20px;
+    display: flex;
 }
 @media screen and (max-width: 768px) {
     .messages {
         padding: 3px;
+        flex-direction: column;
     }
 }
     

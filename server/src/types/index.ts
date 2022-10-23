@@ -26,6 +26,18 @@ interface PostTypes {
     seller: string,
     rating: number,
 }
-
-//export both interfaces
-export { UserTypes, PostTypes }
+interface message  {
+    sender: string,
+    receiver: string,
+    message: string,
+    createdAt: Date,
+    read: boolean
+}
+interface singleChat {
+    chatId: string,
+    users: string[],
+    messages: message[],
+    createdAt: Date,
+    updatedAt: Date
+}
+export { UserTypes, PostTypes, message, singleChat }
