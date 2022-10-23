@@ -64,7 +64,13 @@ const routes = [
                         component: () => import("../views/user/messages/chat.vue"),
                     },
                 ]
-            }
+            },
+            {
+                path: "posts",
+                name: "Posts",
+                component: () => import("../views/user/posts.vue"),
+            },
+        
         ]
     },
     {
@@ -76,7 +82,7 @@ const routes = [
         path: "/:pathMatch(.*)*",
         name: "NotFound",
         component: () => import("../views/NotFound.vue"),
-    },
+    }
 ];
 
 const router = createRouter({

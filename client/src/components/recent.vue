@@ -81,6 +81,7 @@ const tempList = ref([
 
 <template>
     <div class="recent-wrapper">
+        <h4>recent posts</h4>
         <div class="item" v-for="item in tempList" :id="item.id">
             <saved :if-saved="item.saved" class="item-saved" />
             <RouterLink to="/ads/:id">
@@ -102,7 +103,7 @@ const tempList = ref([
 
 <style scoped>
 .recent-wrapper {
-    height: 100%;
+    height: max-content;
     background-color: #fff;
     color: #333;
     border-radius: 10px;

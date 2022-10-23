@@ -156,4 +156,16 @@ exports.checkPhone = async (req:Request, res:Response)=>{
         res.status(201).json({ message : "phone not found"})
     }
 }
-
+exports.checkIfSeller = async (req: Request, res: Response) => {
+  try {
+    const email = req.params.email;
+    const user = await users.findOne({ email: email });
+    if (user.seller) {
+      res.status(200).json({ message: true });
+    } else {
+      res.status(201).json({ message: false });
+    }
+  } catch {
+    res.status(400).json({ message: "user not found" });
+  }
+};

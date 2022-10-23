@@ -9,4 +9,5 @@ router.get('/get-users', userControllers.getUsers);
 router.get('/check-email/:email', userControllers.checkEmail);
 router.get('/check-user-name/:userName', userControllers.checkUserName);
 router.get('/check-phone/:phone', userControllers.checkPhone);
+router.get('/check-if-seller/:email', userControllers.checkIfSeller);
 module.exports = router;
