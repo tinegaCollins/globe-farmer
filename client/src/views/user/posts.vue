@@ -2,9 +2,11 @@
 import { ref } from 'vue';
 import axios from 'axios';
 import { useUserStore } from '../../stores/user';
+import { notify } from "@kyvg/vue3-notification";
 import router from '../../router';
 import Recent from '../../components/recent.vue';
 const DevUrl = import.meta.env.VITE_DEV_URL;
+
 
 const userStore = useUserStore();
 const email = ref<string>(userStore.email);
@@ -23,7 +25,64 @@ const isUserSeller = async () => {
 }
 isUserSeller();
 
-const steps = ref<number>(1);
+const steps = ref<number>(3);
+
+interface stepOne {
+    firstName: string;
+    lastName: string;
+    phone: string;
+    town: string;
+    county: string;
+}
+const step1details = ref<stepOne>({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    town: '',
+    county: '',
+});
+interface stepTwo {
+    title: string;
+    businessAddress: string;
+    businessPhone: string;
+    businessEmail: string;
+}
+const step2details = ref<stepTwo>({
+    title: '',
+    businessAddress: '',
+    businessPhone: '',
+    businessEmail: ''
+});
+const next = () => {
+    if(steps.value == 1) {
+        console.log(step1details.value);
+        if(step1details.value.firstName == '' || step1details.value.lastName == ''|| step1details.value.phone == '' || step1details.value.town == '' || step1details.value.county == '') {
+            //notify user to fill all fields
+            notify({
+                title: "Error",
+                text: "Please fill all fields",
+                type: "error",
+                duration: 3000
+            })
+        }else{
+            steps.value = 2;
+        }
+    }
+    else if(steps.value == 2) {
+        console.log(step2details.value);
+        if(step2details.value.title == '' || step2details.value.businessAddress == ''|| step2details.value.businessPhone == '' || step2details.value.businessEmail == '') {
+            //notify user to fill all fields
+            notify({
+                title: "Error",
+                text: "Please fill all fields",
+                type: "error",
+                duration: 3000
+            })
+        }else{
+            steps.value = 3;
+        }
+    }
+}
 </script>
 
 <template>
@@ -63,27 +122,54 @@ const steps = ref<number>(1);
                 <div class="inputs" v-if="steps == 1">
                     <div class="input">
                         <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" placeholder="First Name">
+                        <input type="text" id="firstName" placeholder="First Name" v-model="step1details.firstName">
                     </div>
                     <div class="input">
                         <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" placeholder="Last Name">
+                        <input type="text" id="lastName" placeholder="Last Name" v-model="step1details.lastName">
                     </div>
                     <div class="input">
                         <label for="phone">Phone Number</label>
-                        <input type="text" id="phone" placeholder="Phone Number">
+                        <input type="text" id="phone" placeholder="Phone Number" v-model="step1details.phone">
                     </div>
                     <div class="input">
                         <label for="town">Town</label>
-                        <input type="text" id="town" placeholder="City">
+                        <input type="text" id="town" placeholder="Town" v-model="step1details.town">
                     </div>
                     <div class="input">
                         <label for="county">County</label>
-                        <input type="text" id="county" placeholder="County">
+                        <input type="text" id="county" placeholder="County" v-model="step1details.county">
+                    </div>
+                </div>
+                <div class="inputs" v-if="steps == 2">
+                    <div class="input">
+                        <label for="title">title</label>
+                        <input type="text" id="title" placeholder="eg. Fresh tomatoes seller" v-model="step2details.title">
+                    </div>
+                    <div class="input">
+                        <label for="businessPhone">Business Phone Number</label>
+                        <input type="text" id="businessPhone" placeholder="Business Phone Number" v-model="step2details.businessPhone">
+                    </div>
+                    <div class="input">
+                        <label for="businessEmail">Business Email</label>
+                        <input type="text" id="businessEmail" placeholder="Business Email" v-model="step2details.businessEmail">
+                    </div>
+                    <div class="input">
+                        <label for="businessAddress">Business Address</label>
+                        <input type="text" id="businessAddress" placeholder="Business Address" v-model="step2details.businessAddress">
+                    </div>
+                </div>
+                <div class="inputs" v-if="steps == 3">
+                    <div class="input last">
+                        <h5>add an Image</h5>
+                        <label for="id">
+                            <img src="../../assets/icons/add-svgrepo-com.svg" alt="" srcset="">
+                        </label>
+                        <input class="image" type="file" id="id" placeholder="ID">
                     </div>
                 </div>
                 <div class="buttons">
-                    <button class="next" @click="steps++">Next</button>
+                    <button class="next" @click="next">Next</button>
                     <button class="back" @click="steps--">Back</button>
                 </div>
             </main>
@@ -137,6 +223,10 @@ section {
     border-radius: 10px;
     height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
 }
 
 .recent-wrapper {
@@ -179,30 +269,79 @@ section {
 
 
 input {
-    width: 120%;
+    width: 110%;
     padding: 10px;
     border: 1px solid #ccc;
     height: 50px;
     border-radius: 5px;
     outline: none;
     background: transparent;
+    color: #fff;
 }
 
 input::placeholder {
     color: #ccc;
     background-color: transparent;
 }
-
+.buttons {
+    margin-top: 30px;
+}
 button {
-    padding: 10px;
+    padding: 10px 30px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 30px;
     outline: none;
     margin-top: 10px;
     background-color: var(--main-yellow);
 }
-
+label > img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    float: cent;
+}
+.last {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
 @media screen and (max-width: 1024px) {
+    .additional-info {
+        padding: 10px;
+    }
+
+    section {
+        display: none;
+    }
+
+    .inputs {
+        width: 80%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .input{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    input {
+        width: 100%;
+    }
+    .last input{
+        width: 60%;
+    }
+    h2 {
+        text-align: center;
+    }
+    main {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
     .additional-info {
         padding: 10px;
     }
@@ -226,6 +365,7 @@ button {
         width: 100%;
     }
 }
+    
 
 .next {
     margin-right: 5px;

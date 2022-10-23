@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Item from '../../types/types';
+import { Item } from '../../types/types';
 import saved from './saved.vue'
 import heart from '../../assets/icons/heart.svg'
 const props = defineProps<{
