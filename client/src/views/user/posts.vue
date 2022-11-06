@@ -16,6 +16,7 @@ if (!email.value) {
 let additionalInfo = ref<Boolean>(false);
 const isUserSeller = async () => {
     await axios.get(`${DevUrl}api/user/check-if-seller/${email.value}`).then((res) => {
+        console.log(res.status)
         if (res.status != 200) {
             additionalInfo.value = true;
         }
@@ -25,7 +26,7 @@ const isUserSeller = async () => {
 }
 isUserSeller();
 
-const steps = ref<number>(3);
+const steps = ref<number>(1);
 
 interface stepOne {
     firstName: string;
@@ -53,6 +54,17 @@ const step2details = ref<stepTwo>({
     businessPhone: '',
     businessEmail: ''
 });
+let finish = ref<Boolean>(false);
+let image: ArrayBuffer | null | String = null;
+const handleImage = (e: any) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+        image = reader.result;
+        finish.value = true;
+    }
+}
 const next = () => {
     if(steps.value == 1) {
         console.log(step1details.value);
@@ -81,6 +93,34 @@ const next = () => {
         }else{
             steps.value = 3;
         }
+    }
+    else if(steps.value == 3){
+        let dataToSend = {
+            email: email.value,
+            firstName: step1details.value.firstName,
+            lastName: step1details.value.lastName,
+            phone: step1details.value.phone,
+            town: step1details.value.town,
+            county: step1details.value.county,
+            title: step2details.value.title,
+            businessAddress: step2details.value.businessAddress,
+            businessPhone: step2details.value.businessPhone,
+            businessEmail: step2details.value.businessEmail,
+            avatar: image
+        }
+        axios.post(`${DevUrl}api/user/add-seller`, dataToSend).then((res) => {
+            if(res.status == 200) {
+                notify({
+                    title: "Success",
+                    text: "Seller account created successfully",
+                    type: "success",
+                    duration: 3000
+                })
+                router.push('/user/dashboard');
+            }
+        }).catch((err) => {
+            console.log(err);
+        })
     }
 }
 </script>
@@ -161,16 +201,18 @@ const next = () => {
                 </div>
                 <div class="inputs" v-if="steps == 3">
                     <div class="input last">
-                        <h5>add an Image</h5>
+                        <h5>add a profile image</h5>
                         <label for="id">
                             <img src="../../assets/icons/add-svgrepo-com.svg" alt="" srcset="">
                         </label>
-                        <input class="image" type="file" id="id" placeholder="ID">
+                        <input @change="handleImage" class="image" type="file" id="id" placeholder="ID" accept="image/*">
                     </div>
                 </div>
                 <div class="buttons">
-                    <button class="next" @click="next">Next</button>
-                    <button class="back" @click="steps--">Back</button>
+                    <button class="next" @click="next" >{{
+                        steps < 3 ? 'Next' : 'Finish'
+                    }}</button>
+                    <button :disabled="steps > 1? false : true" class="back" @click="steps--">Back</button>
                 </div>
             </main>
             <section>
@@ -293,6 +335,12 @@ button {
     outline: none;
     margin-top: 10px;
     background-color: var(--main-yellow);
+    transition: all 0.3s ease-in-out;
+}
+button:disabled {
+    background-color: #ccc;
+    color: #333;
+    cursor: not-allowed;
 }
 label > img {
     width: 50px;

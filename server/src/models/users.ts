@@ -31,15 +31,54 @@ const sellerSchema = new mongoose.Schema<UserTypes>({
         type: Buffer,
         required: false
     },
-    seller: Boolean,
+    seller: {
+        firstName: {
+            type: String,
+            required: true
+        },
+        lastName: {
+            type: String,
+            required: true
+        },
+        email: {
+            type: String,
+            required: true
+        },
+        phone: {
+            type: String,
+            required: true
+        },
+        town: {
+            type: String,
+            required: true
+        },
+        county: {
+            type: String,
+            required: true
+        },
+        title: {
+            type: String,
+            required: true
+        },
+        businessAddress: {
+            type: String,
+            required: true
+        },
+        businessEmail: {
+            type: String,
+            required: true
+        },
+        businessPhone: {
+            type: String,
+            required: true
+        }
+    },
     chats: [String],
     createdAt: {
         type: Date,
         default: new Date()
     },
-    saved: [String],
-    products: [String],
-    productLine: String
+    saved: [String]
 })
 
 module.exports = mongoose.model('globefarmer-user', sellerSchema);
