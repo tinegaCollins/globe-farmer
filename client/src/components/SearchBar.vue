@@ -22,7 +22,7 @@ import search from '../assets/icons/search.svg';
     font: var(--font-family);
 }
 .search-box input{
-    width: 600px;
+    min-width: 400px;
     height: 45px;
     border: none;
     border-radius: 5px;
@@ -62,7 +62,7 @@ import search from '../assets/icons/search.svg';
     }
     .search-box input {
         margin: 0;
-        width: 100%;
+        min-width: 100%;
         padding: 0 5px 0 35px;
         border-radius: 0;
         border-bottom-left-radius: 5px;
