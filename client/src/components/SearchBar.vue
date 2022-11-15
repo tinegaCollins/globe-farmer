@@ -62,7 +62,7 @@ import search from '../assets/icons/search.svg';
     }
     .search-box input {
         margin: 0;
-        min-width: 100%;
+        min-width: 90%;
         padding: 0 5px 0 35px;
         border-radius: 0;
         border-bottom-left-radius: 5px;

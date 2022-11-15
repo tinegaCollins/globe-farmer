@@ -1,24 +1,17 @@
 <script setup lang="ts">
-import apple from '../assets/icons/apple.svg'
-import vegetable from '../assets/icons/vegetable.svg'
 import cereal from '../assets/icons/cereal.svg'
-import dairy from '../assets/icons/milk.svg'
-import legumes from '../assets/icons/legumes.svg'
-import spices from '../assets/icons/spice.svg'
-import animal from '../assets/icons/cow.svg'
-import chicken from '../assets/icons/chicken.svg'
-import other from '../assets/icons/other.svg'
+import { Icon } from '@iconify/vue';
 </script>
 
 <template>
-    <div className="filters">
+    <div class="filters w-max">
         <h4>Categories</h4>
         <a href="/Fruits">
-            <img :src="apple" alt="" />
+            <Icon icon="emojione-monotone:green-apple" class="mr-5 text-3xl"/>
             Fruits
         </a>
         <a href="/Vegetables">
-            <img :src="vegetable" alt="" srcset="" />
+            <Icon icon="game-icons:cabbage" class="mr-5 text-3xl"/>
             Vegetables
         </a>
         <a href="/Cereals">
@@ -26,27 +19,27 @@ import other from '../assets/icons/other.svg'
             Cereals
         </a>
         <a href="/Dairy">
-            <img :src="dairy" alt="" srcset="" />
+            <Icon icon="mdi:cow" class="mr-5 text-3xl"/>
             Dairy
         </a>
         <a href="/Legumes">
-            <img :src="legumes" alt="" srcset="" />
+            <Icon icon="fluent-emoji-high-contrast:beans" class="mr-5 text-3xl"/>
             Legumes
         </a>
         <a href="/spices">
-            <img :src="spices" alt="" srcset="" />
+            <Icon icon="game-icons:cool-spices" class="mr-5 text-3xl"/>
             Spices
         </a>
         <a href="/animal-food">
-            <img :src="animal" alt="" srcset="" />
+            <Icon icon="emojione-monotone:goat" class="mr-5 text-3xl"/>
             Animal food
         </a>
         <a href="/chicken">
-            <img :src="chicken" alt="" srcset="" />
+            <Icon icon="emojione-monotone:chicken" class="mr-5 text-3xl"/>
             Poultry Products
         </a>
         <a href="/other">
-            <img :src="other" alt="" srcset="" />
+            <Icon icon="arcticons:state-farm" class="mr-5 text-3xl"/>
             Other
         </a>
     </div>
@@ -57,11 +50,11 @@ import other from '../assets/icons/other.svg'
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    width: 220px;
     font-family: var(--font-family);
     gap: 10px;
     padding: 15px;
     border-radius: 10px;
+    height: 100%;
 }
 h4 {
     color: #333;
@@ -70,6 +63,7 @@ h4 {
     text-decoration: none;
     color: #333;
     display: flex;
+    min-width: 200px;
     align-items: center;
     padding: 4px 10px;
     transition: all 0.1s ease-in-out;

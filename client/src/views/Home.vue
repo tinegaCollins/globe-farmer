@@ -3,30 +3,29 @@ import Navbar from '../components/Navbar.vue';
 import Filters from '../components/Filters.vue';
 import MidLanding from '../components/mid-landing.vue';
 import Featured from '../components/Featured.vue';
+import trendingAdsVue from '../components/trendingAds.vue';
 import Recent from '../components/recent.vue';
+import Footer from '../components/Footer.vue';
 </script>
 
 <template>
     <div class="home-page">
         <Navbar />
-        <div class="mid-content">
-            <MidLanding />
-        </div>
+        <MidLanding />
         <div class="landing">
-            <Recent />
             <Filters />
+            <trendingAdsVue />
         </div>
         <Featured />
+        <Footer />
     </div>
 </template>
 
 <style scoped>
 .landing {
     display: flex;
-    /* flex-direction: row-reverse; */
-    justify-content: space-around;
     gap: 20px;
-    padding: 30px 4rem;
+    padding: 30px 9rem;
     margin-top: 20px;
 }
 @media screen and (max-width: 1024px) {

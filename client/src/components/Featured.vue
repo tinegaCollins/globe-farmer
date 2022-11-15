@@ -42,7 +42,7 @@
 }
 @media screen and (min-width: 768px) {
     .featured {
-        padding: 20px 40px;
+        padding: 30px 9rem;
     }
 }
 

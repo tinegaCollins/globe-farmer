@@ -63,12 +63,12 @@ const logoutUser = () => {
       <a href="/home">Home</a>
       <RouterLink to="/user/posts">post</RouterLink>
       <div class="dropdown">
-        <div class="dropdown" @click="dropdownMenu">
+        <div class="dropdown z-auto" @click="dropdownMenu">
           <img :src="user" alt="" srcset="" class="user-icon" />
           <p>Account</p>
           <img :src="showMenu ? arrowUp : arrowDown" alt="" srcset="" class="arrow-down" />
         </div>
-        <div class="dropdown-content" v-if="showMenu">
+        <div class="dropdown-content z-50" v-if="showMenu">
           <div class="isLoggedIn" v-if="ifLoggedIn">
             <RouterLink to="/user/profile">
               <img :src="profile" alt="" srcset="" />

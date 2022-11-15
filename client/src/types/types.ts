@@ -7,7 +7,7 @@ interface Item {
     category: string;
     saved: boolean;
     id: string;
-    createdAt: string;
+    createdAt: any;
     seller: string;
     sellerId: string;
 }
