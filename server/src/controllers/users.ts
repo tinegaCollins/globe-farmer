@@ -6,17 +6,14 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 exports.createNewUser = async (req: Request, res: Response) => {
   try {
-    const { name, userName, email, phone, unSecurepassword, seller, location } =
+    const { userName, email, secPassword, seller, location } =
       req.body;
-    const checkPhone: Array<object> = await users.find({ phone: phone });
     const checkEmail: Array<object> = await users.find({ email: email });
-    if (checkPhone.length == 0 && checkEmail.length == 0) {
+    if (checkEmail.length == 0) {
       const salt = await bcrypt.genSalt(10);
-      const password = await bcrypt.hash(unSecurepassword, salt);
+      const password = await bcrypt.hash(secPassword, salt);
       const newSeller = new users({
-        name,
         userName,
-        phone,
         email,
         password,
         location,
@@ -25,15 +22,13 @@ exports.createNewUser = async (req: Request, res: Response) => {
       await newSeller.save();
       res.status(200).json(newSeller);
     } else {
-      if (checkPhone.length != 0) {
-        res.status(500).json({ message: "phone already exists" });
-      }
       if (checkEmail.length != 0) {
         res.status(500).json({ message: "email already exists" });
       }
     }
   } catch (err) {
-    res.status(403).json({ message: "error, couldn't create user" });
+    console.log(err);
+    res.status(403).json({ message: err });
   }
 };
 

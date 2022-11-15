@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 import jwt_decode from 'jwt-decode';
 import axios from 'axios';
-import avatar from "../../assets/temp/avatar.jpg";
+import avatar from "../../assets/icons/user.svg";
 import { notify } from "@kyvg/vue3-notification";
 import { useUserStore } from '../../stores/user';
 const DevUrl = import.meta.env.VITE_DEV_URL;
@@ -20,12 +20,21 @@ const currentUser = ref<user>({
     email: "collinstinega003@gmail.com",
     img: avatar
 })
-// const currentUser = ref<user>({
-//     userName: "",
-//     email: "",
-//     img: avatar
-// })
 const email = ref<string>("");
+function dataURLtoFile(dataurl:any, filename:any) {
+
+    var arr = dataurl.split(','),
+        mime = arr[0].match(/:(.*?);/)[1],
+        bstr = atob(arr[1]),
+        n = bstr.length,
+        u8arr = new Uint8Array(n);
+
+    while (n--) {
+        u8arr[n] = bstr.charCodeAt(n);
+    }
+
+    return new File([u8arr], filename, { type: mime });
+}
 const checkEmail = () => {
     isLoading.value = true;
     const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-0]\d{1,2}\.[0-0]\d{1,2}\.[0-0]\d{1,2}\.[0-0]\d{1,2}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -42,6 +51,9 @@ const checkEmail = () => {
                 console.log(res.data);
                 currentUser.value.email = email.value;
                 currentUser.value.userName = res.data.data.userName;
+                console.log(res.data.data);
+                var file = dataURLtoFile(res.data.data.avatar, "avatar.png");
+                currentUser.value.img = file;
             } else {
                 notify({
                     title: "Error",
@@ -51,7 +63,6 @@ const checkEmail = () => {
                 })
                 isLoading.value = false;
                 loginType = "email";
-
             }
         }).catch(err => {
             isLoading.value = false;
@@ -188,7 +199,7 @@ onMounted(() => {
             <div class="step1" v-if="steps == 1">
                 <div class="user-info">
                     <input type="text" placeholder="Email or Phone" v-model="email">
-                    <button @click="checkEmail">
+                    <button @click="checkEmail" class="bg-yellow-100">
                         <span :class="isLoading ? 'loader' : 'some'">
                             {{isLoading ? '' : 'Continue'}}
                         </span>
@@ -241,12 +252,9 @@ onMounted(() => {
     padding-bottom: 20px;
     margin-bottom: 10px;
     margin-top: 5px;
-    background-color: #E2E4E9;
-    color: #333;
+    color: #fff;
     border-radius: 15px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(209, 204, 25, 0.3);
+
 }
 .inputs > h1 {
     margin:  10px 0;
@@ -257,12 +265,12 @@ input {
     margin: 10px 0;
     border: none;
     background: transparent;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #fff;
     outline: none;
 }
 
 input::placeholder {
-    color: black;
+    color: #fff;
 }
 button {
     width: 100%;
@@ -271,15 +279,15 @@ button {
     border-radius: 5px;
     outline: none;
     padding: 0 10px;
-    /* background-color: var(--main-yellow); */
     color: #333;
+    background-color: var(--main-yellow);
     font-weight: 600;
     font-size: 1.2rem;
     margin: 20px 0;
     transition: all 0.3s ease-in-out;
 }
 button:disabled {
-    background-color: #333;
+    background-color: #fff;
     color: #fff;
     opacity: 0.5;
 }
@@ -297,8 +305,8 @@ button:disabled {
     margin: 20px 0;
 }
 .email-details > img {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     margin-right: 10px;
 }

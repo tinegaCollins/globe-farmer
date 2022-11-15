@@ -17,14 +17,9 @@ import { onMounted, ref } from 'vue';
                 <RouterLink to="/auth/login">Log In</RouterLink>
             </div>
         </div>
-        <div class="bottom">
+        <div class="bottom bg-white/10 backdrop-blur-lg min-h-screen mt-10 lg:mt-0">
             <router-view></router-view>
         </div>
-        <div class="side-images">
-            <img src="../../assets/images/farmer.jpg" alt="" srcset="">
-            <p>An Online market Place you can trust</p>
-        </div>
-
     </div>
 </template>
 
@@ -37,19 +32,9 @@ import { onMounted, ref } from 'vue';
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
+    justify-content: flex-start;
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #E2E4E9;
-    color: #333;
-    border-radius: 15px;
-    ;
-    border-radius: 16px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(209, 204, 25, 0.3);
+    padding-top: 50px;
 }
 
 .top img {
@@ -60,7 +45,6 @@ import { onMounted, ref } from 'vue';
 }
 
 .top h3 {
-    font-size: 3rem;
     font-weight: 600;
     background-image: linear-gradient(90deg, var(--main-red), var(--main-yellow));
     background-clip: text;
@@ -81,7 +65,7 @@ import { onMounted, ref } from 'vue';
 }
 
 .top .links a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
@@ -113,6 +97,7 @@ import { onMounted, ref } from 'vue';
     .bottom {
         height: 100%;
     }
+
     .auth {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -120,41 +105,5 @@ import { onMounted, ref } from 'vue';
         column-gap: 1rem;
     }
 
-    .top {
-        grid-column: span 2;
-    }
-
-    .content {
-        width: 50%;
-    }
-
-    .side-images {
-        display: block;
-        width: 100%;
-        grid-column: span 1;
-        margin-top: 5px;
-        position: relative;
-
-    }
-
-    .side-images img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-        object-fit: cover;
-    }
-    .side-images p {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        font-size: 2rem;
-        font-weight: 600;
-        border-radius: 0 0 15px 15px;
-    }
 }
 </style>

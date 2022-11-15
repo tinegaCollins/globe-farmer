@@ -14,10 +14,8 @@ interface Item {
 
 interface UserRegister {
     userName: string;
-    phone: string;
-    names: string;
     email: string;
-    password: string;
+    secPassword: string;
     seller: boolean;
     location: string;
 }

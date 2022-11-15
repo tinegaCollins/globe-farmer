@@ -2,10 +2,6 @@ import mongoose from 'mongoose';
 
 import { UserTypes } from '../types';
 const sellerSchema = new mongoose.Schema<UserTypes>({
-    name: {
-        type: String,
-        required: true
-    },
     userName: {
         type: String,
         required: false
@@ -34,43 +30,33 @@ const sellerSchema = new mongoose.Schema<UserTypes>({
     seller: {
         firstName: {
             type: String,
-            required: true
         },
         lastName: {
             type: String,
-            required: true
         },
         email: {
             type: String,
-            required: true
         },
         phone: {
             type: String,
-            required: true
         },
         town: {
             type: String,
-            required: true
         },
         county: {
             type: String,
-            required: true
         },
         title: {
             type: String,
-            required: true
         },
         businessAddress: {
             type: String,
-            required: true
         },
         businessEmail: {
             type: String,
-            required: true
         },
         businessPhone: {
             type: String,
-            required: true
         }
     },
     chats: [String],

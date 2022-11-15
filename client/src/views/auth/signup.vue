@@ -3,21 +3,20 @@ import { ref } from 'vue';
 import  { UserRegister } from '../../types/types';
 import axios from 'axios';
 import { notify } from "@kyvg/vue3-notification";
+import router from '../../router';
 
 const DevUrl = import.meta.env.VITE_DEV_URL;
 const currentUser = ref<UserRegister>({
     userName : "",
-    names: "",
     email : "",
-    phone: "",
-    password: "",
+    secPassword: "",
     seller: false,
     location: "",
 })
 const repeatPassword = ref<string>("");
 const passwordError = ref<string>("");
 const checkPasswords = () => {
-    if(currentUser.value.password === repeatPassword.value){
+    if(currentUser.value.secPassword === repeatPassword.value){
         passwordError.value = "";
         return true;
     }else{
@@ -92,45 +91,13 @@ async function checkEmail():Promise<boolean>{
     }
     return returnValue;
 }
-async function checkPhone():Promise<boolean>{
-    let returnValue:boolean = false;
-    if(currentUser.value.phone.length > 0){
-        await axios.get(`${DevUrl}api/user/check-phone/${currentUser.value.phone}`, {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(res => {
-            console.log(res);
-            if(res.status === 201){
-                returnValue = true;
-            }else{
-                notify({
-                    title: "Error",
-                    text: "Phone number already exists",
-                    type: "error",
-                    duration: 3000
-                })
-                returnValue = false;
-            }
-        }).catch(err => {
-            notify({
-                title: "Error",
-                text: err.message,
-                type: "error",
-                duration: 3000
-            })
-        })
-    }
-    return returnValue;
-}
 async function register():Promise<boolean>{
     console.log(currentUser.value);
     console.log(DevUrl);
     const userNameRight = await checkUserName();
     const emailRight = await checkEmail();
     const passwordsRight = checkPasswords();
-    const phoneRight = await checkPhone();
-    console.log(userNameRight, emailRight, passwordsRight,phoneRight);
+    console.log(userNameRight, emailRight, passwordsRight);
     if(userNameRight && emailRight && passwordsRight){
         await axios.post(`${DevUrl}api/user/register-user`, currentUser.value, {
             headers: {
@@ -138,15 +105,23 @@ async function register():Promise<boolean>{
             },
         }).then(res => {
             console.log(res);
-            if(res.status === 201){
+            if (res.status === 200) {
                 notify({
                     title: "Success",
                     text: "Account created successfully",
                     type: "success",
                     duration: 3000
                 })
-                return true;
-            }else{
+                setTimeout(() => {
+                    notify({
+                        title: "Success",
+                        text: "redirecting to login page",
+                        type: "success",
+                        duration: 1000
+                    })
+                    window.location.href = "/auth/login";
+                }, 3000);
+            } else {
                 notify({
                     title: "Error",
                     text: "Account not created",
@@ -163,6 +138,8 @@ async function register():Promise<boolean>{
                 duration: 3000
             })
         })
+    }else {
+        return false;
     }
     return true;
 }
@@ -171,21 +148,17 @@ async function register():Promise<boolean>{
     <div class="signup-wrapper">
         <h1>Welcome </h1>
         <div class="user-details">
-            <input type="text" placeholder="full Names" v-model= "currentUser.names">
-            <input type="text" placeholder="username" v-model="currentUser.userName">
+            <input type="text" placeholder="Username" v-model="currentUser.userName">
             <input type="email" placeholder="Email" v-model="currentUser.email">
-            <p>or</p>
-            <input type="text" placeholder="phone" v-model="currentUser.phone">
-            <input type="text" placeholder="location" v-model="currentUser.location">
-            <input type="password" name="" id="" placeholder="password" v-model="currentUser.password">
-            <input type="password" placeholder="repeat password" v-model="repeatPassword" @mouseout="checkPasswords">
+            <input type="text" placeholder="Location" v-model="currentUser.location">
+            <input type="password" name="" id="" placeholder="Password" v-model="currentUser.secPassword">
+            <input type="password" placeholder="Repeat password" v-model="repeatPassword" @mouseout="checkPasswords">
             <h3>{{passwordError}}</h3>
             <div class="if-seller">
                 <input type="checkbox" name="" id="seller" v-model="currentUser.seller">
                 <label for="seller">Are you a seller?</label>
             </div>
             <button @click="register" :disabled="ifDisabled">Agree and Continue</button>
-            <button>Continue with Google</button>
         </div>
     </div>
 </template>
@@ -203,12 +176,9 @@ async function register():Promise<boolean>{
     padding-bottom: 20px;
     margin-bottom: 10px;
     margin-top: 5px;
-    background-color: #E2E4E9;
-    color: #333;
+    color: #fff;
     border-radius: 15px;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(209, 204, 25, 0.3);
+
 }
 
 .user-details {
@@ -224,7 +194,7 @@ async function register():Promise<boolean>{
 .user-details p {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #333;
+    color: #fff;
     align-self: flex-start;
     padding: 0 5%;
 }
@@ -240,12 +210,12 @@ input {
     margin: 10px 0;
     border: none;
     background: transparent;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #fff;
     outline: none;
 }
 
 input::placeholder {
-    color: black;
+    color: #fff;
 }
 
 .if-seller {
