@@ -46,7 +46,24 @@ const routes = [
             {
                 path: "posts",
                 name: "Posts",
-                component: () => import("../views/user/posts.vue"),
+                component: () => import("../views/user/posts/index.vue"),
+                children: [
+                    {
+                        path: "create",
+                        name: "Create",
+                        component: () => import("../views/user/posts/create.vue"),
+                    },
+                    {
+                        path: "register-seller",
+                        name: "RegisterSeller",
+                        component: () => import("../views/user/posts/register-seller.vue"),
+                    },
+                    {
+                        path: "manage",
+                        name: "managePosts",
+                        component: ()=> import("../views/user/posts/manage-posts.vue")
+                    }
+                ]
             },
             {
                 path: "messages",
@@ -65,18 +82,8 @@ const routes = [
                     },
                 ]
             },
-            {
-                path: "posts",
-                name: "Posts",
-                component: () => import("../views/user/posts.vue"),
-            },
         
         ]
-    },
-    {
-        path: "/post/:id",
-        name: "Post",
-        component: () => import("../views/posts/post.vue"),
     },
     {
         path: "/:pathMatch(.*)*",

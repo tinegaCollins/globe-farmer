@@ -20,4 +20,15 @@ interface UserRegister {
     location: string;
 }
 
-export type { Item, UserRegister };
+interface PostTypes {
+    title: string,
+    category: string,
+    description: string,
+    price: number,
+    location: string,
+    images: Buffer[],
+    seller: string,
+    farmerName: string,
+}
+
+export type { Item, UserRegister, PostTypes };

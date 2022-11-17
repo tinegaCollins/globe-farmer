@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@iconify/vue": "^4.0.0",
+    "@types/node": "^18.11.9",
     "@vitejs/plugin-vue": "^3.1.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.19",

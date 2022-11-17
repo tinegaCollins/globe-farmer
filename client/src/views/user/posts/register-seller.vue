@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import axios from 'axios';
-import { useUserStore } from '../../stores/user';
+import { useUserStore } from '../../../stores/user';
 import { notify } from "@kyvg/vue3-notification";
-import router from '../../router';
-import Recent from '../../components/recent.vue';
+import router from '../../../router';
+import Recent from '../../../components/recent.vue';
 const DevUrl = import.meta.env.VITE_DEV_URL;
+ 
 
 
 const userStore = useUserStore();
@@ -13,18 +14,6 @@ const email = ref<string>(userStore.email);
 if (!email.value) {
     router.push('/auth/login')
 }
-let additionalInfo = ref<Boolean>(false);
-const isUserSeller = async () => {
-    await axios.get(`${DevUrl}api/user/check-if-seller/${email.value}`).then((res) => {
-        console.log(res.status)
-        if (res.status != 200) {
-            additionalInfo.value = true;
-        }
-    }).catch((err) => {
-        console.log(err);
-    })
-}
-isUserSeller();
 
 const steps = ref<number>(1);
 
@@ -127,10 +116,10 @@ const next = () => {
 
 <template>
     <div class="post">
-        <div class="additional-info" v-if="additionalInfo">
+        <div class="additional-info">
             <main>
                 <RouterLink to="/">
-                    <img src="../../../icon.png" alt="">
+                    <img src="../../../../icon.png" alt="">
                 </RouterLink>
                 <h2>we need additional information about you</h2>
                 <div class="tracker">

@@ -55,10 +55,10 @@ const logoutUser = () => {
 </script>
 <template>
   <nav>
-    <div class="icon">
+    <RouterLink to="/" class="icon">
       <img :src="icon" alt="logo" srcset="" />
       <h3>Fresh pickens</h3>
-    </div>
+    </RouterLink>
     <div class="nav-links sidebar" ref="sideBar">
       <a href="/home">Home</a>
       <RouterLink to="/user/posts">post</RouterLink>
