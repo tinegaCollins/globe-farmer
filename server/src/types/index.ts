@@ -28,14 +28,15 @@ interface UserTypes {
 }
 interface PostTypes {
     title: string,
+    category: string,
     description: string,
     price: number,
     location: string,
-    category: string,
     images: Buffer[],
     createdAt: Date,
     seller: string,
     rating: number,
+    farmerName: string,
 }
 interface message  {
     sender: string,

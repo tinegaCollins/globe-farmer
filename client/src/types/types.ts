@@ -24,9 +24,9 @@ interface PostTypes {
     title: string,
     category: string,
     description: string,
-    price: number,
+    price: string,
     location: string,
-    images: Buffer[],
+    images: string[],
     seller: string,
     farmerName: string,
 }

@@ -1,21 +1,18 @@
 import mongoose from 'mongoose'
-const postSchema = new mongoose.Schema({
-    name: String,
-    type: String,
-    breed: String,
-    availability: Boolean,
+import { PostTypes } from '../types'
+const postSchema = new mongoose.Schema<PostTypes>({
+    title: String,
+    category: String,
     description: String,
     createdAt: {
         type: Date,
         default: new Date()
     },
-    senderID: String,
-    popular: Boolean,
+    seller: String,
     location: String,
     farmerName: String,
-    price: Number,
-    quantity: String,
+    price: String,
     images : [String],
 });
 
-module.exports = mongoose.model('post', postSchema);
+module.exports = mongoose.model('globefarmer-post', postSchema);

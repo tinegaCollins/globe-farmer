@@ -38,9 +38,9 @@ const startServer = () => {
     extended: true 
   }));
 
-  //user routes
-  app.use("/api/user", require("./routes/user-routes.ts"));
-  //chats controllers
+  // routes
+  app.use("/api/", require("./routes/user-routes.ts"));
+
   app.get("/test", (req: Request, res: Response) => {
     res.status(200).json({ message: "hello world" });
   });

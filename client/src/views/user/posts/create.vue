@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import axios from 'axios';
 import { ref } from 'vue';
 import { PostTypes } from '../../../types/types';
+import { notify } from "@kyvg/vue3-notification";
+const DevUrl = import.meta.env.VITE_DEV_URL;
+
+
 const steps = ref<Number>(1);
 
 
@@ -8,7 +13,7 @@ const post = ref<PostTypes>({
     title: "",
     category: '',
     description: '',
-    price: 0,
+    price: '',
     location: '',
     images: [],
     seller: '',
@@ -18,7 +23,53 @@ const post = ref<PostTypes>({
 function next(){
     if(post.value.title && post.value.category &&  post.value.images.length > 0){
         steps.value = 2;
+    }else{
+        notify({
+            title: "Error",
+            text: "Please fill all the fields",
+            type: "error",
+            duration: 3000,
+        });
     }
+}
+
+const imageInput = ref<HTMLInputElement | null>(null);
+function toBase64(){
+    //convert image to base64
+    const files = imageInput.value?.files;
+    if(files){
+        for(let i = 0; i < files.length; i++){
+            const reader = new FileReader();
+            reader.readAsDataURL(files[i]);
+            reader.onload = () => {
+                post.value.images.push(reader.result as string);
+            }
+        }
+    }
+}
+function postAd(){
+    console.log(post.value);
+    if(post.value.description && post.value.price){
+        console.log("posting")
+        axios.post(`${DevUrl}api/add-post`, post.value)
+        .then(res => {
+            console.log(res.data);
+            // notify({
+            //     title: "Success",
+            //     text: "Post added successfully",
+            //     type: "success",
+            //     duration: 3000,
+            // });
+        })
+        .catch(err => {
+            notify({
+                title: "Error",
+                text: "Something went wrong",
+                type: "error",
+                duration: 3000,
+            });
+        })
+    }    
 }
 </script>
 <template>
@@ -69,9 +120,7 @@ function next(){
                 <label class="block text-sm font-bold mb-2 text-white" for="username">
                     Add Images
                 </label>
-                <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="username" type="file" placeholder="Title">
+                <input type="file" name="" id="fileId" @input="toBase64" ref="imageInput" multiple>
             </div>
             <button @click="next" class="bg-yellow-400 h-10 flex items-center gap-4 py-5 px-10 rounded-3xl text-black mb-5 mt-5">
                 Next
@@ -82,7 +131,7 @@ function next(){
                 <label class="block text-sm font-bold mb-2 text-white" for="username">
                     Description
                 </label>
-                <textarea
+                <textarea v-model="post.description"
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="username" type="text" placeholder="Description"></textarea>
             </div>
@@ -90,7 +139,7 @@ function next(){
                 <label class="block text-sm font-bold mb-2 text-white" for="username">
                     Price
                 </label>
-                <input
+                <input v-model="post.price"
                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="username" type="text" placeholder="Price">
             </div>
@@ -98,7 +147,7 @@ function next(){
                 <button class="bg-yellow-400 h-10 flex items-center gap-4 py-5 px-10  rounded-3xl text-black mb-5">
                 Back
             </button>
-            <button class="bg-yellow-400 h-10 flex items-center gap-4 py-5 px-10  rounded-3xl text-black mb-5">
+            <button @click.once="postAd" class="bg-yellow-400 h-10 flex items-center gap-4 py-5 px-10  rounded-3xl text-black mb-5">
                 Post
             </button>
             </div>
