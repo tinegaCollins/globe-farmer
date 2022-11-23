@@ -12,5 +12,5 @@ router.get('/check-phone/:phone', userControllers.checkPhone);
 router.get('/check-if-seller/:email', userControllers.checkIfSeller);
 router.post('/register-seller', userControllers.registerSeller);
 router.post('/add-post', postControllers.addPost);
-
+router.post('/get-posts', postControllers.getPosts);
 module.exports = router;

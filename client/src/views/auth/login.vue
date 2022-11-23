@@ -40,7 +40,7 @@ const checkEmail = () => {
     const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-0]\d{1,2}\.[0-0]\d{1,2}\.[0-0]\d{1,2}\.[0-0]\d{1,2}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (regex.test(email.value)) {
         console.log("valid email");
-        axios.get(`${DevUrl}api/user/check-email/${email.value}`, {
+        axios.get(`${DevUrl}api/check-email/${email.value}`, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -69,7 +69,7 @@ const checkEmail = () => {
         })
     } else {
         console.log("invalid email");
-        axios.get(`${DevUrl}api/user/check-user-name/${email.value}`, {
+        axios.get(`${DevUrl}api/check-user-name/${email.value}`, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -101,7 +101,7 @@ const isLoading = ref<boolean>(false);
 const password = ref<string>("");
 async function login() {
     isLoading.value = true;
-    await axios.post(`${DevUrl}api/user/login`, {
+    await axios.post(`${DevUrl}api/login`, {
         userName: currentUser.value.userName,
         email: currentUser.value.email,
         loginType: loginType,

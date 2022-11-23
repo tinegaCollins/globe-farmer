@@ -30,5 +30,16 @@ interface PostTypes {
     seller: string,
     farmerName: string,
 }
-
-export type { Item, UserRegister, PostTypes };
+interface recievedPost {
+    title: string,
+    category: string,
+    description: string,
+    price: string,
+    location: string,
+    images: string[],
+    seller: string,
+    farmerName: string,
+    _id: string,
+    createdAt: Date,
+}
+export type { Item, UserRegister, PostTypes, recievedPost };

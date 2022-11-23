@@ -1,9 +1,40 @@
 <script setup lang="ts">
 import axios from 'axios';
+import router from '../../../router';
 import { ref } from 'vue';
 import { PostTypes } from '../../../types/types';
 import { notify } from "@kyvg/vue3-notification";
+import { useHead } from '@vueuse/head';
+import { useUserStore } from '../../../stores/user';
+import icon from '../../../../icon.png';
 const DevUrl = import.meta.env.VITE_DEV_URL;
+const userEmail = useUserStore().email;
+if(userEmail === ""){
+    notify({
+        title: "Error",
+        text: "You must be logged in to create a post",
+        type: "error",
+        duration: 3000
+    })
+    router.push('/auth/login');
+}
+useHead({
+    title: 'Create Post',
+    meta: [
+        {
+            name: 'description',
+            content: 'Create a post'
+        }
+    ],
+    link: [
+        {
+            rel: 'icon',
+            type: 'image/png',
+            href: icon
+        }
+    ]
+
+})
 
 
 const steps = ref<Number>(1);
@@ -16,7 +47,7 @@ const post = ref<PostTypes>({
     price: '',
     location: '',
     images: [],
-    seller: '',
+    seller: userEmail,
     farmerName: '',
 });
 
@@ -35,7 +66,6 @@ function next(){
 
 const imageInput = ref<HTMLInputElement | null>(null);
 function toBase64(){
-    //convert image to base64
     const files = imageInput.value?.files;
     if(files){
         for(let i = 0; i < files.length; i++){
@@ -53,13 +83,22 @@ function postAd(){
         console.log("posting")
         axios.post(`${DevUrl}api/add-post`, post.value)
         .then(res => {
-            console.log(res.data);
-            // notify({
-            //     title: "Success",
-            //     text: "Post added successfully",
-            //     type: "success",
-            //     duration: 3000,
-            // });
+            if(res.status === 200){
+                notify({
+                    title: "Success",
+                    text: "Post created successfully",
+                    type: "success",
+                    duration: 3000,
+                });
+                router.push('/user/posts/manage');
+            }else {
+                notify({
+                    title: "Error",
+                    text: "Something went wrong",
+                    type: "error",
+                    duration: 3000,
+                });
+            }
         })
         .catch(err => {
             notify({

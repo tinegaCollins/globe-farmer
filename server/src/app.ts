@@ -2,7 +2,6 @@ const express = require('express');
 const http = require('http');
 const mongoose = require('mongoose');
 import { Request, Response, NextFunction } from 'express';
-import bodyParser from 'body-parser';
 import { config } from './config/config';
 const app = express();
 mongoose
@@ -31,12 +30,14 @@ const startServer = () => {
     next();
   });
   app.use(express.urlencoded({ extended: true }))
-  app.use(express.json());
-  app.use(bodyParser.urlencoded({
-    limit: '50mb',
-    parameterLimit: 100000,
-    extended: true 
-  }));
+  app.use(express.json({limit: '25mb'}));
+app.use(express.urlencoded({limit: '25mb'}));
+  // app.use(express.json());
+  // app.use(bodyParser.urlencoded({
+  //   limit: '50mb',
+  //   parameterLimit: 100000,
+  //   extended: true 
+  // }));
 
   // routes
   app.use("/api/", require("./routes/user-routes.ts"));
