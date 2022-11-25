@@ -29,3 +29,22 @@ exports.getPosts = async (req: Request, res: Response) => {
         res.status(400).json({ message: "post not found" });
     }
 };
+
+exports.getPost = async (req: Request, res: Response) => {
+    const id = req.params.id;
+    try {
+        const singlePost = await post.findById(id);
+        res.status(200).json({ singlePost });
+    }catch (error) {
+        res.status(400).json({ message: "post not found" });
+    }
+};
+
+exports.getTrendingPosts = async (req: Request, res: Response) => {
+    try {
+        const posts = await post.find().sort({ createdAt: -1 }).limit(8);
+        res.status(200).json({ posts });
+    }catch (error) {
+        res.status(400).json({ message: "post not found" });
+    }
+};

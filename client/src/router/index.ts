@@ -86,6 +86,11 @@ const routes = [
         ]
     },
     {
+        path: "/post/:id",
+        name: "Post",
+        component: () => import("../views/post.vue"),
+    },
+    {
         path: "/:pathMatch(.*)*",
         name: "NotFound",
         component: () => import("../views/NotFound.vue"),

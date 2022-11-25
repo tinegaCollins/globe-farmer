@@ -160,6 +160,11 @@ function postAd(){
                     Add Images
                 </label>
                 <input type="file" name="" id="fileId" @input="toBase64" ref="imageInput" multiple>
+                <div class="flex gap-2 mt-2">
+                    <div v-for="image in post.images">
+                        <img :src="image" alt="" class="w-20 h-20 object-cover">
+                    </div>
+                </div>
             </div>
             <button @click="next" class="bg-yellow-400 h-10 flex items-center gap-4 py-5 px-10 rounded-3xl text-black mb-5 mt-5">
                 Next

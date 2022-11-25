@@ -32,14 +32,7 @@ const startServer = () => {
   app.use(express.urlencoded({ extended: true }))
   app.use(express.json({limit: '25mb'}));
 app.use(express.urlencoded({limit: '25mb'}));
-  // app.use(express.json());
-  // app.use(bodyParser.urlencoded({
-  //   limit: '50mb',
-  //   parameterLimit: 100000,
-  //   extended: true 
-  // }));
 
-  // routes
   app.use("/api/", require("./routes/user-routes.ts"));
 
   app.get("/test", (req: Request, res: Response) => {

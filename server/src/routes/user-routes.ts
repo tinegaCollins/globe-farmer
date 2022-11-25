@@ -13,4 +13,6 @@ router.get('/check-if-seller/:email', userControllers.checkIfSeller);
 router.post('/register-seller', userControllers.registerSeller);
 router.post('/add-post', postControllers.addPost);
 router.post('/get-posts', postControllers.getPosts);
+router.get('/get-post/:id', postControllers.getPost);
+router.get('/get-trending-posts', postControllers.getTrendingPosts);
 module.exports = router;

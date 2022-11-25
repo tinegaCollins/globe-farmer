@@ -4,7 +4,27 @@ import { notify } from "@kyvg/vue3-notification";
 import { recievedPost } from '../../../types/types';
 import axios from 'axios';
 import { onMounted, ref } from 'vue';
+import icon from '../../../../icon.png';
+import { useHead } from '@vueuse/head';
 
+
+useHead({
+    title: 'Manage Posts',  
+    meta: [
+        {
+            name: 'description',
+            content: 'Create a post'
+        }
+    ],
+    link: [
+        {
+            rel: 'icon',
+            type: 'image/png',
+            href: icon
+        }
+    ]
+
+})
 const email = useUserStore().email;
 const DevUrl = import.meta.env.VITE_DEV_URL;
 let posts = ref<recievedPost[]>([]);
@@ -28,18 +48,20 @@ async function getPost(){
 }
 onMounted(() => {
     getPost();
-    console.log(posts.value.length);
 })
 </script>
 
 <template>
-    <div class="wrapper">
+    <div class="">
         <h1>Your Posts</h1>
-        <div>
-            <div v-for="post in posts">
-                <img v-for="image in post.images" :src="image" alt="" class="">
-                <h2>{{post.title}}</h2>
-            </div>
+        <div class="flex gap-2 flex-wrap p-3">
+            <RouterLink v-for="post in posts" :to="'/post/' + post._id" class="border border-black rounded-xl p-3 ">
+                <img :src="post.images[0]" alt="" class="h-56 w-56 object-cover">
+                <h2>{{ post.title }}</h2>
+                <p>Date posted:{{
+                        new Date(post.createdAt).toLocaleDateString()
+                }}</p>
+            </RouterLink>
         </div>
     </div>
 </template>

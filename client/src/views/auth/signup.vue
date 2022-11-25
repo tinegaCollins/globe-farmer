@@ -31,7 +31,7 @@ const enableButton = () => {
 async function checkUserName():Promise<boolean>{
     let returnValue: boolean = false;
     if(currentUser.value.userName.length > 0){
-        await axios.get(`${DevUrl}api/user/check-user-name/${currentUser.value.userName}`, {
+        await axios.get(`${DevUrl}api/check-user-name/${currentUser.value.userName}`, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -63,7 +63,7 @@ async function checkUserName():Promise<boolean>{
 async function checkEmail():Promise<boolean>{
     let returnValue:boolean = false;
     if(currentUser.value.email.length > 0){
-        await axios.get(`${DevUrl}api/user/check-email/${currentUser.value.email}`, {
+        await axios.get(`${DevUrl}api/check-email/${currentUser.value.email}`, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -99,7 +99,7 @@ async function register():Promise<boolean>{
     const passwordsRight = checkPasswords();
     console.log(userNameRight, emailRight, passwordsRight);
     if(userNameRight && emailRight && passwordsRight){
-        await axios.post(`${DevUrl}api/user/register-user`, currentUser.value, {
+        await axios.post(`${DevUrl}api//register-user`, currentUser.value, {
             headers: {
                 'Content-Type': 'application/json'
             },
