@@ -2,14 +2,22 @@ import mongoose from 'mongoose';
 
 import { singleChat, } from '../types';
 const chatSchema = new mongoose.Schema<singleChat>({
-    chatId: {
-        type: String,
-    },
     users: {
         type: [String],
     },
     messages: {
-        type: [Object],
+        type: [{
+            sender: String,
+            message: String,
+            createdAt: {
+                type: Date,
+                default: Date.now()
+            },
+            read: {
+                type: Boolean,
+                default: false
+            }
+        }],
     },
     createdAt: {
         type: Date,
@@ -17,7 +25,8 @@ const chatSchema = new mongoose.Schema<singleChat>({
     },
     updatedAt: {
         type: Date,
+        default: new Date()
     }
 });
 
-module.exports = mongoose.model('chat', chatSchema);
+module.exports = mongoose.model('globefarmer-chat', chatSchema);

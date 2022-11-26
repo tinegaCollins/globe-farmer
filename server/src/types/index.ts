@@ -40,7 +40,6 @@ interface PostTypes {
 }
 interface message  {
     sender: string,
-    receiver: string,
     message: string,
     createdAt: Date,
     read: boolean
@@ -52,4 +51,5 @@ interface singleChat {
     createdAt: Date,
     updatedAt: Date
 }
+
 export { UserTypes, PostTypes, message, singleChat }

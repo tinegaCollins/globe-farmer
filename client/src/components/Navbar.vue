@@ -61,7 +61,7 @@ const logoutUser = () => {
     </RouterLink>
     <div class="nav-links sidebar" ref="sideBar">
       <a href="/home">Home</a>
-      <RouterLink to="/user/posts">post</RouterLink>
+      <RouterLink to="/user/posts/create">post</RouterLink>
       <div class="dropdown">
         <div class="dropdown z-auto" @click="dropdownMenu">
           <img :src="user" alt="" srcset="" class="user-icon" />

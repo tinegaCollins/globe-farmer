@@ -20,29 +20,62 @@ async function getPost(){
         }
     }).then(res => {
         post.value = res.data.singlePost;
+        getSellerDetails();
     }).catch(err => {
         console.log(err);
     })
 }
 getPost();
-
+interface seller {
+    username: string;
+    name: string;
+    email: string;
+    phone: string;
+    address: string;
+    location: string;
+}
+let seller = ref<seller>();
+async function getSellerDetails(){
+    const email = post.value?.seller;
+   await axios.get(`${DevUrl}api/get-seller-details/${email}`, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => {
+        seller.value = res.data.user;
+        console.log(seller.value);
+    }).catch(err => {
+        console.log(err);
+    })
+}
+async function contactSeller(){
+    
+}
 </script>
 
 <template>
     <NavbarVue />
-    <div v-if="post" class="px-36 py-4">
-        <div>
-            <img :src="post.images[0]" alt="" class="h-96 w-96 object-cover">
-            <div class="mt-4 flex gap-1">
-                <img v-for="image in post.images" :src="image" alt="" class="h-24 w-24 object-cover">
+    <div v-if="post" class="px-48 py-4 grid grid-cols-2">
+      <div class="col-span-2 text-2xl mb-3">
+        <h1>{{post.category}}</h1>
+      </div>
+        <div class="border border-black rounded-xl overflow-hidden">
+            <img :src="post.images[0]" alt="" class="h-96 w-full object-cover">
+            <div class="mt-4 flex gap-1 p-2">
+                <img v-for="image in post.images" :src="image" alt="" class="h-24 w-24 object-cover border border-yellow-100">
             </div>
         </div>
-        <div>
-            <h1>{{ post.title }}</h1>
+        <div class="px-5">
+            <h1 class="text-xl mb-4">{{ post.title }}</h1>
+            <p>{{post.price}}</p>
             <p>{{ post.description }}</p>
+            <h1 class="text-yellow-400 text-xl">Location: <span>{{post.location}}</span></h1>
+            <p>posted on: {{
+              new Date(post.createdAt).toLocaleDateString()
+              }}</p>
+            <button @click="contactSeller" class="bg-yellow-400 w-full py-3 text-black mt-2 rounded-lg">Contact Seller</button>
         </div>
     </div>
-    <!-- skeleton loading animation -->
     <div v-else class="w-100vw h-[calc(100vh-100px)] grid place-items-center">
         <span class="loader-1"></span>
     </div>
