@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useUserStore } from "../stores/user";
+import  { Icon } from '@iconify/vue';
 
 //images import
 
@@ -81,6 +82,12 @@ const logoutUser = () => {
             <div class="sell">
               <RouterLink to="/user/posts">
                 <button>sell</button>
+              </RouterLink>
+            </div>
+            <div class="">
+              <RouterLink to="/user/messages" class=" w-full">
+                <Icon icon="tabler:messages" class="text-3xl mr-2"/>
+                <p>messages</p>
               </RouterLink>
             </div>
             <div @click="logoutUser">

@@ -53,6 +53,7 @@ exports.login = async (req: Request, res: Response) => {
       res
         .status(200)
         .json({
+          id: user._id,
           token: token,
           userName: userName,
           email: email,

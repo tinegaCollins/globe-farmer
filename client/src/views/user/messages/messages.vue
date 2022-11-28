@@ -2,8 +2,6 @@
 import chatSide from '../../../components/chartSide.vue';
 </script>
 
-
-
 <template>
     <div class="messages">
         <chatSide />
@@ -18,6 +16,7 @@ import chatSide from '../../../components/chartSide.vue';
     color: #333;
     padding: 20px;
     display: flex;
+    overflow-y: hidden !important;
 }
 @media screen and (max-width: 768px) {
     .messages {

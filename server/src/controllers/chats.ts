@@ -35,36 +35,40 @@ exports.addMessage = async (req: Request, res: Response) => {
 };
 
 exports.getChats = async (req: Request, res: Response) => {
-    const userId = req.params.id;
-    try {
-        const foundUser = await user.findById(userId)
-        const chatsFound: Array<string> = foundUser.chats;
-        interface Chat {
-            _id: string;
-            recentMessage: string;
-            updatedAt: Date;
-            otherUserName: string;
-        }
-        const chatsArray: Array<Chat>= [];
-        chatsFound.forEach(async (chatId: string) => {
-            const chat = await chats.findById(chatId);
-            const otherUser = await chat.users.filter((user: string) => user !== userId);
-            const other = await user.findById(otherUser[0]);
-            const otherUserName = other.userName;
-            const recentMessage = chat.messages[chat.messages.length - 1];
-            const updatedAt = chat.updatedAt;
-            const chatObject: Chat = await {
-                _id: chat._id,
-                recentMessage,
-                updatedAt,
-                otherUserName
-            }
-            chatsArray.push(chatObject);
-            res.status(200).json(chatsArray);
-        });
-    }catch {
-        res.status(203).json({ messages: 'Error getting chats' });
+  const userId = req.params.id;
+  try {
+    const foundUser = await user.findById(userId);
+    const chatsFound: Array<string> = foundUser.chats;
+    interface Chat {
+      _id: string;
+      recentMessage: string;
+      updatedAt: Date;
+      otherUserName: string;
     }
+    const chatsArray: Array<Chat> = [];
+    chatsFound.forEach(async (chatId: string) => {
+      const chat = await chats.findById(chatId);
+      const otherUser = await chat.users.filter(
+        (user: string) => user !== userId
+      );
+      const other = await user.findById(otherUser[0]);
+      const otherUserName = other.userName;
+      const recentMessage = chat.messages[chat.messages.length - 1];
+      const updatedAt = chat.updatedAt;
+      const chatObject: Chat = await {
+        _id: chat._id,
+        recentMessage,
+        updatedAt,
+        otherUserName,
+      };
+        chatsArray.push(chatObject);
+        if (chatsArray.length === chatsFound.length) {
+            res.status(200).json(chatsArray);
+        }
+    });
+  } catch {
+    res.status(203).json({ messages: "Error getting chats" });
+  }
 };
 
 exports.getMessages = async (req: Request, res: Response) => {

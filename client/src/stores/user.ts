@@ -7,6 +7,7 @@ export const useUserStore = defineStore({
         userName: sessionStorage.getItem("userName") || "",
         email: sessionStorage.getItem("email") || "",
         seller: sessionStorage.getItem("seller") || "",
+        id: sessionStorage.getItem("id") || "",
     }),
     getters: {
         isLoggedIn(): boolean {
@@ -30,13 +31,16 @@ export const useUserStore = defineStore({
             this.userName = user.userName;
             this.email = user.email;
             this.seller = user.seller; 
+            this.id = user.id;
         },
         logout() {
             this.token = "";
             this.userName = "";
             this.email = "";
+            this.id = "";
             sessionStorage.clear();
             window.location.href = "/";
+
         },
     },
 });

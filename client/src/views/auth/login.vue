@@ -126,12 +126,13 @@ async function login() {
             sessionStorage.setItem("userName", decoded.userName);
             sessionStorage.setItem("email", decoded.email);
             sessionStorage.setItem("seller", res.data.seller);
-            console.log(res.data.userName)
+            sessionStorage.setItem("id", res.data.id);  
             userStore.login({
                 userName: res.data.userName,
                 email: res.data.email,
                 seller: res.data.seller,
                 token: res.data.token,
+                id: res.data.id
             })
             window.location.href = "/";
             isLoading.value = false;

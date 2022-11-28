@@ -1,91 +1,38 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { Icon } from '@iconify/vue';
+import axios from 'axios';
+import { useHead } from '@vueuse/head';
+import { useUserStore } from '../stores/user';
 
-interface chart {
-    name: string;
-    id: number;
-    lastMessage: string;
-    lastMessageTime: string;
-    unreadMessages: number;
-    avatar: string;
-}
-const charts = ref<chart[]>([
-    {
-        name: 'John Doe',
-        id: 1,
-        lastMessage: 'Hello, how are you?',
-        lastMessageTime: '12:00',
-        unreadMessages: 3,
-        avatar: 'https://i.pinimg.com/236x/aa/db/e3/aadbe3f76c4c8fcd2eab0d3ff28e66f3--woman-face-pretty-face.jpg'
-    },
-    {
-        name: 'John Doe',
-        id: 2,
-        lastMessage: 'Hello, how are you?',
-        lastMessageTime: '12:00',
-        unreadMessages: 1,
-        avatar: 'https://static.boredpanda.com/blog/wp-content/uploads/2015/08/celebrity-actor-faces-mix-morph-pedro-berg-johnsen-thatnordicguy-2.jpg'
-    },
-    {
-        name: 'John Doe',
-        id: 3,
-        lastMessage: 'Hello, how are you?',
-        lastMessageTime: '12:00',
-        unreadMessages: 45,
-        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEwbA3X5lfUyoBdRrU5kltZNYtOP4iud_QE_Lqbemf&s'
-    },
-    {
-        name: 'John Doe',
-        id: 4,
-        lastMessage: 'Hello, how are you?',
-        lastMessageTime: '12:00',
-        unreadMessages: 3,
-        avatar: 'https://static.boredpanda.com/blog/wp-content/uploads/2015/08/celebrity-actor-faces-mix-morph-pedro-berg-johnsen-thatnordicguy-14.jpg'
-    },
-    {
-        name: 'John Doe',
-        id: 5,
-        lastMessage: 'Hello, how are you?',
-        lastMessageTime: '12:00',
-        unreadMessages: 56,
-        avatar: 'https://i.pinimg.com/736x/82/ee/e8/82eee84dfc280011f70dd4799a29a737.jpg'
-    },
-    {
-        name: 'John Doe',
-        id: 6,
-        lastMessage: 'Hello, how are you?',
-        lastMessageTime: '12:00',
-        unreadMessages: 12,
-        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3u6t98Vd0fLGgnHjhWfY7o7KzbD2o54g7ekZab8ZS&s'
-    },
-    {
-        name: 'John Doe',
-        id: 7,
-        lastMessage: 'Hello, how are you?',
-        lastMessageTime: '12:00',
-        unreadMessages: 7,
-        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRofj7HZhcjeOQYKMo-WduJ691xYI5c48CBUc4eo6me&s'
-    },
-    {
-        name: 'John Doe',
-        id: 8,
-        lastMessage: 'Hello, how are you?',
-        lastMessageTime: '12:00',
-        unreadMessages: 2,
-        avatar: 'https://i.pinimg.com/736x/ba/33/e4/ba33e46bb8fd86e643b7ce3a1297d5ca--sia-music-top-knot.jpg'
-    },
-    {
-        name: 'John Doe',
-        id: 9,
-        lastMessage: 'Hello, how are you?',
-        lastMessageTime: '12:00',
-        unreadMessages: 2,
-        avatar: 'https://i.pinimg.com/originals/b8/35/38/b8353848408bfbe9ba6668a198715ac7.jpg'
+const user = useUserStore().id;
+const DevUrl = import.meta.env.VITE_DEV_URL;
+
+useHead({
+    title: 'Messages',  
+})
+
+interface chat {
+    _id: string;
+    recentMessage: {
+        sender: string;
+        message: string;
+        createdAt: string;
+        read: boolean;
     }
-])
+    otherUserName: string;
+}
+let chats = ref<chat[]>([]);
+async function getChats() {
+    const response = await axios.get(`${DevUrl}api/get-chats/${user}`);
+    console.log(response.data);
+    chats.value = response.data;
+}
+getChats();
+
 </script>
 <template>
-    <div class="chats-side">
+    <div class="chats-side border-r-2 bg-white/10 ">
         <div class="top-bar">
             <a href="/">
                 <img src="../../icon.png" alt="logo">
@@ -99,20 +46,33 @@ const charts = ref<chart[]>([
             <img src="../assets/icons/messages/filter-svgrepo-com.svg" alt="" srcset="">
         </div>
         <div class="now-chats">
-            <RouterLink v-for="chat in charts" :key="chat.id" :to="{ name: 'Chat', params: { id: chat.id}}">
+            <RouterLink v-for="chat in chats" :key="chat._id" :to="{ name: 'Chat', params: { id: chat._id}}">
                 <div class="chat">
                     <div class="chat-img">
-                        <img :src="chat.avatar" alt="" srcset="">
+                        <Icon icon="mdi:user-circle-outline" class="text-5xl" />
                         <div class="if-active"></div>
                     </div>
                     <div class="chat-info">
-                        <h3>{{chat.name}}</h3>
-                        <p>{{chat.lastMessage}}</p>
+                        <h3>{{chat.otherUserName}}</h3>
+                        <p>{{
+                            //add dots if the message is too long
+                            chat.recentMessage.message.length > 10 ? chat.recentMessage.message.slice(0, 10) + '...' : chat.recentMessage.message
+                            }}</p>
                     </div>
                     <div class="chat-time">
-                        <p>{{chat.lastMessageTime}}</p>
-                        <div class="unread-messages" v-if="chat.unreadMessages > 0">
-                            <p>{{chat.unreadMessages}}</p>
+                        <p class="text-sm">{{
+                            //format date
+                            new Date(chat.recentMessage.createdAt).toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'short',
+                                day: 'numeric',
+                                hour: 'numeric',
+                                minute: 'numeric',
+                                hour12: true
+                            })
+                            }}</p>
+                        <div class="unread-messages" v-if="chat.recentMessage.read">
+                            <p>{{chat.recentMessage.read}}</p>
                         </div>
                     </div>
                 </div>
@@ -123,9 +83,10 @@ const charts = ref<chart[]>([
 
 <style scoped>
 .chats-side {
-    height: calc(100vh );
+    height: calc(100vh-10px);
     color: #333;  
-    padding: 5px;
+    /* background-color: red; */
+    /* padding: 5px; */
 }
 .top-bar {
     display: flex;
@@ -222,5 +183,19 @@ const charts = ref<chart[]>([
         width: 25%;
     }
 }
+/* edit scroll bar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
     
 </style>
