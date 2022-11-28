@@ -22,9 +22,7 @@ interface message {
 let messages = ref<message[]>([]);
 const scrolltoBottom = async () => {
     let chat = document.getElementById('chat-box');
-    console.log(chat);
     const scrollToBottomd = (node:any) => {
-        console.log(node);
 	node.scrollTop = node.scrollHeight;
 }
     scrollToBottomd(chat);
@@ -32,17 +30,18 @@ const scrolltoBottom = async () => {
 async function getChat() {
    await axios.get(`${DevUrl}api/get-messages/${routeParams}`) 
     .then((res) => {
-         console.log(res.data);
         messages.value = res.data;
         scrolltoBottom();
     })
 }
 onMounted(async () => {
+    await getUserName();
     await getChat();
     await scrolltoBottom();
 })
 watch(route, async (newRoute) => {
     routeParams = newRoute.params.id;
+    await getUserName();
     await getChat();
     await scrolltoBottom();
     if( window.innerWidth < 768) {
@@ -59,20 +58,57 @@ const back = ()=> {
     router.go(-1);
 }
 
-getChat();
+
+interface dataToSend {
+    message: {
+        message: string;
+        sender: string;
+    }
+    chatId: string;
+}
+let inputVal = ref('');
+async function sendMessage() {
+    let data: dataToSend = {
+        message: {
+            message: inputVal.value,
+            sender: user.value.userName.toLocaleLowerCase()
+        },
+        // @ts-ignore
+        chatId: routeParams
+    }
+    await axios.post(`${DevUrl}api/send-message`, data)
+    .then((res) => {
+        console.log(res.data);
+        inputVal.value = '';
+    }).then(() => {
+        getChat();
+    }).then(() => {
+        scrolltoBottom();
+    }).catch((err) => {
+        console.log(err);
+    })
+}
+let otherUser = ref('');
+async function getUserName() {
+    await axios.get(`${DevUrl}api/get-other-user/${user.value.id}/${routeParams}`)
+    .then((res) => {
+        otherUser.value = res.data;
+    })
+}
+    
 </script>
 <template>
-    <div ref="singleChat" class="single-chart h-[calc(100vh-30px)] w-full p-2">
+    <div ref="singleChat" class="single-chart h-[calc(100vh-0px)] w-full p-2 overflow-y-hidden">
         <button @click="back" class="back">
             <Icon icon="material-symbols:chevron-left" />
         </button>
-        <div>
+        <div class="overflow-y-hidden">
             <div class="flex">
                 <div class="flex items-center pl-1">
                     <Icon icon="mdi:user-circle-outline" class="text-5xl" />
                     <div class="if-active"></div>
                     </div>
-                    <h3 class="ml-2 self-center">Ot</h3>
+                    <h3 class="ml-2 self-center">{{otherUser}}</h3>
                     <div class="flex items-center ml-auto gap-2 border border-sky-400 rounded-3xl px-4">
                         <Icon icon="material-symbols:call" class="text-3xl" />
                         <Icon icon="material-symbols:video-call" class="text-3xl" />
@@ -94,7 +130,8 @@ getChat();
         <div>
             <div class="flex items-center gap-2">
                 <Icon icon="mdi:emoticon-outline" class="text-3xl" />
-                <input type="text" placeholder="Type a message" class="w-full border border-sky-400 rounded-3xl px-4 py-2" />
+                <input type="text" placeholder="Type a message" class="w-full border border-sky-400 rounded-3xl px-4 py-2" v-model="inputVal"/>
+                <Icon icon="ic:sharp-send" class="text-3xl hover:cursor-pointer" @click="sendMessage"/>
                 <Icon icon="mdi:paperclip" class="text-3xl" />
                 <Icon icon="mdi:camera" class="text-3xl" />
             </div>

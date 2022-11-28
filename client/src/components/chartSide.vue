@@ -56,7 +56,7 @@ getChats();
                         <h3>{{chat.otherUserName}}</h3>
                         <p>{{
                             //add dots if the message is too long
-                            chat.recentMessage.message.length > 10 ? chat.recentMessage.message.slice(0, 10) + '...' : chat.recentMessage.message
+                            chat.recentMessage.message.length > 10 ? chat.recentMessage.message.slice(0, 6) + '...' : chat.recentMessage.message
                             }}</p>
                     </div>
                     <div class="chat-time">

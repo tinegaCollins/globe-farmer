@@ -22,7 +22,8 @@ router.get('/get-trending-posts', postControllers.getTrendingPosts);
 
 //chats routes
 router.post('/add-new-chat', chatControllers.addNewChat);
-router.post('/add-message', chatControllers.addMessage);
+router.post('/send-message', chatControllers.addMessage);
 router.get('/get-chats/:id', chatControllers.getChats);
 router.get('/get-messages/:id', chatControllers.getMessages);
+router.get('/get-other-user/:userId/:chatId', chatControllers.getOtherUser);
 module.exports = router;

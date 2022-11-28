@@ -81,3 +81,15 @@ exports.getMessages = async (req: Request, res: Response) => {
     }
 };
 
+exports.getOtherUser = async (req: Request, res: Response) => {
+    const { userId, chatId } = req.params;
+    try {
+        const chat = await chats.findById(chatId);
+        const otherUser = await chat.users.filter((user: string) => user !== userId);
+        const other = await user.findById(otherUser[0]);
+        res.status(200).json(other.userName);
+    } catch (error) {
+        res.status(500).json(error);
+    }
+}
+
